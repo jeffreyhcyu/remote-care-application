@@ -1,5 +1,10 @@
 <?php
  
-// tell our shell script to update github
-`git pull`;
+// Use in the "Post-Receive URLs" section of your GitHub repo.
+ 
+if ( $_POST['payload'] ) {
+  shell_exec( 'cd /var/www/3yp/ && git pull' );
+}
+ 
+?>hi
 
