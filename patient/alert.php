@@ -1,6 +1,6 @@
 <?php
 
-// Check the person is logged in!
+// Check the person is logged in!!
 session_start();    
 if (isset($_SESSION['userID']))
 {
