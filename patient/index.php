@@ -42,12 +42,11 @@ Cardiac Track
 		</tbody>
 </table>
 </form>
-</div> 
 <?php
 session_start();
 echo $_SESSION['loginMessage'];
-echo 'Hello World';
 ?>
+</div> 
 </body>
 
 </html>

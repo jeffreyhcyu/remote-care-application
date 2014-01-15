@@ -25,6 +25,7 @@ if ($actual_password_hash == $input_password_hash)
 {
     $_SESSION['userID'] = $id;
     $_SESSION['userPassword'] = $input_password;  // We need to pass the raw text PW to the encryption function.
+    $_SESSION['loginMessage'] = '';
     
 header('Location: https://3yp.villocq.com/patient/menu.php'); 
 }
