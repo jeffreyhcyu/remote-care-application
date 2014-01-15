@@ -29,8 +29,9 @@ if ($actual_password_hash == $input_password_hash)
 header('Location: https://3yp.villocq.com/patient/menu.php'); 
 }
 else
-{ 
-header('Location: https://3yp.villocq.com/patient'); 
+{
+    $_SESSION['loginMessage'] = 'Login Error';
+    header('Location: https://3yp.villocq.com/patient'); 
 }
 mysql_close();
 ?>

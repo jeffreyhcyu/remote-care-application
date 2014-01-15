@@ -3,13 +3,14 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=0.95; user-scalable=0;">
 <title>Cardiac Track App</title>
 <link rel="stylesheet" type="text/css" href="Cardiac_Track_Style.css">
+		
 <script type="text/javascript">
 function submitform()
 {
 document.forms["jsform"].submit();
 }
-
 </script>
+
 <link rel="apple-touch-icon" href="/iphone_icon.png"/>
 </head>
 
@@ -42,7 +43,10 @@ Cardiac Track
 </table>
 </form>
 </div> 
-
+<?php
+session_start();
+echo $_SESSION['loginMessage']
+?>
 </body>
 
 </html>
