@@ -26,14 +26,14 @@ header('Location: https://3yp.villocq.com/patient');
 Cardiac Track
 </div>
 
-<div class="page_header" style="positon:relative; top:174px;">
+<div class="page_header" style="position:relative; top:174px;">
 <a href="menu.php">
 <img src="menu_button.png" style="float:left" height="80px" >
 </a>
 Contact 
 </div>
 
-<div style="color=red"> <!--dont remove this div it keeps everything in the right place--> 
+<div style="color:red"> <!--dont remove this div it keeps everything in the right place--> 
 .
 </div>
 
