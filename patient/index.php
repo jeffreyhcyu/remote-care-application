@@ -40,7 +40,7 @@ Cardiac Track
 		<a href="javascript: submitform()" style="text-decoration:none; color:white"/> Sign in</td>
 		</tr>
 		<tr>
-		<td>
+		<td> <!-- This might need changing. At the moment this appears inside the submit button! -->
 		<?php
 		session_start();
 		echo $_SESSION['loginMessage'];
