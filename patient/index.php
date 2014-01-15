@@ -38,10 +38,14 @@ Cardiac Track
 		<tr>
 		<td id="sign_in">
 		<a href="javascript: submitform()" style="text-decoration:none; color:white"/> Sign in</td>
+		</tr>
+		<tr>
+		<td>
 		<?php
-session_start();
-echo $_SESSION['loginMessage'];
-?>
+		session_start();
+		echo $_SESSION['loginMessage'];
+		?>
+		</td>
 		</tr>
 		</tbody>
 </table>
