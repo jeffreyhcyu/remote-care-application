@@ -74,13 +74,13 @@ else
 	{
 	mysql_query("UPDATE patientTargetBP SET flag='0' WHERE AES_DECRYPT(patientID,'$input_password')='$id'");
         $flag=0;
-	header("Location: https://3yp.villocq.com/patient/continue_Cardiac_track2.html"); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!THE LINK NEEDS CHANGING
+	header("Location: https://3yp.villocq.com/patient/continue_Cardiac_track2.html"); 
     }
 
     //If a flag is set for high BP, refer to doctor
     elseif ($flag=1)
         {
-        header("Location: https://3yp.villocq.com/patient/alert.php"); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!THE LINK NEEDS CHANGING
+        header("Location: https://3yp.villocq.com/patient/alert.php"); 
         }
     }
     
