@@ -21,13 +21,12 @@ $targetBPDia=$_POST['targetbpdiastolic'];
 $hashedPassword = hash('sha512', $input_password);
 
 //Insert the data into the database
-$insertStatement = "INSERT INTO patientTargetBP VALUES('',AES_ENCRYPT('$id','$input_password'),'$hashedPassword',AES_ENCRYPT('$patient_name','$input_password'),AES_ENCRYPT('$targetBPSys','$input_password'),AES_ENCRYPT('$targetBPDia','$input_password'))";
+$insertStatement = "INSERT INTO patientTargetBP VALUES('',AES_ENCRYPT('$id','$input_password'),'$hashedPassword',AES_ENCRYPT('$patient_name','$input_password'),AES_ENCRYPT('$targetBPSys','$input_password'),AES_ENCRYPT('$targetBPDia','$input_password'),'0')";
 mysql_query($insertStatement);
 mysql_close();
 
 //echo:for testing
 echo $hashedPassword;
-echo '<br>';
-echo $input_pasword;
+
 ?>
     
