@@ -1,8 +1,5 @@
 <?php
 
-// enable sessions
-session_start();
-
 // Php code for a user creation form
 
 // Configure the MySQL connection
@@ -27,5 +24,10 @@ $hashedPassword = hash('sha512', $input_password);
 $insertStatement = "INSERT INTO patientTargetBP VALUES('',AES_ENCRYPT('$id','$input_password'),'$hashedPassword',AES_ENCRYPT('$patient_name','$input_password'),AES_ENCRYPT('$targetBPSys','$input_password'),AES_ENCRYPT('$targetBPDia','$input_password'))";
 mysql_query($insertStatement);
 mysql_close();
+
+//echo:for testing
+echo '$hashedPassword';
+echo '<br>';
+echo '$input_pasword';
 ?>
     
