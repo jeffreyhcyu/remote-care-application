@@ -25,8 +25,5 @@ $insertStatement = "INSERT INTO patientTargetBP VALUES('',AES_ENCRYPT('$id','$in
 mysql_query($insertStatement);
 mysql_close();
 
-//echo:for testing
-echo $hashedPassword;
-
 ?>
     
