@@ -26,8 +26,8 @@ mysql_query($insertStatement);
 mysql_close();
 
 //echo:for testing
-echo '$hashedPassword';
+echo $hashedPassword;
 echo '<br>';
-echo '$input_pasword';
+echo $input_pasword;
 ?>
     
