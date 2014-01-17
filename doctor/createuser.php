@@ -6,10 +6,11 @@
 include_once("pdo_mysql.php"); 
 
 // Configure the MySQL connection
+$server="remote.villocq.com:3306";
 $username="3yp";
 $DBpassword="project";
 $database="tallis";
-pdo_connect('remote.villocq.com:3306',$username,$DBpassword);
+pdo_connect($server,$username,$DBpassword);
 pdo_select_db($database);
 
 //Assign the creation form POST output to PHP variables
