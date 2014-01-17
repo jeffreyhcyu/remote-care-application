@@ -10,7 +10,7 @@ $username="3yp";
 $DBpassword="project";
 $database="tallis";
 pdo_connect('remote.villocq.com:3306',$username,$DBpassword);
-pdo_select_db($database) or die("Error! Something bad happened!");
+pdo_select_db($database);
 
 //Assign the creation form POST output to PHP variables
 $id=$_POST['username'];
