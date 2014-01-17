@@ -1,17 +1,14 @@
 <?php
 
-// PHP code for a user creation form
-
-// PDO connector (DB)
-include_once("pdo_mysql.php"); 
+// Php code for a user creation form
 
 // Configure the MySQL connection
-$server="remote.villocq.com:3306";
 $username="3yp";
 $DBpassword="project";
 $database="tallis";
-pdo_connect($server,$username,$DBpassword);
-pdo_select_db($database);
+
+mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+@mysql_select_db($database) or die("Error! Something bad happened!");
 
 //Assign the creation form POST output to PHP variables
 $id=$_POST['username'];
@@ -24,8 +21,9 @@ $targetBPDia=$_POST['targetbpdiastolic'];
 $hashedPassword = hash('sha512', $input_password);
 
 //Insert the data into the database
-$insertStatement = "INSERT INTO patientTargetBP VALUES('',AES_ENCRYPT(?,?),?,AES_ENCRYPT(?,?),AES_ENCRYPT(?,?),AES_ENCRYPT(?,?),'0')";
-pdo_query($insertStatement,$id,$input_password,$hashedPassword,$patient_name,$input_password,$targetBPSys,$input_password,$targetBPDia,$input_password);
+$insertStatement = "INSERT INTO patientTargetBP VALUES('',AES_ENCRYPT('$id','$input_password'),'$hashedPassword',AES_ENCRYPT('$patient_name','$input_password'),AES_ENCRYPT('$targetBPSys','$input_password'),AES_ENCRYPT('$targetBPDia','$input_password'),'0')";
+mysql_query($insertStatement);
+mysql_close();
 
 ?>
     
