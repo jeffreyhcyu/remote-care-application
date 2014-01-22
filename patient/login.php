@@ -6,13 +6,14 @@ session_start();
 // Php code for a login form
 
 // Configure the MySQL connection
-$server="remote.villocq.com:3306";
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
+$server='remote.villocq.com';
+$username='3yp';
+$DBpassword='project';
+$database='tallis';
 
 // New MySQLi Instance
-$db = new mysqli($server,$username,$DBpassword,$database); 
+$db = new mysqli($server,$username,$DBpassword,$database);
+
 if ($db->connect_error) {
   trigger_error('Database connection failed: '  . $db->connect_error, E_USER_ERROR); // Error message if fails
 }
