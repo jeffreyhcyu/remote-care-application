@@ -11,27 +11,32 @@ $username="3yp";
 $DBpassword="project";
 $database="tallis";
 
-$db = new mysqli($server,$username,$DBpassword,$database); // New MySQLi instance
+// New MySQLi Instance
+$db = new mysqli($server,$username,$DBpassword,$database); 
 if ($db->connect_error) {
-  trigger_error('Database connection failed: '  . $db->connect_error, E_USER_ERROR);
+  trigger_error('Database connection failed: '  . $db->connect_error, E_USER_ERROR); // Error message if fails
 }
-
-//mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-//@mysql_select_db($database) or die("Error! Something bad happened!");
+else // Print for testing!
+    {
+    echo "Connection OK!";
+    echo "<br>";
+    }
 
 //Assign the login form POST output to PHP variables
 $id=$_POST['username'];
 $input_password=$_POST['password'];
+echo $id;
+echo "<br>";
+echo $input_password;
 
-//Get and compare the hashed passwords
-//$getPassword="SELECT patientPassword FROM patientTargetBP WHERE patientID=AES_ENCRYPT('$id','$input_password')";
-//$actual_password_hash=mysql_result(mysql_query($getPassword),0);
-
+// Get and compare the hashed passwords
+// Prepared statement
 $getHash = $db->prepare("SELECT patientPassword FROM patientTargetBP WHERE patientID=AES_ENCRYPT(?,?)");
 if($getHash === false) {
-  trigger_error('SQL Statement Error: ' . $db->error, E_USER_ERROR);
+  trigger_error('SQL Statement Error: ' . $db->error, E_USER_ERROR); // Error message if fails
 }
 
+// Bind & Execute
 $getHash->bind_param('ss',$id,$input_password);
 $getHash->execute();
 $getHash->bind_result($actual_password_hash);
