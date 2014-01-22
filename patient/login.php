@@ -12,6 +12,9 @@ $DBpassword="project";
 $database="tallis";
 
 $db = new mysqli($server,$username,$DBpassword,$database); // New MySQLi instance
+if ($db->connect_error) {
+  trigger_error('Database connection failed: '  . $db->connect_error, E_USER_ERROR);
+}
 
 //mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 //@mysql_select_db($database) or die("Error! Something bad happened!");
@@ -25,6 +28,10 @@ $input_password=$_POST['password'];
 //$actual_password_hash=mysql_result(mysql_query($getPassword),0);
 
 $getHash = $db->prepare("SELECT patientPassword FROM patientTargetBP WHERE patientID=AES_ENCRYPT(?,?)");
+if($getHash === false) {
+  trigger_error('SQL Statement Error: ' . $db->error, E_USER_ERROR);
+}
+
 $getHash->bind_param('ss',$id,$input_password);
 $getHash->execute();
 $getHash->bind_result($actual_password_hash);
