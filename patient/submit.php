@@ -106,6 +106,8 @@ else
         $flag = 0;
         }
     
+    echo $flag;
+    
     //Now submit the flag to the database:
     //Prepared statement
     $setFlag = $db->prepare("UPDATE patientTargetBP SET flag=? WHERE AES_DECRYPT(patientID,?)=?");
