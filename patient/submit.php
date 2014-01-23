@@ -38,6 +38,7 @@ $getSystolic->bind_param('sss',$input_password,$input_password,$id);
 $getSystolic->execute();
 $getSystolic->bind_result($targetSystolic);
 $getSystolic->fetch();
+echo $targetSystolic;
 
 //Get the patient's target Diastolic BP:
 //Prepared statement
@@ -47,7 +48,7 @@ $getDiastolic->bind_param('sss',$input_password,$input_password,$id);
 $getDiastolic->execute();
 $getDiastolic->bind_result($targetDiastolic);
 $getDiastolic->fetch();
-
+echo $targetDiastolic;
 
 //Date checking. $DaysElapsed is days betwwen first BP reading in the database and today.
 // ==>> NB! Need to think of a way to reset the count when secondary treatment is enacted!
