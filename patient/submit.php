@@ -38,6 +38,7 @@ $getSystolic->bind_param('sss',$input_password,$input_password,$id);
 $getSystolic->execute();
 $getSystolic->bind_result($targetSystolic);
 $getSystolic->fetch();
+$getSystolic->close();
 echo "This is Systolic:";
 echo $targetSystolic;
 echo "<br>";
