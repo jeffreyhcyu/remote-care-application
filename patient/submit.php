@@ -39,27 +39,16 @@ $getSystolic->execute();
 $getSystolic->bind_result($targetSystolic);
 $getSystolic->fetch();
 $getSystolic->close();
-echo "This is Systolic:";
-echo $targetSystolic;
-echo "<br>";
 
 //Get the patient's target Diastolic BP:
 //Prepared statement
-echo "1";
 $getDiastolic = $db->prepare("SELECT AES_DECRYPT(patientTargetBPDiastolic,?) FROM patientTargetBP WHERE AES_DECRYPT(patientID,?)=?");
 //Execute and get result
-echo "2";
 $getDiastolic->bind_param('sss',$input_password,$input_password,$id);
-echo "3";
 $getDiastolic->execute();
-echo "4";
 $getDiastolic->bind_result($targetDiastolic);
-echo "5";
 $getDiastolic->fetch();
-echo "6";
-echo "This is Diastolic:";
-echo $targetDiastolic;
-echo "<br>";
+$getDiastolic->close();
 
 //Date checking. $DaysElapsed is days betwwen first BP reading in the database and today.
 // ==>> NB! Need to think of a way to reset the count when secondary treatment is enacted!
@@ -71,6 +60,7 @@ $getDate->bind_param('ss',$id,$input_password);
 $getDate->execute();
 $getDate->bind_result($earliestDate);
 $getDate->fetch();
+$getDate->close();
 
 //Now get a difference in days between earliestDate and today:
 //Prepared statement
@@ -80,7 +70,7 @@ $dateDiff->bind_param('s',$earliestDate);
 $dateDiff->execute();
 $dateDiff->bind_result($daysElapsed);
 $dateDiff->fetch();
-
+$dateDiff->close();
 
 //Decision Logic for the target BP checking
 //
@@ -134,6 +124,5 @@ else
         }
     }
     
-//Close the DB connection
 $db->close();
 ?>
