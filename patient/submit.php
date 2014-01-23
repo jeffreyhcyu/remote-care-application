@@ -106,8 +106,6 @@ else
         $flag = 0;
         }
     
-    echo $flag;
-    
     //Now submit the flag to the database:
     //Prepared statement
     $setFlag = $db->prepare("UPDATE patientTargetBP SET flag=? WHERE AES_DECRYPT(patientID,?)=?");
@@ -116,13 +114,13 @@ else
     $setFlag->execute();
     
     //If a flag is set for high BP, refer to doctor. Otherwise send to 'success' page:
-    if ($flag=1)
+    if ($flag == 1)
         { 
-        //header("Location: https://3yp.villocq.com/patient/alert.php"); //Send to alert page
+        header("Location: https://3yp.villocq.com/patient/alert.php"); //Send to alert page
         }
     else
         {
-        //header("Location: https://3yp.villocq.com/patient/continue_Cardiac_track2.html"); //Send to continue page
+        header("Location: https://3yp.villocq.com/patient/continue_Cardiac_track2.html"); //Send to continue page
         }
     }
     
