@@ -1,0 +1,15 @@
+Readme
+tallisXML folder
+
+This folder holds the database mapping files for tallis. It is live on the server.
+
+To get tallis to use this mapping file, ensure NO tasks/boxes are selected in the Tallis Composer, then on the left
+yellow window, click on 'MetaProps' tab.
+
+Under 'Common Meta Properties', add the following:
+folio.xmldbmapper.mapping=../../../../../www/3yp/tallisXML/coldOrFlu.xml
+
+The filename will change dependent on which XML file you need to access.
+
+
+REMEMBER: You need to use our enactment server, NOT cossacs!
