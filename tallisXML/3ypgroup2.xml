@@ -88,11 +88,11 @@ SELECT drug4prescription FROM patientDrugs WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 
-<!--<enquiryReader taskName="Drug4_READ" dataItem="Drug4class">
+<enquiryReader taskName="Drug4_READ" dataItem="Drug4class">
 <preparedSQLStatement dbName="tallis" params="patientID">
 SELECT drug4class FROM patientDrugs WHERE patientID=(?)
 </preparedSQLStatement>
-</enquiryReader>-->
+</enquiryReader>
 
 
 <!-- The Writer tasks operate on an Enquiry, a decision, or an action box. Notice that the params="patientID patientName symptoms" exactly
