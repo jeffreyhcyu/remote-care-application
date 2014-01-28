@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a template mapping file for tallis-->
+
+<!-- Leave this stuff. It tells the Enactment server to use a database connection '3yp-group2' that is already setup -->
+<proformaDataMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="proformaDataMapping.xsd">
+<database id="3yp-group2">tallis</database>
+
+<!-- Current number of drugs the patient is on. Table: patientDrugs -->
+<enquiryReader taskName="Current_treatment_READ" dataItem="Number_of_drugs">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT numberDrugs FROM patientDrugs WHERE patientID = (?)
+</preparedSQLStatement>
+</enquiryReader>
+
+
+<!-- The Writer tasks operate on an Enquiry, a decision, or an action box. Notice that the params="patientID patientName symptoms" exactly
+matches the variable names used in Tallis itself. These are then placed into the SQL statement instead of '?'. Note it does this in the
+same order that params are listed. -->
+<enquiryWriter taskName="get_symptoms">
+<preparedSQLStatement dbName="tallis" params="patientID patientsName symptoms">
+INSERT INTO PATIENT_DATA (PATIENT_ID, NAME, SYMPTOMS) VALUES (?, ?, ?)
+</preparedSQLStatement>
+</enquiryWriter>
+
+<decisionWriter taskName="diagnosis">
+<preparedSQLStatement dbName="tallis" params="patientID DECISION_NAME TIME_STAMP RECOMMENDATIONS SELECTION">
+INSERT INTO DECISIONS (PATIENT_ID, DECISION_NAME, TIME_STAMP, RECOMMENDATIONS, SELECTION) VALUES (?, ?, ?, ?, ?)
+</preparedSQLStatement>
+</decisionWriter>
+
+<actionWriter taskName="prescribe_painkillers">
+<preparedSQLStatement dbName="tallis" params="patientID">
+UPDATE PATIENT_DATA SET PILL_TAKER = TRUE WHERE PATIENT_ID = (?)
+</preparedSQLStatement>
+</actionWriter>
+</proformaDataMapping>
