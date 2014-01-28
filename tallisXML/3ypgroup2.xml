@@ -110,6 +110,54 @@ WHERE result IS NOT NULL
 </preparedSQLStatement>
 </enquiryReader>
 
+<!-- treatment_status_READ: Get MaxDose yes/no from Drug 2. Table: drugList-->
+<enquiryReader taskName="max_dosage_2" dataItem="Max_dosage">
+<preparedSQLStatement dbName="tallis" params="Drug2 Drug2Prescription Drug2 Drug2Prescription">
+SELECT * FROM   (
+		SELECT 
+		    CASE 
+			WHEN drugList.drug = (?) AND drugList.maxDose > (?) THEN 'No'
+			WHEN drugList.drug = (?) AND (?) >= drugList.maxDose  THEN 'Yes'
+		    END AS result
+                FROM drugList
+		)
+AS result
+WHERE result IS NOT NULL
+</preparedSQLStatement>
+</enquiryReader>
+
+<!-- treatment_status_READ: Get MaxDose yes/no from Drug 3. Table: drugList-->
+<enquiryReader taskName="max_dosage_3" dataItem="Max_dosage">
+<preparedSQLStatement dbName="tallis" params="Drug3 Drug3Prescription Drug3 Drug3Prescription">
+SELECT * FROM   (
+		SELECT 
+		    CASE 
+			WHEN drugList.drug = (?) AND drugList.maxDose > (?) THEN 'No'
+			WHEN drugList.drug = (?) AND (?) >= drugList.maxDose  THEN 'Yes'
+		    END AS result
+                FROM drugList
+		)
+AS result
+WHERE result IS NOT NULL
+</preparedSQLStatement>
+</enquiryReader>
+
+<!-- treatment_status_READ: Get MaxDose yes/no from Drug 4. Table: drugList-->
+<enquiryReader taskName="max_dosage_4" dataItem="Max_dosage">
+<preparedSQLStatement dbName="tallis" params="Drug4 Drug4Prescription Drug4 Drug4Prescription">
+SELECT * FROM   (
+		SELECT 
+		    CASE 
+			WHEN drugList.drug = (?) AND drugList.maxDose > (?) THEN 'No'
+			WHEN drugList.drug = (?) AND (?) >= drugList.maxDose  THEN 'Yes'
+		    END AS result
+                FROM drugList
+		)
+AS result
+WHERE result IS NOT NULL
+</preparedSQLStatement>
+</enquiryReader>
+
 <!-- The Writer tasks operate on an Enquiry, a decision, or an action box. Notice that the params="patientID patientName symptoms" exactly
 matches the variable names used in Tallis itself. These are then placed into the SQL statement instead of '?'. Note it does this in the
 same order that params are listed. -->
