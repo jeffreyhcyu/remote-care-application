@@ -101,7 +101,7 @@ SELECT * FROM   (
 		SELECT 
 		    CASE 
 			WHEN drugList.drug = (?) AND drugList.maxDose > (?) THEN 'No'
-			WHEN drugList.drug = (?) AND (?) > drugList.maxDose  THEN 'Yes'
+			WHEN drugList.drug = (?) AND (?) >= drugList.maxDose  THEN 'Yes'
 		    END AS result
                 FROM drugList
 		)
