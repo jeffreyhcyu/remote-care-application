@@ -5,10 +5,10 @@
 <proformaDataMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="proformaDataMapping.xsd">
 <database id="3yp-group2">tallis</database>
 
-<!-- Current number of drugs the patient is on. Table: patientDrugs -->
-<enquiryReader taskName="Current_treatment_READ" dataItem="Number_of_drugs">
+<!-- Current number of drugs the patient is on & BP Flag status. Table: patientDrugs & patientInfo -->
+<enquiryReader taskName="Current_treatment_READ" dataItem="Number_of_drugs BPcontrolled">
 <preparedSQLStatement dbName="tallis" params="patientID">
-SELECT numberDrugs FROM patientDrugs WHERE patientID = (?)
+SELECT numberDrugs,BPFlag FROM patientDrugs,patientInfo WHERE patientID = (?)
 </preparedSQLStatement>
 </enquiryReader>
 
