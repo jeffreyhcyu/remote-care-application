@@ -6,12 +6,17 @@
 <database id="3yp-group2">tallis</database>
 
 <!-- Current number of drugs the patient is on & BP Flag status. Table: patientDrugs & patientInfo -->
-<enquiryReader taskName="Current_treatment_READ" dataItem="Number_of_drugs BPcontrolled">
+<enquiryReader taskName="Current_treatment_READ" dataItem="Number_of_drugs">
 <preparedSQLStatement dbName="tallis" params="patientID">
-SELECT patientDrugs.numberDrugs,patientInfo.BPFlag FROM patientDrugs,patientInfo WHERE patientInfo.patientID=(?)
+SELECT numberDrugs FROM patientDrugs WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 
+<enquiryReader taskName="Current_treatment_READ" dataItem="BPcontrolled">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT BPFlag FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
 
 <!-- The Writer tasks operate on an Enquiry, a decision, or an action box. Notice that the params="patientID patientName symptoms" exactly
 matches the variable names used in Tallis itself. These are then placed into the SQL statement instead of '?'. Note it does this in the
