@@ -8,7 +8,7 @@
 <!-- Current number of drugs the patient is on & BP Flag status. Table: patientDrugs & patientInfo -->
 <enquiryReader taskName="Current_treatment_READ" dataItem="Number_of_drugs BPcontrolled">
 <preparedSQLStatement dbName="tallis" params="patientID">
-SELECT numberDrugs,BPFlag FROM patientDrugs,patientInfo WHERE patientID = (?)
+SELECT patientDrugs.numberDrugs,patientInfo.BPFlag FROM patientDrugs,patientInfo WHERE patientInfo.patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 
