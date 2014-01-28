@@ -5,7 +5,7 @@
 <proformaDataMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="proformaDataMapping.xsd">
 <database id="3yp-group2">tallis</database>
 
-<!-- Current number of drugs the patient is on & BP Flag status. Table: patientDrugs & patientInfo -->
+<!-- treatment_status_READ: Current number of drugs the patient is on & BP Flag status. Table: patientDrugs & patientInfo -->
 <enquiryReader taskName="Current_treatment_READ" dataItem="Number_of_drugs">
 <preparedSQLStatement dbName="tallis" params="patientID">
 SELECT numberDrugs FROM patientDrugs WHERE patientID=(?)
@@ -17,6 +17,26 @@ SELECT numberDrugs FROM patientDrugs WHERE patientID=(?)
 SELECT BPFlag FROM patientInfo WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
+
+<!-- treatment_status_READ: Get Drug 1 info. Table: patientDrugs-->
+<enquiryReader taskName="Drug1_READ" dataItem="Drug1">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT drug1 FROM patientDrugs WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Drug1_READ" dataItem="Drug1Prescription">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT drug1prescription FROM patientDrugs WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Drug1_READ" dataItem="Drug1class">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT drug1class FROM patientDrugs WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
 
 <!-- The Writer tasks operate on an Enquiry, a decision, or an action box. Notice that the params="patientID patientName symptoms" exactly
 matches the variable names used in Tallis itself. These are then placed into the SQL statement instead of '?'. Note it does this in the
