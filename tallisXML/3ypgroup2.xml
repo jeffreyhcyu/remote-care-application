@@ -95,7 +95,7 @@ SELECT drug4class FROM patientDrugs WHERE patientID=(?)
 </enquiryReader>
 
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 1. Table: drugList-->
-<enquiryReader taskName="maxDose1" dataItem="Max_dosage">
+<enquiryReader taskName="maxDose1" dataItem="max_dose_1">
 <preparedSQLStatement dbName="tallis" params="Drug1 Drug1Prescription Drug1 Drug1Prescription">
 SELECT * FROM   (
 		SELECT 
@@ -111,7 +111,7 @@ WHERE result IS NOT NULL
 </enquiryReader>
 
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 2. Table: drugList-->
-<enquiryReader taskName="maxDose2" dataItem="Max_dosage">
+<enquiryReader taskName="maxDose2" dataItem="max_dose_2">
 <preparedSQLStatement dbName="tallis" params="Drug2 Drug2Prescription Drug2 Drug2Prescription">
 SELECT * FROM   (
 		SELECT 
@@ -127,7 +127,7 @@ WHERE result IS NOT NULL
 </enquiryReader>
 
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 3. Table: drugList-->
-<!--<enquiryReader taskName="maxDose3" dataItem="Max_dosage">
+<enquiryReader taskName="maxDose3" dataItem="max_dose_3">
 <preparedSQLStatement dbName="tallis" params="Drug3 Drug3Prescription Drug3 Drug3Prescription">
 SELECT * FROM   (
 		SELECT 
@@ -140,10 +140,10 @@ SELECT * FROM   (
 AS result
 WHERE result IS NOT NULL
 </preparedSQLStatement>
-</enquiryReader>-->
+</enquiryReader>
 
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 4. Table: drugList-->
-<!--<enquiryReader taskName="maxDose4" dataItem="Max_dosage">
+<enquiryReader taskName="maxDose4" dataItem="max_dose_4">
 <preparedSQLStatement dbName="tallis" params="Drug4 Drug4Prescription Drug4 Drug4Prescription">
 SELECT * FROM   (
 		SELECT 
@@ -156,7 +156,7 @@ SELECT * FROM   (
 AS result
 WHERE result IS NOT NULL
 </preparedSQLStatement>
-</enquiryReader>-->
+</enquiryReader>
 
 <!-- patient_data: Get Patient Details. Table: patientInfo-->
 <enquiryReader taskName="Patient_details" dataItem="Age_group">
