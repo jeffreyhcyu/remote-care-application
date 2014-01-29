@@ -391,25 +391,24 @@ SELECT stenosis FROM patientInfo WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 
-
-<!-- The Writer tasks operate on an Enquiry, a decision, or an action box. Notice that the params="patientID patientName symptoms" exactly
-matches the variable names used in Tallis itself. These are then placed into the SQL statement instead of '?'. Note it does this in the
-same order that params are listed. -->
-<enquiryWriter taskName="blahlb">
-<preparedSQLStatement dbName="tallis" params="patientID patientsName symptoms">
-INSERT INTO PATIENT_DATA (PATIENT_ID, NAME, SYMPTOMS) VALUES (?, ?, ?)
-</preparedSQLStatement>
-</enquiryWriter>
-
+<!-- TreatmentPlan: Save NewTreatment drug option. Table: patientDrugs-->
 <decisionWriter taskName="New_Treatment">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs SELECTION patientID">
 UPDATE patientDrugs SET drug?=(?) WHERE patientID=(?)
 </preparedSQLStatement>
 </decisionWriter>
 
-<actionWriter taskName="yrythb">
-<preparedSQLStatement dbName="tallis" params="patientID">
-UPDATE PATIENT_DATA SET PILL_TAKER = TRUE WHERE PATIENT_ID = (?)
+<!-- This edits the saved data to strip the '[]' and "" characters -->
+<actionWriter taskName="stripChars">
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs PatientID">
+UPDATE patientDrugs SET drug? = REPLACE(drug?,'["',''),drug? = REPLACE(drug?,'"]','') WHERE patientID=(?)
 </preparedSQLStatement>
 </actionWriter>
+
+<!-- Blank EnquiryWriter-->
+<enquiryWriter taskName="blahlb">
+<preparedSQLStatement dbName="tallis" params="patientID patientsName symptoms">
+INSERT INTO PATIENT_DATA (PATIENT_ID, NAME, SYMPTOMS) VALUES (?, ?, ?)
+</preparedSQLStatement>
+</enquiryWriter>
 </proformaDataMapping>
