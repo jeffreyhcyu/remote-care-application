@@ -403,7 +403,7 @@ INSERT INTO PATIENT_DATA (PATIENT_ID, NAME, SYMPTOMS) VALUES (?, ?, ?)
 
 <decisionWriter taskName="New_Treatment">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs SELECTION patientID">
-UPDATE patientDrugs SET drug(?+1)=(?) WHERE patientID=(?)
+UPDATE patientDrugs SET drug?=(?) WHERE patientID=(?)
 </preparedSQLStatement>
 </decisionWriter>
 
