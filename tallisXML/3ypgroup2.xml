@@ -158,6 +158,210 @@ WHERE result IS NOT NULL
 </preparedSQLStatement>
 </enquiryReader>
 
+<!-- patient_data: Get Patient Details. Table: patientInfo-->
+<enquiryReader taskName="Patient_details" dataItem="Age_group">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT ageGroup FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Patient_details" dataItem="Ethnicity">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT ethnicity FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Patient_details" dataItem="Sex">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT gender FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<!-- patient_data: Check pregnancy. Table: patientInfo-->
+<enquiryReader taskName="Pregnancy" dataItem="Breastfeed">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT breastfeed FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Pregnancy" dataItem="Future_preg">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT future_pregnancy FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<!-- patient_data: Medical history. Table: patientInfo-->
+<enquiryReader taskName="Medhistory" dataItem="Aspirin">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT aspirin FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Medhistory" dataItem="Asthma">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT asthma FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<!-- patient_data: COMORBIDITIES. Table: patientInfo-->
+<!-- Warning! The list of items here is very long! -->
+<enquiryReader taskName="Comorbidities" dataItem="BB_already">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT BB_already FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="CCB">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT CCB FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="COO">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT COO FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="CVD">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT CVD FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="CVDrisk">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT CVDrisk FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="DiabRisk">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT DiabRisk FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="Diuretic_suitable">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT Diuretic_suitable FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="Gout">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT Gout FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="HDAB">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT HDAB FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="HFRisk">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT HFRisk FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="Heart_failure">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT Heart_failure FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="HepImp">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT HepImp FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="High_blood_k">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT High_blood_k FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="MI">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT MI FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="OrgDamage">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT OrgDamage FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="Postural_hypotension">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT Postural_hypotension FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="RenImp">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT RenImp FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="Stricture">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT Stricture FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="Whitecoat">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT Whitecoat FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="angina">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT angina FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="angio_expose">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT angio_expose FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="angio_hered">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT angio_hered FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="oedema">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT oedema FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="renal">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT renal FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="renovascular">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT renovascular FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="Comorbidities" dataItem="stenosis">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT stenosis FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+
 <!-- The Writer tasks operate on an Enquiry, a decision, or an action box. Notice that the params="patientID patientName symptoms" exactly
 matches the variable names used in Tallis itself. These are then placed into the SQL statement instead of '?'. Note it does this in the
 same order that params are listed. -->
