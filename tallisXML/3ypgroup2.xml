@@ -400,7 +400,7 @@ UPDATE patientDrugs SET drug?=(?) WHERE patientID=(?)
 
 <!-- This edits the saved data to strip the '[]' and "" characters -->
 <actionWriter taskName="stripChars">
-<preparedSQLStatement dbName="tallis" params="Number_of_drugs PatientID">
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs Number_of_drugs Number_of_drugs Number_of_drugs PatientID">
 UPDATE patientDrugs SET drug? = REPLACE(drug?,'["',''),drug? = REPLACE(drug?,'"]','') WHERE patientID=(?)
 </preparedSQLStatement>
 </actionWriter>
