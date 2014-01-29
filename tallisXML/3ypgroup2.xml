@@ -132,6 +132,12 @@ WHERE result IS NOT NULL
 </preparedSQLStatement>
 </enquiryReader>
 
+<enquiryWriter taskName="maxDose2">
+<preparedSQLStatement dbName="tallis" params="max_dose_2 patientID">
+UPDATE patientDrugs SET isOnMaxDose=(?) WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryWriter>
+
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 3. Table: drugList-->
 <enquiryReader taskName="maxDose3" dataItem="max_dose_3">
 <preparedSQLStatement dbName="tallis" params="Drug3 Drug3Prescription Drug3 Drug3Prescription">
@@ -148,6 +154,12 @@ WHERE result IS NOT NULL
 </preparedSQLStatement>
 </enquiryReader>
 
+<enquiryWriter taskName="maxDose3">
+<preparedSQLStatement dbName="tallis" params="max_dose_3 patientID">
+UPDATE patientDrugs SET isOnMaxDose=(?) WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryWriter>
+
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 4. Table: drugList-->
 <enquiryReader taskName="maxDose4" dataItem="max_dose_4">
 <preparedSQLStatement dbName="tallis" params="Drug4 Drug4Prescription Drug4 Drug4Prescription">
@@ -163,6 +175,12 @@ AS result
 WHERE result IS NOT NULL
 </preparedSQLStatement>
 </enquiryReader>
+
+<enquiryWriter taskName="maxDose4">
+<preparedSQLStatement dbName="tallis" params="max_dose_4 patientID">
+UPDATE patientDrugs SET isOnMaxDose=(?) WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryWriter>
 
 <!-- patient_data: Get Patient Details. Table: patientInfo-->
 <enquiryReader taskName="Patient_details" dataItem="Age_group">
