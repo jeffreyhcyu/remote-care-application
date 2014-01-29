@@ -96,6 +96,12 @@ SELECT drug4class FROM patientDrugs WHERE patientID=(?)
 
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 1. Table: drugList-->
 <enquiryReader taskName="max_dosage_1" dataItem="Max_dosage">
+<preparedSQLStatement dbName="tallis" params="">
+SELECT 'Yes'
+</preparedSQLStatement>
+</enquiryReader>
+
+<!--<enquiryReader taskName="max_dosage_1" dataItem="Max_dosage">
 <preparedSQLStatement dbName="tallis" params="Drug1 Drug1Prescription Drug1 Drug1Prescription">
 SELECT * FROM   (
 		SELECT 
@@ -108,7 +114,7 @@ SELECT * FROM   (
 AS result
 WHERE result IS NOT NULL
 </preparedSQLStatement>
-</enquiryReader>
+</enquiryReader>-->
 
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 2. Table: drugList-->
 <enquiryReader taskName="max_dosage_2" dataItem="Max_dosage">
