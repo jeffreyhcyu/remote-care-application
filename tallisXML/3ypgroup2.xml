@@ -405,10 +405,24 @@ SELECT normDose FROM drugList WHERE drug=(SELECT drug? FROM patientDrugs WHERE p
 </preparedSQLStatement>
 </enquiryReader>
 
+<!-- TreatmentPlan: Get drug class information from database. Table: drugList -->
+<enquiryReader taskName="starting_dose_READ" dataItem="newClass">
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs patientID">
+SELECT class FROM drugList WHERE drug=(SELECT drug? FROM patientDrugs WHERE patientID=(?))
+</preparedSQLStatement>
+</enquiryReader>
+
 <!-- This edits the saved data to strip the '[]' and "" characters -->
 <actionWriter taskName="stripChars">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs Number_of_drugs Number_of_drugs Number_of_drugs PatientID">
 UPDATE patientDrugs SET drug? = REPLACE(drug?,'["',''),drug? = REPLACE(drug?,'"]','') WHERE patientID=(?)
+</preparedSQLStatement>
+</actionWriter>
+
+<!-- TreatmentPlan: SAVE the drug dose and drug class.Table:patientDrugs -->
+<actionWriter taskName="update_status">
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs newClass Number_of_drugs newDose Number_of_drugs PatientID">
+UPDATE patientDrugs SET drug?class=? , drug?prescription=? , numberDrugs=? WHERE patientID=(?)
 </preparedSQLStatement>
 </actionWriter>
 
