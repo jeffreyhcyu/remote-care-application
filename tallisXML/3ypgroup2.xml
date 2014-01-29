@@ -365,15 +365,15 @@ SELECT stenosis FROM patientInfo WHERE patientID=(?)
 <!-- The Writer tasks operate on an Enquiry, a decision, or an action box. Notice that the params="patientID patientName symptoms" exactly
 matches the variable names used in Tallis itself. These are then placed into the SQL statement instead of '?'. Note it does this in the
 same order that params are listed. -->
-<enquiryWriter taskName="get_symptoms">
+<enquiryWriter taskName="New_Treatment">
 <preparedSQLStatement dbName="tallis" params="patientID patientsName symptoms">
 INSERT INTO PATIENT_DATA (PATIENT_ID, NAME, SYMPTOMS) VALUES (?, ?, ?)
 </preparedSQLStatement>
 </enquiryWriter>
 
-<decisionWriter taskName="diagnosis">
-<preparedSQLStatement dbName="tallis" params="patientID DECISION_NAME TIME_STAMP RECOMMENDATIONS SELECTION">
-INSERT INTO DECISIONS (PATIENT_ID, DECISION_NAME, TIME_STAMP, RECOMMENDATIONS, SELECTION) VALUES (?, ?, ?, ?, ?)
+<decisionWriter taskName="New_Treatment">
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs SELECTION patientID">
+UPDATE patientDrugs SET drug(?+1)=(?) WHERE patientID=(?)
 </preparedSQLStatement>
 </decisionWriter>
 
