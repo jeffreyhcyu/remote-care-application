@@ -14,7 +14,7 @@ SELECT numberDrugs FROM patientDrugs WHERE patientID=(?)
 
 <enquiryReader taskName="Current_treatment_READ" dataItem="BPcontrolled">
 <preparedSQLStatement dbName="tallis" params="patientID">
-SELECT BPFlag FROM patientInfo WHERE patientID=(?)
+SELECT BPcontrolled FROM patientInfo WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 
