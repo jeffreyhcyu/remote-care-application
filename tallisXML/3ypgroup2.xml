@@ -227,6 +227,12 @@ SELECT asthma FROM patientInfo WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 
+<enquiryReader taskName="getMaxDose" dataItem="Max_dosage">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT isOnMaxDose FROM patientDrugs WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
 <!-- patient_data: COMORBIDITIES. Table: patientInfo-->
 <!-- Warning! The list of items here is very long! -->
 <enquiryReader taskName="Comorbidities" dataItem="BB_already">
