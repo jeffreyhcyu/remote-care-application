@@ -110,6 +110,12 @@ WHERE result IS NOT NULL
 </preparedSQLStatement>
 </enquiryReader>
 
+<enquiryWriter taskName="maxDose1">
+<preparedSQLStatement dbName="tallis" params="max_dose_1 patientID">
+UPDATE patientDrugs SET isOnMaxDose=(?) WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryWriter>
+
 <!-- treatment_status_READ: Get MaxDose yes/no from Drug 2. Table: drugList-->
 <enquiryReader taskName="maxDose2" dataItem="max_dose_2">
 <preparedSQLStatement dbName="tallis" params="Drug2 Drug2Prescription Drug2 Drug2Prescription">
