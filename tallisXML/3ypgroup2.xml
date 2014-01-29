@@ -398,6 +398,13 @@ UPDATE patientDrugs SET drug?=(?) WHERE patientID=(?)
 </preparedSQLStatement>
 </decisionWriter>
 
+<!-- TreatmentPlan: Get drug dosage information from database. Table: drugList -->
+<enquiryReader taskName="starting_dose_READ" dataItem="newDose">
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs patientID">
+SELECT normDose FROM drugList WHERE drug=(SELECT drug? FROM patientDrugs WHERE patientID=(?))
+</preparedSQLStatement>
+</enquiryReader>
+
 <!-- This edits the saved data to strip the '[]' and "" characters -->
 <actionWriter taskName="stripChars">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs Number_of_drugs Number_of_drugs Number_of_drugs PatientID">
