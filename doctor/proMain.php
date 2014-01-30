@@ -35,7 +35,7 @@ $num = mysql_num_rows($result);
 
 while($row = mysql_fetch_array($result))
   {
-  echo '<div class="Apatient" data-id="$row['id']">'; //inserted the data tag data-id
+  echo '<div class="Apatient" data-id="3">'; //inserted the data tag data-id
   echo $row['patientID'] . " id:" . $row['id']. " age:" . $row['ageGroup'];
   echo '</div>';
   }
