@@ -419,10 +419,17 @@ UPDATE patientDrugs SET drug? = REPLACE(drug?,'["',''),drug? = REPLACE(drug?,'"]
 </preparedSQLStatement>
 </actionWriter>
 
-<!-- TreatmentPlan: SAVE the drug dose and drug class.Table:patientDrugs -->
+<!-- TreatmentPlan:NEW DRUG: SAVE the drug dose and drug class.Table:patientDrugs -->
 <actionWriter taskName="update_status">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs newClass Number_of_drugs newDose Number_of_drugs PatientID">
 UPDATE patientDrugs SET drug?class=? , drug?prescription=? , numberDrugs=? WHERE patientID=(?)
+</preparedSQLStatement>
+</actionWriter>
+
+<!-- TreatmentPlan:EXISTING DRUG: SAVE the corrected drug dose.Table:patientDrugs -->
+<actionWriter taskName="update_status">
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs Dosage_change PatientID">
+UPDATE patientDrugs SET drug?prescription=? WHERE patientID=(?)
 </preparedSQLStatement>
 </actionWriter>
 
