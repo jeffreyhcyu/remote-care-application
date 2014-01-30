@@ -44,6 +44,12 @@ mysql_close();
 ?>
 
 <script>
+$( ".Apatient" ).click(function() {
+alert("step1")
+});
+</script>
+
+<script>
 // 'Getting' data-attributes using getAttribute
 $( ".Apatient" ).click(function() {
 var id = document.getElementById('Apatient');
