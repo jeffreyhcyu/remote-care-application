@@ -16,7 +16,7 @@ $result = mysqli_query($con,"SELECT patientID, ageGroup FROM patientInfo");
 while($row = mysqli_fetch_array($result))
   {
   //echo '<div class="Apatient"';
-  echo $row['patientID'] . " " . $row['ageGroup'];
+  echo $row['*'] . " " . $row['ageGroup'];
   //echo '</div>';
   }
 
