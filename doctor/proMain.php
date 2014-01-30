@@ -48,7 +48,7 @@ $( ".Apatient" ).click(function() {
 // 'Getting' data-attributes using dataset 
 var idNo = document.getElementById('Apatient');
 var idNoOut = idNo.dataset.id; // leaves = 47;
-alert(idNoOut)
+alert('idNoOut')
 });
 </script>
 
