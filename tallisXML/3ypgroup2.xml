@@ -427,7 +427,7 @@ UPDATE patientDrugs SET drug?class=? , drug?prescription=? , numberDrugs=? WHERE
 </actionWriter>
 
 <!-- TreatmentPlan:EXISTING DRUG: SAVE the corrected drug dose.Table:patientDrugs -->
-<actionWriter taskName="update_status">
+<actionWriter taskName="update_status_2">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs Dosage_change PatientID">
 UPDATE patientDrugs SET drug?prescription=? WHERE patientID=(?)
 </preparedSQLStatement>
