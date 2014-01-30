@@ -46,8 +46,8 @@ mysql_close();
 <script>
 $( ".Apatient" ).click(function() {
 // 'Getting' data-attributes using dataset 
-var idNo = document.getElementById('Apatient');
-var idNoOut = idNo.dataset.id; // leaves = 47;
+//var idNo = document.getElementById('Apatient');
+//var idNoOut = idNo.dataset.id; // leaves = 47;
 alert('idNoOut')
 });
 </script>
