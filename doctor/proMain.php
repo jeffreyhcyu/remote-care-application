@@ -51,7 +51,7 @@ mysqli_close($con);
 Normal
 </div>
 <div class="Npatient">
-James Law
+James 
 </div>
 <div class="Npatient">
 Tom Gibbs
