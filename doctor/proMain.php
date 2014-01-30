@@ -43,24 +43,7 @@ while($row = mysql_fetch_array($result))
 mysql_close();
 ?>
 
-<script>
-// 'Getting' data-attributes using getAttribute
-$( ".Apatient" ).click(function() {
-var id = document.getElementById('Apatient');
-var ID = id.getAttribute('data-id');
-alert(ID)
-}); // fruitCount = '12'
 
-</script>
-
-
-<!--this is where the jquery function will need to go to get the stuff out of the Apatient div-->
-<script>
-$( ".Apatient" ).click(function() {
-  alert('top';
-});
-</script>
-<!--function end-->
 
 
 </div>
