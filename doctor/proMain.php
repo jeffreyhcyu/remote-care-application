@@ -45,7 +45,7 @@ mysql_close();
 
 <script>
 $( ".Apatient" ).click(function() {
-  alert( 'id' );
+  alert( $row['id'] );
 });
 </script>
 
