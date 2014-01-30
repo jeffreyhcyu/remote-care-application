@@ -3,6 +3,7 @@
 <head>
 <title>Cardiac Track Professional</title>
 <link rel="stylesheet" type="text/css" href="Cardiac_Track_Style_Pro.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
 </head>
 <div class="full_screen">
@@ -41,6 +42,12 @@ while($row = mysql_fetch_array($result))
 
 mysql_close();
 ?>
+
+<script>
+$( ".Apatient" ).click(function() {
+  alert( "Handler for .click() called." );
+});
+</script>
 
 </div>
 
