@@ -11,7 +11,7 @@ if (mysqli_connect_errno())
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
 
-$result = mysqli_query($con,"SELECT patientID, ageGroup FROM patientInfo");
+$result = mysqli_query("SELECT patientID, ageGroup FROM patientInfo");
 
 while($row = mysqli_fetch_array($result))
   {
@@ -20,5 +20,5 @@ while($row = mysqli_fetch_array($result))
   //echo '</div>';
   }
 
-mysqli_close($con);
+mysqli_close();
 ?>
