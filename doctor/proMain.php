@@ -46,7 +46,7 @@ mysql_close();
 <!--this is where the jquery function will need to go to get the stuff out of the Apatient div-->
 <script>
 $( ".Apatient" ).click(function() {
-  alert(.get());
+  alert('top';
 });
 </script>
 <!--function end-->
