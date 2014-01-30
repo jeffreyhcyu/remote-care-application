@@ -79,10 +79,10 @@
 	float: right;
 	height:70%;
 	width: 80%;
-	/*background-color: #9ECFF7;*/ 
-	background-image:url('cardioPic2.jpg');
+	background-color: #9ECFF7; 
+	/*background-image:url('cardioPic2.jpg');
 	background-repeat:no-repeat;
-	background-size:1400px 2500px;
+	background-size:1400px 2500px;*/
 	border-bottom: solid white 3px;
 	position: relative;
 }
