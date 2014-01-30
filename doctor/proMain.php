@@ -1,4 +1,3 @@
-
 <html>
 
 <head>
@@ -19,6 +18,7 @@ Patients
 <div id="alerted">
 Alerted
 </div>
+
 <?php
 $username="3yp";
 $DBpassword="project";
@@ -43,15 +43,7 @@ while($row = mysqli_fetch_array($result))
 
 mysqli_close($con);
 ?>
-<div class="Apatient">
-James Law
-</div>
-<div class="Apatient">
-Tom Gibbs
-</div>
-<div class="Apatient">
-Stephan Holmes
-</div>
+
 </div>
 
 <div id="normal">
