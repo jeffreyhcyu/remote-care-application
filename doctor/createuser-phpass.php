@@ -26,11 +26,10 @@ $hashedPassword = $hasher->HashPassword($input_password);
 // Password is now hashed as $hashedPassword
 
 //Prepared statement
-$submit = $db->prepare("INSERT INTO patientTargetBP VALUES('',AES_ENCRYPT(?,?),?,AES_ENCRYPT(?,?),AES_ENCRYPT(?,?),AES_ENCRYPT(?,?),'0')");
+$submit = $db->prepare("INSERT INTO patientTargetBP VALUES('',?,?,?,?,?,'0')");
 
 //Bind & Execute to submit to database
-$submit->bind_param('sssssssss',$id,$input_password,$hashedPassword,$patient_name,
-                    $input_password,$targetBPSys,$input_password,$targetBPDia,$input_password);
+$submit->bind_param('sssss',$id,$hashedPassword,$patient_name,$targetBPSys,$targetBPDia);
 $submit->execute();
 $submit->close();
 //Data has now been submitted to the database
