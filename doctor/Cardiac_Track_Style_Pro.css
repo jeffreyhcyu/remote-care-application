@@ -1,0 +1,179 @@
+.full_screen={
+	height: 100%;
+	width:100%;
+	background-color: red;
+	position: absolute;
+	z-index: 0;
+	font-family: helvetica;
+}
+
+.patient_selector{
+	z-index: 1;
+	height: 100%;
+	width: 20%;
+	position:absolute;
+	color:yellow;
+	background-color: #F7B7C9;
+	border-right: solid white 6px; 
+}
+
+#patients{
+	font-family: helvetica;
+	font-size: 40px;
+	border-bottom: solid white 3px;
+	color: white;
+}
+
+#alerted{
+	font-family: helvetica;
+	font-size: 40px;
+	border-bottom: solid white 3px;
+	color: white;
+	background-color: red;
+}
+
+#alert{
+	font-family: helvetica;
+	font-size: 40px;
+	border-bottom: solid white 3px;
+	color: white;
+	background-color: red;	
+}
+
+.Apatient{
+	font-family: helvetica;
+	font-size: 20px;
+	border-bottom: solid white 1px;
+	color: white;
+	background-color: red;
+	height: 40px;
+}
+
+#normaled{
+	font-family: helvetica;
+	font-size: 40px;
+	border-bottom: solid white 3px;
+	color: white;
+	background-color: #9ECFF7;
+}
+
+#normal{
+	font-family: helvetica;
+	font-size: 40px;
+	border-bottom: solid white 3px;
+	color: white;
+	background-color: #9ECFF7;	
+}
+
+.Npatient{
+	font-family: helvetica;
+	font-size: 20px;
+	border-bottom: solid white 1px;
+	color: white;
+	background-color: #9ECFF7;	
+	height: 40px;
+}
+
+#graph_container{
+	text-indent:10px;
+	float: right;
+	height:70%;
+	width: 80%;
+	background-color: #9ECFF7; 
+	border-bottom: solid white 3px;
+	position: relative;
+}
+
+#med_container{
+	text-indent:13px;
+	float:right;
+	height:30%;
+	width:50%;
+	border-right: solid white 3px; 
+	background: -webkit-linear-gradient(#9ECFF7, white); /* For Safari */
+	background: -o-linear-gradient(#9ECFF7, white); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#9ECFF7, white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#9ECFF7, white); /* Standard syntax */ 
+}
+
+#info_container{
+	float:right;
+	height:30%;
+	width:30%;
+	background: -webkit-linear-gradient(#9ECFF7, white); /* For Safari */
+	background: -o-linear-gradient(#9ECFF7, white); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#9ECFF7, white); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#9ECFF7, white); /* Standard syntax */  
+}
+
+.subtitle{
+	font-family: helvetica;
+	font-size: 40px;
+	border-bottom: solid white 3px;
+	color: white;
+}
+
+#info_table{ 
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: helvetica;
+	font-size: 20px;
+	color: #0066FF;
+	width:50%;
+}
+
+#med_table{
+	color: #0066FF;
+}
+
+.med_table1{
+	border-left: solid white 3px; 
+	position: relative;
+	margin-top: 30px;
+	margin-left: 20px;
+	font-family: helvetica;
+	font-size: 30px;
+	color: #0066FF;
+	width:25%;
+}
+
+.med_table2{
+	border-left: solid white 3px; 
+	position: relative;
+	top:-130px;
+	left:225px;
+	margin-top: 30px;
+	margin-left: 30px;
+	font-family: helvetica;
+	font-size: 30px;
+	color: #0066FF;
+	width:25%;
+	float: top;
+}
+
+.med_table3{
+	border-left: solid white 3px; 
+	position: relative;
+	top:-260px;
+	left:470px;
+	margin-top: 30px;
+	margin-left: 30px;
+	font-family: helvetica;
+	font-size: 30px;
+	color: #0066FF;
+	width:25%;
+}
+
+.med_table4{
+	border-left: solid white 3px; 
+	position: relative;
+	top:-390px;
+	left:695px;
+	margin-top: 30px;
+	margin-left: 30px;
+	font-family: helvetica;
+	font-size: 30px;
+	color:#0066FF;
+	width:25%;
+}
