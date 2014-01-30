@@ -36,7 +36,7 @@ echo $num;
 
 while($row = mysql_fetch_array($result))
   {
-  echo '<div class="Apatient"';
+  echo '<div class="Apatient">';
   echo $row['patientID'] . " " . $row['ageGroup'];
   echo '</div>';
   }
