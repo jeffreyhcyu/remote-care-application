@@ -35,7 +35,7 @@ $num = mysql_num_rows($result);
 
 while($row = mysql_fetch_array($result))
   {
-  echo '<div class="Apatient" data-id='$row['id']'>'; //inserted the data tag data-id
+  echo '<div class="Apatient" >'; //inserted the data tag data-id
   echo $row['patientID'] . " id:" . $row['id']. " age:" . $row['ageGroup'];
   echo '</div>';
   }
@@ -43,7 +43,24 @@ while($row = mysql_fetch_array($result))
 mysql_close();
 ?>
 
+<script>
+// 'Getting' data-attributes using getAttribute
+$( ".Apatient" ).click(function() {
+var id = document.getElementById('Apatient');
+var ID = id.getAttribute('data-id');
+alert(ID)
+}); // fruitCount = '12'
 
+</script>
+
+
+<!--this is where the jquery function will need to go to get the stuff out of the Apatient div-->
+<script>
+$( ".Apatient" ).click(function() {
+  alert('top';
+});
+</script>
+<!--function end-->
 
 
 </div>
