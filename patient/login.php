@@ -34,12 +34,15 @@ $getHash->execute();
 $getHash->bind_result($actual_password_hash);
 $getHash->fetch();
 
-// Check hashes
-$input_password_hash = hash('sha512', $input_password);
-if ($actual_password_hash == $input_password_hash)  
+// Check password matches, using PHPass here
+require("PasswordHash.php");
+$hasher = new PasswordHash(10,false); // 10 is the cost function setting
+$checkPassword = $hasher->CheckPassword($input_password,$actual_password_hash);
+
+// If good password:
+if ($checkPassword)  
 {
     $_SESSION['userID'] = $id;
-    $_SESSION['userPassword'] = $input_password;  // We need to pass the text PW to the encryption functions later.
     $_SESSION['loginMessage'] = '';
     
 header('Location: https://3yp.villocq.com/patient/menu.php'); 

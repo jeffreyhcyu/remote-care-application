@@ -13,14 +13,8 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 
 //Pull the user ID + PW out of the stored session
 $id = $_SESSION['userID'];
-$input_password=$_SESSION['userPassword'];
-
-//FOR TESTING ONLY!!!!!!!
-//$id = "hfletcher";
-//$input_password="hfpassword";
 
 //Perform the SQL Query
-
 $SQLQuery = "SELECT date, patientCurrentBPSystolic, patientCurrentBPDiastolic
 	    FROM patientCurrentBP WHERE patientID='$id'";
 
