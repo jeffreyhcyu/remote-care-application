@@ -79,7 +79,8 @@
 	float: right;
 	height:70%;
 	width: 80%;
-	background-color: #9ECFF7; 
+	/*background-color: #9ECFF7;*/ 
+	background-image:url('cardioPic.jpg')
 	border-bottom: solid white 3px;
 	position: relative;
 }
