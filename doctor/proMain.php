@@ -36,7 +36,7 @@ $num = mysql_num_rows($result);
 while($row = mysql_fetch_array($result))
   {
   echo '<div class="Apatient" data-id=' . $row['id']. '>'; //inserted the data tag data-id
-  echo $row['patientID'] . " id:" . $row['id']. " age:" . $row['ageGroup'];
+  echo $row['patientID'] . " id:" . $row['id'];
   echo '</div>';
   }
 
@@ -45,7 +45,10 @@ mysql_close();
 
 <script>
 $( ".Apatient" ).click(function() {
-alert("step1")
+// 'Getting' data-attributes using dataset 
+var idNo = document.getElementById('Apatient');
+var idNoOut = idNo.dataset.id; // leaves = 47;
+alert(idNoOut)
 });
 </script>
 
@@ -59,14 +62,6 @@ alert(ID)
 
 </script>
 
-
-<!--this is where the jquery function will need to go to get the stuff out of the Apatient div-->
-<script>
-$( ".Apatient" ).click(function() {
-  alert('top');
-});
-</script>
-<!--function end-->
 
 
 </div>
