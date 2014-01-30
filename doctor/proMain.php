@@ -43,11 +43,14 @@ while($row = mysql_fetch_array($result))
 mysql_close();
 ?>
 
+<!--this is where the jquery function will need to go to get the stuff out of the Apatient div-->
 <script>
 $( ".Apatient" ).click(function() {
-  alert( $row['id'] );
+  alert(.get());
 });
 </script>
+<!--function end-->
+
 
 </div>
 
