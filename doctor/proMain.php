@@ -46,22 +46,11 @@ mysql_close();
 <script>
 $( ".Apatient" ).click(function() {
 // 'Getting' data-attributes using dataset 
-//var idNum = document.getElementById('.Apatient');
-//var idNo = idNum.dataset.idNo; // leaves = 47;
+var idNum = document.getElementById(".Apatient");
+var idNo = idNum.dataset.idNo; // leaves = 47;
 alert('idNoOut')
 });
 </script>
-
-<script>
-// 'Getting' data-attributes using getAttribute
-$( ".Apatient" ).click(function() {
-var id = document.getElementById('Apatient');
-var ID = id.getAttribute('data-id');
-alert(ID)
-}); // fruitCount = '12'
-
-</script>
-
 
 
 </div>
