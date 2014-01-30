@@ -82,6 +82,7 @@
 	/*background-color: #9ECFF7;*/ 
 	background-image:url('cardioPic2.jpg');
 	background-repeat:no-repeat;
+	background-size:1900px 4000px;
 	border-bottom: solid white 3px;
 	position: relative;
 }
