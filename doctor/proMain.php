@@ -1,12 +1,12 @@
 <?php
 
 // Check the person is logged in!
-session_start();    
-if (isset($_SESSION['docID']))
-{
-    $doc_id = $_SESSION['docID'];
+//session_start();    
+//if (isset($_SESSION['docID']))
+//{
+  //  $doc_id = $_SESSION['docID'];
     //If logged in, go to the HTML page:
-}
+//}
 //else
 //{
 //header('Location: https://3yp.villocq.com/patient'); 
