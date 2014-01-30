@@ -45,7 +45,7 @@ mysql_close();
 
 <script>
 $( ".Apatient" ).click(function() {
-  alert( "Handler for .click() called." );
+  alert( 'id' );
 });
 </script>
 
