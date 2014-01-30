@@ -23,13 +23,13 @@ $input_password=$_POST['password'];
 
 // Get and compare the hashed passwords:
 // Prepared statement
-$getHash = $db->prepare("SELECT patientPassword FROM patientTargetBP WHERE patientID=AES_ENCRYPT(?,?)");
+$getHash = $db->prepare("SELECT patientPassword FROM patientTargetBP WHERE patientID=?");
 if($getHash === false) {
   trigger_error('SQL Statement Error: ' . $db->error, E_USER_ERROR); // Error message if fails
 }
 
 // Bind & Execute
-$getHash->bind_param('ss',$id,$input_password);
+$getHash->bind_param('s',$id);
 $getHash->execute();
 $getHash->bind_result($actual_password_hash);
 $getHash->fetch();

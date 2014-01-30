@@ -21,8 +21,8 @@ $input_password=$_SESSION['userPassword'];
 
 //Perform the SQL Query
 
-$SQLQuery = "SELECT date, AES_DECRYPT(patientCurrentBPSystolic,'$input_password'), AES_DECRYPT(patientCurrentBPDiastolic,'$input_password')
-FROM patientCurrentBP WHERE AES_DECRYPT(patientID,'$input_password')='$id'";
+$SQLQuery = "SELECT date, patientCurrentBPSystolic, patientCurrentBPDiastolic
+	    FROM patientCurrentBP WHERE patientID='$id'";
 
 $result = mysql_query($SQLQuery);
 $num = mysql_num_rows($result);
@@ -34,8 +34,8 @@ $data[0] = array('day','SystolicBP','DiastolicBP');
 for ($i=1; $i<($num+1); $i++)
 {
     $data[$i] = array(substr(mysql_result($result, $i-1, "date"), 0, 10),
-    		(int) mysql_result($result, $i-1, "AES_DECRYPT(patientCurrentBPSystolic,'$input_password')"),
-		(int) mysql_result($result, $i-1, "AES_DECRYPT(patientCurrentBPDiastolic,'$input_password')") );
+    		(int) mysql_result($result, $i-1, "patientCurrentBPSystolic"),
+		(int) mysql_result($result, $i-1, "patientCurrentBPDiastolic") );
 }
 
 echo json_encode($data);
