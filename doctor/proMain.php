@@ -118,6 +118,10 @@ Med Name
 </td>
 </tr>
 <tr>
+<td>Class</td>
+<td>BB</td>
+</tr>
+<tr>
 <td>Daily Dosage</td>
 <td>300mg</td>
 </tr>	
@@ -139,6 +143,10 @@ Med 2
 <td>
 Med Name
 </td>
+</tr>
+<tr>
+<td>Class</td>
+<td>BB</td>
 </tr>
 <tr>
 <td>Daily Dosage</td>
@@ -164,6 +172,10 @@ Med Name
 </td>
 </tr>
 <tr>
+<td>Class</td>
+<td>BB</td>
+</tr>
+<tr>
 <td>Daily Dosage</td>
 <td>300mg</td>
 </tr>	
@@ -185,6 +197,10 @@ Med 4
 <td>
 Med Name
 </td>
+</tr>
+<tr>
+<td>Class</td>
+<td>BB</td>
 </tr>
 <tr>
 <td>Daily Dosage</td>
