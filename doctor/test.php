@@ -21,3 +21,30 @@ while($row = mysql_fetch_array($result))
 
 mysql_close();
 ?>
+
+
+
+
+<html>
+<head>
+	
+<script>
+$( ".Identification1" ).click(function() {
+// 'Getting' data-attributes using dataset 
+var idNum = document.getElementById("idNo");
+var idNumber = idNum.dataset.idNo; // leaves = 47;
+alert( idNumber )
+});
+</script>
+
+	<title></title>
+</head>
+<body>
+
+
+<div class="Identification1" data-idNo=1>
+lets have something to click 
+</div>
+
+</body>
+</html>
