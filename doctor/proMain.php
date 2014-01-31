@@ -36,7 +36,7 @@ $num = mysql_num_rows($result);
 while($row = mysql_fetch_array($result))
   {
   echo '<div class="Apatient" data-idNo=' . $row['id']. '>'; //inserted the data tag data-id
-  echo '<div class="Identification' . $row['id']. '>" data-idNo=' . $row['id']. '>';
+  echo '<div class="Identification' . $row['id']. '" data-idNo=' . $row['id']. '>';
   echo $row['patientID'] . " id:" . $row['id'];
   echo '</div>';
   echo '</div>';
@@ -46,7 +46,7 @@ mysql_close();
 ?>
 
 <script>
-$( ".Apatient" ).click(function() {
+$( ".Identification1" ).click(function() {
 // 'Getting' data-attributes using dataset 
 //var idNum = document.getElementById("Identification1");
 //var idNo = idNum.dataset.idNo; // leaves = 47;
