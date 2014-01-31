@@ -50,7 +50,7 @@ $( ".Identification1" ).click(function() {
 // 'Getting' data-attributes using dataset 
 var idNum = document.getElementById("Identification1");
 var idNo = idNum.dataset.idNo; // leaves = 47;
-alert(idNo)
+alert($idNo)
 });
 </script>
 
