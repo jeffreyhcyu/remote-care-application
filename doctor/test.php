@@ -33,7 +33,7 @@ $( ".Identification1" ).click(function() {
 // 'Getting' data-attributes using dataset 
 //var idNum = document.getElementById("idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
-alert( idNumber )
+alert( 'idNumber' )
 });
 </script>
 
