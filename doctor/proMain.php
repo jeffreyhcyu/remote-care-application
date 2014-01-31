@@ -46,11 +46,11 @@ mysql_close();
 ?>
 
 <script>
-$( ".Apatient" ).click(function() {
+$( ".Identification1" ).click(function() {
 // 'Getting' data-attributes using dataset 
-var idNum = document.getElementById(".Apatient");
+var idNum = document.getElementById("Identification1");
 var idNo = idNum.dataset.idNo; // leaves = 47;
-alert('idNoOut')
+alert(idNo)
 });
 </script>
 
