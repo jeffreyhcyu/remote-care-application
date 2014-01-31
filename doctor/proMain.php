@@ -48,9 +48,9 @@ mysql_close();
 <script>
 $( ".Identification1" ).click(function() {
 // 'Getting' data-attributes using dataset 
-var idNum = document.getElementById("idNo");
-var idNumber = idNum.dataset.idNo; // leaves = 47;
-alert( idNumber )
+var idNum = Identification1.getAttribute("data-idNo");
+//var idNumber = idNum.dataset.idNo; // leaves = 47;
+alert( idNum )
 });
 </script>
 
