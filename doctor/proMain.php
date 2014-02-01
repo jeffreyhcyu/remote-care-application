@@ -46,20 +46,7 @@ $current=$_GET["w1"];
 
 $result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
 
-mysql_close();
-?>
-
-<?php
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-
-
-
-
+echo "<script type='text/javascript'>alert('$result2');</script>";
 
 mysql_close();
 ?>
