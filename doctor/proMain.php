@@ -56,7 +56,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
 
-$result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$_GET["w1"]");
+$result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$_GET['w1']");
 
 
 mysql_close();
