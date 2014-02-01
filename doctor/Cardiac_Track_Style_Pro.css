@@ -126,14 +126,6 @@
 	width:50%;
 }
 
-#med_table{
-	color: #0066FF;
-	background-color: white;
-	opacity:0.4;
-	filter:alpha(opacity=40); /* For IE8 and earlier */
-	z-index: 0;
-}
-
 .med_table1{
 	border-left: solid white 3px; 
 	position: relative;
@@ -185,7 +177,22 @@
 	width:25%;
 }
 
+#med_table{
+	color: #0066FF;
+	background-color: white;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+	z-index: 0;
+}
+
 .Identification{
 	height:40px;
 	position :relative;
+}
+
+.Identification:hover{
+	height:40px;
+	position :relative;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
 }
