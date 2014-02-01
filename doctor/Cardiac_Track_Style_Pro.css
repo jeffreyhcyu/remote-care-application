@@ -186,14 +186,6 @@
 	width:25%;
 }
 
-#med_table1{
-	color: #0066FF;
-	background-color: white;
-	opacity:0.4;
-	filter:alpha(opacity=40); /* For IE8 and earlier */
-	z-index: 0;
-}
-
 
 .Identification{
 	height:40px;

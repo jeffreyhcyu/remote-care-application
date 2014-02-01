@@ -115,7 +115,7 @@ ID Number
 </tr>
 <tr style="color:red;">
 <td>Current Systolic BP</td>
-<td>135</td>
+<td></td> <!--need DB update-->
 </tr>
 <tr>
 <td>Target Diastolic BP</td>
@@ -123,7 +123,7 @@ ID Number
 </tr>
 <tr style="color:red;">
 <td>Current Diastolic BP</td>
-<td>87</td>
+<td></td> <!--need DB update-->
 </tr>
 </table>
 </div>
