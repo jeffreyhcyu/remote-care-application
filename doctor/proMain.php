@@ -139,19 +139,19 @@ Med 1
 </tr>
 <tr>
 <td>Class</td>
-<td>BB</td>
+<td><?php echo $med['drug1class'] ?></td>
 </tr>
 <tr>
 <td>Daily Dosage</td>
-<td>300mg</td>
+<td><?php echo $med['drug1prescription'] ?></td>
 </tr>	
 <tr>
-<td>Max Dosage</td>
-<td>400mg</td>
+<td>On Max Dosage</td>
+<td><?php echo $med['isOnMaxDose'] ?></td>
 </tr>
 <tr>
 <td>Time using drug</td>
-<td>222 days</td>
+<td>NEED DB STUFF TO IMPLEMENt</td>
 </tr>
 </table>
 </div>
@@ -161,51 +161,51 @@ Med 2
 <table id="med_table">
 <tr>
 <td>
-Med Name
+<?php echo $med['drug2'] ?>
 </td>
 </tr>
 <tr>
 <td>Class</td>
-<td>BB</td>
+<td><?php echo $med['drug2class'] ?></td>
 </tr>
 <tr>
 <td>Daily Dosage</td>
-<td>300mg</td>
+<td><?php echo $med['drug2prescription'] ?></td>
 </tr>	
 <tr>
-<td>Max Dosage</td>
-<td>400mg</td>
+<td>On Max Dosage</td> <!--needs on for each-->
+<td><?php echo $med['isOnMaxDose'] ?></td>
 </tr>
 <tr>
 <td>Time using drug</td>
-<td>222 days</td>
+<td>NEED DB STUFF TO IMPLEMENt</td>
 </tr>
 </table>
 </div>
 
-<div class="med_table3">
-Med 3
+<div class="med_table2">
+Med 2
 <table id="med_table">
 <tr>
 <td>
-Med Name
+<?php echo $med['drug3'] ?>
 </td>
 </tr>
 <tr>
 <td>Class</td>
-<td>BB</td>
+<td><?php echo $med['drug3class'] ?></td>
 </tr>
 <tr>
 <td>Daily Dosage</td>
-<td>300mg</td>
+<td><?php echo $med['drug3prescription'] ?></td>
 </tr>	
 <tr>
-<td>Max Dosage</td>
-<td>400mg</td>
+<td>On Max Dosage</td> <!--needs on for each-->
+<td><?php echo $med['isOnMaxDose'] ?></td>
 </tr>
 <tr>
 <td>Time using drug</td>
-<td>222 days</td>
+<td>NEED DB STUFF TO IMPLEMENt</td>
 </tr>
 </table>
 </div>
@@ -215,24 +215,24 @@ Med 4
 <table id="med_table">
 <tr>
 <td>
-Med Name
+<?php echo $med['drug4'] ?>
 </td>
 </tr>
 <tr>
 <td>Class</td>
-<td>BB</td>
+<td><?php echo $med['drug4class'] ?></td>
 </tr>
 <tr>
 <td>Daily Dosage</td>
-<td>300mg</td>
+<td><?php echo $med['drug4prescription'] ?></td>
 </tr>	
 <tr>
-<td>Max Dosage</td>
-<td>400mg</td>
+<td>On Max Dosage</td> <!--needs on for each-->
+<td><?php echo $med['isOnMaxDose'] ?></td>
 </tr>
 <tr>
 <td>Time using drug</td>
-<td>222 days</td>
+<td>NEED DB STUFF TO IMPLEMENt</td>
 </tr>
 </table>
 </div>
