@@ -44,7 +44,7 @@ while($row = mysql_fetch_array($result))
 
 $current=$_GET["w1"];
 
-$result2 = mysql_query("SELECT drug1 FROM patientDrugs ");
+$result2 = mysql_query("SELECT * FROM patientDrugs ");
 $med = mysql_fetch_array($result2);
 
 mysql_close();
