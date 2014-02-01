@@ -31,7 +31,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 
 
 $result = mysql_query("SELECT * FROM patientInfo");
-$info=mysql_fetch_array($result);
+
 $num = mysql_num_rows($result);
 
 while($row = mysql_fetch_array($result))
@@ -42,6 +42,8 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   echo '</div>';
   }
+
+$info=mysql_fetch_array($result);
 
 $current=$_GET["w1"];
 
