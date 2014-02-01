@@ -50,34 +50,11 @@ $( ".Identification" ).click(function() {
 // 'Getting' data-attributes using dataset 
 var idNum = this.getAttribute("data-idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
-window.location.href = "proMain.php?id=" + idNum;
+window.location.href = "proMain.php?w1=" + idNum;
 });
 </script>
 
-<?php
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
 
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-
-isset($_GET["id"])
-
-$result = mysql_query("SELECT * FROM patientDrugs WHERE id=$_GET["id"]");
-$num = mysql_num_rows($result);
-
-while($row = mysql_fetch_array($result))
-  {
-  echo '<div class="Apatient" data-idNo=' . $row['id']. '>'; //inserted the data tag data-id
-  echo '<div class="Identification" data-idNo=' . $row['id']. '>';
-  echo $row['patientID'] . " id:" . $row['id'];
-  echo '</div>';
-  echo '</div>';
-  }
-
-mysql_close();
-?>
 
 </div>
 
