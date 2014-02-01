@@ -42,7 +42,7 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   }
 
-  
+$result2 = mysql_query("SELECT * FROM patientDrugs WHERE $_GET["w1"]");
 
 mysql_close();
 ?>
@@ -130,7 +130,7 @@ Med 1
 <table id="med_table">
 <tr>
 <td>
-<?php echo $row2['drug1'] ?>
+<?php echo $result2['drug1'] ?>
 </td>
 </tr>
 <tr>
