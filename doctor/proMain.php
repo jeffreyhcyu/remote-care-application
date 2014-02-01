@@ -36,8 +36,8 @@ $num = mysql_num_rows($result);
 
 while($row = mysql_fetch_array($result))
   {
-  echo '<div class="Apatient" data-idNo=' . $row['id']. '>'; //inserted the data tag data-id
-  echo '<div class="Identification" data-idNo=' . $row['id']. '>';
+  echo '<div class="Apatient" data-idNo=' . $row['patientID']. '>'; //inserted the data tag data-id
+  echo '<div class="Identification" data-idNo=' . $row['patientID']. '>';
   echo $row['patientID'] . " id:" . $row['id'];
   echo '</div>';
   echo '</div>';
@@ -47,10 +47,10 @@ while($row = mysql_fetch_array($result))
 
 $current=$_GET["w1"];
 
-$result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
+$result2 = mysql_query("SELECT * FROM patientDrugs WHERE patientID=$current");
 $med = mysql_fetch_array($result2);
 
-$result3 = mysql_query("SELECT * FROM patientInfo WHERE id=$current");
+$result3 = mysql_query("SELECT * FROM patientInfo WHERE patientID=$current");
 $info=mysql_fetch_array($result3);
 
 mysql_close();
@@ -103,7 +103,7 @@ Patient Info
 <td>
 ID Number
 </td>
-<td><?php echo $_GET['w1']?><td>
+<td><?php echo $info['id']?><td>
 </tr>
 <tr>
 <td>Age</td>
