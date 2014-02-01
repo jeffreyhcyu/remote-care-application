@@ -46,7 +46,6 @@ $current=$_GET["w1"];
 
 $result2 = mysql_query("SELECT drug1 FROM patientDrugs WHERE id=$current");
 
-echo "<script type='text/javascript'>alert('$result2');</script>";
 
 mysql_close();
 ?>
