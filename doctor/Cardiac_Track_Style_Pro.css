@@ -49,15 +49,6 @@
 	height: 40px;
 }
 
-.Apatient:hover{
-	font-family: helvetica;
-	font-size: 20px;
-	border-bottom: solid white 1px;
-	color: blue;
-	background-color: red;
-	height: 40px;
-}
-
 #normaled{
 	font-family: helvetica;
 	font-size: 40px;
@@ -191,4 +182,3 @@
 	height:40px;
 	position :relative;
 }
-
