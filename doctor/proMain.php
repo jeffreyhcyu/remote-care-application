@@ -30,7 +30,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
 
-$result = mysql_query("SELECT id FROM patientInfo");
+$result = mysql_query("SELECT id, patientID FROM patientInfo");
 
 $num = mysql_num_rows($result);
 
