@@ -46,8 +46,6 @@ $current=$_GET["w1"];
 
 $result2 = mysql_query("SELECT drug1 FROM patientDrugs ");
 
-echo "<script type='text/javascript'>alert('$result2');</script>";
-
 mysql_close();
 ?>
 
@@ -135,7 +133,7 @@ Med 1
 <table id="med_table">
 <tr>
 <td>
-<?php echo $result2['drug1'] ?>
+<?php echo $result2 ?>
 </td>
 </tr>
 <tr>
