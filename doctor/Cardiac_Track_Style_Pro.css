@@ -47,6 +47,17 @@
 	color: white;
 	background-color: red;
 	height: 40px;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.Apatient:hover{
+	font-family: helvetica;
+	font-size: 20px;
+	border-bottom: solid white 1px;
+	color: white;
+	background-color: red;
+	height: 40px;
 }
 
 #normaled{
@@ -190,9 +201,3 @@
 	position :relative;
 }
 
-.Identification:hover{
-	height:40px;
-	position :relative;
-	opacity:0.4;
-	filter:alpha(opacity=40); /* For IE8 and earlier */
-}
