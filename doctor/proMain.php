@@ -30,7 +30,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
 
-$result = mysql_query("SELECT * FROM patientInfo");
+$result = mysql_query("SELECT id FROM patientInfo");
 
 $num = mysql_num_rows($result);
 
@@ -43,12 +43,15 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   }
 
-$info=mysql_fetch_array($result);
+
 
 $current=$_GET["w1"];
 
 $result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
 $med = mysql_fetch_array($result2);
+
+$result3 = mysql_query("SELECT * FROM patientInfo WHERE id=$current")
+$info=mysql_fetch_array($result3);
 
 mysql_close();
 ?>
