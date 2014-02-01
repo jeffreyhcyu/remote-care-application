@@ -151,7 +151,7 @@ Med 1
 </tr>
 <tr>
 <td>Time using drug</td>
-<td>NEED DB STUFF TO IMPLEMENt</td>
+<td></td> <!--NEED DB STUFF TO IMPLEMENT-->
 </tr>
 </table>
 </div>
@@ -178,7 +178,7 @@ Med 2
 </tr>
 <tr>
 <td>Time using drug</td>
-<td>NEED DB STUFF TO IMPLEMENt</td>
+<td></td> <!--NEED DB STUFF TO IMPLEMENT-->
 </tr>
 </table>
 </div>
@@ -205,7 +205,7 @@ Med 2
 </tr>
 <tr>
 <td>Time using drug</td>
-<td>NEED DB STUFF TO IMPLEMENt</td>
+<td></td> <!--NEED DB STUFF TO IMPLEMENT-->
 </tr>
 </table>
 </div>
