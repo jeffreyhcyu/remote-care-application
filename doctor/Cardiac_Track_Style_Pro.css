@@ -186,7 +186,7 @@
 	width:25%;
 }
 
-#med_table{
+#med_table1{
 	color: #0066FF;
 	background-color: white;
 	opacity:0.4;
@@ -194,9 +194,6 @@
 	z-index: 0;
 }
 
-#med_table tr{
-	color: blue;
-}
 
 .Identification{
 	height:40px;
