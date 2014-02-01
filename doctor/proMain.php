@@ -54,8 +54,6 @@ window.location.href = "proMain.php?id=" + idNum;
 });
 </script>
 
-
-
 <?php
 $username="3yp";
 $DBpassword="project";
@@ -69,10 +67,13 @@ isset($_GET["id"])
 $result = mysql_query("SELECT * FROM patientDrugs WHERE id=$_GET["id"]");
 $num = mysql_num_rows($result);
 
-while($row2 = mysql_fetch_array($result))
+while($row = mysql_fetch_array($result))
   {
-  
-
+  echo '<div class="Apatient" data-idNo=' . $row['id']. '>'; //inserted the data tag data-id
+  echo '<div class="Identification" data-idNo=' . $row['id']. '>';
+  echo $row['patientID'] . " id:" . $row['id'];
+  echo '</div>';
+  echo '</div>';
   }
 
 mysql_close();
@@ -150,7 +151,7 @@ Med 1
 <table id="med_table">
 <tr>
 <td>
-<? echo $row2['drug1'] ?>
+Med Name
 </td>
 </tr>
 <tr>
