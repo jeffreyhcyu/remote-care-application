@@ -45,6 +45,7 @@ while($row = mysql_fetch_array($result))
 $current=$_GET["w1"];
 
 $result2 = mysql_query("SELECT drug1 FROM patientDrugs ");
+$med = mysql_fetch_array($result2);
 
 mysql_close();
 ?>
@@ -133,7 +134,7 @@ Med 1
 <table id="med_table">
 <tr>
 <td>
-<?php echo $result2 ?>
+<?php echo $med['drug1'] ?>
 </td>
 </tr>
 <tr>
