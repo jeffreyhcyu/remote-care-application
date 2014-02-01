@@ -31,6 +31,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 
 
 $result = mysql_query("SELECT * FROM patientInfo");
+$info=mysql_fetch_array($result2);
 $num = mysql_num_rows($result);
 
 while($row = mysql_fetch_array($result))
@@ -101,11 +102,11 @@ ID Number
 </tr>
 <tr>
 <td>Age</td>
-<td><?php echo $result['ageGroup'] ?></td>
+<td><?php echo $info['ageGroup'] ?></td>
 </tr>	
 <tr>
 <td>Target Systolic BP</td>
-<td><?php echo $result['targetSystolic'] ?></td>
+<td><?php echo $info['targetSystolic'] ?></td>
 </tr>
 <tr style="color:red;">
 <td>Current Systolic BP</td>
@@ -113,7 +114,7 @@ ID Number
 </tr>
 <tr>
 <td>Target Diastolic BP</td>
-<td><?php echo $result['targetDiastolic'] ?></td>
+<td><?php echo $info['targetDiastolic'] ?></td>
 </tr>
 <tr style="color:red;">
 <td>Current Diastolic BP</td>
