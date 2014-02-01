@@ -44,9 +44,9 @@ while($row = mysql_fetch_array($result))
 
 $current=$_GET["w1"];
 
-$result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
+$result2 = mysql_query("SELECT drug1 FROM patientDrugs WHERE id=$current");
 
-echo "<script type='text/javascript'>prompt('$result2');</script>";
+echo "<script type='text/javascript'>alert('$result2');</script>";
 
 mysql_close();
 ?>
