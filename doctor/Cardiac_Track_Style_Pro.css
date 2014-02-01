@@ -126,6 +126,10 @@
 	width:50%;
 }
 
+#med_table{
+	color: #0066FF;
+}
+
 .med_table1{
 	border-left: solid white 3px; 
 	position: relative;
@@ -176,7 +180,6 @@
 	color:#0066FF;
 	width:25%;
 }
-
 
 .Identification{
 	height:40px;
