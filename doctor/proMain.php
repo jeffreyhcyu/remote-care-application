@@ -109,6 +109,7 @@ Patient Info
 <td>
 ID Number
 </td>
+<td><?php echo $_GET['w1']?><td>
 </tr>
 <tr>
 <td>Age</td>
