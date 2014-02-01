@@ -183,7 +183,7 @@ Med 2
 </table>
 </div>
 
-<div class="med_table2">
+<div class="med_table3">
 Med 2
 <table id="med_table">
 <tr>
