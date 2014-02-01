@@ -42,7 +42,7 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   }
 
-$result2 = mysql_query("SELECT * FROM patientDrugs WHERE $_GET["w1"]");
+$result2 = mysql_query("SELECT drug1 FROM patientDrugs WHERE $_GET["w1"]");
 
 mysql_close();
 ?>
