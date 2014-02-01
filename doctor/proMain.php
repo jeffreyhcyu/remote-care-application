@@ -47,6 +47,21 @@ while($row = mysql_fetch_array($result))
 mysql_close();
 ?>
 
+<?php
+$username="3yp";
+$DBpassword="project";
+$database="tallis";
+
+mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+@mysql_select_db($database);
+
+
+$result2 = mysql_query("SELECT * FROM patientDrugs");
+
+
+mysql_close();
+?>
+
 <script>
 $( ".Identification" ).click(function() {
 // 'Getting' data-attributes using dataset 
