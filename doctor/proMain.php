@@ -50,6 +50,7 @@ $( ".Identification" ).click(function() {
 // 'Getting' data-attributes using dataset 
 var idNum = this.getAttribute("data-idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
+window.location.href = "proMain.php?w1=" + idNum;
 alert( idNum )
 });
 </script>
