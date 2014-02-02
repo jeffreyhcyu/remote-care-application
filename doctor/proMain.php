@@ -64,15 +64,6 @@ $info=mysql_fetch_array($result3);
 mysql_close();
 ?>
 
-<script>
-$( ".Identification" ).click(function() {
-// 'Getting' data-attributes using dataset 
-var idNum = this.getAttribute("data-idNo");
-//var idNumber = idNum.dataset.idNo; // leaves = 47;
-window.location.href = "proMain.php?w1=" + idNum;
-});
-</script>
-
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -151,6 +142,15 @@ while($row5 = mysql_fetch_array($result5))
   }
 ?>
 </div>
+
+<script>
+$( ".Identification" ).click(function() {
+// 'Getting' data-attributes using dataset 
+var idNum = this.getAttribute("data-idNo");
+//var idNumber = idNum.dataset.idNo; // leaves = 47;
+window.location.href = "proMain.php?w1=" + idNum;
+});
+</script>
 
 </div>
 <!--End of left hand of page-->
