@@ -28,8 +28,8 @@
 		$id = $_SESSION['userID'];
 
 		//Perform the SQL Query
-		$SQLQuery = "SELECT b. date, b. patientCurrentBPSystolic, b. patientCurrentBPDiastolic
-	    FROM patientCurrentBP AS b JOIN patientInfo AS i ON b. patientID=i. patientID WHERE i. id=$current";
+		$SQLQuery = "SELECT b.date, b.patientCurrentBPSystolic, b.patientCurrentBPDiastolic
+	    FROM patientCurrentBP AS b JOIN patientInfo AS i ON b.patientID=i.patientID WHERE i.id='$current'";
 
 		$result = mysql_query($SQLQuery);
 		$num = mysql_num_rows($result);
