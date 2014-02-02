@@ -155,10 +155,10 @@ Stephan Holmes
 Graphs
 </div>
 <div id="chart_div" style="	position: relative;
-	vertical-align: middle;
+	left: 200px;
 	top:100px;
 	height:400px;
-	width:200px;
+	width:800px;
 	z-index: 5;"></div> 
 </div>
 
