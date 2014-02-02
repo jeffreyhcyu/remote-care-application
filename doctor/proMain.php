@@ -94,7 +94,7 @@ for ($i=1; $i<($num2+1); $i++)
 		(int) mysql_result($result, $i-1, "patientCurrentBPDiastolic") );
 }
 
-echo json_encode($data);
+json_encode($data);
 
 mysql_close();
 ?>
