@@ -133,8 +133,8 @@ Stephan Holmes
 <div id="graph_container">
 <div class="subtitle">
 Graphs
-<div id="chart_div" style="width: 640px; height: 520px;"></div> 
-
+<div id="chart_div"></div> 
+</div>
 
 <div id="info_container">
 <div class="subtitle">
