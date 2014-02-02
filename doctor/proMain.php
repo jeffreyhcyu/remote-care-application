@@ -78,7 +78,7 @@ window.location.href = "proMain.php?w1=" + idNum;
 		<?php
 
 		// enable sessions
-		session_start();
+		//session_start();
 
 		// Configure the MySQL connection
 		$username="3yp";
@@ -88,6 +88,7 @@ window.location.href = "proMain.php?w1=" + idNum;
 		mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 		@mysql_select_db($database);
 
+		$current=$_GET["w1"];
 
 		//Perform the SQL Query
 		$SQLQuery = "SELECT b.date, b.patientCurrentBPSystolic, b.patientCurrentBPDiastolic
