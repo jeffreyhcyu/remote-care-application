@@ -45,6 +45,12 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   }
 
+$result5 = mysql_query("SELECT i.id, i.patientID FROM patientInfo AS i JOIN patientTargetBP AS t ON t.patientID=i.patientID WHERE t.flag=0");
+
+$num5 = mysql_num_rows($result5);
+
+
+
 $current=$_GET["w1"];
 
 $result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
@@ -135,17 +141,6 @@ window.location.href = "proMain.php?w1=" + idNum;
 Normal
 </div>
 <?php
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-
-$result5 = mysql_query("SELECT i.id, i.patientID FROM patientInfo AS i JOIN patientTargetBP AS t ON t.patientID=i.patientID WHERE t.flag=0");
-
-$num5 = mysql_num_rows($result5);
-
 while($row5 = mysql_fetch_array($result5))
   {
   echo '<div class="Npatient" data-idNo=' . $row5['id']. '>'; //inserted the data tag data-id
@@ -154,20 +149,7 @@ while($row5 = mysql_fetch_array($result5))
   echo '</div>';
   echo '</div>';
   }
-
-$current=$_GET["w1"];
-
-$result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
-$med = mysql_fetch_array($result2);
-
-$result3 = mysql_query("SELECT * FROM patientInfo WHERE id=$current");
-$info=mysql_fetch_array($result3);
-
-
-
-mysql_close();
 ?>
-
 </div>
 
 </div>
