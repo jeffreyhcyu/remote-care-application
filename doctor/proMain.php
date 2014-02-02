@@ -32,7 +32,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
 
-$result = mysql_query("SELECT id, patientID FROM patientInfo");
+$result = mysql_query("SELECT i.id, i.patientID FROM patientInfo AS i JOIN patientTargetBP AS t ON t.patientID=i.patientID WHERE t.flag=1");
 
 $num = mysql_num_rows($result);
 
@@ -45,7 +45,18 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   }
 
+$result5 = mysql_query("SELECT i.id, i.patientID FROM patientInfo AS i JOIN patientTargetBP AS t ON t.patientID=i.patientID WHERE t.flag=0");
 
+$num5 = mysql_num_rows($result5);
+
+while($row5 = mysql_fetch_array($result5))
+  {
+  echo '<div class="Npatient" data-idNo=' . $row5['id']. '>'; //inserted the data tag data-id
+  echo '<div class="Identification" data-idNo=' . $row5['id']. '>';
+  echo $row5['patientID'] . " id:" . $row5['id'];
+  echo '</div>';
+  echo '</div>';
+  }
 
 $current=$_GET["w1"];
 
