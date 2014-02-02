@@ -186,12 +186,8 @@
 	position :relative;
 }
 
-#chart_title{
-	position: relative;
-	top:210px;
-	left:-133px;
-	z-index: 100;
-	font-size: 50px;
-	color: red;
-	font-family: arial;
+#chart_div{
+	height:400px;
+	width:200px;
+	z-index: 5;
 }
