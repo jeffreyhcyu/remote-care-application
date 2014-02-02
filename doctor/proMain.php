@@ -5,6 +5,32 @@
 <link rel="stylesheet" type="text/css" href="Cardiac_Track_Style_Pro.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(
+        <?php
+        // query MySQL and put results here
+        include 'graph-data.php';
+    ?>
+    );
+
+        var options = {
+          //title: 'Blood Pressure',
+          //titleTextStyle: {color: 'red', fontSize: '40', fontName: 'arial' },
+          //chartArea.top: '30',
+          //backgroundColor.stroke: {#80807D},
+          //vAxis.baselineColor: 'red',
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+         
+      }
+    </script>
+
 </head>
 <div class="full_screen">
 
@@ -53,6 +79,23 @@ $med = mysql_fetch_array($result2);
 $result3 = mysql_query("SELECT * FROM patientInfo WHERE id=$current");
 $info=mysql_fetch_array($result3);
 
+$result4 = mysql_query("SELECT b.date, b.patientCurrentBPSystolic, b.patientCurrentBPDiastolic
+	    FROM patientCurrentBP AS b JOIN patientInfo AS i ON b.patientID=i.patientID WHERE i.id=$current"); //this needs a double sql query
+$num2 = mysql_num_rows($result4);
+
+
+//This builds an array that contains the BP values. This array is then used by the javascript to make the chart.
+//Source code below provided by: http://www.kometschuh.de/GoogleChartToolswithJSON.html
+$data[0] = array('day','SystolicBP','DiastolicBP');		
+for ($i=1; $i<($num2+1); $i++)
+{
+    $data[$i] = array(substr(mysql_result($result, $i-1, "date"), 0, 10),
+    		(int) mysql_result($result, $i-1, "patientCurrentBPSystolic"),
+		(int) mysql_result($result, $i-1, "patientCurrentBPDiastolic") );
+}
+
+echo json_encode($data);
+
 mysql_close();
 ?>
 
@@ -90,9 +133,8 @@ Stephan Holmes
 <div id="graph_container">
 <div class="subtitle">
 Graphs
-</div>
-this is where the graphs will go 
-</div>
+<div id="chart_div" style="width: 640px; height: 520px;"></div> 
+
 
 <div id="info_container">
 <div class="subtitle">
