@@ -158,9 +158,9 @@ Graphs
 	left: 200px;
 	top:100px;
 	height:400px;
-	width:1300px;
-	opacity:0.7;
-	filter:alpha(opacity=70); /* For IE8 and earlier */
+	width:1100px;
+	opacity:0.9;
+	filter:alpha(opacity=90); /* For IE8 and earlier */
 	z-index: 5;"></div> 
 </div>
 
