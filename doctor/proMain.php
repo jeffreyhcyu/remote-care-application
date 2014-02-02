@@ -154,7 +154,12 @@ Stephan Holmes
 <div class="subtitle">
 Graphs
 </div>
-<div id="chart_div"></div> 
+<div id="chart_div" style="	position: relative;
+	vertical-align: middle;
+	top:100px;
+	height:400px;
+	width:200px;
+	z-index: 5;"></div> 
 </div>
 
 <div id="info_container">
