@@ -135,6 +135,7 @@ Stephan Holmes
 Graphs
 <div id="chart_div"></div> 
 </div>
+</div>
 
 <div id="info_container">
 <div class="subtitle">
