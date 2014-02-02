@@ -11,7 +11,10 @@
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable(
-        	 include 'graph-data-pro.php';
+        <?php
+        // query MySQL and put results here
+        include 'graph-data-pro.php';
+    ?>
     );
 
         var options = {
