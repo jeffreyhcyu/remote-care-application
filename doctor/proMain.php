@@ -157,7 +157,7 @@ Graphs
 <div id="chart_div" style="	position: relative;
 	left: 200px;
 	top:100px;
-	height:400px;
+	height:500px;
 	width:1100px;
 	opacity:0.9;
 	filter:alpha(opacity=90); /* For IE8 and earlier */
