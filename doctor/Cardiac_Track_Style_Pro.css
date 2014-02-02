@@ -188,6 +188,8 @@
 
 #chart_div{
 	position: relative;
+	vertical-align: middle;
+	top:100px;
 	height:400px;
 	width:200px;
 	z-index: 5;
