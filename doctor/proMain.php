@@ -59,7 +59,8 @@ $med = mysql_fetch_array($result2);
 $result3 = mysql_query("SELECT * FROM patientInfo WHERE id=$current");
 $info=mysql_fetch_array($result3);
 
-
+$result6 = mysql_query("SELECT * FROM doctorInfo WHERE id=5");
+$docInfo=mysql_fetch_array($result6);
 
 mysql_close();
 ?>
@@ -157,7 +158,7 @@ window.location.href = "proMain.php?w1=" + idNum;
 
 <div id="graph_container">
 <div class="subtitle">
-Graphs
+Welcome <?php $docInfo['prefix'] . $docInfo['firstName'] . $docInfo['secondName'] ?>
 </div>
 <div id="chart_div" style="	position: relative;
 	left: 200px;
