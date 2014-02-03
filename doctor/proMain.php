@@ -150,10 +150,6 @@ $( ".Identification" ).click(function() {
 var idNum = this.getAttribute("data-idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
 window.location.href = "proMain.php?w1=" + idNum;
-                $(".Identification").css('background-color', '#6F0000');
-                $(this).css('background-color', '#EBA521');
-                $(this).data("bgColor", "#EBA521")
-                return false;
 });
 </script>
 
