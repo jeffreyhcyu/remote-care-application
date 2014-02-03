@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=0.95; user-scalable=0;">
-<title>Cardiac Track App</title>
+<title>Cardiac Track Professional</title>
 <link rel="stylesheet" type="text/css" href="Pro_Login.css">
 
 <script type="text/javascript">
