@@ -26,7 +26,7 @@ document.forms["jsform"].submit();
 Cardiac Track
 </div>
 <div id="pro">
-Professional
+Pro
 </div>
 <div id="details_box">
 <form id="jsform" action="login.php" method="post">
