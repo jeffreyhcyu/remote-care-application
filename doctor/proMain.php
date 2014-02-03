@@ -59,7 +59,7 @@ $med = mysql_fetch_array($result2);
 $result3 = mysql_query("SELECT * FROM patientInfo WHERE id=$current");
 $info=mysql_fetch_array($result3);
 
-$result6 = mysql_query("SELECT * FROM doctorInfo WHERE id=5");
+$result6 = mysql_query("SELECT * FROM doctorInfo WHERE id=1");
 $docInfo=mysql_fetch_array($result6);
 
 mysql_close();
