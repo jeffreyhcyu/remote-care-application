@@ -80,3 +80,12 @@
 	left:780px;
 	top: 250px;
 }
+
+#professional{
+	font-family: Verdana;
+	font-style: italic;
+	font-size: 20px;
+	transform: rotate(10deg);
+	-ms-transform: rotate(10deg); /* IE 9 */
+	-webkit-transform: rotate(10deg); /* Safari and Chrome */
+}
