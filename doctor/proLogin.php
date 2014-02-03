@@ -17,6 +17,7 @@ document.forms["jsform"].submit();
 <body>
 <div class="pro_login_page">
 
+<div class="all_login">
 <div id="heartlogo">
 <img src="love-heart.png" width="158px" height="144px">
 </div>
@@ -51,6 +52,7 @@ Cardiac Track
 </table>
 </form>
 </div> 
+</div>
 </body>
 
 </html>
