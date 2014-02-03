@@ -150,6 +150,7 @@ $( ".Identification" ).click(function() {
 var idNum = this.getAttribute("data-idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
 window.location.href = "proMain.php?w1=" + idNum;
+$(this).css('background-color', '#EBA521');
 });
 </script>
 
