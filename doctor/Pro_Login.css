@@ -84,10 +84,10 @@
 #pro{
 	font-family: Verdana;
 	font-style: italic;
-	font-size: 20px;
+	font-size: 27px;
 	color: white;
 	position: relative;
-	top:230px;
+	top:250px;
 	left:220px;
 	z-index: 100;
 }
