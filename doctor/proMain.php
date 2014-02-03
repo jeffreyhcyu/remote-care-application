@@ -158,7 +158,7 @@ window.location.href = "proMain.php?w1=" + idNum;
 
 <div id="graph_container">
 <div class="subtitle">
-Welcome <?php echo $docInfo['prefix'] . ". " . $docInfo['firstName'] . " " . $docInfo['secondName'] ?>
+Current User <?php echo $docInfo['prefix'] . ". " . $docInfo['firstName'] . " " . $docInfo['secondName'] ?>
 </div>
 <div id="chart_div" style="	position: relative;
 	left: 200px;
