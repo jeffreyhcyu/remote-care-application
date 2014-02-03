@@ -25,7 +25,9 @@ document.forms["jsform"].submit();
 <div id="title">
 Cardiac Track
 </div>
-
+<div id="pro">
+Professional
+</div>
 <div id="details_box">
 <form id="jsform" action="login.php" method="post">
 <table id="login_table">
