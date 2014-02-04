@@ -5,6 +5,8 @@ session_start();
 if (isset($_SESSION['userID']))
 {
     //Continue to the page
+    // This sets the current user ID as php variable!
+    $doctorID = $_SESSION['userID'];
 }
 else
 {
@@ -39,6 +41,7 @@ Alerted
 
 
 <?php
+//Database connection to get all the patient data out
 $username="3yp";
 $DBpassword="project";
 $database="tallis";
@@ -46,7 +49,7 @@ $database="tallis";
 mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
-
+//Need to make this doctor specific!
 $result = mysql_query("SELECT i.id, i.patientID FROM patientInfo AS i JOIN patientTargetBP AS t ON t.patientID=i.patientID WHERE t.flag=1");
 
 $num = mysql_num_rows($result);
@@ -63,8 +66,6 @@ while($row = mysql_fetch_array($result))
 $result5 = mysql_query("SELECT i.id, i.patientID FROM patientInfo AS i JOIN patientTargetBP AS t ON t.patientID=i.patientID WHERE t.flag=0");
 
 $num5 = mysql_num_rows($result5);
-
-
 
 $current=$_GET["w1"];
 
@@ -88,8 +89,8 @@ mysql_close();
         var data = google.visualization.arrayToDataTable(
 		<?php
 
-		// enable sessions
-		//session_start();
+		// This PHP getes the chart data
+		
 
 		// Configure the MySQL connection
 		$username="3yp";
