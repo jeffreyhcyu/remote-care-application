@@ -23,7 +23,7 @@ $input_password=$_POST['password'];
 
 // Get and compare the hashed passwords:
 // Prepared statement
-$getHash = $db->prepare("SELECT patientPassword FROM patientTargetBP WHERE patientID=?");
+$getHash = $db->prepare("SELECT password FROM patientInfo WHERE patientID=?");
 if($getHash === false) {
   trigger_error('SQL Statement Error: ' . $db->error, E_USER_ERROR); // Error message if fails
 }

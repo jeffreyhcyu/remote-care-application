@@ -31,7 +31,7 @@ $submit->execute();
 
 //Get the patient's target Systolic BP:
 //Prepared statement
-$getSystolic = $db->prepare("SELECT patientTargetBPSystolic FROM patientTargetBP WHERE patientID=?");
+$getSystolic = $db->prepare("SELECT targetSystolic FROM patientInfo WHERE patientID=?");
 //Execute and get result
 $getSystolic->bind_param('s',$id);
 $getSystolic->execute();
@@ -41,7 +41,7 @@ $getSystolic->close();
 
 //Get the patient's target Diastolic BP:
 //Prepared statement
-$getDiastolic = $db->prepare("SELECT patientTargetBPDiastolic FROM patientTargetBP WHERE patientID=?");
+$getDiastolic = $db->prepare("SELECT targetDiastolic FROM patientInfo WHERE patientID=?");
 //Execute and get result
 $getDiastolic->bind_param('s',$id);
 $getDiastolic->execute();
@@ -88,7 +88,7 @@ else
 	{  
 	echo "Your Systolic BP is too high.";
 	echo "<br>";
-        $flag = 1;
+        $flag = "no"; //i.e bp not controlled
 	}
     
     //If Diastolic is high:
@@ -96,24 +96,26 @@ else
 	{  
 	echo "Your Diastolic BP is too high.";
 	echo "<br>";
-        $flag = 1;
+        $flag = "no";
 	}
 
     //If BP is lower than target on both:
     if ($targetSystolic >= $sysBP AND $targetDiastolic >= $diaBP)
 	{
-        $flag = 0;
+        $flag = "yes"; //i.e. bp is controlled
         }
     
-    //Now submit the flag to the database:
+    //Now submit the flag to the database.
+    //The flag is:BPcontrolled=yes/no
+    
     //Prepared statement
-    $setFlag = $db->prepare("UPDATE patientTargetBP SET flag=? WHERE patientID=?");
+    $setFlag = $db->prepare("UPDATE patientInfo SET BPcontrolled=? WHERE patientID=?");
     //Execute
-    $setFlag->bind_param('is',$flag,$id);
+    $setFlag->bind_param('ss',$flag,$id);
     $setFlag->execute();
     
     //If a flag is set for high BP, refer to doctor. Otherwise send to 'success' page:
-    if ($flag == 1)
+    if ($flag == "no") //Reminder: no = BP NOT controlled
         { 
         header("Location: https://3yp.villocq.com/patient/alert.php"); //Send to alert page
         }
