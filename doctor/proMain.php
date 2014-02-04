@@ -1,3 +1,18 @@
+<?php
+
+// Check the person is logged in!
+session_start();    
+if (isset($_SESSION['userID']))
+{
+    //Continue to the page
+}
+else
+{
+    //Login Failure
+header('Location: https://3yp.villocq.com/doctor'); 
+}
+?>
+
 <html>
 
 <head>
