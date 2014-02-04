@@ -426,10 +426,24 @@ UPDATE patientDrugs SET drug?class=? , drug?prescription=? , numberDrugs=? WHERE
 </preparedSQLStatement>
 </actionWriter>
 
+<!-- This sets the last review date as today-->
+<actionWriter taskName="update_status">
+<preparedSQLStatement dbName="tallis" params="PatientID">
+UPDATE patientInfo SET lastReview=curdate() WHERE patientID=(?)
+</preparedSQLStatement>
+</actionWriter>
+
 <!-- TreatmentPlan:EXISTING DRUG: SAVE the corrected drug dose.Table:patientDrugs -->
 <actionWriter taskName="update_status_2">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs Dosage_change PatientID">
 UPDATE patientDrugs SET drug?prescription=? WHERE patientID=(?)
+</preparedSQLStatement>
+</actionWriter>
+
+<!-- This sets the last review date as today-->
+<actionWriter taskName="update_status_2">
+<preparedSQLStatement dbName="tallis" params="PatientID">
+UPDATE patientInfo SET lastReview=curdate() WHERE patientID=(?)
 </preparedSQLStatement>
 </actionWriter>
 
