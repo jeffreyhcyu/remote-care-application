@@ -88,7 +88,7 @@ else
 	{  
 	echo "Your Systolic BP is too high.";
 	echo "<br>";
-        $flag = "no"; //i.e bp not controlled
+        $flag = "No"; //i.e bp not controlled
 	}
     
     //If Diastolic is high:
@@ -96,13 +96,13 @@ else
 	{  
 	echo "Your Diastolic BP is too high.";
 	echo "<br>";
-        $flag = "no";
+        $flag = "No";
 	}
 
     //If BP is lower than target on both:
     if ($targetSystolic >= $sysBP AND $targetDiastolic >= $diaBP)
 	{
-        $flag = "yes"; //i.e. bp is controlled
+        $flag = "Yes"; //i.e. bp is controlled
         }
     
     //Now submit the flag to the database.
@@ -115,7 +115,7 @@ else
     $setFlag->execute();
     
     //If a flag is set for high BP, refer to doctor. Otherwise send to 'success' page:
-    if ($flag == "no") //Reminder: no = BP NOT controlled
+    if ($flag == "No") //Reminder: no = BP NOT controlled
         { 
         header("Location: https://3yp.villocq.com/patient/alert.php"); //Send to alert page
         }
