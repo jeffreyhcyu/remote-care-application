@@ -431,7 +431,7 @@ patientInfo.lastReview=curdate() WHERE patientDrugs.patientID=(?) AND patientInf
 <!-- TreatmentPlan:EXISTING DRUG: SAVE the corrected drug dose.Table:patientDrugs -->
 <actionWriter taskName="update_status_2">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs Dosage_change PatientID PatientID">
-UPDATE patientDrugs,patientInfo SET patientDrugs.drug?prescription=(?)
+UPDATE patientDrugs,patientInfo SET patientDrugs.drug?prescription=(?),
 patientInfo.lastReview=curdate() WHERE patientDrugs.patientID=(?) AND patientInfo.patientID=(?)
 </preparedSQLStatement>
 </actionWriter>
