@@ -49,39 +49,39 @@ $getDiastolic->bind_result($targetDiastolic);
 $getDiastolic->fetch();
 $getDiastolic->close();
 
-//Date checking. $DaysElapsed is days betwwen first BP reading in the database and today.
-// ==>> NB! Need to think of a way to reset the count when secondary treatment is enacted!
-//Get earliest date that data was submitted:
+//Date checking.
+//Get the next review date:
 //Prepared statement
-$getDate = $db->prepare("SELECT min(date) FROM patientCurrentBP WHERE patientID=?");
+$getDate = $db->prepare("SELECT nextReview FROM patientInfo WHERE patientID=?");
 //Execute & get
 $getDate->bind_param('s',$id);
 $getDate->execute();
-$getDate->bind_result($earliestDate);
+$getDate->bind_result($reviewDate);
 $getDate->fetch();
 $getDate->close();
 
-//Now get a difference in days between earliestDate and today:
+//Now get a difference in days between reviewDate and today (as DaysRemaining)
 //Prepared statement
-$dateDiff = $db->prepare("SELECT DATEDIFF(now(),?) AS date_difference");
+$dateDiff = $db->prepare("SELECT DATEDIFF(?,now()) AS date_difference");
 //Execute & get
-$dateDiff->bind_param('s',$earliestDate);
+$dateDiff->bind_param('s',$reviewDate);
 $dateDiff->execute();
-$dateDiff->bind_result($daysElapsed);
+$dateDiff->bind_result($daysRemaining);
 $dateDiff->fetch();
 $dateDiff->close();
 
 //Decision Logic for the target BP checking
 //
-// First check if 30 days has elapsed:
-if ($daysElapsed < 30)
+// First check if review is due:
+if ($daysRemaining > 0)
     {
-    $daysRemaining=30-$daysElapsed;
+        //Review not due, redirect:
     header("Location: https://3yp.villocq.com/patient/pending.php"); 
     $_SESSION['daysRemaining'] = $daysRemaining;
     }
     
 else
+    //Review is due:
     {
     // If Systolic is high:
     if ($targetSystolic < $sysBP)
