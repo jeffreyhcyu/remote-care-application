@@ -419,7 +419,7 @@ SELECT class FROM drugList WHERE drug=(SELECT drug? FROM patientDrugs WHERE pati
 </preparedSQLStatement>
 </enquiryReader>
 
-<!-- This edits the saved data to strip the '[]' and "" characters -->
+<!-- TreatmentPlan:This edits the saved data to strip the '[]' and "" characters -->
 <actionWriter taskName="stripChars">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs Number_of_drugs Number_of_drugs Number_of_drugs PatientID">
 UPDATE patientDrugs SET drug? = REPLACE(drug?,'["',''),drug? = REPLACE(drug?,'"]','') WHERE patientID=(?)
@@ -434,7 +434,6 @@ patientInfo.lastReview=curdate() WHERE patientDrugs.patientID=(?) AND patientInf
 </preparedSQLStatement>
 </actionWriter>
 
-
 <!-- TreatmentPlan:EXISTING DRUG: SAVE the corrected drug dose.Table:patientDrugs -->
 <actionWriter taskName="update_status_2">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs Dosage_change PatientID PatientID">
@@ -443,7 +442,26 @@ patientInfo.lastReview=curdate() WHERE patientDrugs.patientID=(?) AND patientInf
 </preparedSQLStatement>
 </actionWriter>
 
+<!-- TreatmentPlan:Set Next Review date to 28 days time.Table:patientInfo -->
+<actionWriter taskName="set_28_days">
+<preparedSQLStatement dbName="tallis" params="PatientID">
+UPDATE patientInfo SET nextReview=DATE_ADD(CURDATE(),INTERVAL 28 DAY) WHERE patientID=(?)
+</preparedSQLStatement>
+</actionWriter>
 
+<!-- TreatmentPlan:Set Next Review date to 14 days time.Table:patientInfo -->
+<actionWriter taskName="set_14_days">
+<preparedSQLStatement dbName="tallis" params="PatientID">
+UPDATE patientInfo SET nextReview=DATE_ADD(CURDATE(),INTERVAL 14 DAY) WHERE patientID=(?)
+</preparedSQLStatement>
+</actionWriter>
+
+<!-- TreatmentPlan:Set Next Review date to 7 days time.Table:patientInfo -->
+<actionWriter taskName="set_7_days">
+<preparedSQLStatement dbName="tallis" params="PatientID">
+UPDATE patientInfo SET nextReview=DATE_ADD(CURDATE(),INTERVAL 7 DAY) WHERE patientID=(?)
+</preparedSQLStatement>
+</actionWriter>
 <!-- Blank EnquiryWriter-->
 <enquiryWriter taskName="blahlb">
 <preparedSQLStatement dbName="tallis" params="patientID patientsName symptoms">
