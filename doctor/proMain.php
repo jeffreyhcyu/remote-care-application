@@ -34,7 +34,7 @@ Patients
 </div>
 <div id="alert">
 <div id="alerted">
-Alerted
+High BP
 </div>
 
 
