@@ -48,7 +48,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
 //Need to make this doctor specific!
-$result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No'");
+$result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID='$doctorID'");
 
 $num = mysql_num_rows($result);
 
@@ -61,7 +61,7 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   }
 
-$result5 = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes'");
+$result5 = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes' AND doctorID='$doctorID'");
 
 $num5 = mysql_num_rows($result5);
 
