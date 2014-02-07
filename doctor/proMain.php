@@ -22,8 +22,6 @@ header('Location: https://3yp.villocq.com/doctor');
 <link rel="stylesheet" type="text/css" href="Cardiac_Track_Style_Pro.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
-
-
 </head>
 <div class="full_screen">
 
@@ -50,7 +48,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
 //Need to make this doctor specific!
-$result = mysql_query("SELECT i.id, i.patientID FROM patientInfo AS i JOIN patientTargetBP AS t ON t.patientID=i.patientID WHERE t.flag=1");
+$result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No'");
 
 $num = mysql_num_rows($result);
 
@@ -63,7 +61,7 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   }
 
-$result5 = mysql_query("SELECT i.id, i.patientID FROM patientInfo AS i JOIN patientTargetBP AS t ON t.patientID=i.patientID WHERE t.flag=0");
+$result5 = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes'");
 
 $num5 = mysql_num_rows($result5);
 
