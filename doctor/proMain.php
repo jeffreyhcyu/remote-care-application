@@ -34,25 +34,26 @@ Patients
 </div>
 <div id="alert">
 <div id="alerted">
-Alerted
+BP High
 </div>
 
-
 <?php
-//Database connection to get all the patient data out
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
 
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
+// Configure the MySQL connection parameters
+$server='remote.villocq.com';
+$username='3yp';
+$DBpassword='project';
+$database='tallis';
 
-//Need to make this doctor specific!
-$result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID='$doctorID'");
+// New MySQLi Instance
+$db = new mysqli($server,$username,$DBpassword,$database);
 
-$num = mysql_num_rows($result);
+//Get High BP patients
+$result = $db->prepare("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID=?");
+$result->bind_param('s',$doctorID);
+$result->execute();
 
-while($row = mysql_fetch_array($result))
+while($row = $result->fetch_assoc())
   {
   echo '<div class="Apatient" data-idNo=' . $row['id']. '>'; //inserted the data tag data-id
   echo '<div class="Identification" data-idNo=' . $row['id']. '>';
@@ -61,22 +62,32 @@ while($row = mysql_fetch_array($result))
   echo '</div>';
   }
 
-$result5 = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes' AND doctorID='$doctorID'");
+$result->close();
 
-$num5 = mysql_num_rows($result5);
-
+//Current patient ID
 $current=$_GET["w1"];
 
-$result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
-$med = mysql_fetch_array($result2);
+//Get patient's drugs
+$result2 = $db->prepare("SELECT * FROM patientDrugs WHERE id=?");
+$result2->bind_param('s',$current);
+$result2->execute();
+$med = mysqli_fetch_array($result2);
+$result2->close();
 
-$result3 = mysql_query("SELECT * FROM patientInfo WHERE id=$current");
-$info=mysql_fetch_array($result3);
+//Get patient personal info
+$result3 = $db->prepare("SELECT * FROM patientInfo WHERE id=?");
+$result3->bind_param('s',$current);
+$result3->execute();
+$info = mysqli_fetch_array($result3);
+$result3->close();
 
-$result6 = mysql_query("SELECT * FROM doctorInfo WHERE id=$doctorID");
-$docInfo=mysql_fetch_array($result6);
+//Get Doctor info
+$result6 = $db->prepare("SELECT * FROM doctorInfo WHERE id=?");
+$result6->bind_param('s',$doctorID);
+$result6->execute();
+$docInfo=mysqli_fetch_array($result6);
+$result6->close();
 
-mysql_close();
 ?>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -87,9 +98,8 @@ mysql_close();
         var data = google.visualization.arrayToDataTable(
 		<?php
 
-		// This PHP getes the chart data
+		// This PHP gets the chart data
 		
-
 		// Configure the MySQL connection
 		$username="3yp";
 		$DBpassword="project";
@@ -147,7 +157,13 @@ mysql_close();
 Normal
 </div>
 <?php
-while($row5 = mysql_fetch_array($result5))
+
+// Get Normal BP patients
+$result5 = $db->prepare("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes' AND doctorID=?");
+$result5->bind_param('s',$doctorID);
+$result5->execute();
+
+while($row5 = $row = $result5->fetch_assoc())
   {
   echo '<div class="Npatient" data-idNo=' . $row5['id']. '>'; //inserted the data tag data-id
   echo '<div class="Identification" data-idNo=' . $row5['id']. '>';
@@ -155,7 +171,10 @@ while($row5 = mysql_fetch_array($result5))
   echo '</div>';
   echo '</div>';
   }
+
+$result5->close();
 ?>
+
 </div>
 
 <script>
