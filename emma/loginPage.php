@@ -40,13 +40,6 @@ document.forms["jsform"].submit();
     <div class="push"></div>
 
 </div>
-
-<footer class="footer">
-	<ul>
-          <a href="siteTerms.html"><li>Site Terms</li></a>
-          <a href="aboutUs.html"><li>About Us</li></a>
-	</ul>
-</footer>    
-      
+     
 </body>
 </html>
