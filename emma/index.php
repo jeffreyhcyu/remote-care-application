@@ -1,4 +1,31 @@
-<!doctype html>
+<?php
+
+// Check the person is logged in!
+session_start();    
+if (isset($_SESSION['userID']))
+{
+    //Continue to the page
+    // This sets the current user ID as php variable!
+    $doctorID = $_SESSION['userID'];
+}
+else
+{
+    //Login Failure
+header('Location: https://3yp.villocq.com/emma/loginPage.php'); 
+}
+?>
+
+<?php
+//Database connection to get all the patient data out
+$username="3yp";
+$DBpassword="project";
+$database="tallis";
+
+mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+@mysql_select_db($database);
+?>
+
+
 <html>
 <head>
 <meta charset="utf-8">
@@ -31,7 +58,7 @@
 
   <article class="content">
     
-    <h3>Welcome, Dr &lt;insert name&gt;</h3>
+    <h3>Welcome, Dr <?php echo $docInfo['prefix'] . ". " . $docInfo['firstName'] . " " . $docInfo['secondName'] ?></h3>
     
     <section>
       <h4>How to use this site:</h4>
