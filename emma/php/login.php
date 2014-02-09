@@ -1,5 +1,5 @@
 <?php
-// Login Form
+// Login Form for Doctor's portal
 
 // enable sessions
 session_start();
@@ -18,12 +18,12 @@ if ($db->connect_error) {
 }
 
 //Assign the login form POST output to PHP variables
-$id=$_POST['username'];
+$id=$_POST['textfield'];
 $input_password=$_POST['password'];
 
 // Get and compare the hashed passwords:
 // Prepared statement
-$getHash = $db->prepare("SELECT patientPassword FROM patientTargetBP WHERE patientID=?");
+$getHash = $db->prepare("SELECT password FROM doctorInfo WHERE id=?");
 if($getHash === false) {
   trigger_error('SQL Statement Error: ' . $db->error, E_USER_ERROR); // Error message if fails
 }
