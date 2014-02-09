@@ -49,7 +49,7 @@ header('Location: https://3yp.villocq.com/emma/index.php');
 }
 else
 {
-    $_SESSION['loginMessage'] = 'Login Error';
+    $_SESSION['loginMessage'] = 'Incorrect login details. Please try again.';
     header('Location: https://3yp.villocq.com/emma/loginPage.php'); 
 }
 
