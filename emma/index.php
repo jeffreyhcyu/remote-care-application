@@ -45,10 +45,10 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
     <div class="sidebar1">
 		<nav>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="existingPatients.html">Existing patients</a></li>
-              <li><a href="newPatient.html">Add a new patient</a></li>
-              <li><a href="login.html">Log out</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="existingPatients.php">Existing patients</a></li>
+              <li><a href="newPatient.php">Add a new patient</a></li>
+              <li><a href="loginPage.php">Log out</a></li>
             </ul>
       </nav>
       <aside>

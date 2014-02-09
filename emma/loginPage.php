@@ -28,10 +28,12 @@ document.forms["jsform"].submit();
       <input type="password" name="password" id="password">
       <input type="button" value="Log In" onClick="location.href='javascript: submitform()'">
 	<br>
+	<article>
 		<?php
 		session_start();
 		echo $_SESSION['loginMessage'];
 		?>
+	</article>
       </form>
     </section>
       
