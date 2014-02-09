@@ -58,7 +58,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 
   <article class="content">
     
-    <h3>Welcome, <?php echo $docInfo['prefix'] . ". " . $docInfo['firstName'] . " " . $docInfo['secondName'] ?></h3>
+    <h3>Welcome, <?php echo $docInfo['prefix'] . ". " . $docInfo['firstName'] . " " . $docInfo['secondName'] ;?></h3>
     
     <section>
       <h4>How to use this site:</h4>
