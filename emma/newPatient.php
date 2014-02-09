@@ -29,7 +29,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 <html>
 <head>
 <meta charset="utf-8">
-<title>Cardiac Track Pro - Home</title>
+<title>Cardiac Track Pro - Add a new patient</title>
 
 <link href="styles/style.css" rel="stylesheet" type="text/css">
 <body>
@@ -39,7 +39,8 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
   	  <label for="search2">Patient ID:</label>
       <input type="search" name="search2" id="search2">
       <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
-    <section id="searchbar"></section>
+<nav></nav>
+      <section id="searchbar"></section>
   	</header>
     
     <div class="sidebar1">
@@ -58,36 +59,60 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 
   <article class="content">
     
-    <h3>Welcome, <?php echo $docInfo['prefix'] . ". " . $docInfo['firstName'] . " " . $docInfo['secondName'];?></h3>
+    <h3>Add a new patient:</h3>
     
     <section>
-      <h4>How to use this site:</h4>
-      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+      <p>Is patient suitable? Please tick all that apply. </p>
+      <p>&nbsp;</p>
     </section>
     
     <section>
-      <h4>Manage patients:</h4>
-      <p>Search for an existing patient using their patient ID</p>
-      <p>
-        <label for="search">Patient ID:</label>
-        <input type="search" name="search" id="search">
-        <input type="button" name="button" id="button" value="Search" onClick="location.href='existingPatients.php'">
-      </p>
-      <p>Or click here to create a <a href="newPatient.php">new patient profile</a></p>
+      <form id="form1" name="form1" method="post">
+        <table width="540">
+          <tr>
+            <td><label>
+              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_0">
+              Patient has been diagnosed with Type I or Type II diabetes</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_1">
+              Patient is in a state of hypertensive crisis</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_2">
+              Patient has secondary hypertension</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_3">
+              Patient is pregnant</label></td>
+          </tr>
+          <tr>
+            <td><label>
+              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_4">
+              Patient is younger than 18 years of age</label></td>
+          </tr>
+        </table>
+<section id="submit">
+<br>
+        <input type="button" name="next" id="next" value="Next" onClick="location.href='newPatientDetails.php'">
+        </section>
+      </form>
     </section>
     
     
   </article>
-  <div class="push"></div>
-</div>  
-  
+<div class="push"></div>
+</div>
+
   <footer class="footer">
 	<ul>
           <a href="siteTerms.html"><li>Site Terms</li></a>
           <a href="aboutUs.html"><li>About Us</li></a>
 	</ul>
   </footer>    
-
 
 </body>
 </html>
