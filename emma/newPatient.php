@@ -15,17 +15,6 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 }
 ?>
 
-<?php
-//Database connection to get all the patient data out
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-?>
-
-
 <html>
 <head>
 <meta charset="utf-8">
@@ -67,37 +56,38 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
     </section>
     
     <section>
-      <form id="form1" name="form1" method="post">
+      <form id="suitability" action="suitable.php" name="suitability" method="post">
         <table width="540">
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_0">
+              <input type="checkbox" name="disclaimer[]" value="A" id="diabetes">
               Patient has been diagnosed with Type I or Type II diabetes</label></td>
           </tr>
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_1">
+              <input type="checkbox" name="disclaimer[]" value="B" id="HTcrisis">
               Patient is in a state of hypertensive crisis</label></td>
           </tr>
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_2">
+              <input type="checkbox" name="disclaimer[]" value="C" id="secondaryHT">
               Patient has secondary hypertension</label></td>
           </tr>
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_3">
+              <input type="checkbox" name="disclaimer[]" value="D" id="pregnant">
               Patient is pregnant</label></td>
           </tr>
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer" value="checkbox" id="disclaimer_4">
+              <input type="checkbox" name="disclaimer[]" value="E" id="young">
               Patient is younger than 18 years of age</label></td>
           </tr>
         </table>
 <section id="submit">
 <br>
-        <input type="button" name="next" id="next" value="Next" onClick="location.href='newPatientDetails.php'">
+        <input type="submit" name="next" id="next" value="Next">
+		
         </section>
       </form>
     </section>
