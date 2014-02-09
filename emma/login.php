@@ -45,7 +45,7 @@ if ($checkPassword)
     $_SESSION['userID'] = $id;
     $_SESSION['loginMessage'] = '';
     
-header('Location: https://3yp.villocq.com/emma/index.html'); 
+header('Location: https://3yp.villocq.com/emma/index.php'); 
 }
 else
 {
