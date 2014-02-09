@@ -27,6 +27,7 @@ document.forms["jsform"].submit();
       <label for="password">Password:</label>
       <input type="password" name="password" id="password">
       <input type="button" value="Log In" onClick="location.href='javascript: submitform()'">
+	<br>
 		<?php
 		session_start();
 		echo $_SESSION['loginMessage'];
