@@ -35,10 +35,10 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 <body>
 
 <div class="container">
-  	<header><a href="index.html"><img src="images/logo.png" width="600" height="31" alt=""/></a>
+  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
   	  <label for="search2">Patient ID:</label>
       <input type="search" name="search2" id="search2">
-      <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.html'">
+      <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
     <section id="searchbar"></section>
   	</header>
     
@@ -71,9 +71,9 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
       <p>
         <label for="search">Patient ID:</label>
         <input type="search" name="search" id="search">
-        <input type="button" name="button" id="button" value="Search" onClick="location.href='existingPatients.html'">
+        <input type="button" name="button" id="button" value="Search" onClick="location.href='existingPatients.php'">
       </p>
-      <p>Or click here to create a <a href="newPatient.html">new patient profile</a></p>
+      <p>Or click here to create a <a href="newPatient.php">new patient profile</a></p>
     </section>
     
     
