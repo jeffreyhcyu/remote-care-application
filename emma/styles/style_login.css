@@ -1,18 +1,28 @@
 @charset "utf-8";
+*{
+	margin:0;
+}
+html, body {
+	height: 100%;
+}
 
 body {
 	background-color: #F1F1EF;
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 ul, ol, dl {
 	padding: 0;
 	margin: 0;
 }
 .container {
+	min-height:100%
+	height: auto!important;
+	height: 100%;
 	width: 960px;
 	background-color: #FFFFFF;
-	margin: 0 auto;
+	margin: 0 auto -4em;
 	font-family: Verdana;
 	color: #07536E;
 	font-weight: normal;
@@ -21,36 +31,38 @@ ul, ol, dl {
 header {
 	background-color: #FFFFFF;
 	display: inline;
-	padding-top: 200px;
 }
-footer {
-	padding-top: 5px;
-	padding-right: 0;
-	padding-left: 0;
-	padding-bottom: 50px;
-	background-color: #4D4D4D;
+.footer, .push {
+	height: 4em;
+}
+.footer {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 	position: relative;
-	clear: both;
-	height: 0px;
+	background-color: #4D4D4D;
 	color: #FFFFFF;
 	font-family: Verdana;
 	font-weight: normal;
-}
-section, footer {
 	display: block;
+}
+section {
+	display: block;
+	padding-top: 5px;
 }
 .footer ul {
 	list-style-type: none;
 }
 .footer a {
+	padding-top: 5px;
+	padding-left: 15px;
 	float: left;
 	display: block;
-	width: 12%;
 	text-align: center;
 	color: #FFFFFF;
 	text-decoration: none;
+	width: 10%;
 }
 .footer a:hover, a:active, a:focus {
 	text-decoration: underline;
-.container header #searchbar {
 }

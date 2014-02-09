@@ -1,0 +1,142 @@
+@charset "utf-8";
+*{
+	margin:0;
+}
+html, body {
+	height: 100%;
+}
+body {
+	font: Verdana;
+	background-color: #F1F1EF;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	text-align:center;
+}
+ul, ol, dl {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 5px;
+}
+nav a:link {
+	color: #07536E;
+	text-decoration: none;
+}
+nav a:visited {
+	color: #07536E;
+	text-decoration: none;
+}
+.container {
+	min-height:100%
+	height: auto!important;
+	height: 100%;
+	width: 960px;
+	background-color: #FFFFFF;
+	margin: 0 auto -4em;
+	font-family: Verdana;
+	color: #07536E;
+	font-weight: normal;
+	text-align: left;
+}
+header {
+	background-color: #FFFFFF;
+	display: inline;
+}
+.sidebar1 {
+	float: left;
+	width: 200px;
+	background-color: #FFFFFF;
+	padding-bottom: 10px;
+	padding-top: 15px;
+}
+.content {
+	padding-top: 15px;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 10px;
+	width: 760px;
+	float: right;
+}
+.content ul, .content ol {
+	padding: 0 15px 15px 40px;
+}
+nav ul{
+	list-style: none;
+	margin-bottom: 15px;
+}
+nav a, nav a:visited {
+	padding-top: 5px;
+	padding-left: 15px;
+	padding-bottom: 5px;
+	display: block;
+	width: 180px;
+	background-color: #FFFFFF;
+	padding-right: 5px;
+}
+nav a:hover, nav a:active, nav a:focus {
+	background-color: #FFFFFF;
+	color: #56099A;
+	text-decoration: underline;
+}
+.footer, .push {
+	height: 4em;
+}
+.footer {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	background-color: #4D4D4D;
+	color: #FFFFFF;
+	font-family: Verdana;
+	font-weight: normal;
+	display: block;
+}
+section, aside, article, figure {
+	display: block;
+	padding-top: 5px;
+}
+.container header img {
+	padding-left: 15px;
+	padding-top: 10px;
+}
+.footer ul {
+	list-style-type: none;
+}
+.footer a {
+	float: left;
+	display: block;
+	width: 10%;
+	padding-top: 5px;
+	padding-left: 15px;
+	text-align: center;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.content a:link {
+	color: #000000;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.content a:visited {
+	color: #610C6C;
+	text-decoration: underline;
+}
+.content a:hover, a:active, a:focus {
+	text-decoration: underline;
+	color: #07536E;
+}
+.footer a:hover, a:active, a:focus {
+	text-decoration: underline;
+}
+.container header #searchbar {
+ 	color: #FFFFFF;
+}
+article {
+	color: #000000;
+}

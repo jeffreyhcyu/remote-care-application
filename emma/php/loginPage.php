@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Cardiac Track Pro - Log In</title>
 
-<link href="style_login.css" rel="stylesheet" type="text/css">
+<link href="styles/style_login.css" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
 function submitform()
@@ -18,7 +18,7 @@ document.forms["jsform"].submit();
 
 <div class="container">
 
-  	<header><img src="logo_login.png" width="960" height="40" alt=""/>
+  	<header><img src="images/logo_login.png" width="960" height="40" alt=""/>
   	</header>
     
     <section id="login">
