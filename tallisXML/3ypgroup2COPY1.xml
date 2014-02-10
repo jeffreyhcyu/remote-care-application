@@ -426,6 +426,22 @@ UPDATE patientDrugs SET drug? = REPLACE(REPLACE(drug?,'"]',''),'["','')WHERE pat
 </preparedSQLStatement>
 </actionWriter>
 
+<!-- treatment_status_READ: Get MaxDose yes/no from proposed new prescription Table: drugList-->
+<enquiryReader taskName="maxDoseCheck" dataItem="max_dose_check">
+<preparedSQLStatement dbName="tallis" params="oldDrug Dosage_change oldDrug Dosage_change">
+SELECT * FROM   (
+		SELECT 
+		    CASE 
+			WHEN drugList.drug = (?) AND drugList.maxDose >= (?) THEN 'No'
+			WHEN drugList.drug = (?) AND (?) > drugList.maxDose  THEN 'Yes'
+		    END AS result
+                FROM drugList
+		)
+AS result
+WHERE result IS NOT NULL
+</preparedSQLStatement>
+</enquiryReader>
+
 <!-- TreatmentPlan:NEW DRUG: SAVE the drug dose and drug class.Table:patientDrugs -->
 <actionWriter taskName="update_status">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs newClass Number_of_drugs newDose Number_of_drugs PatientID PatientID">
