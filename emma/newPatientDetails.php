@@ -55,7 +55,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
     </section>
     
     <section>
-      <form id="form1" name="form1" method="post">
+      <form id="details" name="details" method="post" action="details.php">
         <section id="submit">
           <p>
             <label for="select">Age group:</label>
@@ -80,7 +80,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
             <label for="radio4">No </label>
           </p> 
           <br>
-            <input type="button" name="next" id="next" value="Next" onClick="location.href='newPatientComorbidities.html'">
+            <input type="submit" name="next" id="next" value="Next">
           </p>
         </section>
       </form>

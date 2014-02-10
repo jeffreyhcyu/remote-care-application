@@ -52,7 +52,6 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
     
     <section>
       <p>Is patient suitable? Please tick all that apply. </p>
-      <p>&nbsp;</p>
     </section>
     
     <section>
@@ -84,10 +83,10 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
               Patient is younger than 18 years of age</label></td>
           </tr>
         </table>
-<section id="submit">
-<br>
+
+     	<section id="submit">
+	<br>
         <input type="submit" name="next" id="next" value="Next">
-		
         </section>
       </form>
     </section>
