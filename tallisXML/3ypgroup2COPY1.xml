@@ -400,8 +400,7 @@ SELECT drug? FROM patientDrugs WHERE patientID=(?)
 
 <!-- TreatmentPlan: Save NewTreatment drug option. Table: patientDrugs-->
 <decisionWriter taskName="New_Treatment">
-<preparedSQLStatement dbName="tallis" params="Number_of_drugs SELECTION patientID 
-Number_of_drugs Number_of_drugs Number_of_drugs Number_of_drugs">
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs SELECTION patientID">
 UPDATE patientDrugs SET drug? = REPLACE(REPLACE('?','"]',''),'["','') WHERE patientID=(?);
 </preparedSQLStatement>
 </decisionWriter>
@@ -422,8 +421,8 @@ SELECT class FROM drugList WHERE drug=(SELECT drug? FROM patientDrugs WHERE pati
 
 <!-- TreatmentPlan:This edits the saved data to strip the '[]' and "" characters -->
 <actionWriter taskName="stripChars">
-<preparedSQLStatement dbName="tallis" params="Number_of_drugs Number_of_drugs Number_of_drugs Number_of_drugs PatientID">
-UPDATE patientDrugs SET drug? = REPLACE(drug?,'["',''),drug? = REPLACE(drug?,'"]','') WHERE patientID=(?)
+<preparedSQLStatement dbName="tallis" params="Number_of_drugs Number_of_drugs PatientID">
+UPDATE patientDrugs SET drug? = REPLACE(REPLACE(drug?,'"]',''),'["','')WHERE patientID=(?)
 </preparedSQLStatement>
 </actionWriter>
 
