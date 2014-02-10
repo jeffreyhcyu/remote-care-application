@@ -401,7 +401,7 @@ SELECT drug? FROM patientDrugs WHERE patientID=(?)
 <!-- TreatmentPlan: Save NewTreatment drug option. Table: patientDrugs-->
 <decisionWriter taskName="New_Treatment">
 <preparedSQLStatement dbName="tallis" params="Number_of_drugs SELECTION patientID">
-UPDATE patientDrugs SET drug? = REPLACE(REPLACE('?','"]',''),'["','') WHERE patientID=(?);
+UPDATE patientDrugs SET drug? = REPLACE(REPLACE((?),'"]',''),'["','') WHERE patientID=(?);
 </preparedSQLStatement>
 </decisionWriter>
 
