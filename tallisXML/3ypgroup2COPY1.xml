@@ -479,8 +479,8 @@ INSERT INTO PATIENT_DATA (PATIENT_ID, NAME, SYMPTOMS) VALUES (?, ?, ?)
 
 <!-- Treatment_change: writing base blood test values-->
 <enquiryWriter taskName="blood_base_WRITE">
-<preparedSQLStatement dbName="tallis" params="eGFR_base serum_creatine_base serum_potassium_base patientID">
-UPDATE patientInfo SET eGFRbase =(?),creatinebase=(?),potassiumbase=(?) WHERE patientID=(?)
+<preparedSQLStatement dbName="tallis" params="eGFR_base serum_creatinine_base serum_potassium_base patientID">
+UPDATE patientInfo SET eGFRbase =(?),creatininebase=(?),potassiumbase=(?) WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryWriter>
 
@@ -491,9 +491,9 @@ SELECT eGFRbase FROM patientInfo WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 
-<enquiryReader taskName="blood_base_READ" dataItem="serum_creatine_base">
+<enquiryReader taskName="blood_base_READ" dataItem="serum_creatinine_base">
 <preparedSQLStatement dbName="tallis" params="patientID">
-SELECT creatinebase FROM patientInfo WHERE patientID=(?)
+SELECT creatininebase FROM patientInfo WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 
