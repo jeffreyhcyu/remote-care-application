@@ -475,7 +475,6 @@ UPDATE patientInfo SET nextReview=DATE_ADD(CURDATE(),INTERVAL 7 DAY) WHERE patie
 INSERT INTO PATIENT_DATA (PATIENT_ID, NAME, SYMPTOMS) VALUES (?, ?, ?)
 </preparedSQLStatement>
 </enquiryWriter>
-</proformaDataMapping>
 
 <!-- Treatment_change: writing base blood test values-->
 <enquiryWriter taskName="blood_base_WRITE">
