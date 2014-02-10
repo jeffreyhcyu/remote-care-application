@@ -476,3 +476,29 @@ INSERT INTO PATIENT_DATA (PATIENT_ID, NAME, SYMPTOMS) VALUES (?, ?, ?)
 </preparedSQLStatement>
 </enquiryWriter>
 </proformaDataMapping>
+
+<!-- Treatment_change: writing base blood test values-->
+<enquiryWriter taskName="blood_base_WRITE">
+<preparedSQLStatement dbName="tallis" params="eGFR_base serum_creatine_base serum_potassium_base patientID">
+UPDATE patientInfo SET eGFRbase =(?),creatinebase=(?),potassiumbase=(?) WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryWriter>
+
+<!-- TItration assessment: reading base blood test values-->
+<enquiryReader taskName="blood_base_READ" dataItem="eGFR_base">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT eGFRbase FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="blood_base_READ" dataItem="serum_creatine_base">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT creatinebase FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
+
+<enquiryReader taskName="blood_base_READ" dataItem="serum_potassium_base">
+<preparedSQLStatement dbName="tallis" params="patientID">
+SELECT potassiumbase FROM patientInfo WHERE patientID=(?)
+</preparedSQLStatement>
+</enquiryReader>
