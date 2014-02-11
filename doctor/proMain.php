@@ -76,6 +76,11 @@ $info=mysql_fetch_array($result3);
 $result6 = mysql_query("SELECT * FROM doctorInfo WHERE id=$doctorID");
 $docInfo=mysql_fetch_array($result6);
 
+$result7 = mysql_query("SELECT b.patientCurrentBPSystolic,b.patientCurrentBPDiastolic,b.number
+                       FROM patientCurrentBP AS b JOIN patientInfo AS i on b.patientID=i.patientID WHERE i.id='1'
+                       ORDER BY b.number DESC LIMIT 1");
+$BP=mysql_fetch_array($result7);
+                       
 mysql_close();
 ?>
 
@@ -205,7 +210,7 @@ ID Number
 </tr>
 <tr style="color:red;">
 <td>Current Systolic BP</td>
-<td></td> <!--need DB update-->
+<td><?php echo $BP['patientCurrentBPSystolic'] ?></td>
 </tr>
 <tr>
 <td>Target Diastolic BP</td>
@@ -213,7 +218,7 @@ ID Number
 </tr>
 <tr style="color:red;">
 <td>Current Diastolic BP</td>
-<td></td>
+<td><?php echo $BP['patientCurrentBPDiastolic'] ?></td>
 </tr>
 </table>
 </div>
