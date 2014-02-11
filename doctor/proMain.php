@@ -220,6 +220,10 @@ ID Number
 <td>Current Diastolic BP</td>
 <td><?php echo $BP['patientCurrentBPDiastolic'] ?></td>
 </tr>
+<tr>
+<td>Next review date</td>
+<td><?php echo $info['nextReview']?><td>
+</tr>
 </table>
 </div>
 
