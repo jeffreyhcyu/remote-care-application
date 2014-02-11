@@ -221,7 +221,7 @@ ID Number
 <td><?php echo $BP['patientCurrentBPDiastolic'] ?></td>
 </tr>
 <tr>
-<td>Next review date</td>
+<td>Next review </td>
 <td><?php echo $info['nextReview']?><td>
 </tr>
 </table>
