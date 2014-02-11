@@ -77,7 +77,7 @@ $result6 = mysql_query("SELECT * FROM doctorInfo WHERE id=$doctorID");
 $docInfo=mysql_fetch_array($result6);
 
 $result7 = mysql_query("SELECT b.patientCurrentBPSystolic,b.patientCurrentBPDiastolic,b.number
-                       FROM patientCurrentBP AS b JOIN patientInfo AS i on b.patientID=i.patientID WHERE i.id='1'
+                       FROM patientCurrentBP AS b JOIN patientInfo AS i on b.patientID=i.patientID WHERE i.id='$current'
                        ORDER BY b.number DESC LIMIT 1");
 $BP=mysql_fetch_array($result7);
                        
