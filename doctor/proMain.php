@@ -285,7 +285,7 @@ Med 2
 </div>
 
 <div class="med_table3">
-Med 2
+Med 3
 <table id="med_table">
 <tr>
 <td>
