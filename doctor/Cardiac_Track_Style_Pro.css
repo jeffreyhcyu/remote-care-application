@@ -166,6 +166,7 @@
 	font-size: 30px;
 	color: white;
 	width:25%;
+	float:top;
 }
 
 .med_table4{
@@ -179,6 +180,7 @@
 	font-size: 30px;
 	color:white;
 	width:25%;
+	float:top;
 }
 
 .Identification{
