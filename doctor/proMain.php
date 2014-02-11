@@ -203,7 +203,11 @@ ID Number
 <tr>
 <td>Age</td>
 <td><?php echo $info['ageGroup'] ?></td>
-</tr>	
+</tr>
+<tr>
+<td>Next review </td>
+<td><?php echo $info['nextReview']?><td>
+</tr>
 <tr>
 <td>Target Systolic BP</td>
 <td><?php echo $info['targetSystolic'] ?></td>
@@ -219,10 +223,6 @@ ID Number
 <tr style="color:red;">
 <td>Current Diastolic BP</td>
 <td><?php echo $BP['patientCurrentBPDiastolic'] ?></td>
-</tr>
-<tr>
-<td>Next review </td>
-<td><?php echo $info['nextReview']?><td>
 </tr>
 </table>
 </div>
