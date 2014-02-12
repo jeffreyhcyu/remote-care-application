@@ -59,7 +59,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
         <table width="540">
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer[]" value="A" id="diabetes">
+              <input type="checkbox" name="test" value="A" id="diabetes">
               Patient has been diagnosed with Type I or Type II diabetes</label></td>
           </tr>
           <tr>

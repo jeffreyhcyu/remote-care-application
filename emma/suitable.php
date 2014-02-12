@@ -1,6 +1,6 @@
 <?php
 
-$selected = $_POST['disclaimer[]'];
+$selected = $_POST['test'];
 
 echo $selected;
 
