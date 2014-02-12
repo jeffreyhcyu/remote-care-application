@@ -59,27 +59,27 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
         <table width="540">
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer[]" value="A" id="diabetes">
+              <input type="checkbox" name="A" value="A" id="diabetes">
               Patient has been diagnosed with Type I or Type II diabetes</label></td>
           </tr>
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer[]" value="B" id="HTcrisis">
+              <input type="checkbox" name="B" value="B" id="HTcrisis">
               Patient is in a state of hypertensive crisis</label></td>
           </tr>
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer[]" value="C" id="secondaryHT">
+              <input type="checkbox" name="C" value="C" id="secondaryHT">
               Patient has secondary hypertension</label></td>
           </tr>
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer[]" value="D" id="pregnant">
+              <input type="checkbox" name="D" value="D" id="pregnant">
               Patient is pregnant</label></td>
           </tr>
           <tr>
             <td><label>
-              <input type="checkbox" name="disclaimer[]" value="E" id="young">
+              <input type="checkbox" name="E" value="E" id="young">
               Patient is younger than 18 years of age</label></td>
           </tr>
         </table>

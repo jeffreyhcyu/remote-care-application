@@ -1,18 +1,18 @@
 <?php
 
-$selected[] = $_POST['disclaimer[]'];
+$selectedA = $_POST['A'];
+$selectedB = $_POST['B'];
+$selectedC = $_POST['C'];
+$selectedD = $_POST['D'];
+$selectedE = $_POST['E'];
 
-foreach($selected as $result) {
-    echo $result, '<br>';
+if(!empty($selectedA))
+{
+header('Location: https://3yp.villocq.com/emma/newPatientUnsuitable.php'); 
 }
-
-//if(!empty($selected))
-//{
-//header('Location: https://3yp.villocq.com/emma/newPatientUnsuitable.php'); 
-//}
-//else
-//{
-//header('Location: https://3yp.villocq.com/emma/newPatientDetails.php'); 
-//}
+else
+{
+header('Location: https://3yp.villocq.com/emma/newPatientDetails.php'); 
+}
 
 ?>
