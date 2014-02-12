@@ -2,7 +2,9 @@
 
 $selected[] = $_POST['disclaimer[]'];
 
-echo $selected;
+foreach($selected as $result) {
+    echo $result, '<br>';
+}
 
 //if(!empty($selected))
 //{
