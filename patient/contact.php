@@ -73,11 +73,11 @@ Contact
 
 <div id="contact1">
 <div id="contact_title1"><?php echo $prefix ?>. <?php echo $name1 ?> <?php echo $name2 ?></div>
-henry.jekyll@nhs.co.uk
-<br>11 Harley Street,</br>
-London,
-<br>W1G 8QP</br>
-<br>01243 786594</br>
+<?php echo $email ?>
+<br><?php echo $address1 ?>,</br>
+<?php echo $address2 ?>,
+<br><?php echo $postcode ?></br>
+<br><?php echo $telephone ?></br>
 </div>
 
 <!-- Old stuff - Ignore! -->
