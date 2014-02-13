@@ -13,48 +13,48 @@ $db = new mysqli($server,$username,$DBpassword,$database);
 
 //Assign the creation form POST output to PHP variables
 //If there are multiple stages of the form, use $_SESSION variables between pages to save them.
-//NB: THESE WILL CHANGE DEPENDING ON WHAT IS IN THE PREVIOUS PAGES!
-$patientID=$_POST['username'];
-$input_password=$_POST['password'];
-$doctorID=$_SESSION['userID'];
-$targetSystolic = // Stuff
-$targetDiastolic = //stuff
+//NB: THESE WILL CHANGE DEPENDING ON WHAT IS IN THE PREVIOUS PAGES! Values below are for testing only!
+$patientID = "form-test";
+$input_password = "thisisapassword";
+$doctorID = "1";
+$targetSystolic = "100";
+$targetDiastolic = "50";
 $BPcontrolled = "No";
-$ageGroup = //stuff
-$ethnicity = //stuff
-$gender = //Stuff
+$ageGroup = "55-79";
+$ethnicity = "No";
+$gender = "Female";
 
-$breastfeed = //stuff
-$future_pregnancy = //stuff
-$aspirin = //stuff
-$asthma = //stuff
-$BB_already = //stuff
-$CCB = //stuff
-$COO = //stuff
-$CVD = //stuff
-$CVDrisk = //stuff
-$DiabRisk = //stuff
-$Diuretic_suitable = //stuff
-$Gout = //stuff
-$HDAB = //stuff
-$HFRisk = //stuff
-$Heart_failure = //stuff
-$HepImp = //stuff
-$High_blood_k = //stuff
-$MI = //stuff
-$OrgDamage = //stuff
-$Postural_hypotension = //stuff
-$RenImp = //stuff
-$Stricture = //stuff
-$Whitecoat = //stuff
-$angina = //stuff
-$angio_expose = //stuff
-$angio_hered = //stuff
-$oedema = //stuff
-$renal = //stuff
-$renovascular = //stuff
-$stenosis = //stuff
-
+//Comorbidities:
+$breastfeed = "No";
+$future_pregnancy = "No";
+$aspirin = "No";
+$asthma = "No";
+$BB_already = "No";
+$CCB = "No";
+$COO = "No";
+$CVD = "No";
+$CVDrisk = "No";
+$DiabRisk = "No";
+$Diuretic_suitable = "No";
+$Gout = "No";
+$HDAB = "No";
+$HFRisk = "No";
+$Heart_failure = "No";
+$HepImp = "No";
+$High_blood_k = "No";
+$MI = "No";
+$OrgDamage = "No";
+$Postural_hypotension = "No";
+$RenImp = "No";
+$Stricture = "No";
+$Whitecoat = "No";
+$angina = "No";
+$angio_expose = "No";
+$angio_hered = "No";
+$oedema = "No";
+$renal = "No";
+$renovascular = "No";
+$stenosis = "No";
 
 //Hashing Function
 require("PasswordHash.php"); //This is the PHPass framework
@@ -93,11 +93,13 @@ if ($check_password == $hashedPassword AND $check_id > 0)
     //Maybe, save the auto-ID as a variable to be accessed later:
     $_SESSION['patientAutoID'] = $check_id;
     //Redirect to the success page
-    header('Location: https://3yp.villocq.com/emma/CHANGE-ME-Success-page.html');
+    //header('Location: https://3yp.villocq.com/emma/CHANGE-ME-Success-page.html');
+    echo "SUCCESS!";
 }
 else
 {
-    header('Location: Some_failure_page.html');
+    //header('Location: Some_failure_page.html');
+    echo "FAILURE :(";
 }
 
 $db->close();
