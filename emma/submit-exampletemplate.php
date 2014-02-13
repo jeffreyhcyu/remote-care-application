@@ -73,7 +73,7 @@ $newPatient = $db->prepare("INSERT INTO patientInfo VALUES('',?,?,?,?,?,now(),DA
                            ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 //Bind & Execute to submit to database. 
-$newPatient->bind_param('ssssssssssssssssssssssssssssssssssssssssssss',
+$newPatient->bind_param('ssssssssssssssssssssssssssssssssssssssssss',
                     $patientID,$hashedPassword,$doctorID,$targetSystolic,$targetDiastolic,
                     $BPcontrolled,$ageGroup,$ethnicity,$gender,
                     $breastfeed,$future_pregnancy,$aspirin,$asthma,$BB_already,$CCB,
