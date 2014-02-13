@@ -31,17 +31,17 @@ $getDoctor->bind_param('s',$user_id);
 $getDoctor->execute();
 $getDoctor->bind_result($doctor_id);
 $getDoctor->fetch();
-$getSystolic->close();
+$getDoctor->close();
 
 //Get the Doctor's Address:
 //Prepared statement
 $getAddress = $db->prepare("SELECT prefix,secondName,email,address1,address2,postcode,telephone FROM doctorInfo WHERE id=?");
 //Execute and get
-$getDoctor->bind_param('s',$doctor_id);
-$getDoctor->execute();
-$getDoctor->bind_result($prefix,$name,$email,$address1,$address2,$postcode,$telephone);
-$getDoctor->fetch();
-$getSystolic->close();
+$getAddress->bind_param('s',$doctor_id);
+$getAddress->execute();
+$getAddress->bind_result($prefix,$name,$email,$address1,$address2,$postcode,$telephone);
+$getAddress->fetch();
+$getAddress->close();
 
 $db->close();
 
