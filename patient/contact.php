@@ -11,6 +11,40 @@ else
 {
 header('Location: https://3yp.villocq.com/patient'); 
 }
+
+// Need DB access to display the doctor's address:
+
+// Configure the MySQL connection
+$server='remote.villocq.com';
+$username="3yp";
+$DBpassword="project";
+$database="tallis";
+
+// New MySQLi Instance
+$db = new mysqli($server,$username,$DBpassword,$database);
+
+//Get the patient's doctor ID:
+//Prepared statement
+$getDoctor = $db->prepare("SELECT doctorID FROM patientInfo WHERE patientID=?");
+//Execute and get
+$getDoctor->bind_param('s',$user_id);
+$getDoctor->execute();
+$getDoctor->bind_result($doctor_id);
+$getDoctor->fetch();
+$getSystolic->close();
+
+//Get the Doctor's Address:
+//Prepared statement
+$getAddress = $db->prepare("SELECT prefix,secondName,email,address1,address2,postcode,telephone FROM doctorInfo WHERE id=?");
+//Execute and get
+$getDoctor->bind_param('s',$doctor_id);
+$getDoctor->execute();
+$getDoctor->bind_result($prefix,$name,$email,$address1,$address2,$postcode,$telephone);
+$getDoctor->fetch();
+$getSystolic->close();
+
+$db->close();
+
 ?>
 <html>
 <head> 
@@ -38,13 +72,15 @@ Contact
 </div>
 
 <div id="contact1">
-<div id="contact_title1">GP Dr Jekyll</div>
+<div id="contact_title1"><?php echo $prefix ?> <?php echo $name ?></div>
 henry.jekyll@nhs.co.uk
 <br>11 Harley Street,</br>
 London,
 <br>W1G 8QP</br>
 <br>01243 786594</br>
 </div>
+
+<!-- Old stuff - Ignore! -->
 
 <!--<div id="contact2">
 <div id="contact_title2">Consultant Mr Hyde</div>
