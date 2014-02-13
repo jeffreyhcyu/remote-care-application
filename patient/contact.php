@@ -46,14 +46,14 @@ London,
 <br>01243 786594</br>
 </div>
 
-<div id="contact2">
+<!--<div id="contact2">
 <div id="contact_title2">Consultant Mr Hyde</div>
 james.hyde@nhs.co.uk
 <br>11 Harley Street,</br>
 London,
 <br>W1G 8QP</br>
 <br>01243 786595</br>
-</div>
+</div>-->
 
 <body>
 
