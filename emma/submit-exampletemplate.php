@@ -56,6 +56,11 @@ $renal = "No";
 $renovascular = "No";
 $stenosis = "No";
 
+//Blood test results, set them to 'null' for now:
+$eGFRbase = null;
+$creatininebase = null;
+$potassiumbase = null;
+
 //Hashing Function
 require("PasswordHash.php"); //This is the PHPass framework
 $hasher = new PasswordHash(10,false); // 10 is the cost function setting
@@ -63,18 +68,20 @@ $hashedPassword = $hasher->HashPassword($input_password);
 // Password is now hashed as $hashedPassword
 
 //Prepared statement:
-$newPatient = $db->prepare("INSERT INTO patientInfo VALUES('',?,?,?,?,?,'','',?,?,?,?,?,?,?,
-                           ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'','','')");
+//NB: Dates are set to: lastReview:Today, nextReview:T+30days
+$newPatient = $db->prepare("INSERT INTO patientInfo VALUES('',?,?,?,?,?,now(),DATE_ADD(now(), INTERVAL 1 MONTH),?,?,?,?,?,?,?,
+                           ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 //Bind & Execute to submit to database. 
-$newPatient->bind_param('sssssssssssssssssssssssssssssssssssssss',
+$newPatient->bind_param('ssssssssssssssssssssssssssssssssssssssssssss',
                     $patientID,$hashedPassword,$doctorID,$targetSystolic,$targetDiastolic,
                     $BPcontrolled,$ageGroup,$ethnicity,$gender,
                     $breastfeed,$future_pregnancy,$aspirin,$asthma,$BB_already,$CCB,
                     $COO,$CVD,$CVDrisk,$DiabRisk,$Diuretic_suitable,$Gout,$HDAB,
                     $HFRisk,$Heart_failure,$HepImp,$High_blood_k,$MI,$OrgDamage,
                     $Postural_hypotension,$RenImp,$Stricture,$Whitecoat,$angina,
-                    $angio_expose,$angio_hered,$oedema,$renal,$renovascular,$stenosis);
+                    $angio_expose,$angio_hered,$oedema,$renal,$renovascular,$stenosis,
+                    $eGFRbase,$creatininebase,$potassiumbase);
 $newPatient->execute();
 $newPatient->close();
 //Data has now been submitted to the database
