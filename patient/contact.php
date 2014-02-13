@@ -35,11 +35,11 @@ $getDoctor->close();
 
 //Get the Doctor's Address:
 //Prepared statement
-$getAddress = $db->prepare("SELECT prefix,secondName,email,address1,address2,postcode,telephone FROM doctorInfo WHERE id=?");
+$getAddress = $db->prepare("SELECT prefix,firstName,secondName,email,address1,address2,postcode,telephone FROM doctorInfo WHERE id=?");
 //Execute and get
 $getAddress->bind_param('s',$doctor_id);
 $getAddress->execute();
-$getAddress->bind_result($prefix,$name,$email,$address1,$address2,$postcode,$telephone);
+$getAddress->bind_result($prefix,$name1,$name2,$email,$address1,$address2,$postcode,$telephone);
 $getAddress->fetch();
 $getAddress->close();
 
@@ -72,7 +72,7 @@ Contact
 </div>
 
 <div id="contact1">
-<div id="contact_title1"><?php echo $prefix ?> <?php echo $name ?></div>
+<div id="contact_title1"><?php echo $prefix ?>. <?php echo $name1 ?> <?php echo $name2 ?></div>
 henry.jekyll@nhs.co.uk
 <br>11 Harley Street,</br>
 London,
