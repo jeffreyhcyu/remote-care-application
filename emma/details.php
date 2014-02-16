@@ -13,4 +13,7 @@ $sql="INSERT INTO patientInfo (ageGroup, ethnicity, gender)
 VALUES
 ('$_POST[ageGroup]','$_POST[ethnicity]', '$_POST[gender]')";
 mysql_close($db)
+
+header('Location: https://3yp.villocq.com/emma/newPatientComorbidities.php');
+
 ?>
