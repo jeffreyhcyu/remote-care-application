@@ -59,7 +59,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
         <section id="submit">
           <p>
             <label for="select">Age group:</label>
-            <select name="select" id="select">
+            <select name="ageGroup" id="ageGroup">
               <option>18-54</option>
               <option>55-79</option>
               <option>80+</option>
@@ -67,17 +67,16 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
           </p>
           <p>
             Sex:
-            <input type="radio" name="radio" id="radio" value="radio">
-            <label for="radio">Female </label>
-            <input type="radio" name="radio2" id="radio2" value="radio2">
-            Male
-            <label for="radio2"> </label>
+            <input type="radio" name="gender" id="radio1" value="female">
+            <label for="radio">Female</label>
+            <input type="radio" name="gender" id="radio2" value="male">
+            <label for="radio2">Male</label>
           </p>
           <p>Is the patient of Black African or Black Caribbean descent? 
-            <input type="radio" name="radio3" id="radio3" value="radio3">
-            <label for="radio3">Yes </label>
-            <input type="radio" name="radio4" id="radio4" value="radio4">
-            <label for="radio4">No </label>
+            <input type="radio" name="ethnicity" id="radio3" value="Yes">
+            <label for="radio3">Yes</label>
+            <input type="radio" name="ethnicity" id="radio4" value="No">
+            <label for="radio4">No</label>
           </p> 
           <br>
             <input type="submit" name="next" id="next" value="Next">
