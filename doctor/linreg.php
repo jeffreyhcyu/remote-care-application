@@ -117,7 +117,7 @@
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($dayonein<$dayonebottom{
+			if($dayonein<$dayonebottom){
 						$patient_flag = $patient_flag+1;
 			};
 
