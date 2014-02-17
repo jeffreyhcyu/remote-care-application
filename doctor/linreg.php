@@ -97,7 +97,7 @@ $SQLQuery2 = "SELECT Day, SBP FROM FraudTest WHERE id='$patient_id'";
 
 	while($row = mysql_fetch_array($result2)){
     print "<tr><td>".$row['Day']."</td><td>".$row['SBP']."</td></tr>";
-}
+}	print "</table>";
 			 
 			//var_dump($array2);
 
