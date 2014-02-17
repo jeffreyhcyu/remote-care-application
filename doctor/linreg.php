@@ -7,6 +7,8 @@
 	mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 	@mysql_select_db($database);
 
+	$patient_id=1
+
 	$SQLQuery = "
 
 			select a as 'a',
@@ -54,7 +56,7 @@
 			         -- Alias the x-variable column as 'x'
 			         -- Alias the y-variable column as 'y'
 					
-					SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id=1
+					SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id=$patient_id
 			      
 			      ) as source_data
 			   ) as regression
