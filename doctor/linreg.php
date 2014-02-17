@@ -113,11 +113,12 @@
 					$daysevenquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=7");
 					$daysevenin = mysql_fetch_array($daysevenquery);
 
-			if(1.1*$dayone<$dayonein){
+			if($dayonetop<$dayonein){
 						$patient_flag = $patient_flag+1;
+			echo true;
 			};
 
-			if($dayonein<0.9*$dayone){
+			if($dayonein<$dayonebottom){
 						$patient_flag = $patient_flag+1;
 			};
 
