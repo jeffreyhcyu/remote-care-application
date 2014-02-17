@@ -122,6 +122,61 @@
 						$patient_flag = $patient_flag+1;
 			};
 
+			if($daytwotop<$daytwoin['SBP']){
+						$patient_flag = $patient_flag+1;
+			echo 'true';
+			};
+
+			if($daytwoin['SBP']<$daytwobottom){
+						$patient_flag = $patient_flag+1;
+			};
+
+			if($daythreetop<$daythreein['SBP']){
+						$patient_flag = $patient_flag+1;
+			echo 'true';
+			};
+
+			if($daythreein['SBP']<$daythreebottom){
+						$patient_flag = $patient_flag+1;
+			};
+
+			if($dayfourtop<$dayfourin['SBP']){
+						$patient_flag = $patient_flag+1;
+			echo 'true';
+			};
+
+			if($dayfourin['SBP']<$dayfourbottom){
+						$patient_flag = $patient_flag+1;
+			};
+
+			if($dayfivetop<$dayfivein['SBP']){
+						$patient_flag = $patient_flag+1;
+			echo 'true';
+			};
+
+			if($dayfivein['SBP']<$dayfivebottom){
+						$patient_flag = $patient_flag+1;
+			};
+
+			if($daysixtop<$daysixin['SBP']){
+						$patient_flag = $patient_flag+1;
+			echo 'true';
+			};
+
+			if($daysixin['SBP']<$daysixbottom){
+						$patient_flag = $patient_flag+1;
+			};
+
+			if($dayseventop<$daysevenin['SBP']){
+						$patient_flag = $patient_flag+1;
+			echo 'true';
+			};
+
+			if($daysevenin['SBP']<$daysevenbottom){
+						$patient_flag = $patient_flag+1;
+			};
+
+
 			echo $patient_flag.'<br>';
 
 			echo $dayonetop.'<br>';
