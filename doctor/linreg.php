@@ -68,7 +68,8 @@
 
 			echo $array['b'].'<br>';
 			echo $array['a'].'<br>';
-			echo 'a'.$array['a']+($array['b']*1).'<br>';
+			$dayone=$array['a']+($array['b']*1);
+			echo $dayone.'<br>';
 			echo 'a'.$array['a']+($array['b']*2).'<br>';
 
 			echo '<pre>'; print_r($array); echo '<pre/>';
