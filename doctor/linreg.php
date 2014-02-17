@@ -90,13 +90,36 @@
 			$daysixbottom=0.9*$daysix;
 			$daysevenbottom=0.9*$dayseven;
 
-$SQLQuery2 = "SELECT Day, SBP FROM FraudTest WHERE id='$patient_id'";
 			
-$dayonequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=1");
-$dayonein = mysql_fetch_array($dayonequery);
+					$dayonequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=1");
+					$dayonein = mysql_fetch_array($dayonequery);
 
-echo $dayonein['SBP']; 
+					$daytwoquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=2");
+					$daytwoin = mysql_fetch_array($daytwoquery);
 
+					$daythreequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=3");
+					$daythreein = mysql_fetch_array($daythreequery);
+
+					$dayfourquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=4");
+					$dayfourin = mysql_fetch_array($dayfourquery);
+
+					$dayfivequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=5");
+					$dayfivein = mysql_fetch_array($dayfivequery);
+
+					$daysixquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=6");
+					$daysixin = mysql_fetch_array($daysixquery);
+
+					$daysevenquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=7");
+					$daysevenin = mysql_fetch_array($daysevenquery);
+
+
+			echo $dayonein.'<br>'; 
+			echo $daytwoin.'<br>';
+			echo $daythreein.'<br>';
+			echo $dayfourin.'<br>';
+			echo $dayfivein.'<br>';
+			echo $daysixin.'<br>';
+			echo $daysevenin.'<br>';
 			//var_dump($array2);
 
 			/*echo $dayone.'<br>';
