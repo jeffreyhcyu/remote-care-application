@@ -169,6 +169,7 @@ $( ".Identification" ).click(function() {
 var idNum = this.getAttribute("data-idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
 window.location.href = "proMain.php?w1=" + idNum;
+ <?php include("linreg.php?w1=" + idNum);?> //this is what has been added to call the php script 
 });
 </script>
 
