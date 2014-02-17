@@ -74,7 +74,7 @@
 			$daysix=$array['a']+($array['b']*6);
 			$dayseven=$array['a']+($array['b']*7);
 
-			$dayonetop=1.1*$dayonetop;
+			$dayonetop=1.1*$dayone;
 			$daytwotop=1.1*$daytwo; 
 			$daythreetop=1.1*$daythree;
 			$dayfourtop=1.1*$dayfour;
@@ -82,13 +82,13 @@
 			$daysixtop=1.1*$daysix;
 			$dayseventop=1.1*$dayseven;
 
-			$dayonetop=0.9*$dayonebottom;
-			$daytwo=0.9*$daytwobottom; 
-			$daythree=0.9*$daythreebottom;
-			$dayfour=0.9*$dayfourbottom;
-			$dayfive=0.9*$dayfivebottom;
-			$daysix=0.9*$daysixbottom;
-			$dayseven=0.9*$daysevenbottom;
+			$dayonebottom=0.9*$dayone;
+			$daytwobottom=0.9*$daytwo; 
+			$daythreebottom=0.9*$daythree;
+			$dayfourbottom=0.9*$dayfour;
+			$dayfivebottom=0.9*$dayfive;
+			$daysixbottom=0.9*$daysix;
+			$daysevenbottom=0.9*$dayseven;
 
 			echo $dayone.'<br>';
 			echo $daytwo.'<br>';
