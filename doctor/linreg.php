@@ -7,7 +7,7 @@
 	mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 	@mysql_select_db($database);
 
-	$patient_id=1
+	$patient_id = 1;
 
 	$SQLQuery = "
 
