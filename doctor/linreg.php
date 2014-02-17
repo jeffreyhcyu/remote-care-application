@@ -95,7 +95,7 @@ $SQLQuery2 = "SELECT Day, SBP FROM FraudTest WHERE id='$patient_id'";
 $dayonequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=1");
 $dayonein = mysql_fetch_array($dayonequery);
 
-echo $dayonein; 
+echo $dayonein['SBP']; 
 
 			//var_dump($array2);
 
