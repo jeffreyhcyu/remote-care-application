@@ -209,7 +209,7 @@
 			echo $daysevenbottom.'<br>';
 			*/
 	
-	mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='patient_id'");
+	mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='$patient_id'");
 
 	mysql_close();
 
