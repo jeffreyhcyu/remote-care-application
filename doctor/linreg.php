@@ -98,6 +98,7 @@ $SQLQuery2 = "SELECT Day, SBP FROM FraudTest WHERE id='$patient_id'";
 	while($row = mysql_fetch_array($result2)){
     print "<tr><td>".$row['Day']."</td><td>".$row['SBP']."</td></tr>";
 }	print "</table>";
+	echo "<table border='1'><tr><th>Firstname</th><th>Lastname</th></tr>";
 			 
 			//var_dump($array2);
 
