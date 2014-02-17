@@ -93,11 +93,15 @@
 $SQLQuery2 = "SELECT Day, SBP FROM FraudTest WHERE id='$patient_id'";
 			
 	$result2 = mysql_query($SQLQuery2);
-	$array2 = mysql_fetch_array($result2);
+	//$array2 = mysql_fetch_array($result2);
 
-			 var_dump($array2);
+	while($row = mysql_fetch_array($result2)){
+    print "<tr><td>".$row['Day']."</td><td>".$row['SBP']."</td></tr>";
+}
+			 
+			//var_dump($array2);
 
-			echo $dayone.'<br>';
+			/*echo $dayone.'<br>';
 			echo $daytwo.'<br>';
 			echo $daythree.'<br>';
 			echo $dayfour.'<br>';
@@ -120,7 +124,7 @@ $SQLQuery2 = "SELECT Day, SBP FROM FraudTest WHERE id='$patient_id'";
 			echo $dayfivebottom.'<br>';
 			echo $daysixbottom.'<br>';
 			echo $daysevenbottom.'<br>';
-
+			*/
 	mysql_close();
 
 ?>
