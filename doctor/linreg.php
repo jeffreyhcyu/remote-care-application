@@ -66,7 +66,12 @@
 			$result = mysql_query($SQLQuery);
 			$array = mysql_fetch_array($result);
 
+			echo 'a'.$array['a'];
+
 			echo '<pre>'; print_r($array); echo '<pre/>';
+
+
+
 	mysql_close();
 
 ?>
