@@ -66,8 +66,6 @@
 			$result = mysql_query($SQLQuery);
 			$array = mysql_fetch_array($result);
 
-			echo $array['b'].'<br>';
-			echo $array['a'].'<br>';
 			$dayone=$array['a']+($array['b']*1);
 			$daytwo=$array['a']+($array['b']*2);
 			$daythree=$array['a']+($array['b']*3);
@@ -76,6 +74,22 @@
 			$daysix=$array['a']+($array['b']*6);
 			$dayseven=$array['a']+($array['b']*7);
 
+			$dayonetop=1.1*$dayonetop;
+			$daytwotop=1.1*$daytwo; 
+			$daythreetop=1.1*$daythree;
+			$dayfourtop=1.1*$dayfour;
+			$dayfivetop=1.1*$dayfive;
+			$daysixtop=1.1*$daysix;
+			$dayseventop=1.1*$dayseven;
+
+			$dayonetop=0.9*$dayonebottom;
+			$daytwo=0.9*$daytwobottom; 
+			$daythree=0.9*$daythreebottom;
+			$dayfour=0.9*$dayfourbottom;
+			$dayfive=0.9*$dayfivebottom;
+			$daysix=0.9*$daysixbottom;
+			$dayseven=0.9*$daysevenbottom;
+
 			echo $dayone.'<br>';
 			echo $daytwo.'<br>';
 			echo $daythree.'<br>';
@@ -83,6 +97,22 @@
 			echo $dayfive.'<br>';
 			echo $daysix.'<br>';
 			echo $dayseven.'<br>';
+
+			echo $dayonetop.'<br>';
+			echo $daytwotop.'<br>';
+			echo $daythreetop.'<br>';
+			echo $dayfourtop.'<br>';
+			echo $dayfivetop.'<br>';
+			echo $daysixtop.'<br>';
+			echo $dayseventop.'<br>';
+	
+			echo $dayonebottom.'<br>';
+			echo $daytwobottom.'<br>';
+			echo $daythreebottom.'<br>';
+			echo $dayfourbottom.'<br>';
+			echo $dayfivebottom.'<br>';
+			echo $daysixbottom.'<br>';
+			echo $daysevenbottom.'<br>';
 
 	mysql_close();
 
