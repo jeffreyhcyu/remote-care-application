@@ -69,12 +69,20 @@
 			echo $array['b'].'<br>';
 			echo $array['a'].'<br>';
 			$dayone=$array['a']+($array['b']*1);
+			$daytwo=$array['a']+($array['b']*2);
+			$daythree=$array['a']+($array['b']*3);
+			$dayfour=$array['a']+($array['b']*4);
+			$dayfive=$array['a']+($array['b']*5);
+			$daysix=$array['a']+($array['b']*6);
+			$dayseven=$array['a']+($array['b']*7);
+
 			echo $dayone.'<br>';
-			echo 'a'.$array['a']+($array['b']*2).'<br>';
-
-			echo '<pre>'; print_r($array); echo '<pre/>';
-
-
+			echo $daytwo.'<br>';
+			echo $daythree.'<br>';
+			echo $dayfour.'<br>';
+			echo $dayfive.'<br>';
+			echo $daysix.'<br>';
+			echo $dayseven.'<br>';
 
 	mysql_close();
 
