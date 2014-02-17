@@ -113,13 +113,13 @@
 					$daysevenin = mysql_fetch_array($daysevenquery);
 
 
-			echo $dayonein.'<br>'; 
-			echo $daytwoin.'<br>';
-			echo $daythreein.'<br>';
-			echo $dayfourin.'<br>';
-			echo $dayfivein.'<br>';
-			echo $daysixin.'<br>';
-			echo $daysevenin.'<br>';
+			echo $dayonein['SBP'].'<br>'; 
+			echo $daytwoin['SBP'].'<br>';
+			echo $daythreein['SBP'].'<br>';
+			echo $dayfourin['SBP'].'<br>';
+			echo $dayfivein['SBP'].'<br>';
+			echo $daysixin['SBP'].'<br>';
+			echo $daysevenin['SBP'].'<br>';
 			//var_dump($array2);
 
 			/*echo $dayone.'<br>';
