@@ -115,7 +115,7 @@
 
 			if($dayonetop<$dayonein){
 						$patient_flag = $patient_flag+1;
-			echo true;
+			echo 'true';
 			};
 
 			if($dayonein<$dayonebottom){
