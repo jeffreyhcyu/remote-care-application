@@ -56,7 +56,7 @@
 			         -- Alias the x-variable column as 'x'
 			         -- Alias the y-variable column as 'y'
 					
-					SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id=$patient_id
+					SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id='$patient_id'
 			      
 			      ) as source_data
 			   ) as regression
