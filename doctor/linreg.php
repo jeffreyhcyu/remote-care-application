@@ -66,10 +66,10 @@
 			$result = mysql_query($SQLQuery);
 			$array = mysql_fetch_array($result);
 
-			echo $array['b'];
-			echo $array['a'];
-			echo 'a'.$array['a']+($array['b']*1);
-			echo 'a'.$array['a']+($array['b']*2);
+			echo $array['b'].'<break>';
+			echo $array['a'].'<break>';
+			echo 'a'.$array['a']+($array['b']*1).'<break>';
+			echo 'a'.$array['a']+($array['b']*2).'<break>';
 
 			echo '<pre>'; print_r($array); echo '<pre/>';
 
