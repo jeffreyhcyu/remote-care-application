@@ -8,11 +8,11 @@ if (isset($_SESSION['userID']))
     // This sets the current user ID as php variable!
     $doctorID = $_SESSION['userID'];
 }
-else
-{
+//else
+//{
     //Login Failure
-header('Location: https://3yp.villocq.com/doctor'); 
-}
+//header('Location: https://3yp.villocq.com/doctor'); 
+//}
 ?>
 
 <html>
