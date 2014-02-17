@@ -124,6 +124,7 @@
 			echo $patient_flag.'<br>';
 
 			echo $dayonetop.'<br>';
+			echo $dayonebottom.'<br>';
 
 			echo $dayonein['SBP'].'<br>'; 
 			echo $daytwoin['SBP'].'<br>';
