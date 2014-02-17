@@ -62,8 +62,9 @@
 	";
 
 			$result = mysql_query($SQLQuery);
+			$linregression = mysql_fetch_array($result);
 
-			echo $result;
+			echo $linregression;
 	mysql_close();
 
 ?>
