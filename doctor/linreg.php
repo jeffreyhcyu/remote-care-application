@@ -8,7 +8,7 @@
 	@mysql_select_db($database);
 
 	$patient_id = 2;
-	$patient_flag = 1;
+	$patient_flag = 4;
 
 	$SQLQuery = "
 
@@ -115,7 +115,6 @@
 
 			if($dayonetop<$dayonein['SBP']){
 						$patient_flag = $patient_flag+1;
-			echo 'true';
 			};
 
 			if($dayonein['SBP']<$dayonebottom){
@@ -124,7 +123,6 @@
 
 			if($daytwotop<$daytwoin['SBP']){
 						$patient_flag = $patient_flag+1;
-			echo 'true';
 			};
 
 			if($daytwoin['SBP']<$daytwobottom){
@@ -133,7 +131,6 @@
 
 			if($daythreetop<$daythreein['SBP']){
 						$patient_flag = $patient_flag+1;
-			echo 'true';
 			};
 
 			if($daythreein['SBP']<$daythreebottom){
@@ -142,7 +139,6 @@
 
 			if($dayfourtop<$dayfourin['SBP']){
 						$patient_flag = $patient_flag+1;
-			echo 'true';
 			};
 
 			if($dayfourin['SBP']<$dayfourbottom){
@@ -151,7 +147,6 @@
 
 			if($dayfivetop<$dayfivein['SBP']){
 						$patient_flag = $patient_flag+1;
-			echo 'true';
 			};
 
 			if($dayfivein['SBP']<$dayfivebottom){
@@ -160,7 +155,6 @@
 
 			if($daysixtop<$daysixin['SBP']){
 						$patient_flag = $patient_flag+1;
-			echo 'true';
 			};
 
 			if($daysixin['SBP']<$daysixbottom){
@@ -169,7 +163,6 @@
 
 			if($dayseventop<$daysevenin['SBP']){
 						$patient_flag = $patient_flag+1;
-			echo 'true';
 			};
 
 			if($daysevenin['SBP']<$daysevenbottom){
@@ -215,6 +208,9 @@
 			echo $daysixbottom.'<br>';
 			echo $daysevenbottom.'<br>';
 			*/
+	
+	mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='patient_id'")
+
 	mysql_close();
 
 ?>
