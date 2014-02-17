@@ -8,6 +8,7 @@
 	@mysql_select_db($database);
 
 	$patient_id = 2;
+	$patient_flag = 1;
 
 	$SQLQuery = "
 
@@ -112,6 +113,11 @@
 					$daysevenquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=7");
 					$daysevenin = mysql_fetch_array($daysevenquery);
 
+			if(1.1*$dayone<$dayonein<0.9*$dayone){
+						$patient_flag = $patient_flag+1;
+			}
+
+			echo $patient_flag;
 
 			echo $dayonein['SBP'].'<br>'; 
 			echo $daytwoin['SBP'].'<br>';
