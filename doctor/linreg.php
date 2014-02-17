@@ -94,8 +94,8 @@ $SQLQuery2 = "SELECT DAY, SBP FROM FraudTest WHERE id='$patient_id'";
 			
 	$result2 = mysql_query($SQLQuery2);
 	$array2 = mysql_fetch_array($result2);
-
-			echo $array2.'<br>';
+	
+			 print_r ($array2);
 
 			echo $dayone.'<br>';
 			echo $daytwo.'<br>';
