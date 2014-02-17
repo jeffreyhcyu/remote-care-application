@@ -64,7 +64,7 @@
 			$result = mysql_query($SQLQuery);
 			$linregression = mysql_fetch_array($result);
 
-			echo $linregression;
+			var_dump($linregression) ;
 	mysql_close();
 
 ?>
