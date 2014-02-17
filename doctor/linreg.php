@@ -90,11 +90,11 @@
 			$daysixbottom=0.9*$daysix;
 			$daysevenbottom=0.9*$dayseven;
 
-$SQLQuery2 = "SELECT DAY, SBP FROM FraudTest WHERE id='$patient_id'";
+$SQLQuery2 = "SELECT SBP FROM FraudTest WHERE id='$patient_id'";
 			
 	$result2 = mysql_query($SQLQuery2);
 	$array2 = mysql_fetch_array($result2);
-	
+
 			 print_r ($array2);
 
 			echo $dayone.'<br>';
