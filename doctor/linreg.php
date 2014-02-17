@@ -66,7 +66,8 @@
 			$result = mysql_query($SQLQuery);
 			$array = mysql_fetch_array($result);
 
-			echo 'a'.$array['a'];
+			echo 'a'.$array['a']+($array['b']*1);
+			echo 'a'.$array['a']+($array['b']*2);
 
 			echo '<pre>'; print_r($array); echo '<pre/>';
 
