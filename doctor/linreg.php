@@ -8,7 +8,7 @@
 	@mysql_select_db($database);
 
 	$patient_id = 2;
-	$patient_flag = 4;
+	$patient_flag = 8;
 
 	$SQLQuery = "
 
