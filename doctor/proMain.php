@@ -176,21 +176,6 @@ $( ".Identification" ).click(function() {
 var idNum = this.getAttribute("data-idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
 window.location.href = "proMain.php?w1=" + idNum;
-
-// Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross
-<?php include("linreg.php");
-//DB Params
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-
-$flagquery = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername' ORDER BY id DESC LIMIT 1");
-$flagno = mysql_fetch_array($flagnoquery); 
- ?>
- //Linreg include ends
 });
 </script>
 
