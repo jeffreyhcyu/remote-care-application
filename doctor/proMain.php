@@ -219,7 +219,7 @@ Patient Info
 <tr>
 <td>
 ID Number
-<?php echo $flagno ?>
+<?php echo $flagno['flag'] ?>
 </td>
 <td><?php echo $_GET['w1']?><td>
 </tr>
