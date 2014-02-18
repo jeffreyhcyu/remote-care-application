@@ -74,7 +74,6 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
           <p>
             <label for="ageGroup">Age group:</label>
             <select name="ageGroup">
-	      <option value="">Select...</option>
               <option value="18-54"<? if($varAgeGroup=="18-54") echo(" selected=\"selected\"");?>18-54</option>
               <option value="55-79"<? if($varAgeGroup=="55-79") echo(" selected=\"selected\"");?>55-79</option>
               <option value="80+"<? if($varAgeGroup=="80+") echo(" selected=\"selected\"");?>80+</option>
@@ -82,7 +81,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
           </p>
 
 <p>
-<label for='gender'>Sex:</label>
+<label for='gender'>Sex:</label><br>
 
         <input name="gender" type="radio" 
 
@@ -100,7 +99,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 </p>
 
 <p>
-<label for='ethnicity'>Is the patient of Black African or Black Caribbean descent?</label>
+<label for='ethnicity'>Is the patient of Black African or Black Caribbean descent?</label><br>
 
         <input name="ethnicity" type="radio" 
 
