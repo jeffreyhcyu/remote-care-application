@@ -87,15 +87,12 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 
         value="Male" checked="checked"<? if($varGender=="Male") echo(" selected=\"selected\"");?>
 
-        <span class="examplestyle">Male</span><br />
+<span>Male</span><br />
 
-  <input type="radio" name="gender" 
+<input type="radio" name="gender" 
 
-  value="Female"<? if($varGender=="Female") echo(" selected=\"selected\"");?>
-  <span class="examplestyle"> 
-
- Female
-  </span>
+value="Female"<? if($varGender=="Female") echo(" selected=\"selected\"");?>
+<span>Female</span>
 </p>
 
 <p>
@@ -105,14 +102,13 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 
         value="Yes" checked="checked"<? if($varEthnicity=="Yes") echo(" selected=\"selected\"");?>
 
-        <span class="examplestyle">Yes</span><br />
+<span>Yes</span><br />
 
-  <input type="radio" name="ethnicity" 
+<input type="radio" name="ethnicity" 
 
-  value="No"<? if($varGender=="No") echo(" selected=\"selected\"");?>
-  <span class="examplestyle"> 
-No
-  </span>
+value="No"<? if($varGender=="No") echo(" selected=\"selected\"");?>
+
+<span>No</span>
 </p>
 
 

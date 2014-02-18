@@ -54,8 +54,9 @@ $sql = "INSERT INTO patientInfo (ageGroup, gender, ethnicity) VALUES (".
   // The user is directed to this page after completing the form. 
   // This code assumes that the thankyou form is in the same folder as the example form.
 			
-			header("Location: newPatientComorbidities.php");
+			header("Location: newPatientComorbidities.html");
 
 			exit();
+}
 
 ?>
