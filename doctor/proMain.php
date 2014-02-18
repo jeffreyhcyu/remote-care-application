@@ -92,6 +92,14 @@ $_SESSION['patientUsername'] = $patientUsername;
 
 include("linreg.php");
 
+//Database connection to get all the patient data out
+$username="3yp";
+$DBpassword="project";
+$database="tallis";
+
+mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+@mysql_select_db($database);
+
 $flagquery = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername' ORDER BY id DESC LIMIT 1");
 $flagno = mysql_fetch_array($flagquery); 
 
