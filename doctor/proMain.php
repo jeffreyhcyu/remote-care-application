@@ -88,6 +88,13 @@ $patientUsername=mysql_fetch_array($result8);
 
 $_SESSION['patientUsername'] = $patientUsername;
 
+// Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross
+
+include("linreg.php");
+
+$flagquery = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername' ORDER BY id DESC LIMIT 1");
+$flagno = mysql_fetch_array($flagnoquery); 
+
 mysql_close();
 ?>
 

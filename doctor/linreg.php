@@ -182,43 +182,43 @@ session_start();
 			};
 
 
-			echo $patient_flag.'<br>';
-
-			echo $dayonetop.'<br>';
-			echo $dayonebottom.'<br>';
-
-			echo $dayonein['SBP'].'<br>'; 
-			echo $daytwoin['SBP'].'<br>';
-			echo $daythreein['SBP'].'<br>';
-			echo $dayfourin['SBP'].'<br>';
-			echo $dayfivein['SBP'].'<br>';
-			echo $daysixin['SBP'].'<br>';
-			echo $daysevenin['SBP'].'<br>';
-			//var_dump($array2);*/
-
-			echo $dayone.'<br>';
-			echo $daytwo.'<br>';
-			echo $daythree.'<br>';
-			echo $dayfour.'<br>';
-			echo $dayfive.'<br>';
-			echo $daysix.'<br>';
-			echo $dayseven.'<br>';
-
-			echo $dayonetop.'<br>';
-			echo $daytwotop.'<br>';
-			echo $daythreetop.'<br>';
-			echo $dayfourtop.'<br>';
-			echo $dayfivetop.'<br>';
-			echo $daysixtop.'<br>';
-			echo $dayseventop.'<br>';
-	
-			echo $dayonebottom.'<br>';
-			echo $daytwobottom.'<br>';
-			echo $daythreebottom.'<br>';
-			echo $dayfourbottom.'<br>';
-			echo $dayfivebottom.'<br>';
-			echo $daysixbottom.'<br>';
-			echo $daysevenbottom.'<br>';
+			//echo $patient_flag.'<br>';
+			//
+			//echo $dayonetop.'<br>';
+			//echo $dayonebottom.'<br>';
+			//
+			//echo $dayonein['SBP'].'<br>'; 
+			//echo $daytwoin['SBP'].'<br>';
+			//echo $daythreein['SBP'].'<br>';
+			//echo $dayfourin['SBP'].'<br>';
+			//echo $dayfivein['SBP'].'<br>';
+			//echo $daysixin['SBP'].'<br>';
+			//echo $daysevenin['SBP'].'<br>';
+			////var_dump($array2);*/
+			//
+			//echo $dayone.'<br>';
+			//echo $daytwo.'<br>';
+			//echo $daythree.'<br>';
+			//echo $dayfour.'<br>';
+			//echo $dayfive.'<br>';
+			//echo $daysix.'<br>';
+			//echo $dayseven.'<br>';
+			//
+			//echo $dayonetop.'<br>';
+			//echo $daytwotop.'<br>';
+			//echo $daythreetop.'<br>';
+			//echo $dayfourtop.'<br>';
+			//echo $dayfivetop.'<br>';
+			//echo $daysixtop.'<br>';
+			//echo $dayseventop.'<br>';
+			//
+			//echo $dayonebottom.'<br>';
+			//echo $daytwobottom.'<br>';
+			//echo $daythreebottom.'<br>';
+			//echo $dayfourbottom.'<br>';
+			//echo $dayfivebottom.'<br>';
+			//echo $daysixbottom.'<br>';
+			//echo $daysevenbottom.'<br>';
 			
 	
 	//mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='$patient_id'");
