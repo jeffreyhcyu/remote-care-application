@@ -9,7 +9,7 @@ $database="tallis";
 // New MySQLi Instance
 $db = new mysqli($server,$username,$DBpassword,$database);
 
-if($_POST['formSubmit'} == "Submit")
+if($_POST['formSubmit'] == "Submit")
 {
 	$errorMessage = "";
 
