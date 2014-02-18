@@ -81,6 +81,13 @@ $result7 = mysql_query("SELECT b.patientCurrentBPSystolic,b.patientCurrentBPDias
                        ORDER BY b.number DESC LIMIT 1");
 $BP=mysql_fetch_array($result7);
                        
+//This section sets a global session variable with the selected patientUsername
+//This is used for the LinReg checking. $_SESSION is used in linreg!
+$result8 = mysql_query("SELECT patientID FROM patientInfo WHERE id = '$current'");
+$patientUsername=mysql_fetch_array($result8);
+
+$_SESSION['patientUsername'] = $patientUsername;
+
 mysql_close();
 ?>
 
@@ -169,9 +176,10 @@ $( ".Identification" ).click(function() {
 var idNum = this.getAttribute("data-idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
 window.location.href = "proMain.php?w1=" + idNum;
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- <?php include("linreg.php?w1=$current");         //this is when the include starts !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- //Database connection to get all the patient data out
+
+// Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross
+<?php include("linreg.php");
+//DB Params
 $username="3yp";
 $DBpassword="project";
 $database="tallis";
@@ -179,10 +187,10 @@ $database="tallis";
 mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
-$flagnoarray = mysql_query("SELECT flag FROM FraudTest WHERE id='$current'");
-$flagno = mysql_fetch_array($flagnoarray); 
- ?>                                   //this is what has been added to call the php script!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+$flagquery = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername' ORDER BY id DESC LIMIT 1");
+$flagno = mysql_fetch_array($flagnoquery); 
+ ?>
+ //Linreg include ends
 });
 </script>
 

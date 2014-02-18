@@ -7,7 +7,8 @@
 	mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 	@mysql_select_db($database);
 
-	$patient_id = 2;
+        $patientUsername = $_SESSION['patientUsername'];
+	$patient_id = 2; //This will be defunct with the live system.. Using the username not id number
 	$patient_flag = 0;
 
 	$SQLQuery = "
@@ -59,11 +60,11 @@
 					
                                         # COMMENT HERE:
                                         # A POSSIBLE STATEMENT FOR LIVE DATA IS:
-                                        # SELECT @i:=0;
-                                        # SELECT patientCurrentBPSystolic, @i:=@i+1 AS x FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='test' ORDER BY date DESC LIMIT 7) AS value ORDER BY date
+                                    
+                                        SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date
                                         # The above query gets the last 7 data points as 'patientCurrentBPSystolic' and 'x' ordered from 1 to 7
 					
-                                        SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id='$patient_id'
+                                        # SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id='$patient_id'
 			      
 			      ) as source_data
 			   ) as regression
@@ -215,9 +216,11 @@
 			echo $daysevenbottom.'<br>';
 			*/
 	
-	mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='$patient_id'");
-
-
+	//mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='$patient_id'");
+        
+        //New query here
+        mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag'");
+        
 	mysql_close();
 
 ?>
