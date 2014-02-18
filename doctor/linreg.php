@@ -113,7 +113,15 @@ session_start();
                                 $counter++;
                               }
                               // $dayin[index] is the 7 previous days of actual data. Remember 1st day = 0!
-                        
+
+            if ($array['r_r']>1){
+            			$patient_flag = $patient_flag+1;
+            }
+
+            if ($array['r_r']<(-1)){
+            			$patient_flag = $patient_flag+1;
+            }
+
 			if($dayonetop<$dayin[0]){
 						$patient_flag = $patient_flag+1;
 			};
