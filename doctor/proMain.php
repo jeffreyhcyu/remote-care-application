@@ -219,13 +219,16 @@ Patient Info
 <tr>
 <td>
 ID Number
-<?php echo $flagno['flag'] ?>
 </td>
 <td><?php echo $_GET['w1']?><td>
 </tr>
 <tr>
 <td>Age</td>
 <td><?php echo $info['ageGroup'] ?></td>
+</tr>
+<tr>
+<td>Fraud Level</td>
+<td><?php echo $flagno['flag'] ?></td>
 </tr>
 <tr>
 <td>Next review </td>
