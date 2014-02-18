@@ -109,7 +109,7 @@ session_start();
 			$dayquery = mysql_query("SELECT patientCurrentBPSystolic AS SBP, @i:=@i+1 AS DAY FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date");
 			$dayin = mysql_fetch_array($dayquery);
 
-echo $dayin[0][0];
+echo $dayin[1][0];
 
 			if($dayonetop<$dayonein['SBP']){
 						$patient_flag = $patient_flag+1;
