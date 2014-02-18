@@ -74,9 +74,9 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
           <p>
             <label for="ageGroup">Age group:</label>
             <select name="ageGroup">
-              <option value="18-54"</option>
-              <option value="55-79"</option>
-              <option value="80+"</option>
+              <option value="18-54">18-54</option>
+              <option value="55-79">55-79</option>
+              <option value="80+">80+</option>
             </select>
           </p>
 
