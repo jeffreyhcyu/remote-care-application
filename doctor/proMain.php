@@ -92,7 +92,7 @@ $_SESSION['patientUsername'] = $patientUsername;
 
 include("linreg.php");
 
-//Database connection to get all the patient data out
+//Need to re-connect since linreg disconnects it
 $username="3yp";
 $DBpassword="project";
 $database="tallis";
