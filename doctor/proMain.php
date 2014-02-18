@@ -86,8 +86,8 @@ $BP=mysql_fetch_array($result7);
 $result8 = mysql_query("SELECT patientID FROM patientInfo WHERE id = '$current'");
 $patientUsername=mysql_fetch_array($result8);
 
-$_SESSION['patientUsername'] = $patientUsername;
-
+$_SESSION['patientUsername'] = $patientUsername['patientID'];
+echo $_SESSION['patientUsername'];
 // Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross
 
 include("linreg.php");
