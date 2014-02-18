@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 	//Database connection to get all the patient data out
 	$username="3yp";
 	$DBpassword="project";
