@@ -47,9 +47,7 @@ $database="tallis";
 mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
-//Need to make this doctor specific!
 $result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID='$doctorID'");
-
 $num = mysql_num_rows($result);
 
 while($row = mysql_fetch_array($result))
@@ -62,10 +60,14 @@ while($row = mysql_fetch_array($result))
   }
 
 $result5 = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes' AND doctorID='$doctorID'");
-
 $num5 = mysql_num_rows($result5);
 
-$current=$_GET["w1"];
+$current=$_GET["w1"]; //This is the current patient ID number selected on the left side
+
+if (empty($current)) //Default case if no patient selected
+{
+    $current = "0";
+}
 
 $result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
 $med = mysql_fetch_array($result2);
@@ -88,9 +90,8 @@ $result8array=mysql_fetch_array($result8);
 $patientUsername = $result8array['patientID'];
 
 $_SESSION['patientUsername'] = $patientUsername;
-echo $_SESSION['patientUsername'];
 
-// Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross
+// Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross.
 
 include("linreg.php");
 
