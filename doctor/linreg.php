@@ -10,11 +10,13 @@ session_start();
 	@mysql_select_db($database);
 
         $patientUsername = $_SESSION['patientUsername'];
+        $patientUsername = 'test';
 	$patient_id = 2; //This will be defunct with the live system.. Using the username not id number
 	$patient_flag = 0;
 
         mysql_query("SELECT @i:=0;"); //pre-query
         
+        //Linear Regression code 
 	$SQLQuery = "
 
 			select a as 'a',
@@ -102,27 +104,12 @@ session_start();
 			$daysixbottom=0.9*$daysix;
 			$daysevenbottom=0.9*$dayseven;
 
-			
-					$dayonequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=1");
-					$dayonein = mysql_fetch_array($dayonequery);
+			mysql_query("SELECT @i:=0;"); //pre-query
+                        
+			$dayquery = mysql_query("SELECT patientCurrentBPSystolic AS SBP, @i:=@i+1 AS DAY FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date");
+			$dayin = mysql_fetch_array($dayquery);
 
-					$daytwoquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=2");
-					$daytwoin = mysql_fetch_array($daytwoquery);
-
-					$daythreequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=3");
-					$daythreein = mysql_fetch_array($daythreequery);
-
-					$dayfourquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=4");
-					$dayfourin = mysql_fetch_array($dayfourquery);
-
-					$dayfivequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=5");
-					$dayfivein = mysql_fetch_array($dayfivequery);
-
-					$daysixquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=6");
-					$daysixin = mysql_fetch_array($daysixquery);
-
-					$daysevenquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=7");
-					$daysevenin = mysql_fetch_array($daysevenquery);
+echo $dayin["SBP"];
 
 			if($dayonetop<$dayonein['SBP']){
 						$patient_flag = $patient_flag+1;
