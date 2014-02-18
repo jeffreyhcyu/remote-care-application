@@ -215,7 +215,7 @@ session_start();
 //			echo $daysevenbottom.'<br>';
 
 //Delete the old values
-mysql_query("DELETE FROM FraudFlag WHERE username=$patientUsername");
+mysql_query("DELETE FROM FraudFlag WHERE username='$patientUsername'");
 
 //New query here
 mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
