@@ -172,55 +172,55 @@ session_start();
 						$patient_flag = $patient_flag+1;
 			};
 
+//
+//			echo $patient_flag.'<br>';
+//			
+//			echo $dayin[0].'<br>'; 
+//			echo $dayin[1].'<br>';
+//			echo $dayin[2].'<br>';
+//			echo $dayin[3].'<br>';
+//			echo $dayin[4].'<br>';
+//			echo $dayin[5].'<br>';
+//			echo $dayin[6].'<br>';
+//			//var_dump($array2);*/
+//			
+//                        echo '<br>';
+//                        
+//			echo $dayone.'<br>';
+//			echo $daytwo.'<br>';
+//			echo $daythree.'<br>';
+//			echo $dayfour.'<br>';
+//			echo $dayfive.'<br>';
+//			echo $daysix.'<br>';
+//			echo $dayseven.'<br>';
+//			
+//                        echo '<br>';
+//                        
+//			echo $dayonetop.'<br>';
+//			echo $daytwotop.'<br>';
+//			echo $daythreetop.'<br>';
+//			echo $dayfourtop.'<br>';
+//			echo $dayfivetop.'<br>';
+//			echo $daysixtop.'<br>';
+//			echo $dayseventop.'<br>';
+//			
+//                        echo '<br>';
+//                           
+//			echo $dayonebottom.'<br>';
+//			echo $daytwobottom.'<br>';
+//			echo $daythreebottom.'<br>';
+//			echo $dayfourbottom.'<br>';
+//			echo $dayfivebottom.'<br>';
+//			echo $daysixbottom.'<br>';
+//			echo $daysevenbottom.'<br>';
 
-			echo $patient_flag.'<br>';
-			
-			echo $dayin[0].'<br>'; 
-			echo $dayin[1].'<br>';
-			echo $dayin[2].'<br>';
-			echo $dayin[3].'<br>';
-			echo $dayin[4].'<br>';
-			echo $dayin[5].'<br>';
-			echo $dayin[6].'<br>';
-			//var_dump($array2);*/
-			
-                        echo '<br>';
-                        
-			echo $dayone.'<br>';
-			echo $daytwo.'<br>';
-			echo $daythree.'<br>';
-			echo $dayfour.'<br>';
-			echo $dayfive.'<br>';
-			echo $daysix.'<br>';
-			echo $dayseven.'<br>';
-			
-                        echo '<br>';
-                        
-			echo $dayonetop.'<br>';
-			echo $daytwotop.'<br>';
-			echo $daythreetop.'<br>';
-			echo $dayfourtop.'<br>';
-			echo $dayfivetop.'<br>';
-			echo $daysixtop.'<br>';
-			echo $dayseventop.'<br>';
-			
-                        echo '<br>';
-                           
-			echo $dayonebottom.'<br>';
-			echo $daytwobottom.'<br>';
-			echo $daythreebottom.'<br>';
-			echo $dayfourbottom.'<br>';
-			echo $dayfivebottom.'<br>';
-			echo $daysixbottom.'<br>';
-			echo $daysevenbottom.'<br>';
-			
-	
-	//mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='$patient_id'");
-        
-        //New query here
-        //mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
-        
-	mysql_close();
+//Delete the old values
+mysql_query("DELETE FROM FraudFlag WHERE username=$patientUsername");
+
+//New query here
+mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
+  
+mysql_close();
 
 ?>
 
