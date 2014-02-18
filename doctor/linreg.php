@@ -110,7 +110,7 @@ session_start();
 			
                         while($row = mysql_fetch_array($dayquery))
                               {
-                                echo $row;
+                                echo $row[0];
                               }
 
 			if($dayonetop<$dayonein['SBP']){
