@@ -180,7 +180,7 @@
 			};
 
 
-			/*echo $patient_flag.'<br>';
+			echo $patient_flag.'<br>';
 
 			echo $dayonetop.'<br>';
 			echo $dayonebottom.'<br>';
@@ -194,7 +194,7 @@
 			echo $daysevenin['SBP'].'<br>';
 			//var_dump($array2);*/
 
-			/*echo $dayone.'<br>';
+			echo $dayone.'<br>';
 			echo $daytwo.'<br>';
 			echo $daythree.'<br>';
 			echo $dayfour.'<br>';
@@ -217,7 +217,7 @@
 			echo $dayfivebottom.'<br>';
 			echo $daysixbottom.'<br>';
 			echo $daysevenbottom.'<br>';
-			*/
+			
 	
 	//mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='$patient_id'");
         
