@@ -10,7 +10,6 @@ session_start();
 	@mysql_select_db($database);
 
         $patientUsername = $_SESSION['patientUsername'];
-        $patientUsername = 'test'; //for testing
 	$patient_id = 2; //This will be defunct with the live system.. Using the username not id number
 	$patient_flag = 0;
 

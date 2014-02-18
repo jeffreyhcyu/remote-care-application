@@ -84,10 +84,12 @@ $BP=mysql_fetch_array($result7);
 //This section sets a global session variable with the selected patientUsername
 //This is used for the LinReg checking. $_SESSION is used in linreg!
 $result8 = mysql_query("SELECT patientID FROM patientInfo WHERE id = '$current'");
-$patientUsername=mysql_fetch_array($result8);
+$result8array=mysql_fetch_array($result8);
+$patientUsername = $result8array['patientID'];
 
-$_SESSION['patientUsername'] = $patientUsername['patientID'];
+$_SESSION['patientUsername'] = $patientUsername;
 echo $_SESSION['patientUsername'];
+
 // Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross
 
 include("linreg.php");
