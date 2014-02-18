@@ -224,7 +224,7 @@ session_start();
 	//mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='$patient_id'");
         
         //New query here
-        mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag'");
+        mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
         
 	mysql_close();
 
