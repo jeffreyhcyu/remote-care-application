@@ -75,32 +75,24 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
             <label for="ageGroup">Age group:</label>
             <select name="ageGroup">
 	      <option value="">Select...</option>
-              <option value="18-54"<? if($varAgeGroup=="18-54") echo(" selected=\"selected\"");?>>18-54</option>
-              <option value="55-79"<? if($varAgeGroup=="55-79") echo(" selected=\"selected\"");?>>55-79</option>
-              <option value="80+"<? if($varAgeGroup=="80+") echo(" selected=\"selected\"");?>>80+</option>
+              <option value="18-54"<? if($varAgeGroup=="18-54") echo(" selected=\"selected\"");?>18-54</option>
+              <option value="55-79"<? if($varAgeGroup=="55-79") echo(" selected=\"selected\"");?>55-79</option>
+              <option value="80+"<? if($varAgeGroup=="80+") echo(" selected=\"selected\"");?>80+</option>
             </select>
           </p>
 
-          <p>
-            Sex:
-            <input type="radio" name="gender" id="radio1" value="female">
-            <label for="radio">Female</label>
-            <input type="radio" name="gender" id="radio2" value="male">
-            <label for="radio2">Male</label>
-          </p>
-
 <p>
-<label for='gender'>Patient sex:</label>
+<label for='gender'>Sex:</label>
 
         <input name="gender" type="radio" 
 
-        value="Male" checked="checked"<? if($varGender=="Male") echo(" selected=\"selected\"");?>>
+        value="Male" checked="checked"<? if($varGender=="Male") echo(" selected=\"selected\"");?>
 
         <span class="examplestyle">Male</span><br />
 
   <input type="radio" name="gender" 
 
-  value="Female"<? if($varGender=="Female") echo(" selected=\"selected\"");?>>
+  value="Female"<? if($varGender=="Female") echo(" selected=\"selected\"");?>
   <span class="examplestyle"> 
 
  Female
@@ -112,13 +104,13 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 
         <input name="ethnicity" type="radio" 
 
-        value="Yes" checked="checked"<? if($varEthnicity=="Yes") echo(" selected=\"selected\"");?>>
+        value="Yes" checked="checked"<? if($varEthnicity=="Yes") echo(" selected=\"selected\"");?>
 
         <span class="examplestyle">Yes</span><br />
 
   <input type="radio" name="ethnicity" 
 
-  value="No"<? if($varGender=="No") echo(" selected=\"selected\"");?>>
+  value="No"<? if($varGender=="No") echo(" selected=\"selected\"");?>
   <span class="examplestyle"> 
 No
   </span>
