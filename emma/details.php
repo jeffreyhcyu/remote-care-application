@@ -57,3 +57,5 @@ $sql = "INSERT INTO patientInfo (ageGroup, gender, ethnicity) VALUES (".
 			header("Location: newPatientComorbidities.php");
 
 			exit();
+
+?>
