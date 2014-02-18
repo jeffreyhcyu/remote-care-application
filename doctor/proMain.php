@@ -93,7 +93,7 @@ $_SESSION['patientUsername'] = $patientUsername;
 include("linreg.php");
 
 $flagquery = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername' ORDER BY id DESC LIMIT 1");
-$flagno = mysql_fetch_array($flagnoquery); 
+$flagno = mysql_fetch_array($flagquery); 
 
 mysql_close();
 ?>
