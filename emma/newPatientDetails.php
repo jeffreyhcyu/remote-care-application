@@ -50,6 +50,20 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
     
     <h3>Add a new patient:</h3>
     
+<?php
+
+		    if(!empty($errorMessage)) 
+
+		    {
+
+			    echo("<p>There was an error with your form:</p>\n");
+
+			    echo("<ul>" . $errorMessage . "</ul>\n");
+
+            }
+
+        ?>
+
         <section>
       <p>Patient is suitable. Please enter patient info. </p>
     </section>
@@ -58,13 +72,15 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
       <form id="details" name="details" method="post" action="details.php">
         <section id="submit">
           <p>
-            <label for="select">Age group:</label>
-            <select name="ageGroup" id="ageGroup">
-              <option>18-54</option>
-              <option>55-79</option>
-              <option>80+</option>
+            <label for="ageGroup">Age group:</label>
+            <select name="ageGroup">
+	      <option value="">Select...</option>
+              <option value="18-54"<? if($varAgeGroup=="18-54") echo(" selected=\"selected\"");?>>18-54</option>
+              <option value="55-79"<? if($varAgeGroup=="55-79") echo(" selected=\"selected\"");?>>55-79</option>
+              <option value="80+"<? if($varAgeGroup=="80+") echo(" selected=\"selected\"");?>>80+</option>
             </select>
           </p>
+
           <p>
             Sex:
             <input type="radio" name="gender" id="radio1" value="female">
@@ -72,15 +88,49 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
             <input type="radio" name="gender" id="radio2" value="male">
             <label for="radio2">Male</label>
           </p>
-          <p>Is the patient of Black African or Black Caribbean descent? 
-            <input type="radio" name="ethnicity" id="radio3" value="Yes">
-            <label for="radio3">Yes</label>
-            <input type="radio" name="ethnicity" id="radio4" value="No">
-            <label for="radio4">No</label>
-          </p> 
+
+<p>
+<label for='gender'>Patient sex:</label>
+
+        <input name="gender" type="radio" 
+
+        value="Male" checked="checked"<? if($varGender=="Male") echo(" selected=\"selected\"");?>>
+
+        <span class="examplestyle">Male</span><br />
+
+  <input type="radio" name="gender" 
+
+  value="Female"<? if($varGender=="Female") echo(" selected=\"selected\"");?>>
+  <span class="examplestyle"> 
+
+ Female
+  </span>
+</p>
+
+<p>
+<label for='ethnicity'>Is the patient of Black African or Black Caribbean descent?</label>
+
+        <input name="ethnicity" type="radio" 
+
+        value="Yes" checked="checked"<? if($varEthnicity=="Yes") echo(" selected=\"selected\"");?>>
+
+        <span class="examplestyle">Yes</span><br />
+
+  <input type="radio" name="ethnicity" 
+
+  value="No"<? if($varGender=="No") echo(" selected=\"selected\"");?>>
+  <span class="examplestyle"> 
+No
+  </span>
+</p>
+
+
           <br>
-            <input type="submit" name="next" id="next" value="Next">
+            <input type="submit" name="formSubmit" value="Submit">
           </p>
+
+
+
         </section>
       </form>
       <h3>&nbsp;</h3>
