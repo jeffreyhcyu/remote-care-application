@@ -16,7 +16,7 @@ echo $_SESSION['ethnicity'];
 
 // The user is directed to this page after completing the form. 
 
-header("Location: newPatientComorbidities.html");
+//header("Location: newPatientComorbidities.html");
 
 
 
