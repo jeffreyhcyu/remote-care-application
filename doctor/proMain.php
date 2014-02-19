@@ -256,12 +256,11 @@ ID Number
        <script>
         $(function() {
           $( "#progressbar" ).progressbar({
-            value: <?php echo $flagno['flag']*10 ?>;
+            value: <?php echo $flagno['flag']*10 ?>
           });
         });
         </script>
-<td>Fraud Level <div id="progressbar"><div class="progress-label">Loading...</div></div></td>
-<td><?php echo $flagno['flag']*10 ?></td>
+<td>Fraud Level <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
 </tr>
 <tr>
 <td>Next review </td>
