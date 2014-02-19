@@ -125,6 +125,13 @@ $checker->close();
 $concat = $patientID . $hashedPassword . $doctorID . $targetSystolic . $targetDiastolic . $gender;
 $PHP_hash = hash('SHA512',$concat);
 
+echo $concat;
+echo '<br>';
+echo $SQL_hash;
+echo '<br>';
+echo $PHP_hash;
+echo '<br>';
+
 if ($SQL_hash == $PHP_hash)
 {
     //If Successful data entry
