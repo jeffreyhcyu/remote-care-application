@@ -253,17 +253,16 @@ ID Number
 <td><?php echo $info['ageGroup'] ?></td>
 </tr>
 <tr>
-Fraud Level 
-</tr>
-<tr>
        <script>
         $(function() {
           $( "#progressbar" ).progressbar({
-            value: <?php echo $flagno['flag']*10 ?>
+            value: <?php echo $flagno['flag']*10 ?>;
           });
         });
         </script>
-<div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></tr>
+<td>Fraud Level</td><td> <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
+
+</tr>
 <tr>
 <td>Next review </td>
 <td><?php echo $info['nextReview']?><td>
