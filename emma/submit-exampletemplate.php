@@ -7,15 +7,15 @@
 //NB: THESE WILL CHANGE DEPENDING ON WHAT IS IN THE PREVIOUS PAGES! Values below are for testing only!
 
 //Patient Details
-$patientID = "form-test";
-$input_password = "thisisapassword";
-$doctorID = "1";
-$targetSystolic = "100";
-$targetDiastolic = "50";
+$patientID = "form-test2";
+$input_password = "thisisapassword2";
+$doctorID = "2";
+$targetSystolic = "120";
+$targetDiastolic = "60";
 $BPcontrolled = "No";
 $ageGroup = "55-79";
-$ethnicity = "No";
-$gender = "Female";
+$ethnicity = "Yes";
+$gender = "Male";
 
 //Comorbidities:
 $breastfeed = "No";
