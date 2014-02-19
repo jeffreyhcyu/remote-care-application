@@ -260,7 +260,9 @@ ID Number
           });
         });
         
-        /*        $(document).ready(function(){
+        /* 
+        SHOULD WORK BUT HIDES THE PROGRESS BAR 
+               $(document).ready(function(){
           $("button").click(function(){
             $.ajax({url:"clearFraud.php";
             }});
@@ -288,7 +290,7 @@ ID Number
         });
         */
         </script>
-<td>Fraud Level <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
+<td>Data Uncertainty Metric <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
 <td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
 </tr>
 <tr>
