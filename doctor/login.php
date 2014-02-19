@@ -45,6 +45,13 @@ if ($checkPassword)
     $_SESSION['userID'] = $id;
     $_SESSION['loginMessage'] = '';
     
+    //Add successful login to the Access Log:
+    $remoteIP = $_SERVER['REMOTE_ADDR'];
+    $doctorLog = $db->prepare("INSERT INTO doctorAccessLog VALUES('',?,now(),?)");
+    $doctorLog->bind_param('ss',$id,$remoteIP);
+    $doctorLog->execute();
+    $doctorLog->close();
+    
 header('Location: https://3yp.villocq.com/doctor/proMain.php'); 
 }
 else
