@@ -260,13 +260,13 @@ ID Number
           });
         });
         
-                $(document).ready(function(){
+        /*        $(document).ready(function(){
           $("button").click(function(){
             $.ajax({url:"clearFraud.php";
             }});
           });
         });
-
+        */
         /*
         WONT WORK DUE TO TYPICAL CLIENT/SERVER SIDE DIVIDE 
         $(function clearDBfraud(){
