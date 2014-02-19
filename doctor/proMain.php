@@ -256,7 +256,7 @@ ID Number
        <script>
         $(function() {
           $( "#progressbar" ).progressbar({
-            value: 40
+            value: 10
           });
         });
         </script>
