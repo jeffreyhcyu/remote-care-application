@@ -253,6 +253,9 @@ ID Number
 <td><?php echo $info['ageGroup'] ?></td>
 </tr>
 <tr>
+Fraud Level 
+</tr>
+<tr>
        <script>
         $(function() {
           $( "#progressbar" ).progressbar({
@@ -260,8 +263,7 @@ ID Number
           });
         });
         </script>
-<td>Fraud Level <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
-</tr>
+<div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></tr>
 <tr>
 <td>Next review </td>
 <td><?php echo $info['nextReview']?><td>
