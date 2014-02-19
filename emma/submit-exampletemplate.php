@@ -125,18 +125,9 @@ $checker->close();
 $concat = $patientID . $hashedPassword . $doctorID . $targetSystolic . $targetDiastolic . $gender;
 $PHP_hash = hash('SHA512',$concat);
 
-echo $concat;
-echo '<br>';
-echo $SQL_hash;
-echo '<br>';
-echo $PHP_hash;
-echo '<br>';
-
 if ($SQL_hash == $PHP_hash)
 {
     //If Successful data entry
-    //Maybe, save the auto-ID as a variable to be accessed later:
-    $_SESSION['patientAutoID'] = $check_id;
     //Redirect to the success page
     //header('Location: https://3yp.villocq.com/emma/CHANGE-ME-Success-page.html');
     echo "SUCCESS!";
