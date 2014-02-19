@@ -260,7 +260,7 @@ ID Number
 </tr>
 <tr>
 <td>Fraud Level <div id="progressbar"><div class="progress-label">Loading...</div></div></td>
-<td><?php echo $flagno['flag']*10 ?></td>
+<td><?php echo $flagno['flag'] ?></td>
 </tr>
 <tr>
 <td>Next review </td>
