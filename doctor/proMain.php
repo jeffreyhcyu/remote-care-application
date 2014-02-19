@@ -31,7 +31,7 @@ header('Location: https://3yp.villocq.com/doctor');
         <script>
         $(function() {
           $( "#progressbar" ).progressbar({
-            value: 37
+            value: <?php echo $flagno['flag']*10 ?>
           });
         });
         </script>
@@ -260,7 +260,7 @@ ID Number
 </tr>
 <tr>
 <td>Fraud Level <div id="progressbar"><div class="progress-label">Loading...</div></div></td>
-<td><?php echo $flagno['flag'] ?></td>
+<td><?php echo $flagno['flag']*10 ?></td>
 </tr>
 <tr>
 <td>Next review </td>
