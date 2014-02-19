@@ -2,18 +2,11 @@
 
 // This is an example of the php that might be needed for the new user creation form
 
-// Configure the MySQL connection
-$server="remote.villocq.com";
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-// New MySQLi Instance
-$db = new mysqli($server,$username,$DBpassword,$database);
-
 //Assign the creation form POST output to PHP variables
 //If there are multiple stages of the form, use $_SESSION variables between pages to save them.
 //NB: THESE WILL CHANGE DEPENDING ON WHAT IS IN THE PREVIOUS PAGES! Values below are for testing only!
+
+//Patient Details
 $patientID = "form-test";
 $input_password = "thisisapassword";
 $doctorID = "1";
@@ -61,6 +54,24 @@ $eGFRbase = null;
 $creatininebase = null;
 $potassiumbase = null;
 
+//DrugInfo:
+$numberDrugs = "1";
+$isonmaxdose = "No";
+$drug1 = "drug1";
+$drug1class = "drugclass";
+$drug1prescription = "99";
+
+///////////////////////////////////////////////////////////////////////////////
+
+// Configure the MySQL connection
+$server="remote.villocq.com";
+$username="3yp";
+$DBpassword="project";
+$database="tallis";
+
+// New MySQLi Instance
+$db = new mysqli($server,$username,$DBpassword,$database);
+
 //Hashing Function
 require("PasswordHash.php"); //This is the PHPass framework
 $hasher = new PasswordHash(10,false); // 10 is the cost function setting
@@ -86,15 +97,35 @@ $newPatient->execute();
 $newPatient->close();
 //Data has now been submitted to the database
 
-//Let's do a quick data check to make sure it was sbumitted:
-$checker = $db->prepare("SELECT id,password FROM patientInfo WHERE patientID=?");
+//Need to create additional records:
+//This is for the Fraud Detection system:
+$newFlag = $db->prepare("INSERT INTO FraudFlag VALUES('',?,'0')");
+$newFlag->bind_param('s',$patientID);
+$newFlag->execute();
+$newFLag->close();
+
+//This creates a new record in the patient drugs table:
+$newPatientDrugs = $db->prepare("INSERT INTO patientDrugs VALUES('',?,?,?,?,?,?,'','','','','','','','','')");
+$newPatientDrugs->bind_param('ssssss',$patientID,$numberDrugs,$isonmaxdose,$drug1,$drug1class,$drug1prescription);
+$newPatientDrugs->execute();
+$newPatientDrugs->close();
+
+//All records have now been created
+
+//Quick data check to make sure data to patientInfo was submitted (concatenate + hash some columns):
+$checker = $db->prepare("SELECT SHA2(concat(patientID,password,doctorID,targetSystolic,
+                        targetDiastolic,gender),'512') FROM patientInfo WHERE patientID = ?");
 $checker->bind_param('s',$patientID);
 $checker->execute();
-$checker->bind_result($check_id,$check_password);
+$checker->bind_result($SQL_hash);
 $checker->fetch();
 $checker->close();
 
-if ($check_password == $hashedPassword AND $check_id > 0)
+//Create a hash of the same columns from the PHP data:
+$concat = $patientID . $hashedPassword . $doctorID . $targetSystolic . $targetDiastolic . $gender;
+$PHP_hash = hash('SHA512',$concat);
+
+if ($SQL_hash == $PHP_hash)
 {
     //If Successful data entry
     //Maybe, save the auto-ID as a variable to be accessed later:
