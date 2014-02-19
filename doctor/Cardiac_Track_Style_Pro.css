@@ -199,7 +199,6 @@
 
   .ui-progressbar {
     position: relative;
-    color:red;
   }
   .progress-label {
     position: absolute;
@@ -207,4 +206,5 @@
     top: 4px;
     font-weight: bold;
     text-shadow: 1px 1px 0 #fff;
+  	color:red;
   }
