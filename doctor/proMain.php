@@ -22,6 +22,27 @@ header('Location: https://3yp.villocq.com/doctor');
 <link rel="stylesheet" type="text/css" href="Cardiac_Track_Style_Pro.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
+      <!--this is the begining of the j query for the spurious bar-->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+  $(function() {
+    var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+ 
+    progressbar.progressbar({
+      value: false,
+      change: function() {
+        progressLabel.text( progressbar.progressbar( "4" ) + "%" );
+      },
+      complete: function() {
+        progressLabel.text( "Complete!" );
+      }
+    });
+    </script>
+     <!--this is the end of the j query for the spurious bar-->
 </head>
 <div class="full_screen">
 
@@ -230,7 +251,7 @@ ID Number
 <td><?php echo $info['ageGroup'] ?></td>
 </tr>
 <tr>
-<td>Fraud Level</td>
+<td>Fraud Level <div id="progressbar"><div class="progress-label">Loading...</div></div></td>
 <td><?php echo $flagno['flag'] ?></td>
 </tr>
 <tr>
