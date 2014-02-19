@@ -33,6 +33,7 @@ $getHash->bind_param('s',$id);
 $getHash->execute();
 $getHash->bind_result($actual_password_hash);
 $getHash->fetch();
+$getHash->close();
 
 // Check password matches, using PHPass here
 require("PasswordHash.php");
