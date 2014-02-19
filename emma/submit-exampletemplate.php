@@ -102,7 +102,7 @@ $newPatient->close();
 $newFlag = $db->prepare("INSERT INTO FraudFlag VALUES('',?,'0')");
 $newFlag->bind_param('s',$patientID);
 $newFlag->execute();
-$newFLag->close();
+$newFlag->close();
 
 //This creates a new record in the patient drugs table:
 $newPatientDrugs = $db->prepare("INSERT INTO patientDrugs VALUES('',?,?,?,?,?,?,'','','','','','','','','')");
