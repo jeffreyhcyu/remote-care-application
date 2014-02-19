@@ -259,6 +259,16 @@ ID Number
             value: <?php echo $flagno['flag']*10 ?>
           });
         });
+        
+                $(document).ready(function(){
+          $("button").click(function(){
+            $.ajax({url:"clearFraud.php";
+            }});
+          });
+        });
+
+        /*
+        WONT WORK DUE TO TYPICAL CLIENT/SERVER SIDE DIVIDE 
         $(function clearDBfraud(){
           <?php 
               // Configure the MySQL connection
@@ -276,9 +286,10 @@ ID Number
 
           ?>
         });
+        */
         </script>
 <td>Fraud Level <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
-<td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
+<td><button >Click here to reset uncertainity</button></td>
 </tr>
 <tr>
 <td>Next review </td>
