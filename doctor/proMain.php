@@ -253,6 +253,7 @@ ID Number
 <td><?php echo $info['ageGroup'] ?></td>
 </tr>
 <tr>
+<td>
        <script>
         $(function() {
           $( "#progressbar" ).progressbar({
@@ -290,9 +291,13 @@ ID Number
         });
         */
         </script>
-Data Uncertainty Metric </tr>
+Data Uncertainty Metric 
+</td>
+</tr>
 <tr>
+<td>
 <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div>
+</td>
 </tr>
 <tr>
 <td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
