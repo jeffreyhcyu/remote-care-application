@@ -27,7 +27,15 @@ header('Location: https://3yp.villocq.com/doctor');
   <script src="//code.jquery.com/jquery-1.9.1.js"></script>
   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
-    <script>
+  
+        <script>
+        $(function() {
+          $( "#progressbar" ).progressbar({
+            value: 37
+          });
+        });
+        </script>
+  <!-- THIS IS THE MORE COMPLEX LABLED ONE  <script>
   $(function() {
     var progressbar = $( "#progressbar" ),
       progressLabel = $( ".progress-label" );
