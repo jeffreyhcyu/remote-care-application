@@ -10,9 +10,8 @@ session_start();
 	@mysql_select_db($database);
         
         $patientUsername = $_SESSION['patientUsername'];
-		$patient_flag_query= mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername'");
-        $patient_flag= mysql_fetch_array($patient_flag_query);
-
+	$patient_flag = 0;
+        
         mysql_query("SELECT @i:=0;"); //pre-query
         
         //Linear Regression code 
@@ -222,10 +221,10 @@ session_start();
 //			echo $daysevenbottom.'<br>';
 
 //Delete the old values
-//mysql_query("DELETE FROM FraudFlag WHERE username='$patientUsername'");
+mysql_query("DELETE FROM FraudFlag WHERE username='$patientUsername'");
 
 //New query here
-mysql_query("UPDATE FraudFlag SET flag='$patient_flag' WHERE username='$patientUsername'");
+mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
   
 mysql_close();
 
