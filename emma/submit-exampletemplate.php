@@ -105,7 +105,7 @@ $newFlag->execute();
 $newFlag->close();
 
 //This creates a new record in the patient drugs table:
-$newPatientDrugs = $db->prepare("INSERT INTO patientDrugs VALUES('',?,?,?,?,?,?,'','','','','','','','','')");
+$newPatientDrugs = $db->prepare("INSERT INTO patientDrugs VALUES('',?,?,?,?,?,?,null,null,null,null,null,null,null,null,null)");
 $newPatientDrugs->bind_param('ssssss',$patientID,$numberDrugs,$isonmaxdose,$drug1,$drug1class,$drug1prescription);
 $newPatientDrugs->execute();
 $newPatientDrugs->close();
