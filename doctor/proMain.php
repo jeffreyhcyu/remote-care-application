@@ -28,13 +28,7 @@ header('Location: https://3yp.villocq.com/doctor');
   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
   
-        <script>
-        $(function() {
-          $( "#progressbar" ).progressbar({
-            value: <?php echo $flagno['flag']*10 ?>
-          });
-        });
-        </script>
+ 
   <!-- THIS IS THE MORE COMPLEX LABLED ONE  <script>
   $(function() {
     var progressbar = $( "#progressbar" ),
@@ -259,8 +253,15 @@ ID Number
 <td><?php echo $info['ageGroup'] ?></td>
 </tr>
 <tr>
+       <script>
+        $(function() {
+          $( "#progressbar" ).progressbar({
+            value: <?php echo $flagno['flag']*10 ?>
+          });
+        });
+        </script>
 <td>Fraud Level <div id="progressbar"><div class="progress-label">Loading...</div></div></td>
-<td><?php echo $flagno['flag'] ?></td>
+<td><?php echo $flagno['flag']*10 ?></td>
 </tr>
 <tr>
 <td>Next review </td>
