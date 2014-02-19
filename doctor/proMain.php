@@ -260,7 +260,7 @@ ID Number
           });
         });
         </script>
-<td>Fraud Level</td><td> <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
+<td>Fraud Level <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
 
 </tr>
 <tr>
