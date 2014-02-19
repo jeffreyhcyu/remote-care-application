@@ -290,7 +290,11 @@ ID Number
         });
         */
         </script>
-<td>Data Uncertainty Metric <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
+Data Uncertainty Metric </tr>
+<tr>
+<div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div>
+</tr>
+<tr>
 <td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
 </tr>
 <tr>
