@@ -259,8 +259,26 @@ ID Number
             value: <?php echo $flagno['flag']*10 ?>
           });
         });
+        $(function clearDBfraud(){
+          <?php 
+              // Configure the MySQL connection
+          $username="3yp";
+          $DBpassword="project";
+          $database="tallis";
+
+          mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+          @mysql_select_db($database);
+
+          $current=$_GET["w1"];
+
+          //Perform the SQL Query
+          mysql_query("UPDATE FraudFlag SET flag=0 WHERE username = (SELECT patientID FROM patientInfo WHERE id='$current')");
+
+          ?>
+        });
         </script>
 <td>Fraud Level <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
+<td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
 </tr>
 <tr>
 <td>Next review </td>
