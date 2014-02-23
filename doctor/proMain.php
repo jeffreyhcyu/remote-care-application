@@ -22,6 +22,29 @@ header('Location: https://3yp.villocq.com/doctor');
 <link rel="stylesheet" type="text/css" href="Cardiac_Track_Style_Pro.css">
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 
+      <!--this is the begining of the j query for the spurious bar-->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  
+ 
+  <!-- THIS IS THE MORE COMPLEX LABLED ONE  <script>
+  $(function() {
+    var progressbar = $( "#progressbar" ),
+      progressLabel = $( ".progress-label" );
+ 
+    progressbar.progressbar({
+      value: false,
+      change: function() {
+        progressLabel.text( progressbar.progressbar( "4" ) + "%" );
+      },
+      complete: function() {
+        progressLabel.text( "Complete!" );
+      }
+    });
+    </script>
+     <!--this is the end of the j query for the spurious bar-->
 </head>
 <div class="full_screen">
 
@@ -47,9 +70,7 @@ $database="tallis";
 mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
-//Need to make this doctor specific!
 $result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID='$doctorID'");
-
 $num = mysql_num_rows($result);
 
 while($row = mysql_fetch_array($result))
@@ -62,10 +83,14 @@ while($row = mysql_fetch_array($result))
   }
 
 $result5 = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes' AND doctorID='$doctorID'");
-
 $num5 = mysql_num_rows($result5);
 
-$current=$_GET["w1"];
+$current=$_GET["w1"]; //This is the current patient ID number selected on the left side
+
+if (empty($current)) //Default case if no patient selected
+{
+    $current = "0";
+}
 
 $result2 = mysql_query("SELECT * FROM patientDrugs WHERE id=$current");
 $med = mysql_fetch_array($result2);
@@ -81,6 +106,29 @@ $result7 = mysql_query("SELECT b.patientCurrentBPSystolic,b.patientCurrentBPDias
                        ORDER BY b.number DESC LIMIT 1");
 $BP=mysql_fetch_array($result7);
                        
+//This section sets a global session variable with the selected patientUsername
+//This is used for the LinReg checking. $_SESSION is used in linreg!
+$result8 = mysql_query("SELECT patientID FROM patientInfo WHERE id = '$current'");
+$result8array=mysql_fetch_array($result8);
+$patientUsername = $result8array['patientID'];
+
+$_SESSION['patientUsername'] = $patientUsername;
+
+// Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross.
+
+include("linreg.php");
+
+//Need to re-connect since linreg disconnects it
+$username="3yp";
+$DBpassword="project";
+$database="tallis";
+
+mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+@mysql_select_db($database);
+
+$flagquery = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername' ORDER BY id DESC LIMIT 1");
+$flagno = mysql_fetch_array($flagquery); 
+
 mysql_close();
 ?>
 
@@ -169,20 +217,6 @@ $( ".Identification" ).click(function() {
 var idNum = this.getAttribute("data-idNo");
 //var idNumber = idNum.dataset.idNo; // leaves = 47;
 window.location.href = "proMain.php?w1=" + idNum;
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- <?php include("linreg.php?w1=$current");         //this is when the include starts !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
- //Database connection to get all the patient data out
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-
-$flagnoarray = mysql_query("SELECT flag FROM FraudTest WHERE id='$current'");
-$flagno = mysql_fetch_array($flagnoarray); 
- ?>                                   //this is what has been added to call the php script!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 });
 </script>
 
@@ -211,13 +245,53 @@ Patient Info
 <tr>
 <td>
 ID Number
-<?php echo $flagno ?>
 </td>
 <td><?php echo $_GET['w1']?><td>
 </tr>
 <tr>
 <td>Age</td>
 <td><?php echo $info['ageGroup'] ?></td>
+</tr>
+<tr>
+       <script>
+        $(function() {
+          $( "#progressbar" ).progressbar({
+            value: <?php echo $flagno['flag']*10 ?>
+          });
+        });
+        
+        /* 
+        SHOULD WORK BUT HIDES THE PROGRESS BAR 
+               $(document).ready(function(){
+          $("button").click(function(){
+            $.ajax({url:"clearFraud.php";
+            }});
+          });
+        });
+        */
+        /*
+        WONT WORK DUE TO TYPICAL CLIENT/SERVER SIDE DIVIDE 
+        $(function clearDBfraud(){
+          <?php 
+              // Configure the MySQL connection
+          $username="3yp";
+          $DBpassword="project";
+          $database="tallis";
+
+          mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+          @mysql_select_db($database);
+
+          $current=$_GET["w1"];
+
+          //Perform the SQL Query
+          mysql_query("UPDATE FraudFlag SET flag=0 WHERE username = (SELECT patientID FROM patientInfo WHERE id='$current')");
+
+          ?>
+        });
+        */
+        </script>
+<td>Data Uncertainty  <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
+<td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
 </tr>
 <tr>
 <td>Next review </td>

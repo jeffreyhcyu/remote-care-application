@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 	//Database connection to get all the patient data out
 	$username="3yp";
 	$DBpassword="project";
@@ -6,10 +8,15 @@
 
 	mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 	@mysql_select_db($database);
+        
+        $patientUsername = $_SESSION['patientUsername'];
+		$patient_flag = 0;
+  		//$patient_flag_query= mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername'");
+      	//$patient_flag= mysql_fetch_result ($patient_flag_query);
 
-	$patient_id = 2;
-	$patient_flag = 0;
-
+        mysql_query("SELECT @i:=0;"); //pre-query
+        
+        //Linear Regression code 
 	$SQLQuery = "
 
 			select a as 'a',
@@ -57,7 +64,13 @@
 			         -- Alias the x-variable column as 'x'
 			         -- Alias the y-variable column as 'y'
 					
-					SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id='$patient_id'
+                                        # COMMENT HERE:
+                                        # A POSSIBLE STATEMENT FOR LIVE DATA IS:
+                                    
+                                        SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date
+                                        # The above query gets the last 7 data points as 'patientCurrentBPSystolic' and 'x' ordered from 1 to 7
+					
+                                        # SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id='$patient_id'
 			      
 			      ) as source_data
 			   ) as regression
@@ -91,128 +104,134 @@
 			$daysixbottom=0.9*$daysix;
 			$daysevenbottom=0.9*$dayseven;
 
-			
-					$dayonequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=1");
-					$dayonein = mysql_fetch_array($dayonequery);
+                        //The below query gets the past 7 days data again, puts into an array $dayin
+			mysql_query("SELECT @i:=0;"); //pre-query
+                        
+			$dayquery = mysql_query("SELECT patientCurrentBPSystolic AS SBP, @i:=@i+1 AS DAY FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date");
+                        $counter = 0;
+                        while($row = mysql_fetch_array($dayquery))
+                              {
+                                $dayin[$counter] = $row[0];
+                                $counter++;
+                              }
+                              // $dayin[index] is the 7 previous days of actual data. Remember 1st day = 0!
 
-					$daytwoquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=2");
-					$daytwoin = mysql_fetch_array($daytwoquery);
+            if ($array['r_r']>1){
+            			$patient_flag = $patient_flag+1;
+            }
 
-					$daythreequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=3");
-					$daythreein = mysql_fetch_array($daythreequery);
+            if ($array['r_r']<(-1)){
+            			$patient_flag = $patient_flag+1;
+            }
 
-					$dayfourquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=4");
-					$dayfourin = mysql_fetch_array($dayfourquery);
-
-					$dayfivequery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=5");
-					$dayfivein = mysql_fetch_array($dayfivequery);
-
-					$daysixquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=6");
-					$daysixin = mysql_fetch_array($daysixquery);
-
-					$daysevenquery = mysql_query("SELECT SBP FROM FraudTest WHERE id='$patient_id' AND Day=7");
-					$daysevenin = mysql_fetch_array($daysevenquery);
-
-			if($dayonetop<$dayonein['SBP']){
+			if($dayonetop<$dayin[0]){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($dayonein['SBP']<$dayonebottom){
+			if($dayin[0]<$dayonebottom){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($daytwotop<$daytwoin['SBP']){
+			if($daytwotop<$dayin[1]){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($daytwoin['SBP']<$daytwobottom){
+			if($dayin[1]<$daytwobottom){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($daythreetop<$daythreein['SBP']){
+			if($daythreetop<$dayin[2]){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($daythreein['SBP']<$daythreebottom){
+			if($dayin[2]<$daythreebottom){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($dayfourtop<$dayfourin['SBP']){
+			if($dayfourtop<$dayin[3]){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($dayfourin['SBP']<$dayfourbottom){
+			if($dayin[3]<$dayfourbottom){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($dayfivetop<$dayfivein['SBP']){
+			if($dayfivetop<$dayin[4]){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($dayfivein['SBP']<$dayfivebottom){
+			if($dayin[4]<$dayfivebottom){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($daysixtop<$daysixin['SBP']){
+			if($daysixtop<$dayin[5]){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($daysixin['SBP']<$daysixbottom){
+			if($dayin[5]<$daysixbottom){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($dayseventop<$daysevenin['SBP']){
+			if($dayseventop<$dayin[6]){
 						$patient_flag = $patient_flag+1;
 			};
 
-			if($daysevenin['SBP']<$daysevenbottom){
+			if($dayin[6]<$daysevenbottom){
 						$patient_flag = $patient_flag+1;
 			};
 
+//
+//			echo $patient_flag.'<br>';
+//			
+//			echo $dayin[0].'<br>'; 
+//			echo $dayin[1].'<br>';
+//			echo $dayin[2].'<br>';
+//			echo $dayin[3].'<br>';
+//			echo $dayin[4].'<br>';
+//			echo $dayin[5].'<br>';
+//			echo $dayin[6].'<br>';
+//			//var_dump($array2);*/
+//			
+//                        echo '<br>';
+//                        
+//			echo $dayone.'<br>';
+//			echo $daytwo.'<br>';
+//			echo $daythree.'<br>';
+//			echo $dayfour.'<br>';
+//			echo $dayfive.'<br>';
+//			echo $daysix.'<br>';
+//			echo $dayseven.'<br>';
+//			
+//                        echo '<br>';
+//                        
+//			echo $dayonetop.'<br>';
+//			echo $daytwotop.'<br>';
+//			echo $daythreetop.'<br>';
+//			echo $dayfourtop.'<br>';
+//			echo $dayfivetop.'<br>';
+//			echo $daysixtop.'<br>';
+//			echo $dayseventop.'<br>';
+//			
+//                        echo '<br>';
+//                           
+//			echo $dayonebottom.'<br>';
+//			echo $daytwobottom.'<br>';
+//			echo $daythreebottom.'<br>';
+//			echo $dayfourbottom.'<br>';
+//			echo $dayfivebottom.'<br>';
+//			echo $daysixbottom.'<br>';
+//			echo $daysevenbottom.'<br>';
 
-			/*echo $patient_flag.'<br>';
+//update query 
+mysql_query("UPDATE FraudFlag SET flag='$patient_flag' WHERE username='$patientUsername'");
 
-			echo $dayonetop.'<br>';
-			echo $dayonebottom.'<br>';
+//Delete the old values
+//mysql_query("DELETE FROM FraudFlag WHERE username='$patientUsername'");
 
-			echo $dayonein['SBP'].'<br>'; 
-			echo $daytwoin['SBP'].'<br>';
-			echo $daythreein['SBP'].'<br>';
-			echo $dayfourin['SBP'].'<br>';
-			echo $dayfivein['SBP'].'<br>';
-			echo $daysixin['SBP'].'<br>';
-			echo $daysevenin['SBP'].'<br>';
-			//var_dump($array2);*/
-
-			/*echo $dayone.'<br>';
-			echo $daytwo.'<br>';
-			echo $daythree.'<br>';
-			echo $dayfour.'<br>';
-			echo $dayfive.'<br>';
-			echo $daysix.'<br>';
-			echo $dayseven.'<br>';
-
-			echo $dayonetop.'<br>';
-			echo $daytwotop.'<br>';
-			echo $daythreetop.'<br>';
-			echo $dayfourtop.'<br>';
-			echo $dayfivetop.'<br>';
-			echo $daysixtop.'<br>';
-			echo $dayseventop.'<br>';
-	
-			echo $dayonebottom.'<br>';
-			echo $daytwobottom.'<br>';
-			echo $daythreebottom.'<br>';
-			echo $dayfourbottom.'<br>';
-			echo $dayfivebottom.'<br>';
-			echo $daysixbottom.'<br>';
-			echo $daysevenbottom.'<br>';
-			*/
-	
-	mysql_query("UPDATE FraudTest SET flag='$patient_flag' WHERE id='$patient_id'");
-
-
-	mysql_close();
+//New query here
+//mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
+  
+mysql_close();
 
 ?>
 

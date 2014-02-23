@@ -1,6 +1,8 @@
 <?php
+//PHP Handler for newPatientDetails.php
 
 session_start();
+<<<<<<< HEAD
 
 
 // Configure the MySQL connection
@@ -8,14 +10,17 @@ $server="remote.villocq.com";
 $username="3yp";
 $DBpassword="project";
 $database="tallis";
+=======
+>>>>>>> b28e615302d2c969c4509cc5ea3521aa91c94ba6
 
-// New MySQLi Instance
-$db = new mysqli($server,$username,$DBpassword,$database);
+//Save as temporary variables
+$_SESSION['ageGroup'] = $_POST['ageGroup'];
+$_SESSION['gender'] = $_POST['gender'];
+$_SESSION['ethnicity'] = $_POST['ethnicity'];
 
-if($_POST['formSubmit'] == "Submit")
-{
-	$errorMessage = "";
+// The user is directed to this page after completing the form. 
 
+<<<<<<< HEAD
 		if(empty($_POST['ageGroup'])) 
         {
 			$errorMessage .= "<li>Please select age group.</li>";
@@ -45,5 +50,8 @@ $_SESSION['ethnicity'] = $_POST['ethnicity'];
 header("Location: newPatientComorbidities.php");
 
 }
+=======
+header("Location: newPatientComorbidities.html");
+>>>>>>> b28e615302d2c969c4509cc5ea3521aa91c94ba6
 
 ?>
