@@ -32,7 +32,7 @@
 
   <article class="content">
     
-    <form method="post" action="comorbidity">
+    <form method="post" action="comorbidity.php">
           <table width="200">
             <tr>
               <td><label>
