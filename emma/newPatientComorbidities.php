@@ -44,6 +44,11 @@
                 <input type="checkbox" name="Heart_Failure" value="Yes">
                 Heart Failure</label></td>
             </tr>
+	    <tr>
+              <td><label>
+                <input type="checkbox" name="Whitecoat" value="Yes">
+                White coat hypertension</label></td>
+            </tr>
           </table>
           <p>
             <input type="submit" name="formSubmit" value="Submit">
