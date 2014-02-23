@@ -65,13 +65,9 @@ session_start();
 			         -- Alias the x-variable column as 'x'
 			         -- Alias the y-variable column as 'y'
 					
-                                        # COMMENT HERE:
-                                        # A POSSIBLE STATEMENT FOR LIVE DATA IS:
-                                    
-                                        SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date
-                                        # The above query gets the last 7 data points as 'patientCurrentBPSystolic' and 'x' ordered from 1 to 7
-					
-                                        # SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id='$patient_id'
+
+                                 SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date
+                                        
 			      
 			      ) as source_data
 			   ) as regression
