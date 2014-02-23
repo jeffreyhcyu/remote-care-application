@@ -32,9 +32,10 @@
 
   <article class="content">
     
-  <?php
+<?php
 
 session_start();
+
 
 if $_SESSION['ageGroup'] == "80+" AND $_SESSION['Whitecoat'] == "Yes"
 {
@@ -66,10 +67,11 @@ $_SESSION[targetSystolic] = "140"
 
 $_SESSION[targetDiastolic] = "90"
 }
-
-echo $_SESSION[targetSystolic];
-echo $_SESSION[targetDystolic];
 ?>
+
+Target systolic blood pressure: <?php echo $_SESSION[targetSystolic] ?>mmHg
+Target diastolic blood pressure: <?php echo $_SESSION[targetDiastolic] ?>mmHg
+
     
   </article>
   <div class="push"></div>
