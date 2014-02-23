@@ -36,6 +36,8 @@ session_start();
 
   <article>
 
+  <?php include 'target.php'; ?>
+  
 Target systolic blood pressure: <?php echo $_SESSION['targetSystolic'] ?>mmHg
 <br>
 Target diastolic blood pressure: <?php echo $_SESSION['targetDiastolic'] ?>mmHg
