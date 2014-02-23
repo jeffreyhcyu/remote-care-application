@@ -38,13 +38,13 @@ session_start();
 
 <?php
 
-include 'TargetBP.php';
+include 'target.php';
 
 ?>
 
-Target systolic blood pressure: <?php echo $_SESSION[targetSystolic] ?>mmHg
+Target systolic blood pressure: <?php echo $_SESSION['targetSystolic'] ?>mmHg
 <br>
-Target diastolic blood pressure: <?php echo $_SESSION[targetDiastolic] ?>mmHg
+Target diastolic blood pressure: <?php echo $_SESSION['targetDiastolic'] ?>mmHg
 
     
   </article>
