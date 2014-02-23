@@ -1,9 +1,6 @@
 <?php
 function linear_regression($patientUsername)
 {
-    
-    error_log(print_r("Hello World", TRUE));
-    
 	//Database connection to get all the patient data out
 	$username="3yp";
 	$DBpassword="project";
@@ -231,6 +228,8 @@ mysql_query("UPDATE FraudFlag SET flag='$patient_flag' WHERE username='$patientU
 //mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
   
 mysql_close();
+
+return($patient_flag);
 
 }
 

@@ -112,23 +112,12 @@ $result8 = mysql_query("SELECT patientID FROM patientInfo WHERE id = '$current'"
 $result8array=mysql_fetch_array($result8);
 $patientUsername = $result8array['patientID'];
 
-// Include the linreg.php file. linear_regression is a function
+// Include the linreg.php file. linear_regression is a function that returns the current flag value.
 
 require("linreg.php");
-linear_regression($patientUsername);
+$flagno = linear_regression($patientUsername);
 
-//Need to re-connect since linreg disconnects it
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
 
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-
-$flagquery = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername' ORDER BY id DESC LIMIT 1");
-$flagno = mysql_fetch_array($flagquery); 
-
-mysql_close();
 ?>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -255,7 +244,7 @@ ID Number
        <script>
         $(function() {
           $( "#progressbar" ).progressbar({
-            value: <?php echo $flagno['flag']*10 ?>
+            value: <?php echo $flagno*10 ?>
           });
         });
         
@@ -289,7 +278,7 @@ ID Number
         });
         */
         </script>
-<td>Data Uncertainty  <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
+<td>Data Uncertainty  <div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div></td>
 <td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
 </tr>
 <tr>
