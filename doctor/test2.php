@@ -1,4 +1,12 @@
 <?php
+//Database connection to get all the patient data out
+$username="3yp";
+$DBpassword="project";
+$database="tallis";
+
+mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+@mysql_select_db($database);
+
 //The below query gets the past 7 days data again, puts into an array $dayin
 mysql_query("SELECT @i:=0;"); //pre-query
 $dayquery = mysql_query("SELECT patientCurrentBPSystolic AS SBP, @i:=@i+1 AS DAY FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='test' ORDER BY date DESC LIMIT 7) AS value ORDER BY date");
