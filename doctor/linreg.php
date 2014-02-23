@@ -12,7 +12,7 @@ session_start();
         $patientUsername = $_SESSION['patientUsername'];
 	//$patient_flag = 0;
   	$patient_flag_query = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername'");
-      	$patient_flag = mysql_result($patient_flag_query);
+      	$patient_flag = mysql_result($patient_flag_query,0);
 
         mysql_query("SELECT @i:=0;"); //pre-query
         
