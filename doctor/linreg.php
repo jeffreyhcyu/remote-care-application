@@ -223,13 +223,13 @@ session_start();
 //			echo $daysevenbottom.'<br>';
 
 //update query 
-mysql_query("UPDATE FraudFlag SET flag='$patient_flag' WHERE username='$patientUsername'");
+//mysql_query("UPDATE FraudFlag SET flag='$patient_flag' WHERE username='$patientUsername'");
 
 //Delete the old values
-//mysql_query("DELETE FROM FraudFlag WHERE username='$patientUsername'");
+mysql_query("DELETE FROM FraudFlag WHERE username='$patientUsername'");
 
 //New query here
-//mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
+mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
   
 mysql_close();
 
