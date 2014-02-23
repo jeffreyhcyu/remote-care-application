@@ -112,11 +112,10 @@ $result8 = mysql_query("SELECT patientID FROM patientInfo WHERE id = '$current'"
 $result8array=mysql_fetch_array($result8);
 $patientUsername = $result8array['patientID'];
 
-$_SESSION['patientUsername'] = $patientUsername;
+// Include the linreg.php file. linear_regression is a function
 
-// Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross.
-
-include("linreg.php");
+require("linreg.php");
+linear_regression($patientUsername);
 
 //Need to re-connect since linreg disconnects it
 $username="3yp";

@@ -1,6 +1,6 @@
 <?php
-session_start();
-
+function linear_regression($patientUsername)
+{
 	//Database connection to get all the patient data out
 	$username="3yp";
 	$DBpassword="project";
@@ -9,7 +9,6 @@ session_start();
 	mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 	@mysql_select_db($database);
         
-        $patientUsername = $_SESSION['patientUsername'];
 	//$patient_flag = 0;
   	$patient_flag_query = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername'");
       	$pFlag = mysql_fetch_array($patient_flag_query);
@@ -229,6 +228,8 @@ mysql_query("UPDATE FraudFlag SET flag='$patient_flag' WHERE username='$patientU
 //mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
   
 mysql_close();
+
+}
 
 ?>
 
