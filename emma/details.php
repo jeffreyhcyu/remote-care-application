@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+
 // Configure the MySQL connection
 $server="remote.villocq.com";
 $username="3yp";
@@ -33,30 +36,14 @@ if($_POST['formSubmit'] == "Submit")
 		}
 
 
-$varAgeGroup = $_POST['ageGroup'];
+$_SESSION['ageGroup'] = $_POST['ageGroup'];
 
-$varGender = $_POST['gender'];
+$_SESSION['gender'] = $_POST['gender'];
 
-$varEthnicity = $_POST['ethnicity'];
+$_SESSION['ethnicity'] = $_POST['ethnicity'];
 
+header("Location: newPatientComorbidities.php");
 
-$sql = "INSERT INTO patientInfo (ageGroup, gender, ethnicity) VALUES (".
-
-							PrepSQL($varAgeGroup) . ", " .
-
-							PrepSQL($varGender) . ", " .
-
-							PrepSQL($varEthnicity) . ", " .
-
-
-			mysql_query($sql);
-
-  // The user is directed to this page after completing the form. 
-  // This code assumes that the thankyou form is in the same folder as the example form.
-			
-			header("Location: newPatientComorbidities.html");
-
-			exit();
 }
 
 ?>
