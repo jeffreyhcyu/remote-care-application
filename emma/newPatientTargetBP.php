@@ -32,25 +32,7 @@
 
   <article class="content">
     
-    <form method="post" action="comorbidity">
-          <table width="200">
-            <tr>
-              <td><label>
-                <input type="checkbox" name="Gout" value="Yes">
-                Gout</label></td>
-            </tr>
-            <tr>
-              <td><label>
-                <input type="checkbox" name="Heart_Failure" value="Yes">
-                Heart Failure</label></td>
-            </tr>
-          </table>
-          <p>
-            <input type="submit" name="formSubmit" value="Submit">
-          </p>
-        </p>
-      </form>
-    
+    Display Target BP    
     
   </article>
   <div class="push"></div>
