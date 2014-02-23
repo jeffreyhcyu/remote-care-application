@@ -2,23 +2,23 @@
 
 session_start();
 
-$targetSystolic = '';
-$targetDiastolic = '';
+$targetSystolic = "";
+$targetDiastolic = "";
 
-if $_SESSION['ageGroup'] == "80+" AND $_SESSION['Whitecoat'] == "Yes"
+if $_SESSION['ageGroup'] == "80+" && $_SESSION['Whitecoat'] == "Yes"
 {
 $targetSystolic = "145";
 $targetDiastolic = "85";
 }
 
-elseif $_SESSION['ageGroup'] == "80+" AND $_SESSION['Whitecoat'] == "No"
+elseif $_SESSION['ageGroup'] == "80+" && $_SESSION['Whitecoat'] == "No"
 {
 $targetSystolic = "150";
 $targetDiastolic = "90";
 }
 
 
-elseif $_SESSION['ageGroup'] != "80+" AND $_SESSION['Whitecoat'] == "Yes"
+elseif $_SESSION['ageGroup'] != "80+" && $_SESSION['Whitecoat'] == "Yes"
 {
 $targetSystolic = "135";
 $targetDiastolic = "85";
