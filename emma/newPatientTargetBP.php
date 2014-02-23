@@ -34,13 +34,7 @@ session_start();
       </aside>
   </div>
 
-  <article class="content">
-
-<?php
-
-include 'target.php';
-
-?>
+  <article>
 
 Target systolic blood pressure: <?php echo $_SESSION['targetSystolic'] ?>mmHg
 <br>
