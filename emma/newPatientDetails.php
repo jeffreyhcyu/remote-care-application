@@ -49,20 +49,6 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   <article class="content">
     
     <h3>Add a new patient:</h3>
-    
-<?php
-
-		    if(!empty($errorMessage)) 
-
-		    {
-
-			    echo("<p>There was an error with your form:</p>\n");
-
-			    echo("<ul>" . $errorMessage . "</ul>\n");
-
-            }
-
-        ?>
 
         <section>
       <p>Patient is suitable. Please enter patient info. </p>
