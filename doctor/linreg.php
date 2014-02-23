@@ -1,6 +1,9 @@
 <?php
 function linear_regression($patientUsername)
 {
+    
+    error_log(print_r("Hello World", TRUE));
+    
 	//Database connection to get all the patient data out
 	$username="3yp";
 	$DBpassword="project";
