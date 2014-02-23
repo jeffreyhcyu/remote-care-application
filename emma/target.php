@@ -32,5 +32,8 @@ $targetDiastolic = "90";
 
 $_SESSION['targetSystolic'] = $targetSystolic;
 $_SESSION['targetDiastolic'] = $targetDiastolic;
+echo $targetSystolic;
+echo $targetDiastolic;
+
 
 ?>
