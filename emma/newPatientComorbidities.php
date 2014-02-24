@@ -1,5 +1,18 @@
 <?php
-session_start();
+
+// Check the person is logged in!
+session_start();    
+if (isset($_SESSION['userID']))
+{
+    //Continue to the page
+    // This sets the current user ID as php variable!
+    $doctorID = $_SESSION['userID'];
+}
+else
+{
+    //Login Failure
+header('Location: https://3yp.villocq.com/emma/loginPage.php'); 
+}
 ?>
 
 <!doctype html>
@@ -35,6 +48,8 @@ session_start();
   </div>
 
   <article class="content">
+
+<?php echo $_SESSION['gender']?>
     
     <form method="post" action="comorbidity.php">
           <table width="200">
