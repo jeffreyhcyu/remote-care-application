@@ -242,33 +242,6 @@ ID Number
 <td><?php echo $info['ageGroup'] ?></td>
 </tr>
 <tr>
-       <script>
-        $(function() {
-          $( "#progressbar" ).progressbar({
-            value: <?php echo $flagno ?>
-          });
-        });
-        
-        /* 
-        SHOULD WORK BUT HIDES THE PROGRESS BAR 
-               $(document).ready(function(){
-          $("button").click(function(){
-            $.ajax({url:"clearFraud.php";
-            }});
-          });
-        });
-        
-        $(function clearDBfraud(){
-          
-        });
-        */
-        
-        </script>
-<td>Data Uncertainty</td>
-<td><div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div>
-<button class="button" onClick="window.open('clearFraud.php');">Reset</button></td>
-</tr>
-<tr>
 <td>Next review </td>
 <td><?php echo $info['nextReview']?><td>
 </tr>
@@ -288,9 +261,34 @@ ID Number
 <td>Current Diastolic BP</td>
 <td><?php echo $BP['patientCurrentBPDiastolic'] ?></td>
 </tr>
+<tr>
+<script>
+    $(function() {
+        $( "#progressbar" ).progressbar(
+        {
+        value: <?php echo $flagno ?>
+        });
+        });
+        /* 
+        SHOULD WORK BUT HIDES THE PROGRESS BAR 
+               $(document).ready(function(){
+          $("button").click(function(){
+            $.ajax({url:"clearFraud.php";
+            }});
+          });
+        });
+        
+        $(function clearDBfraud(){
+          
+        });
+        */
+</script>
+<td>Data Uncertainty</td>
+<td><div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div>
+<button class="button" onClick="window.open('clearFraud.php');">Reset</button></td>
+</tr>
 </table>
 </div>
-
 
 
 <div id="med_container">
