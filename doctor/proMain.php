@@ -118,7 +118,6 @@ $_SESSION['patientUsername'] = $patientUsername;
 require("linreg.php");
 $flagno = linear_regression($patientUsername);
 
-
 ?>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -246,20 +245,25 @@ ID Number
 <td><?php echo $info['nextReview']?><td>
 </tr>
 <tr>
-<td>Target Systolic BP</td>
-<td><?php echo $info['targetSystolic'] ?></td>
+<td>Target BP</td>
+<td>
+<?php
+    echo $info['targetSystolic'];
+    echo "/";                    
+    echo $info['targetDiastolic'];
+?>
+</td>
 </tr>
 <tr style="color:red;">
-<td>Current Systolic BP</td>
-<td><?php echo $BP['patientCurrentBPSystolic'] ?></td>
-</tr>
-<tr>
-<td>Target Diastolic BP</td>
-<td><?php echo $info['targetDiastolic'] ?></td>
-</tr>
-<tr style="color:red;">
-<td>Current Diastolic BP</td>
-<td><?php echo $BP['patientCurrentBPDiastolic'] ?></td>
+<td>Current BP</td>
+<td>
+<?php echo $BP['patientCurrentBPSystolic'] ?>
+<?php
+    echo $BP['patientCurrentBPSystolic'];
+    echo "/";                    
+    echo $info['patientCurrentBPDiastolic'];
+?>
+</td>
 </tr>
 <tr>
 <script>
