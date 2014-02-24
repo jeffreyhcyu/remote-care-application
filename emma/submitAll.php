@@ -4,6 +4,7 @@ session_start();
 
 if($_POST['formSubmit'] == "Submit")
 {
+$_SESSION['patientID'] = $_POST['patientID'];
 $_SESSION['input_password'] = $_POST['input_password'];
 }
 
@@ -14,7 +15,7 @@ $_SESSION['input_password'] = $_POST['input_password'];
 //NB: THESE WILL CHANGE DEPENDING ON WHAT IS IN THE PREVIOUS PAGES! Values below are for testing only!
 
 //Patient Details
-$patientID = "form-test2";
+$patientID = "$_SESSION['patientID']";
 $input_password = "$_SESSION['input_password']";
 $doctorID = "2";
 $targetSystolic = "$_SESSION['targetSystolic']";

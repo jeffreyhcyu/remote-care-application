@@ -36,9 +36,11 @@ session_start();
 
   <article>
 
-	Ask patient to enter memorable allow access to patient Cardiac Track app
+	Ask patient to enter memorable patient ID and password to allow access to patient Cardiac Track app
 
  <form action="submitAll.php" method="post">
+	<label for = "textfield">Username:</label>
+	<input type="text" name="patientID" id="username">
       <label for="password">Password:</label>
       <input type="password" name="input_password">
       <input type="submit" name="formSubmit" value="Submit"></form>
