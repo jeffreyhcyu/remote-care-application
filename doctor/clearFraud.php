@@ -15,6 +15,6 @@ mysql_query("UPDATE FraudFlag SET flag='0' WHERE username = '$patientUsername'")
 
 mysql_close();
 
-echo "window.close();";
+echo $patientUsername;
 
 ?>
