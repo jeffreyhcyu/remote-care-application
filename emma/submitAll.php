@@ -17,19 +17,19 @@ $_SESSION['input_password'] = $_POST['input_password'];
 //NB: THESE WILL CHANGE DEPENDING ON WHAT IS IN THE PREVIOUS PAGES! Values below are for testing only!
 
 //Patient Details
-$patientID = "$_SESSION['patientID']";
-$input_password = "$_SESSION['input_password']";
+$patientID = $_SESSION['patientID'];
+$input_password = $_SESSION['input_password'];
 $doctorID = "2";
-$targetSystolic = "$_SESSION['targetSystolic']";
-$targetDiastolic = "$_SESSION['targetDiastolic']";
+$targetSystolic = $_SESSION['targetSystolic'];
+$targetDiastolic = $_SESSION['targetDiastolic'];
 $BPcontrolled = "No";
-$ageGroup = "$_SESSION['ageGroup']";
-$ethnicity = "$_SESSION['ethnicity']";
-$gender = "$_SESSION['gender']";
+$ageGroup = $_SESSION['ageGroup'];
+$ethnicity = $_SESSION['ethnicity'];
+$gender = $_SESSION['gender'];
 
 //Comorbidities:
-$breastfeed = "$_SESSION['breastfeed']";
-$future_pregnancy = "$_SESSION['future_pregnancy']";
+$breastfeed = $_SESSION['breastfeed'];
+$future_pregnancy = $_SESSION['future_pregnancy'];
 $aspirin = "No";
 $asthma = "No";
 $BB_already = "No";
@@ -39,10 +39,10 @@ $CVD = "No";
 $CVDrisk = "No";
 $DiabRisk = "No";
 $Diuretic_suitable = "No";
-$Gout = "$_SESSION['Gout']";
+$Gout = $_SESSION['Gout'];
 $HDAB = "No";
 $HFRisk = "No";
-$Heart_failure = "$_SESSION['Heart_failure']";
+$Heart_failure = $_SESSION['Heart_failure'];
 $HepImp = "No";
 $High_blood_k = "No";
 $MI = "No";
@@ -50,7 +50,7 @@ $OrgDamage = "No";
 $Postural_hypotension = "No";
 $RenImp = "No";
 $Stricture = "No";
-$Whitecoat = "$_SESSION['Whitecoat']";
+$Whitecoat = $_SESSION['Whitecoat'];
 $angina = "No";
 $angio_expose = "No";
 $angio_hered = "No";
