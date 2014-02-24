@@ -19,7 +19,7 @@ $_SESSION['input_password'] = $_POST['input_password'];
 //Patient Details
 $patientID = $_SESSION['patientID'];
 $input_password = $_SESSION['input_password'];
-$doctorID = "2";
+$doctorID = $_SESSION['userID'];
 $targetSystolic = $_SESSION['targetSystolic'];
 $targetDiastolic = $_SESSION['targetDiastolic'];
 $BPcontrolled = "No";
