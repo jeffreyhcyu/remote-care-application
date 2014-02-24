@@ -1,6 +1,6 @@
 <?php
-session_start();
-
+function linear_regression($patientUsername)
+{
 	//Database connection to get all the patient data out
 	$username="3yp";
 	$DBpassword="project";
@@ -9,10 +9,10 @@ session_start();
 	mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 	@mysql_select_db($database);
         
-        $patientUsername = $_SESSION['patientUsername'];
-		$patient_flag = 0;
-  		//$patient_flag_query= mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername'");
-      	//$patient_flag= mysql_fetch_result ($patient_flag_query);
+	//$patient_flag = 0;
+  	$patient_flag_query = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername'");
+      	$pFlag = mysql_fetch_array($patient_flag_query);
+        $patient_flag = $pFlag[0];
 
         mysql_query("SELECT @i:=0;"); //pre-query
         
@@ -64,13 +64,9 @@ session_start();
 			         -- Alias the x-variable column as 'x'
 			         -- Alias the y-variable column as 'y'
 					
-                                        # COMMENT HERE:
-                                        # A POSSIBLE STATEMENT FOR LIVE DATA IS:
-                                    
-                                        SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date
-                                        # The above query gets the last 7 data points as 'patientCurrentBPSystolic' and 'x' ordered from 1 to 7
-					
-                                        # SELECT (day) AS x, (SBP) AS y FROM FraudTest WHERE id='$patient_id'
+
+                                 SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date
+                                        
 			      
 			      ) as source_data
 			   ) as regression
@@ -233,5 +229,8 @@ mysql_query("UPDATE FraudFlag SET flag='$patient_flag' WHERE username='$patientU
   
 mysql_close();
 
+return($patient_flag);
+
+}
 ?>
 

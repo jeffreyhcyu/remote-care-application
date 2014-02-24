@@ -111,25 +111,13 @@ $BP=mysql_fetch_array($result7);
 $result8 = mysql_query("SELECT patientID FROM patientInfo WHERE id = '$current'");
 $result8array=mysql_fetch_array($result8);
 $patientUsername = $result8array['patientID'];
-
 $_SESSION['patientUsername'] = $patientUsername;
 
-// Include the linreg.php file. $_SESSION['patientUsername'] passes the ID accross.
+// Include the linreg.php file. linear_regression is a function that returns the current flag value.
 
-include("linreg.php");
+require("linreg.php");
+$flagno = linear_regression($patientUsername);
 
-//Need to re-connect since linreg disconnects it
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-
-$flagquery = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername' ORDER BY id DESC LIMIT 1");
-$flagno = mysql_fetch_array($flagquery); 
-
-mysql_close();
 ?>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -253,13 +241,37 @@ ID Number
 <td><?php echo $info['ageGroup'] ?></td>
 </tr>
 <tr>
-       <script>
-        $(function() {
-          $( "#progressbar" ).progressbar({
-            value: <?php echo $flagno['flag']*10 ?>
-          });
+<td>Next review </td>
+<td><?php echo $info['nextReview']?><td>
+</tr>
+<tr>
+<td>Target BP</td>
+<td>
+<?php
+    echo $info['targetSystolic'];
+    echo "/";                    
+    echo $info['targetDiastolic'];
+?>
+</td>
+</tr>
+<tr style="color:red;">
+<td>Current BP</td>
+<td>
+<?php
+    echo $BP['patientCurrentBPSystolic'];
+    echo "/";                    
+    echo $BP['patientCurrentBPDiastolic'];
+?>
+</td>
+</tr>
+<tr>
+<script>
+    $(function() {
+        $( "#progressbar" ).progressbar(
+        {
+        value: <?php echo $flagno ?>
         });
-        
+        });
         /* 
         SHOULD WORK BUT HIDES THE PROGRESS BAR 
                $(document).ready(function(){
@@ -268,54 +280,31 @@ ID Number
             }});
           });
         });
-        */
-        /*
-        WONT WORK DUE TO TYPICAL CLIENT/SERVER SIDE DIVIDE 
+        
         $(function clearDBfraud(){
-          <?php 
-              // Configure the MySQL connection
-          $username="3yp";
-          $DBpassword="project";
-          $database="tallis";
-
-          mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-          @mysql_select_db($database);
-
-          $current=$_GET["w1"];
-
-          //Perform the SQL Query
-          mysql_query("UPDATE FraudFlag SET flag=0 WHERE username = (SELECT patientID FROM patientInfo WHERE id='$current')");
-
-          ?>
+          
         });
         */
-        </script>
-<td>Data Uncertainty  <div id="progressbar"><div class="progress-label"><?php echo $flagno['flag'] ?></div></div></td>
-<td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
+</script>
+<td>Data Uncertainty</td>
+<td>
+<div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div>
+</td>
 </tr>
 <tr>
-<td>Next review </td>
-<td><?php echo $info['nextReview']?><td>
+<td>Uncertainty Reset</td>
+<td>
+<button class="button" onClick="window.open('clearFraud.php');">Reset</button>
+</td>
 </tr>
 <tr>
-<td>Target Systolic BP</td>
-<td><?php echo $info['targetSystolic'] ?></td>
-</tr>
-<tr style="color:red;">
-<td>Current Systolic BP</td>
-<td><?php echo $BP['patientCurrentBPSystolic'] ?></td>
-</tr>
-<tr>
-<td>Target Diastolic BP</td>
-<td><?php echo $info['targetDiastolic'] ?></td>
-</tr>
-<tr style="color:red;">
-<td>Current Diastolic BP</td>
-<td><?php echo $BP['patientCurrentBPDiastolic'] ?></td>
+<td>Launch Tallis</td>
+<td>
+<button class="button" onClick="window.open('http://remote.villocq.com:8081/tallis-enactment-1.7.2/');">Launch TWE</button>
+</td>
 </tr>
 </table>
 </div>
-
 
 
 <div id="med_container">
