@@ -300,7 +300,7 @@ ID Number
 <tr>
 <td>Launch Tallis</td>
 <td>
-<button class="button" onClick="window.open('http://remote.villocq.com:8081/tallis-enactment-1.7.2/');">Launch TWE</button>
+<button class="button" onClick="window.open('http://remote.villocq.com:8081/tallis-enactment-1.7.2/EnactFile.page?protocol=BPManager&pfdi_patientID=<?php echo $patientUsername; ?>');">Launch TWE</button>
 </td>
 </tr>
 </table>
