@@ -37,8 +37,13 @@ session_start();
   <article>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php include 'target.php' ?>
 
+=======
+  <?php include 'target.php' ?>
+  
+>>>>>>> 1bf494ec9a29f1da870a7690e00a5793722e3a96
 =======
   <?php include 'target.php' ?>
   
