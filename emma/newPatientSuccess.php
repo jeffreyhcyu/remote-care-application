@@ -50,17 +50,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   <article>
 
 	Patient successfully created.
-<?php
-// Configure the MySQL connection
-$server="remote.villocq.com";
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-// New MySQLi Instance
-$db = new mysqli($server,$username,$DBpassword,$database);
-printf("Last inserted record has id %d\n", mysql_insert_id());
-?>
+    
   </article>
   <div class="push"></div>
   
