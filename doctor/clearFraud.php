@@ -1,5 +1,7 @@
 <?php
-    
+
+session_start();
+
 // Configure the MySQL connection
 $username="3yp";
 $DBpassword="project";
