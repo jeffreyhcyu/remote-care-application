@@ -91,7 +91,7 @@ $hashedPassword = $hasher->HashPassword($input_password);
 //Prepared statement:
 //NB: Dates are set to: lastReview:Today, nextReview:T+30days
 $newPatient = $db->prepare("INSERT INTO patientInfo VALUES('',?,?,?,?,?,now(),DATE_ADD(now(), INTERVAL 1 MONTH),?,?,?,?,?,?,?,
-                           ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+                           ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,'0')");
 
 //Bind & Execute to submit to database. 
 $newPatient->bind_param('ssssssssssssssssssssssssssssssssssssssssss',
@@ -106,13 +106,6 @@ $newPatient->bind_param('ssssssssssssssssssssssssssssssssssssssssss',
 $newPatient->execute();
 $newPatient->close();
 //Data has now been submitted to the database
-
-//Need to create additional records:
-//This is for the Fraud Detection system:
-$newFlag = $db->prepare("INSERT INTO FraudFlag VALUES('',?,'0')");
-$newFlag->bind_param('s',$patientID);
-$newFlag->execute();
-$newFlag->close();
 
 //This creates a new record in the patient drugs table:
 $newPatientDrugs = $db->prepare("INSERT INTO patientDrugs VALUES('',?,?,?,?,?,?,null,null,null,null,null,null,null,null,null)");

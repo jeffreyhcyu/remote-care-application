@@ -13,7 +13,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 $patientUsername = $_SESSION['patientUsername'];
 
 //Perform the SQL Query
-mysql_query("UPDATE FraudFlag SET flag='0' WHERE username = '$patientUsername'");
+mysql_query("UPDATE patientInfo SET fraudFlag='0' WHERE patientID = '$patientUsername'");
 
 mysql_close();
 
