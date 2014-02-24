@@ -50,7 +50,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   <article class="content">
     
     <form method="post" action="female.php">
-          <table width="200">
+          <table width="400">
             <tr>
               <td><label>
                 <input type="checkbox" name="breastfeed" value="Yes">

@@ -48,8 +48,6 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   </div>
 
   <article class="content">
-
-<?php echo $_SESSION['gender']?>
     
     <form method="post" action="comorbidity.php">
           <table width="200">
