@@ -57,13 +57,11 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 
         <input name="Gout" type="radio" 
 
-        value="Yes" checked="checked">
+        value="Yes">
 
 <span>Yes</span><br />
 
-<input type="radio" name="Gout" 
-
-value="No">
+<input type="radio" name="Gout" value="No" checked>
 
 <span>No</span>
 </p>
@@ -73,13 +71,11 @@ value="No">
 
         <input name="Heart_failure" type="radio" 
 
-        value="Yes" checked="checked">
+        value="Yes">
 
 <span>Yes</span><br />
 
-<input type="radio" name="Heart_failure" 
-
-value="No">
+<input type="radio" name="Heart_failure" value="No" checked>
 
 <span>No</span>
 </p>
@@ -89,13 +85,11 @@ value="No">
 
         <input name="Whitecoat" type="radio" 
 
-        value="Yes" checked="checked">
+        value="Yes">
 
 <span>Yes</span><br />
 
-<input type="radio" name="Whitecoat" 
-
-value="No">
+<input type="radio" name="Whitecoat" value="No" checked>
 
 <span>No</span>
 </p>
