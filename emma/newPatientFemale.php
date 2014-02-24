@@ -50,22 +50,36 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   <article class="content">
     
     <form method="post" action="female.php">
-          <table width="400">
-            <tr>
-              <td><label>
-                <input type="checkbox" name="breastfeed" value="Yes">
-                Breastfeeding</label></td>
-            </tr>
-             <tr>
-              <td><label>
-                <input type="checkbox" name="future_pregnancy" value="Yes">
-                Future pregnancy</label></td>
-            </tr>
-          </table>
           <p>
-            <input type="submit" name="formSubmit" value="Submit">
-          </p>
-        </p>
+<label for='future_pregnancy'>Pregnant in next 6 to 12 months</label><br>
+
+        <input name="future_pregnancy" type="radio" 
+
+        value="Yes" checked="checked">
+
+<span>Yes</span><br />
+
+<input type="radio" name="future_pregnancy" 
+
+value="No">
+
+<span>No</span>
+</p>
+<p>
+<label for='breastfeed'>Breasteed</label><br>
+
+        <input name="breastfeed" type="radio" 
+
+        value="Yes" checked="checked">
+
+<span>Yes</span><br />
+
+<input type="radio" name="breastfeed" 
+
+value="No">
+
+<span>No</span>
+</p>
       </form>
     
     
