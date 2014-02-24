@@ -245,7 +245,7 @@ ID Number
        <script>
         $(function() {
           $( "#progressbar" ).progressbar({
-            value: <?php echo $flagno*10 ?>
+            value: <?php echo $flagno ?>
           });
         });
         
