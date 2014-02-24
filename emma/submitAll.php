@@ -65,11 +65,11 @@ $creatininebase = null;
 $potassiumbase = null;
 
 //DrugInfo:
-$numberDrugs = "1";
+$numberDrugs = "0";
 $isonmaxdose = "No";
-$drug1 = "drug1";
-$drug1class = "drugclass";
-$drug1prescription = "99";
+$drug1 = null;
+$drug1class = null;
+$drug1prescription = null;
 
 ///////////////////////////////////////////////////////////////////////////////
 
