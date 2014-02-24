@@ -10,6 +10,14 @@ $_SESSION['gender'] = $_POST['gender'];
 
 $_SESSION['ethnicity'] = $_POST['ethnicity'];
 }
+
+if($_SESSION['gender'] == "Female")
+{
+header("Location: newPatientFemale.php");
+}
+else
+{
 header("Location: newPatientComorbidities.php");
+}
 
 ?>
