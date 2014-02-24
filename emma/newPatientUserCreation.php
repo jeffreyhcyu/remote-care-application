@@ -36,15 +36,7 @@ session_start();
 
   <article>
 
-<?php include 'target.php' ?>
-<h3>Patient's target blood pressure:</h3>
-<br>
-Target systolic blood pressure: <?php echo $_SESSION['targetSystolic'] ?>mmHg
-<br>
-Target diastolic blood pressure: <?php echo $_SESSION['targetDiastolic'] ?>mmHg
-<br>
-<input type="button" name="button" value="Next" onClick="location.href='newPatientUserCreation.php'">
-
+	Enter username and password
     
   </article>
   <div class="push"></div>
