@@ -55,13 +55,13 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 
         <input name="future_pregnancy" type="radio" 
 
-        value="Yes" checked="checked">
+        value="Yes">
 
 <span>Yes</span><br />
 
 <input type="radio" name="future_pregnancy" 
 
-value="No">
+value="No" checked>
 
 <span>No</span>
 </p>
@@ -70,13 +70,11 @@ value="No">
 
         <input name="breastfeed" type="radio" 
 
-        value="Yes" checked="checked">
+        value="Yes">
 
 <span>Yes</span><br />
 
-<input type="radio" name="breastfeed" 
-
-value="No">
+<input type="radio" name="breastfeed" value="No" checked>
 
 <span>No</span>
 </p>
