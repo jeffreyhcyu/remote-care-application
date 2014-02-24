@@ -69,15 +69,15 @@ value="No">
 </p>
 
 <p>
-<label for='Heart_Failure'>Heart failure</label><br>
+<label for='Heart_failure'>Heart failure</label><br>
 
-        <input name="Heart_Failure" type="radio" 
+        <input name="Heart_failure" type="radio" 
 
         value="Yes" checked="checked">
 
 <span>Yes</span><br />
 
-<input type="radio" name="Heart_Failure" 
+<input type="radio" name="Heart_failure" 
 
 value="No">
 
