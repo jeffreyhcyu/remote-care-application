@@ -287,8 +287,15 @@ ID Number
         */
 </script>
 <td>Data Uncertainty</td>
-<td><div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div>
-<button class="button" onClick="window.open('clearFraud.php');">Reset</button></td>
+<td>
+<div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div>
+</td>
+</tr>
+<tr>
+<td>Uncertainty Reset</td>
+<td>
+<button class="button" onClick="window.open('clearFraud.php');">Reset</button>
+</td>
 </tr>
 </table>
 </div>
