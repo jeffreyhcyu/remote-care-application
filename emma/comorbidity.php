@@ -9,10 +9,16 @@ if($_POST['formSubmit'] == "Submit")
 	{
 	$_SESSION['Gout'] = $_POST['Gout'];
 	}
+	else
+	{
+	$_SESSION['Gout'] = "No";
+	}
+
 	if($_POST['Heart_Failure'] == "Yes");
 	{
 	$_SESSION['Heart_Failure'] = $_POST['Heart_Failure'];
 	}
+
 	if($_POST['Whitecoat'] == "Yes");
 	{
 	$_SESSION['Whitecoat'] = $_POST['Whitecoat'];
