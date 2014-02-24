@@ -264,8 +264,9 @@ ID Number
         */
         
         </script>
-<td>Data Uncertainty  <div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div></td>
-<td><button class="button" onClick="window.open('clearFraud.php');">Click here to reset uncertainity</button></td>
+<td>Data Uncertainty</td>
+<td><div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div>
+<button class="button" onClick="window.open('clearFraud.php');">Reset</button></td>
 </tr>
 <tr>
 <td>Next review </td>
