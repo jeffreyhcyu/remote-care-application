@@ -66,7 +66,7 @@ value="No" checked>
 <span>No</span>
 </p>
 <p>
-<label for='breastfeed'>Breasteed</label><br>
+<label for='breastfeed'>Breastfeed</label><br>
 
         <input name="breastfeed" type="radio" 
 
@@ -78,6 +78,7 @@ value="No" checked>
 
 <span>No</span>
 </p>
+<input type="submit" name="formSubmit" value="Submit">
       </form>
     
     
