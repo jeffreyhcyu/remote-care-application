@@ -297,6 +297,12 @@ ID Number
 <button class="button" onClick="window.open('clearFraud.php');">Reset</button>
 </td>
 </tr>
+<tr>
+<td>Launch Tallis</td>
+<td>
+<button class="button" onClick="window.open('http://remote.villocq.com:8081/tallis-enactment-1.7.2/');">Launch TWE</button>
+</td>
+</tr>
 </table>
 </div>
 
