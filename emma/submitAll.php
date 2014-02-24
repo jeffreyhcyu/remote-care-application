@@ -130,6 +130,14 @@ $PHP_hash = hash('SHA512',$concat);
 
 if ($SQL_hash == $PHP_hash)
 {
+    $getID = $db->prepare("SELECT id FROM patientInfo WHERE patientID=?");
+    $getID->bind_param('s',$patientID);
+    $getID->execute();
+    $getID->bind_result($autoID);
+    $getID->fetch();
+    $getID->close();
+    $_SESSION['autoID'] = $autoID;
+    
     //If Successful data entry
     //Redirect to the success page
     header('Location: https://3yp.villocq.com/emma/newPatientSuccess.php');
@@ -137,6 +145,7 @@ if ($SQL_hash == $PHP_hash)
 }
 else
 {
+    
     header('Location: https://3yp.villocq.com/emma/newPatientFailure.html');
 }
 
