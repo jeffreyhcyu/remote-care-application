@@ -10,7 +10,7 @@ function linear_regression($patientUsername)
 	@mysql_select_db($database);
         
 	//$patient_flag = 0;
-  	$patient_flag_query = mysql_query("SELECT flag FROM FraudFlag WHERE username='$patientUsername'");
+  	$patient_flag_query = mysql_query("SELECT fraudFlag FROM patientInfo WHERE patientID='$patientUsername'");
       	$pFlag = mysql_fetch_array($patient_flag_query);
         $patient_flag = $pFlag[0];
 
@@ -219,7 +219,7 @@ function linear_regression($patientUsername)
 //			echo $daysevenbottom.'<br>';
 
 //update query 
-mysql_query("UPDATE FraudFlag SET flag='$patient_flag' WHERE username='$patientUsername'");
+mysql_query("UPDATE patientInfo SET fraudFlag='$patient_flag' WHERE patientID='$patientUsername'");
 
 //Delete the old values
 //mysql_query("DELETE FROM FraudFlag WHERE username='$patientUsername'");

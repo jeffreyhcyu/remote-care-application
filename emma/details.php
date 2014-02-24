@@ -17,6 +17,10 @@ header("Location: newPatientFemale.php");
 }
 else
 {
+  
+$_SESSION['breastfeed'] = "No";
+$_SESSION['future_pregnancy'] = "No";
+
 header("Location: newPatientComorbidities.php");
 }
 
