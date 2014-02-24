@@ -47,7 +47,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 
   <article class="content">
     
-    <h3>Welcome, <?php echo "Need dynamic content here!"; ?></h3>
+    <h3>Welcome, <?php require("functions.php"); $doctorName = doctorname($doctorID); echo $doctorName;?></h3>
     
     <section>
       <h4>How to use this site:</h4>
