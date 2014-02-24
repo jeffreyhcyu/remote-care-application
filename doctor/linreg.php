@@ -232,6 +232,5 @@ mysql_close();
 return($patient_flag);
 
 }
-
 ?>
 

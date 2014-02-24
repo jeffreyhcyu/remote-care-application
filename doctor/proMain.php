@@ -111,6 +111,7 @@ $BP=mysql_fetch_array($result7);
 $result8 = mysql_query("SELECT patientID FROM patientInfo WHERE id = '$current'");
 $result8array=mysql_fetch_array($result8);
 $patientUsername = $result8array['patientID'];
+$_SESSION['patientUsername'] = $patientUsername;
 
 // Include the linreg.php file. linear_regression is a function that returns the current flag value.
 
@@ -256,30 +257,15 @@ ID Number
             }});
           });
         });
-        */
-        /*
-        WONT WORK DUE TO TYPICAL CLIENT/SERVER SIDE DIVIDE 
+        
         $(function clearDBfraud(){
-          <?php 
-          // Configure the MySQL connection
-          //$username="3yp";
-          //$DBpassword="project";
-          //$database="tallis";
-
-          //mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-          //@mysql_select_db($database);
-
-          //$current=$_GET["w1"];
-
-          //Perform the SQL Query
-          //mysql_query("UPDATE FraudFlag SET flag=0 WHERE username = (SELECT patientID FROM patientInfo WHERE id='$current')");
-
-          ?>
+          
         });
         */
+        
         </script>
 <td>Data Uncertainty  <div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div></td>
-<td><button onclick="clearDBFraud()">Click here to reset uncertainity</button></td>
+<td><button class="button" onClick="window.open('clearFraud.php');">Click here to reset uncertainity</button></td>
 </tr>
 <tr>
 <td>Next review </td>
