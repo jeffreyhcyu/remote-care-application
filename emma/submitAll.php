@@ -146,7 +146,7 @@ if ($SQL_hash == $PHP_hash)
 else
 {
     
-    header('Location: https://3yp.villocq.com/emma/newPatientFailure.html');
+    header('Location: https://3yp.villocq.com/emma/newPatientFailure.php');
 }
 
 $db->close();

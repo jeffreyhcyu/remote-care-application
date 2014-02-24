@@ -15,17 +15,6 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 }
 ?>
 
-<?php
-//Database connection to get all the patient data out
-$username="3yp";
-$DBpassword="project";
-$database="tallis";
-
-mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-@mysql_select_db($database);
-?>
-
-
 <html>
 <head>
 <meta charset="utf-8">
@@ -48,7 +37,7 @@ mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
               <li><a href="index.php">Home</a></li>
               <li><a href="existingPatients.php">Existing patients</a></li>
               <li><a href="newPatient.php">Add a new patient</a></li>
-              <li><a href="loginPage.php">Log out</a></li>
+              <li><a href="logout.php">Log out</a></li>
             </ul>
       </nav>
       <aside>
