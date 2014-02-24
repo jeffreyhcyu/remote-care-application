@@ -50,23 +50,57 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   <article class="content">
     
     <form method="post" action="comorbidity.php">
-          <table width="200">
-            <tr>
-              <td><label>
-                <input type="checkbox" name="Gout" value="Yes">
-                Gout</label></td>
-            </tr>
-            <tr>
-              <td><label>
-                <input type="checkbox" name="Heart_Failure" value="Yes">
-                Heart Failure</label></td>
-            </tr>
-	    <tr>
-              <td><label>
-                <input type="checkbox" name="Whitecoat" value="Yes">
-                White coat hypertension</label></td>
-            </tr>
-          </table>
+       
+
+<p>
+<label for='Gout'>Gout</label><br>
+
+        <input name="Gout" type="radio" 
+
+        value="Yes" checked="checked">
+
+<span>Yes</span><br />
+
+<input type="radio" name="Gout" 
+
+value="No">
+
+<span>No</span>
+</p>
+
+<p>
+<label for='Heart_Failure'>Heart failure</label><br>
+
+        <input name="Heart_Failure" type="radio" 
+
+        value="Yes" checked="checked">
+
+<span>Yes</span><br />
+
+<input type="radio" name="Heart_Failure" 
+
+value="No">
+
+<span>No</span>
+</p>
+
+<p>
+<label for='Whitecoat'>White coat hypertension</label><br>
+
+        <input name="Whitecoat" type="radio" 
+
+        value="Yes" checked="checked">
+
+<span>Yes</span><br />
+
+<input type="radio" name="Whitecoat" 
+
+value="No">
+
+<span>No</span>
+</p>
+
+
           <p>
             <input type="submit" name="formSubmit" value="Submit">
           </p>
