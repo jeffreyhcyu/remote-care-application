@@ -133,8 +133,6 @@ if ($SQL_hash == $PHP_hash)
     //If Successful data entry
     //Redirect to the success page
     header('Location: https://3yp.villocq.com/emma/newPatientSuccess.php');
-	echo "Last inserted record has id %d\n", mysql_insert_id());
-
  
 }
 else
