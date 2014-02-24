@@ -257,11 +257,10 @@ ID Number
 <tr style="color:red;">
 <td>Current BP</td>
 <td>
-<?php echo $BP['patientCurrentBPSystolic'] ?>
 <?php
     echo $BP['patientCurrentBPSystolic'];
     echo "/";                    
-    echo $info['patientCurrentBPDiastolic'];
+    echo $BP['patientCurrentBPDiastolic'];
 ?>
 </td>
 </tr>
