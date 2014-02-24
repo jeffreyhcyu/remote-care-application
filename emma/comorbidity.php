@@ -5,24 +5,18 @@ session_start();
 if($_POST['formSubmit'] == "Submit")
 
 {
-	if($_POST['Gout'] == "Yes");
-	{
+	if($Gout == "Yes") {
+		$Gout = 'checked';
+		}
+
+	if $Gout = 'checked'{
 	$_SESSION['Gout'] = $_POST['Gout'];
 	}
-	else
-	{
-	$_SESSION['Gout'] = "No";
-	}
 
-	if($_POST['Heart_Failure'] == "Yes");
-	{
 	$_SESSION['Heart_Failure'] = $_POST['Heart_Failure'];
-	}
-
-	if($_POST['Whitecoat'] == "Yes");
-	{
+	
 	$_SESSION['Whitecoat'] = $_POST['Whitecoat'];
-	}
+
 }
 
 header("Location: newPatientTargetBP.php");
