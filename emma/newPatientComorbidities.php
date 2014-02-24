@@ -48,58 +48,36 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   </div>
 
   <article class="content">
-    
+    <h3>Add a new patient:</h3>
+    <p>Please select all of the following comorbidities which apply:</p>
+    <br>
     <form method="post" action="comorbidity.php">
-       
+ <table width="717" border="0" cellpadding="5">
+            <tr>
+            <td width="579"></td>
+            <td width="50" align="center"><strong>Yes</strong></td>
+            <td width="50" align="center"><strong>No</strong></td>
+            </tr>
+             <tr>
+              <td>Gout</td>
+              <td align="center"><input name="Gout" type="radio" value="Yes"></td>
+              <td align="center"><input type="radio" name="Gout" value="No" checked></td>
+            </tr>
+            <tr>
+              <td>Heart failure</td>
+              <td align="center"><input name="Heart_failure" type="radio"  value="Yes"></td>
+              <td align="center"><input type="radio" name="Heart_failure" value="No" checked></td>
+            </tr>
+            <tr>
+              <td>White coat hypertension</td>
+              <td align="center"><input name="Whitecoat" type="radio" value="Yes"></td>
+              <td align="center"><input type="radio" name="Whitecoat" value="No" checked></td>
+            </tr>
+          </table>
 
-<p>
-<label for='Gout'>Gout</label><br>
-
-        <input name="Gout" type="radio" 
-
-        value="Yes">
-
-<span>Yes</span><br />
-
-<input type="radio" name="Gout" value="No" checked>
-
-<span>No</span>
-</p>
-
-<p>
-<label for='Heart_failure'>Heart failure</label><br>
-
-        <input name="Heart_failure" type="radio" 
-
-        value="Yes">
-
-<span>Yes</span><br />
-
-<input type="radio" name="Heart_failure" value="No" checked>
-
-<span>No</span>
-</p>
-
-<p>
-<label for='Whitecoat'>White coat hypertension</label><br>
-
-        <input name="Whitecoat" type="radio" 
-
-        value="Yes">
-
-<span>Yes</span><br />
-
-<input type="radio" name="Whitecoat" value="No" checked>
-
-<span>No</span>
-</p>
-
-
-          <p>
-            <input type="submit" name="formSubmit" value="Submit">
-          </p>
-        </p>
-      </form>
+<br>
+<input type="submit" name="formSubmit" value="Submit">
+</form>
     
     
   </article>

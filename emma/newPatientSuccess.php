@@ -47,9 +47,13 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
       </aside>
   </div>
 
-  <article>
+  <article class="content">
 
-	Patient successfully created.
+	<h3>Add a new patient:</h3>
+	<p>&nbsp;</p>
+    <p>Thank you, your patient profile has been created successfully.</p>
+    <p>&nbsp;</p>
+    <p><a href="index.php">Click here</a> to return to the home screen.</p>
     
   </article>
   <div class="push"></div>

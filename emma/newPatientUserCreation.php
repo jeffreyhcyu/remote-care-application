@@ -47,16 +47,24 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
       </aside>
   </div>
 
-  <article>
+  <article class="content">
 
-	Ask patient to enter memorable patient ID and password to allow access to patient Cardiac Track app
-
+<h3>Add a new patient:</h3>
+<p>Please ask the patient to enter a memorable username and password, which will grant them access to the patient Cardiac Track app.</p>
+<br>
  <form action="submitAll.php" method="post">
-	<label for = "textfield">Username:</label>
-	<input type="text" name="patientID" id="username">
-      <label for="password">Password:</label>
-      <input type="password" name="input_password">
-      <input type="submit" name="formSubmit" value="Submit"></form>
+	<table width="300" border="0" cellspacing="5" cellpadding="5">
+      <tr>
+        <td>Username:</td>
+        <td><input type="text" name="patientID" id="username"></td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="input_password"></td>
+      </tr>
+    </table>
+    <br>
+    <input type="submit" name="formSubmit" value="Submit"></form>
     
   </article>
   <div class="push"></div>

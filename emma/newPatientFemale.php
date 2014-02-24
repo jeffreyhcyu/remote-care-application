@@ -48,38 +48,32 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   </div>
 
   <article class="content">
-    
-    <form method="post" action="female.php">
-          <p>
-<label for='future_pregnancy'>Pregnant in next 6 to 12 months</label><br>
-
-        <input name="future_pregnancy" type="radio" 
-
-        value="Yes">
-
-<span>Yes</span><br />
-
-<input type="radio" name="future_pregnancy" 
-
-value="No" checked>
-
-<span>No</span>
-</p>
-<p>
-<label for='breastfeed'>Breastfeed</label><br>
-
-        <input name="breastfeed" type="radio" 
-
-        value="Yes">
-
-<span>Yes</span><br />
-
-<input type="radio" name="breastfeed" value="No" checked>
-
-<span>No</span>
-</p>
+  
+  <h3>Add a new patient:</h3>
+  
+  <p>You have indicated that the patient is <strong>female</strong>.</p>
+  <p>Please answer the following questions:</p>
+  <form method="post" action="female.php">
+          <table width="717" border="0" cellpadding="5">
+            <tr>
+            <td width="579"></td>
+            <td width="50" align="center"><strong>Yes</strong></td>
+            <td width="50" align="center"><strong>No</strong></td>
+            </tr>
+            <tr>
+              <td>Is the patient currently breastfeeding?</td>
+              <td align="center"><input name="breastfeed" type="radio"  value="Yes"></td>
+              <td align="center"><input type="radio" name="breastfeed" value="No" checked></td>
+            </tr>
+            <tr>
+              <td>Is the patient looking to become pregnant in the next 12 months?</td>
+              <td align="center"><input name="future_pregnancy" type="radio" value="Yes"></td>
+              <td align="center"><input type="radio" name="future_pregnancy" value="No" checked></td>
+            </tr>
+          </table>
+<br>
 <input type="submit" name="formSubmit" value="Submit">
-      </form>
+  </form>
     
     
   </article>

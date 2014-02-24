@@ -51,7 +51,8 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
     <h3>Add a new patient:</h3>
     
         <section>
-      <p>Patient is not suitable. Please contact a hypertension specialist.</p>
+      <p>Unfortunately the patient does not meet the scope of this application.</p>
+      <p>Please contact a hypertension specialist.</p>
     </section>
     
   </article>

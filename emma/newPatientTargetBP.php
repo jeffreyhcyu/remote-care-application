@@ -47,16 +47,18 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
       </aside>
   </div>
 
-  <article>
+  <article class="content">
 
-<?php include 'target.php' ?>
-<h3>Patient's target blood pressure:</h3>
-<br>
-Target systolic blood pressure: <?php echo $_SESSION['targetSystolic'] ?>mmHg
-<br>
-Target diastolic blood pressure: <?php echo $_SESSION['targetDiastolic'] ?>mmHg
-<br>
-<input type="button" name="button" value="Next" onClick="location.href='newPatientUserCreation.php'">
+<?php include 'target.php' ?><h3>Add a new patient:</h3>
+<p>&nbsp;</p>
+<p>We have calculated an appropriate target blood pressure for your patient, based on the patient information provided.</p>
+<p><br>
+  Target systolic blood pressure: <strong><?php echo $_SESSION['targetSystolic'] ?>mmHg </strong><br>
+  Target diastolic blood pressure:<strong> <?php echo $_SESSION['targetDiastolic'] ?>mmHg </strong></p>
+<p><br>
+  
+  <input type="button" name="button" value="Next" onClick="location.href='newPatientUserCreation.php'">
+</p>
 
     
   </article>
