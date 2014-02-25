@@ -58,21 +58,164 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
             <td width="50" align="center"><strong>Yes</strong></td>
             <td width="50" align="center"><strong>No</strong></td>
             </tr>
-             <tr>
-              <td>Gout</td>
-              <td align="center"><input name="Gout" type="radio" value="Yes"></td>
-              <td align="center"><input type="radio" name="Gout" value="No" checked></td>
-            </tr>
-            <tr>
-              <td>Heart failure</td>
-              <td align="center"><input name="Heart_failure" type="radio"  value="Yes"></td>
-              <td align="center"><input type="radio" name="Heart_failure" value="No" checked></td>
-            </tr>
-            <tr>
+
+	    <tr>
               <td>White coat hypertension</td>
               <td align="center"><input name="Whitecoat" type="radio" value="Yes"></td>
               <td align="center"><input type="radio" name="Whitecoat" value="No" checked></td>
+            </tr>  
+    
+	    <tr>
+              <td>Target organ damage due to hypertension</td>
+              <td align="center"><input name="OrgDamage" type="radio" value="Yes"></td>
+              <td align="center"><input name="OrgDamage" type="radio" value="No" checked></td>
             </tr>
+    
+	    <tr>
+              <td>History of postural hypotension and micturition syncope</td>
+              <td align="center"><input name="Postural_Hypotension" type="radio" value="Yes"></td>
+              <td align="center"><input name="Postural_Hypotension" type="radio" value="No" checked></td>
+            </tr>
+    
+	    
+	    <tr>
+              <td>Calcium channel blocker (CCB) intolerance</td>
+              <td align="center"><input name="CCB" type="radio" value="Yes"></td>
+              <td align="center"><input name="CCB" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Already on a beta-blocker for an indication other than hypertension</td>
+              <td align="center"><input name="BB_already" type="radio" value="Yes"></td>
+              <td align="center"><input name="BB_already" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>History of angioedema associated with previous exposure to an ACE inhibitor</td>
+              <td align="center"><input name="angio_expose" type="radio" value="Yes"></td>
+              <td align="center"><input name="angio_expose" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Hereditary or idiopathic angioedema</td>
+              <td align="center"><input name="angio_hered" type="radio" value="Yes"></td>
+              <td align="center"><input name="angio_hered" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Cardiac outflow obstruction</td>
+              <td align="center"><input name="COO" type="radio" value="Yes"></td>
+              <td align="center"><input name="COO" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Clinically-apparent cardiovascular disease (CVD)</td>
+              <td align="center"><input name="CVD" type="radio" value="Yes"></td>
+              <td align="center"><input name="CVD" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>10 year CVD risk of 20% or greater</td>
+              <td align="center"><input name="CVDrisk" type="radio" value="Yes"></td>
+              <td align="center"><input name="CVDrisk" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Higher degree atrioventricular block</td>
+              <td align="center"><input name="HDAB" type="radio" value="Yes"></td>
+              <td align="center"><input name="HDAB" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Previous myocardial infarction (MI) without heart failure</td>
+              <td align="center"><input name="MI" type="radio" value="Yes"></td>
+              <td align="center"><input name="MI" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Heart failure</td>
+              <td align="center"><input name="Heart_failure" type="radio" value="Yes"></td>
+              <td align="center"><input name="Heart_failure" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>High risk of heart failure</td>
+              <td align="center"><input name="HFRisk" type="radio" value="Yes"></td>
+              <td align="center"><input name="HFRisk" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Angina</td>
+              <td align="center"><input name="angina" type="radio" value="Yes"></td>
+              <td align="center"><input name="angina" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>High risk of developing diabetes</td>
+              <td align="center"><input name="DiabRisk" type="radio" value="Yes"></td>
+              <td align="center"><input name="DiabRisk" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Gout</td>
+              <td align="center"><input name="Gout" type="radio" value="Yes"></td>
+              <td align="center"><input name="Gout" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Diuretic intolerance</td>
+              <td align="center"><input name="Diuretic_suitable" type="radio" value="Yes"></td>
+              <td align="center"><input name="Diuretic_suitable" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Hepatic impairment</td>
+              <td align="center"><input name="HepImp" type="radio" value="Yes"></td>
+              <td align="center"><input name="HepImp" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Renal impairment</td>
+              <td align="center"><input name="RenImp" type="radio" value="Yes"></td>
+              <td align="center"><input name="RenImp" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Renal disease</td>
+              <td align="center"><input name="renal" type="radio" value="Yes"></td>
+              <td align="center"><input name="renal" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Known or suspected renovascular disease</td>
+              <td align="center"><input name="renovascular" type="radio" value="Yes"></td>
+              <td align="center"><input name="renovascular" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Bilateral renal artery stenosis</td>
+              <td align="center"><input name="stenosis" type="radio" value="Yes"></td>
+              <td align="center"><input name="stenosis" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Gastrointestinal obstruction, oesophageal obstruction, or any degree of stricture</td>
+              <td align="center"><input name="Stricture" type="radio" value="Yes"></td>
+              <td align="center"><input name="Stricture" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Oedema</td>
+              <td align="center"><input name="oedema" type="radio" value="Yes"></td>
+              <td align="center"><input name="oedema" type="radio" value="No" checked></td>
+            </tr>
+    
+	    <tr>
+              <td>Blood potassium level > 4.5mmol/L</td>
+              <td align="center"><input name="High_blood_k" type="radio" value="Yes"></td>
+              <td align="center"><input name="High_blood_k" type="radio" value="No" checked></td>
+            </tr>
+    
           </table>
 
 <br>
