@@ -144,3 +144,16 @@ section, aside, article, figure {
 article {
 	color: #000000;
 }
+.container .sidebar1 aside .patient_selector {
+	padding-left: 15px;
+	padding-top: 5px;
+}
+.container .sidebar1 aside .patient_selector .normal {
+	color: #006C02;
+}
+.container .sidebar1 aside .patient_selector #normal {
+	color: #0A6300;
+}
+.container .sidebar1 aside .patient_selector #alert {
+	color: #FF0000;
+}
