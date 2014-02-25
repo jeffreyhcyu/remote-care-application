@@ -33,7 +33,6 @@ $getHash->bind_param('s',$id);
 $getHash->execute();
 $getHash->bind_result($actual_password_hash);
 $getHash->fetch();
-$getHash->close();
 
 // Check password matches, using PHPass here
 require("PasswordHash.php");
@@ -46,19 +45,12 @@ if ($checkPassword)
     $_SESSION['userID'] = $id;
     $_SESSION['loginMessage'] = '';
     
-    //Add successful login to the Access Log:
-    $remoteIP = $_SERVER['REMOTE_ADDR'];
-    $doctorLog = $db->prepare("INSERT INTO doctorAccessLog VALUES('',?,now(),?)");
-    $doctorLog->bind_param('ss',$id,$remoteIP);
-    $doctorLog->execute();
-    $doctorLog->close();
-    
-header('Location: https://3yp.villocq.com/doctor/proMain.php'); 
+header('Location: https://3yp.villocq.com/emma/index.php'); 
 }
 else
 {
-    $_SESSION['loginMessage'] = 'Login Error';
-    header('Location: https://3yp.villocq.com/doctor/index.php'); 
+    $_SESSION['loginMessage'] = 'Incorrect login details. Please try again.';
+    header('Location: https://3yp.villocq.com/emma/loginPage.php'); 
 }
 
 $db->close();

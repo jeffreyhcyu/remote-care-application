@@ -1,60 +1,82 @@
+<?php
+
+// Check the person is logged in!
+session_start();    
+if (isset($_SESSION['userID']))
+{
+    //Continue to the page
+    // This sets the current user ID as php variable!
+    $doctorID = $_SESSION['userID'];
+}
+else
+{
+    //Login Failure
+header('Location: https://3yp.villocq.com/emma/loginPage.php'); 
+}
+?>
+
 <html>
 <head>
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=0.95; user-scalable=0;">
-<title>Cardiac Track Professional</title>
-<link rel="stylesheet" type="text/css" href="Pro_Login.css">
+<meta charset="utf-8">
+<title>Cardiac Track Pro - Home</title>
 
-<script type="text/javascript">
-function submitform()
-{
-document.forms["jsform"].submit();
-}
-</script>
-
-<link rel="apple-touch-icon" href="/iphone_icon.png"/>
-</head>
-
+<link href="styles/style.css" rel="stylesheet" type="text/css">
 <body>
-<div class="pro_login_page">
 
-<div class="all_login">
-<div id="heartlogo">
-<img src="love-heart.png" width="158px" height="144px">
-</div>
+<div class="container">
+  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
+  	  <label for="search2">Patient ID:</label>
+      <input type="search" name="search2" id="search2">
+      <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
+    <section id="searchbar"></section>
+  	</header>
+    
+    <div class="sidebar1">
+		<nav>
+            <ul>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="existingPatients.php">Existing patients</a></li>
+              <li><a href="newPatient.php">Add a new patient</a></li>
+              <li><a href="logout.php">Log out</a></li>
+            </ul>
+      </nav>
+      <aside>
+        	<h4>News Feed</h4>
+      </aside>
+  </div>
 
-<div id="title">
-Cardiac Track
-</div>
-<div id="pro">
-Pro
-</div>
-<div id="details_box">
-<form id="jsform" action="login.php" method="post">
-<table id="login_table">
-		<tbody>
-		<tr>
-		<td id="id" style="border-bottom: white solid 4px;"><input type="text" name="username" placeholder="Username" required> </td>
-		</tr>
-		<tr>
-		<td id="password" style="border-bottom: white solid 4px;"> <input type="Password" name="password" placeholder="Password" required></td>
-		</tr>
-		<tr>
-		<td id="sign_in">
-		<a href="javascript: submitform()" style="text-decoration:none; color:white"/> Sign in</td>
-		</tr>
-		<tr>
-		<td> <!-- This might need changing. At the moment this appears inside the submit button! -->
-		<?php
-		session_start();
-		echo $_SESSION['loginMessage'];
-		?>
-		</td>
-		</tr>
-		</tbody>
-</table>
-</form>
-</div> 
-</div>
+  <article class="content">
+    
+    <h3>Welcome, <?php require("functions.php"); $doctorName = doctorname($doctorID); echo $doctorName;?></h3>
+    
+    <section>
+      <h4>How to use this site:</h4>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. </p>
+    </section>
+    
+    <section>
+      <h4>Manage patients:</h4>
+      <p>Search for an existing patient using their patient ID</p>
+      <p>
+        <label for="search">Patient ID:</label>
+        <input type="search" name="search" id="search">
+        <input type="button" name="button" id="button" value="Search" onClick="location.href='existingPatients.php'">
+      </p>
+      <p>Or click here to create a <a href="newPatient.php">new patient profile</a></p>
+    </section>
+    
+    
+  </article>
+  <div class="push"></div>
+</div>  
+  
+  <footer class="footer">
+	<ul>
+          <a href="siteTerms.html"><li>Site Terms</li></a>
+          <a href="aboutUs.html"><li>About Us</li></a>
+	</ul>
+  </footer>    
+
+
 </body>
-
 </html>
