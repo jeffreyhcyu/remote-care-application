@@ -22,19 +22,22 @@ document.forms["jsform"].submit();
     
     <section id="login">
     <form id="jsform" action="login.php" method="post">
-      <label for="textfield">Username:</label>
-      <input type="text" name="username" id="username">
-      <label for="password">Password:</label>
-      <input type="password" name="password" id="password">
+   
+      <input type="text" name="username" id="username" placeholder="Username">
+   
+      <input type="password" name="password" id="password" placeholder="Password">
+     
       <input type="button" value="Log In" onClick="location.href='javascript: submitform()'">
-	<br>
+	
+    <br>
 	<article>
 		<?php
 		session_start();
 		echo $_SESSION['loginMessage'];
 		?>
 	</article>
-      </form>
+    
+    </form>
     </section>
       
     <div class="push"></div>
