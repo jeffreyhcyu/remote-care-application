@@ -45,6 +45,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 
 <div id="patients">
   <em><strong>Patients</strong></em></div>
+<br>
 <div id="alert">
 <div id="alerted">
   <strong>High BP</strong> </div>
@@ -74,7 +75,7 @@ while($row = mysql_fetch_array($result))
 ?>
 
 </div>
-
+<br>
 <div id="normal">
 <div id="normaled">
   <strong>Normal </strong></div>
