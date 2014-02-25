@@ -16,7 +16,7 @@ function linear_regression($patientUsername)
         
         //get patient review date
         $patient_review_query = mysql_query("SELECT DATEDIFF(now(),lastReview) FROM patientInfo WHERE patientID='$patientUsername'");
-        $daysElapsedArray = mysql_fetch_array($patient_flag_query);
+        $daysElapsedArray = mysql_fetch_array($patient_review_query);
         $daysElapsed = $daysElapsedArray[0];
         
         //Now, if 7 days since the drug review, perform error checking
