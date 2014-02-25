@@ -24,9 +24,7 @@ document.forms["jsform"].submit();
     <form id="jsform" action="login.php" method="post">
    
       <input type="text" name="username" id="username" placeholder="Username">
-   <br><br>
-      <input type="password" name="password" id="password" placeholder="Password">
-    <br><br>   
+      <input type="password" name="password" id="password" placeholder="Password"> 
       <input type="button" value="Log In" onClick="location.href='javascript: submitform()'">
 	
     <br>
