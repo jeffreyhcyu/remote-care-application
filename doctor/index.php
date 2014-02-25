@@ -40,15 +40,13 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
               <li><a href="logout.php">Log out</a></li>
             </ul>
       </nav>
-      <aside>
+
       <div class="patient_selector">
 
 <div id="patients">
-  <strong>Patients</strong></div>
-<br>
 <div id="alert">
 <div id="alerted">
-  <strong>High BP</strong> </div>
+  <strong>Alerted patients:</strong> </div>
 
 
 <?php
@@ -75,24 +73,9 @@ while($row = mysql_fetch_array($result))
 ?>
 
 </div>
-<br>
-<div id="normal">
-<div id="normaled">
-  <strong>Normal </strong></div>
-<?php
-while($row5 = mysql_fetch_array($result5))
-  {
-  echo '<div class="Npatient" data-idNo=' . $row5['id']. '>'; //inserted the data tag data-id
-  echo '<div class="Identification" data-idNo=' . $row5['id']. '>';
-  echo $row5['patientID'] . " id:" . $row5['id'];
-  echo '</div>';
-  echo '</div>';
-  }
-?>
-</div>
 
 </div>
-      </aside>
+     
   </div>
 
   <article class="content">
