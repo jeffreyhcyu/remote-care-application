@@ -241,8 +241,8 @@ ID Number
 <td><?php echo $info['ageGroup'] ?></td>
 </tr>
 <tr>
-<td>Next review </td>
-<td><?php echo $info['nextReview']?><td>
+<td>Last/Next review </td>
+<td><?php echo $info['lastReview']; echo " -> "; echo $indo['nextReview'];?><td>
 </tr>
 <tr>
 <td>Target BP</td>
