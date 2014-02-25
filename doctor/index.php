@@ -40,13 +40,15 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
               <li><a href="logout.php">Log out</a></li>
             </ul>
       </nav>
-
+      <aside>
       <div class="patient_selector">
 
 <div id="patients">
+  <strong>News Feed:</strong></div>
+<br>
 <div id="alert">
 <div id="alerted">
-  <strong>Alerted patients:</strong> </div>
+  <strong>High BP</strong> </div>
 
 
 <?php
@@ -73,9 +75,10 @@ while($row = mysql_fetch_array($result))
 ?>
 
 </div>
+<br>
 
 </div>
-     
+      </aside>
   </div>
 
   <article class="content">
