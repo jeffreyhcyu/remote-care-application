@@ -60,9 +60,9 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
             </tr>
 
 	    <tr>
-              <td>White coat hypertension</td>
+              <td>'White coat' hypertension</td>
               <td align="center"><input name="Whitecoat" type="radio" value="Yes"></td>
-              <td align="center"><input type="radio" name="Whitecoat" value="No" checked></td>
+              <td align="center"><input name="Whitecoat" type="radio" value="No" checked></td>
             </tr>  
     
 	    <tr>
