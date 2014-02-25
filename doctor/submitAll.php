@@ -140,13 +140,13 @@ if ($SQL_hash == $PHP_hash)
     
     //If Successful data entry
     //Redirect to the success page
-    header('Location: https://3yp.villocq.com/emma/newPatientSuccess.php');
+    header('Location: https://3yp.villocq.com/doctor/newPatientSuccess.php');
  
 }
 else
 {
     
-    header('Location: https://3yp.villocq.com/emma/newPatientFailure.php');
+    header('Location: https://3yp.villocq.com/doctor/newPatientFailure.php');
 }
 
 $db->close();

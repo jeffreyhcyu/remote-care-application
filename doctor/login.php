@@ -45,12 +45,12 @@ if ($checkPassword)
     $_SESSION['userID'] = $id;
     $_SESSION['loginMessage'] = '';
     
-header('Location: https://3yp.villocq.com/emma/index.php'); 
+header('Location: https://3yp.villocq.com/doctor/index.php'); 
 }
 else
 {
     $_SESSION['loginMessage'] = 'Incorrect login details. Please try again.';
-    header('Location: https://3yp.villocq.com/emma/loginPage.php'); 
+    header('Location: https://3yp.villocq.com/doctor/loginPage.php'); 
 }
 
 $db->close();

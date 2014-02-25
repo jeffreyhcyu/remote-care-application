@@ -11,7 +11,7 @@ if (isset($_SESSION['userID']))
 else
 {
     //Login Failure
-header('Location: https://3yp.villocq.com/emma/loginPage.php'); 
+header('Location: https://3yp.villocq.com/doctor/loginPage.php'); 
 }
 ?>
 
@@ -37,7 +37,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
 		<nav>
             <ul>
               <li><a href="index.php">Home</a></li>
-              <li><a href="existingPatients.php">Existing patients</a></li>
+              <li><a href="currentpatients/index.php">Existing patients</a></li>
               <li><a href="newPatient.php">Add a new patient</a></li>
               <li><a href="logout.php">Log out</a></li>
             </ul>

@@ -8,11 +8,11 @@ $selectedE = $_POST['E'];
 
 if(!empty($selectedA) or !empty($selectedB) or !empty($selectedC) or !empty($selectedD) or !empty($selectedE))
 {
-header('Location: https://3yp.villocq.com/emma/newPatientUnsuitable.php'); 
+header('Location: https://3yp.villocq.com/doctor/newPatientUnsuitable.php'); 
 }
 else
 {
-header('Location: https://3yp.villocq.com/emma/newPatientDetails.php'); 
+header('Location: https://3yp.villocq.com/doctor/newPatientDetails.php'); 
 }
 
 ?>
