@@ -73,8 +73,8 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
     
 	    <tr>
               <td>History of postural hypotension and micturition syncope</td>
-              <td align="center"><input name="Postural_Hypotension" type="radio" value="Yes"></td>
-              <td align="center"><input name="Postural_Hypotension" type="radio" value="No" checked></td>
+              <td align="center"><input name="Postural_hypotension" type="radio" value="Yes"></td>
+              <td align="center"><input name="Postural_hypotension" type="radio" value="No" checked></td>
             </tr>
     
 	    

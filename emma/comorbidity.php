@@ -13,7 +13,7 @@ if($_POST['formSubmit'] == "Submit")
 
 	$_SESSION['OrgDamage'] = $_POST['OrgDamage'];
 
-	$_SESSION['Postural_Hypotension'] = $_POST['Postural_Hypotension'];
+	$_SESSION['Postural_hypotension'] = $_POST['Postural_hypotension'];
 
 	$_SESSION['CCB'] = $_POST['CCB'];
 
