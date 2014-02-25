@@ -42,7 +42,7 @@ $checkPassword = $hasher->CheckPassword($input_password,$actual_password_hash);
 // If good password:
 if ($checkPassword)  
 {
-    $_SESSION['userID'] = $id;
+    $_SESSION['patientAppID'] = $id;
     $_SESSION['loginMessage'] = '';
     
 header('Location: https://3yp.villocq.com/patient/menu.php'); 

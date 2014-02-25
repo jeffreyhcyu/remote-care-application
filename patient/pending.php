@@ -2,9 +2,9 @@
 
 // Check the person is logged in!
 session_start();    
-if (isset($_SESSION['userID']))
+if (isset($_SESSION['patientAppID']))
 {
-    $user_id = $_SESSION['userID'];
+    $user_id = $_SESSION['patientAppID'];
     $daysRemaining = $_SESSION['daysRemaining'];
     //If logged in, go to the HTML page:
 }

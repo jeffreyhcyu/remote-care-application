@@ -14,7 +14,7 @@ $database="tallis";
 $db = new mysqli($server,$username,$DBpassword,$database);
 
 //Assign the form POST output to PHP variables
-$id=$_SESSION['userID'];
+$id=$_SESSION['patientAppID'];
 $sysBP=$_POST['sysBP'];
 $diaBP=$_POST['diaBP'];
 
