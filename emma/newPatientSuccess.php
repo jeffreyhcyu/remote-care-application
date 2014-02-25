@@ -54,7 +54,7 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
     <p>Thank you, your patient profile has been created successfully.</p>
     <p>&nbsp;</p>
     <p> Patient unique identifier = <?php echo $_SESSION['autoID']; ?></p>
-    <p>&nbsp;</p>
+    <p>Please store this in your patient's file for your records.</p>
     <p><a href="index.php">Click here</a> to return to the home screen.</p>
     
   </article>
