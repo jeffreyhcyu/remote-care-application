@@ -1,7 +1,7 @@
 <?php
 function linear_regression($patientUsername)
 {
-	//Database connection to get all the patient data out
+	//Database connection parameters
 	$username="3yp";
 	$DBpassword="project";
 	$database="tallis";
@@ -9,12 +9,21 @@ function linear_regression($patientUsername)
 	mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 	@mysql_select_db($database);
         
-	//$patient_flag = 0;
+	//get patient flag
   	$patient_flag_query = mysql_query("SELECT fraudFlag FROM patientInfo WHERE patientID='$patientUsername'");
       	$pFlag = mysql_fetch_array($patient_flag_query);
         $patient_flag = $pFlag[0];
-
-        mysql_query("SELECT @i:=0;"); //pre-query
+        
+        //get patient review date
+        $patient_review_query = mysql_query("SELECT DATEDIFF(now(),lastReview) FROM patientInfo WHERE patientID='$patientUsername'");
+        $daysElapsedArray = mysql_fetch_array($patient_flag_query);
+        $daysElapsed = $daysElapsedArray[0];
+        
+        //Now, if 7 days since the drug review, perform error checking
+        if($daysElapsed > '7'){
+            
+        //pre-query for the regression SQL
+        mysql_query("SELECT @i:=0;"); 
         
         //Linear Regression code 
 	$SQLQuery = "
@@ -176,61 +185,20 @@ function linear_regression($patientUsername)
 						$patient_flag = $patient_flag+1;
 			};
 
-//
-//			echo $patient_flag.'<br>';
-//			
-//			echo $dayin[0].'<br>'; 
-//			echo $dayin[1].'<br>';
-//			echo $dayin[2].'<br>';
-//			echo $dayin[3].'<br>';
-//			echo $dayin[4].'<br>';
-//			echo $dayin[5].'<br>';
-//			echo $dayin[6].'<br>';
-//			//var_dump($array2);*/
-//			
-//                        echo '<br>';
-//                        
-//			echo $dayone.'<br>';
-//			echo $daytwo.'<br>';
-//			echo $daythree.'<br>';
-//			echo $dayfour.'<br>';
-//			echo $dayfive.'<br>';
-//			echo $daysix.'<br>';
-//			echo $dayseven.'<br>';
-//			
-//                        echo '<br>';
-//                        
-//			echo $dayonetop.'<br>';
-//			echo $daytwotop.'<br>';
-//			echo $daythreetop.'<br>';
-//			echo $dayfourtop.'<br>';
-//			echo $dayfivetop.'<br>';
-//			echo $daysixtop.'<br>';
-//			echo $dayseventop.'<br>';
-//			
-//                        echo '<br>';
-//                           
-//			echo $dayonebottom.'<br>';
-//			echo $daytwobottom.'<br>';
-//			echo $daythreebottom.'<br>';
-//			echo $dayfourbottom.'<br>';
-//			echo $dayfivebottom.'<br>';
-//			echo $daysixbottom.'<br>';
-//			echo $daysevenbottom.'<br>';
-
 //update query 
 mysql_query("UPDATE patientInfo SET fraudFlag='$patient_flag' WHERE patientID='$patientUsername'");
 
-//Delete the old values
-//mysql_query("DELETE FROM FraudFlag WHERE username='$patientUsername'");
-
-//New query here
-//mysql_query("INSERT INTO FraudFlag VALUES('','$patientUsername','$patient_flag')");
-  
+        }
+        
+        //If less than 7 days, data is not reliable enough so set error = 0
+        else {
+            $patient_flag = '0';
+        }
+        
 mysql_close();
 
 return($patient_flag);
-
+        
 }
 ?>
 
