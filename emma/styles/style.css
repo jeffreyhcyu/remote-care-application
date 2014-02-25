@@ -53,6 +53,7 @@ header {
 	background-color: #FFFFFF;
 	padding-bottom: 10px;
 	padding-top: 15px;
+	height: auto;
 }
 .content {
 	padding-top: 15px;
@@ -62,6 +63,7 @@ header {
 	width: 760px;
 	float: right;
 	background-color: #FFFFFF;
+	height: auto;
 }
 .content ul, .content ol {
 	padding: 0 15px 15px 40px;
