@@ -48,8 +48,8 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
   </div>
 
   <article>
-
-	Could not connect to server. Patient could not be created. Please try again.
+<font color="red"><h3>Error:</h3></font>
+	<font color="red">Could not connect to server. Patient could not be created. Please try again.</font>
     
   </article>
   <div class="push"></div>
