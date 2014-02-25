@@ -85,6 +85,7 @@ nav a:hover, nav a:active, nav a:focus {
 }
 .footer, .push {
 	height: 4em;
+	clear: both;
 }
 .footer {
 	width: 960px;
