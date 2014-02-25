@@ -242,7 +242,7 @@ ID Number
 </tr>
 <tr>
 <td>Last/Next review </td>
-<td><?php echo $info['lastReview']; echo " -> "; echo $indo['nextReview'];?><td>
+<td><?php echo $info['lastReview']; echo " -> "; echo $info['nextReview'];?><td>
 </tr>
 <tr>
 <td>Target BP</td>
