@@ -34,7 +34,6 @@ nav a:visited {
 .container {
 	min-height:100%
 	height: auto!important;
-	height: 100%;
 	width: 960px;
 	background-color: #FFFFFF;
 	margin: 0 auto -4em;
@@ -42,6 +41,7 @@ nav a:visited {
 	color: #07536E;
 	font-weight: normal;
 	text-align: left;
+	padding-bottom: 40px;
 }
 header {
 	background-color: #FFFFFF;
