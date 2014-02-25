@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6, p {
 	padding-top: 5px;
 }
 nav a:link {
-	color: #07536E;
+	color: #081933;
 	text-decoration: none;
 }
 nav a:visited {
@@ -38,7 +38,7 @@ nav a:visited {
 	background-color: #FFFFFF;
 	margin: 0 auto -4em;
 	font-family: Verdana;
-	color: #07536E;
+	color: #081933;
 	font-weight: normal;
 	text-align: left;
 	padding-bottom: 40px;
@@ -95,7 +95,7 @@ nav a:hover, nav a:active, nav a:focus {
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
-	background-color: #4D4D4D;
+	background-color: #081933;
 	color: #FFFFFF;
 	font-family: Verdana;
 	font-weight: normal;
