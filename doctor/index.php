@@ -45,7 +45,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 
 <div id="alert">
 <div id="alerted">
-  <strong>Alerted patients:</strong> </div>
+  <strong>Alerted patients:</strong> </div><br>
 
 
 <?php

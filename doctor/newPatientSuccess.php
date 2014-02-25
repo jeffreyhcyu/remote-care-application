@@ -42,8 +42,41 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
               <li><a href="logout.php">Log out</a></li>
             </ul>
       </nav>
-      <aside>
-        	<h4>News Feed</h4>
+            <aside>
+      <div class="patient_selector">
+
+<div id="alert">
+<div id="alerted">
+  <strong>Alerted patients:</strong> </div><br>
+
+
+<?php
+//Database connection to get all the patient data out
+$username="3yp";
+$DBpassword="project";
+$database="tallis";
+
+mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+@mysql_select_db($database);
+
+$result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID='$doctorID'");
+$num = mysql_num_rows($result);
+
+while($row = mysql_fetch_array($result))
+  {
+  echo '<div class="Apatient" data-idNo=' . $row['id']. '>'; //inserted the data tag data-id
+  echo '<div class="Identification" data-idNo=' . $row['id']. '>';
+  echo $row['patientID'] . " id:" . $row['id'];
+  echo '</div>';
+  echo '</div>';
+  }
+
+?>
+
+</div>
+<br>
+
+</div>
       </aside>
   </div>
 
@@ -54,7 +87,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
     <p>Thank you, your patient profile has been created successfully.</p>
     <p>&nbsp;</p>
     <p> Patient unique identifier = <?php echo $_SESSION['autoID']; ?></p>
-    <p>Please store this in your patient's file for your records.</p>
+    <p>Please store this in your patient's file for your records.</p><br>
     <p><a href="index.php">Click here</a> to return to the home screen.</p>
     
   </article>
