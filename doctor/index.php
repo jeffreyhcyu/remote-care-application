@@ -43,12 +43,9 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
       <aside>
       <div class="patient_selector">
 
-<div id="patients">
-  <strong>News Feed:</strong></div>
-<br>
 <div id="alert">
 <div id="alerted">
-  <strong>High BP</strong> </div>
+  <strong>Alerted patients:</strong> </div>
 
 
 <?php
