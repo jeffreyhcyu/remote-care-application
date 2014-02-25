@@ -20,7 +20,7 @@ function linear_regression($patientUsername)
         $daysElapsed = $daysElapsedArray[0];
         
         //Now, if 7 days since the drug review, perform error checking
-        if($daysElapsed > '7'){
+        if($daysElapsed > 7){
             
         //pre-query for the regression SQL
         mysql_query("SELECT @i:=0;"); 
@@ -191,7 +191,7 @@ mysql_query("UPDATE patientInfo SET fraudFlag='$patient_flag' WHERE patientID='$
         }
         
         //If less than 7 days, data is not reliable enough so set error = 0
-        else {
+        elseif ($daysElapsed <= 7) {
             $patient_flag = '0';
         }
         
