@@ -61,6 +61,7 @@ header {
 	padding-bottom: 10px;
 	width: 760px;
 	float: right;
+	background-color: #FFFFFF;
 }
 .content ul, .content ol {
 	padding: 0 15px 15px 40px;
