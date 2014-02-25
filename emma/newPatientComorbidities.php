@@ -58,7 +58,19 @@ header('Location: https://3yp.villocq.com/emma/loginPage.php');
             <td width="50" align="center"><strong>Yes</strong></td>
             <td width="50" align="center"><strong>No</strong></td>
             </tr>
-
+	    
+	     <tr>
+              <td>Patient suffers from Asthma</td>
+              <td align="center"><input name="Asthma" type="radio" value="Yes"></td>
+              <td align="center"><input name="Asthma" type="radio" value="No" checked></td>
+            </tr>
+	    
+	    <tr>
+              <td>Patient is currently taking Aspirin</td>
+              <td align="center"><input name="Aspirin" type="radio" value="Yes"></td>
+              <td align="center"><input name="Aspirin" type="radio" value="No" checked></td>
+            </tr>
+	    
 	    <tr>
               <td>'White coat' hypertension</td>
               <td align="center"><input name="Whitecoat" type="radio" value="Yes"></td>

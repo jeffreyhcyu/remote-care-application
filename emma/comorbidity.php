@@ -7,6 +7,10 @@ if($_POST['formSubmit'] == "Submit")
 {
 	$_SESSION['Gout'] = $_POST['Gout'];
 
+        $_SESSION['asthma'] = $_POST['Asthma'];
+        
+        $_SESSION['aspirin'] = $_POST['Aspirin'];
+        
 	$_SESSION['Heart_failure'] = $_POST['Heart_failure'];
 	
 	$_SESSION['Whitecoat'] = $_POST['Whitecoat'];
