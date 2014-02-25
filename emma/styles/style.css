@@ -28,7 +28,7 @@ nav a:link {
 	text-decoration: none;
 }
 nav a:visited {
-	color: #07536E;
+	color: #081933;
 	text-decoration: none;
 }
 .container {
@@ -133,7 +133,7 @@ section, aside, article, figure {
 }
 .content a:hover, a:active, a:focus {
 	text-decoration: underline;
-	color: #07536E;
+	color: #081933;
 }
 .footer a:hover, a:active, a:focus {
 	text-decoration: underline;
