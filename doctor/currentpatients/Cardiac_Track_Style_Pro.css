@@ -78,7 +78,9 @@
 	text-indent:10px;
 	float: right;
 	height:70%;
+	height:70vh;
 	width: 80%;
+	width: 80vw;
 	/*background-color: #9ECFF7;*/
 	background-image:url('CardioPic5.jpg');
 	background-repeat:no-repeat;
