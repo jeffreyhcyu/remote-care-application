@@ -218,7 +218,8 @@ Current User <?php echo $docInfo['prefix'] . ". " . $docInfo['firstName'] . " " 
 <div id="chart_div" style="	position: relative;
 	left: 200px;
 	top:100px;
-	height:500px;
+	top:50vh;
+  height:500px;
 	height:48vh;
   width:1100px;
 	width:58vw;
