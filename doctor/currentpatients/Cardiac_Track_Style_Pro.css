@@ -82,12 +82,12 @@
 	height:70%;
 	height:70vh;
 	width: 80%;
-	width: 79vw;
+	width: 85vw;
 	/*background-color: #9ECFF7;*/
 	background-image:url('CardioPic5.jpg');
 	background-repeat:no-repeat;
 	background-size:1530px 900px;
-	background-size:79vw 70vh;
+	background-size:85vw 70vh;
 	border-bottom: solid white 3px;
 	position: relative;
 }
@@ -97,6 +97,7 @@
 	float:right;
 	height:30%;
 	width:50%;
+	width:55vw;
 	border-right: solid white 3px; 
 	background: -webkit-linear-gradient(#081933, #7396B2); /* For Safari */
 	background: -o-linear-gradient(#081933, #7396B2); /* For Opera 11.1 to 12.0 */
