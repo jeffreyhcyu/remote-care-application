@@ -21,6 +21,7 @@
 #patients{
 	font-family: helvetica;
 	font-size: 40px;
+	font-size: 4vh;
 	border-bottom: solid white 3px;
 	color: white;
 }
@@ -28,6 +29,7 @@
 #alerted{
 	font-family: helvetica;
 	font-size: 40px;
+	font-size: 4vh;
 	border-bottom: solid white 3px;
 	color: white;
 	background-color: red;
@@ -36,6 +38,7 @@
 #alert{
 	font-family: helvetica;
 	font-size: 40px;
+	font-size: 4vh;
 	border-bottom: solid white 3px;
 	color: white;
 	background-color: red;	
@@ -55,6 +58,7 @@
 #normaled{
 	font-family: helvetica;
 	font-size: 40px;
+	font-size: 4vh;
 	border-bottom: solid white 3px;
 	color: white;
 	background-color: #9ECFF7;
@@ -63,6 +67,7 @@
 #normal{
 	font-family: helvetica;
 	font-size: 40px;
+	font-size: 4vh;
 	border-bottom: solid white 3px;
 	color: white;
 	background-color: #9ECFF7;	
@@ -122,6 +127,7 @@
 .subtitle{
 	font-family: helvetica;
 	font-size: 40px;
+	font-size: 4vh;
 	border-bottom: solid white 3px;
 	color: white;
 }
