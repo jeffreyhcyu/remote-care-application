@@ -43,8 +43,8 @@
 
 .Apatient{
 	font-family: helvetica;
-	font-size: 20px;
-	font-size: 2vh;
+	font-size: 30px;
+	font-size: 3vh;
 	border-bottom: solid white 1px;
 	color: white;
 	background-color: red;
@@ -70,8 +70,8 @@
 
 .Npatient{
 	font-family: helvetica;
-	font-size: 20px;
-	font-size: 2vh;
+	font-size: 30px;
+	font-size: 3vh;
 	border-bottom: solid white 1px;
 	color: white;
 	background-color: #9ECFF7;	
