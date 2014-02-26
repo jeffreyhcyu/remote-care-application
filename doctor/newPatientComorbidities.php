@@ -37,7 +37,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 		<nav>
             <ul>
               <li><a href="index.php">Home</a></li>
-              <li><a href="currentpatients/index.php">Existing patients</a></li>
+              <li><a href="currentpatients/index.php" target="_blank">Existing patients</a></li>
               <li><a href="newPatient.php">Add a new patient</a></li>
               <li><a href="logout.php">Log out</a></li>
             </ul>
