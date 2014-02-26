@@ -28,27 +28,28 @@ function doctorname($id){
 
 function patientsidebar($doctorID){
     
-    //Database connection
+    // Configure the MySQL connection
+    $server="remote.villocq.com";
     $username="3yp";
     $DBpassword="project";
     $database="tallis";
     
-    mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
-    @mysql_select_db($database);
+    // New MySQLi Instance
+    $db = new mysqli($server,$username,$DBpassword,$database);
     
-    $result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID='$doctorID'");
-    $num = mysql_num_rows($result);
-    
-    while($row = mysql_fetch_array($result))
+    $alerted = $db->prepare("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID=?");
+    $alerted->bind_param('s',$doctorID);
+    $alerted->execute();
+    $results = $alerted->fetch_all();
+        
+    foreach($results as $row)
     {
-      echo '<div class="Apatient" data-idNo=' . $row['id']. '>'; //inserted the data tag data-id
-      echo '<div class="Identification" data-idNo=' . $row['id']. '>';
-      echo $row['patientID'] . " id:" . $row['id'];
-      echo '</div>';
-      echo '</div>';
-    }     
+      echo $row['patientID'];
+      echo "<br>";
+    }
 
-
+    $alerted->close();
+    $db->close();
 }
 
 ?>
