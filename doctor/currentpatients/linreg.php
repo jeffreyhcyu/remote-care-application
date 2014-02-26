@@ -37,7 +37,7 @@ function linear_regression($patientUsername)
         
         //If one of the data points has been checked (i.e. day 1,2,3, etc), return the previous flag value
         if($dataFlagSum != 0){
-            return $patientFlag;
+            return $patient_flag;
         }
         
         //Now we can assume that all 7 previous data points have not yet been checked and that days elapsed
