@@ -1,5 +1,6 @@
 <?php
 
+//Gets and dispalys the doctor's current name
 function doctorname($id){
     
     // Configure the MySQL connection
@@ -25,7 +26,7 @@ function doctorname($id){
 
 }
 
-
+//Dispalys the sidebar with alerted patients in
 function patientsidebar($doctorID){
     
     // Configure the MySQL connection
