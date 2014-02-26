@@ -61,7 +61,7 @@ patientsidebar($doctorID);
 
   <article class="content">
     
-    <h3>Welcome, <?php require("functions.php"); $doctorName = doctorname($doctorID); echo $doctorName;?></h3>
+    <h3>Welcome, <?php $doctorName = doctorname($doctorID); echo $doctorName;?></h3>
     
     <section>
       <br>
