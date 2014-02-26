@@ -83,7 +83,7 @@ while($row = mysql_fetch_array($result))
     <h3>Welcome, <?php require("functions.php"); $doctorName = doctorname($doctorID); echo $doctorName;?></h3>
     
     <section>
-      <h4>How to use this site:</h4>
+      <br>
       <p>This is the <i>Cardiac Track Pro</i> portal. Here, you can monitor your patients' progress and update their treatment.</p></section>
     <br>
     <section>
