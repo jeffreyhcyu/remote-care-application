@@ -19,7 +19,7 @@ $sysBP=$_POST['sysBP'];
 $diaBP=$_POST['diaBP'];
 
 //Prepared statement
-$submit = $db->prepare("INSERT INTO patientCurrentBP VALUES ('',now(),?,?,?)");
+$submit = $db->prepare("INSERT INTO patientCurrentBP VALUES ('',now(),?,?,?,'0')");
 
 //Bind & Execute to submit to database
 $submit->bind_param('sss',$id,$sysBP,$diaBP);
