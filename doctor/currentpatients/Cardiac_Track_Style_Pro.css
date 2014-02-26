@@ -10,7 +10,9 @@
 .patient_selector{
 	z-index: 1;
 	height: 100%;
+	height: 100vh;
 	width: 20%;
+	width: 20vw;
 	position:absolute;
 	color:yellow;
 	background-color: #081933;
