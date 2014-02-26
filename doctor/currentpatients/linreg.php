@@ -33,7 +33,7 @@ function linear_regression($patientUsername)
         $dataFlagQuery = mysql_query("SELECT SUM(uncertaintyFlag) FROM (SELECT date,patientCurrentBPSystolic,uncertaintyFlag FROM
                                      patientCurrentBP WHERE patientID='test2' ORDER BY date DESC LIMIT 7) AS value");
         $dataFlagArray = mysql_fetch_array($dataFlagQuery);
-        $dataFlagSum = $dataFlagQuery[0];
+        $dataFlagSum = $dataFlagArray[0];
         
         //If one of the data points has been checked (i.e. day 1,2,3, etc), return the previous flag value
         if($dataFlagSum != 0){
