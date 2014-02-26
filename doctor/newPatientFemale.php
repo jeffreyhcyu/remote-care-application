@@ -89,19 +89,19 @@ while($row = mysql_fetch_array($result))
   <form method="post" action="female.php">
           <table width="717" border="0" cellpadding="5">
             <tr>
-            <td width="579"></td>
             <td width="50" align="center"><strong>Yes</strong></td>
             <td width="50" align="center"><strong>No</strong></td>
+            <td width="579"></td>
             </tr>
             <tr>
-              <td>Is the patient currently breastfeeding?</td>
               <td align="center"><input name="breastfeed" type="radio"  value="Yes"></td>
               <td align="center"><input type="radio" name="breastfeed" value="No" checked></td>
+              <td>Is the patient currently breastfeeding?</td>
             </tr>
             <tr>
-              <td>Is the patient looking to become pregnant in the next 12 months?</td>
               <td align="center"><input name="future_pregnancy" type="radio" value="Yes"></td>
               <td align="center"><input type="radio" name="future_pregnancy" value="No" checked></td>
+              <td>Is the patient looking to become pregnant in the next 12 months?</td>
             </tr>
           </table>
 <br>
