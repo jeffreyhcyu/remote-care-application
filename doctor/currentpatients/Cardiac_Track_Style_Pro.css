@@ -150,7 +150,7 @@
 	margin-left: 20px;
 	font-family: helvetica;
 	font-size: 30px;			/*this is so that something appears on older browsers*/
-	font-size: 1.7vw;			/*this gives dynamic resizing*/
+	font-size: 1vw;			/*this gives dynamic resizing*/
 	color: white;
 
 }
@@ -165,7 +165,7 @@
 	margin-left: 10px;
 	font-family: helvetica;
 	font-size: 30px;			/*this is so that something appears on older browsers*/
-	font-size: 1.7vw;			/*this gives dynamic resizing*/
+	font-size: 1vw;			/*this gives dynamic resizing*/
 	color: white;
 
 	
@@ -181,7 +181,7 @@
 	margin-left: 10px;
 	font-family: helvetica;
 	font-size: 30px;			/*this is so that something appears on older browsers*/
-	font-size: 1.7vw;			/*this gives dynamic resizing*/
+	font-size: 1vw;			/*this gives dynamic resizing*/
 	color: white;
 
 	
@@ -197,7 +197,7 @@
 	margin-left: 10px;
 	font-family: helvetica;
 	font-size: 30px;			/*this is so that something appears on older browsers*/
-	font-size: 1.7vw;			/*this gives dynamic resizing*/
+	font-size: 1vw;			/*this gives dynamic resizing*/
 	color:white;
 
 	
