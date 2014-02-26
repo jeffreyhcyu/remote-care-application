@@ -75,7 +75,8 @@
 }
 
 #graph_container{
-	text-indent:10px;
+	text-indent:20px;
+	text-indent:0.01vw;
 	float: right;
 	height:70%;
 	height:70vh;
