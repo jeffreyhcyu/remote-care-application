@@ -128,6 +128,8 @@
 	font-size: 20px;
 	color: white;
 	width:70%;
+	height:30%;
+	height: 30vh;
 }
 
 #med_table{
@@ -143,8 +145,7 @@
 	font-size: 30px;			/*this is so that something appears on older browsers*/
 	font-size: 1.7vw;			/*this gives dynamic resizing*/
 	color: white;
-	
-	width:25vw;
+	width:25%;
 }
 
 .med_table2{
