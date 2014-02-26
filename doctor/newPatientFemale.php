@@ -87,11 +87,11 @@ while($row = mysql_fetch_array($result))
   <p>You have indicated that the patient is <strong>female</strong>.</p>
   <p>Please answer the following questions:</p>
   <form method="post" action="female.php">
-          <table width="717" border="0" cellpadding="5">
+          <table width="718" border="0" cellpadding="5">
             <tr>
-            <td width="50" align="center"><strong>Yes</strong></td>
-            <td width="50" align="center"><strong>No</strong></td>
-            <td width="579"></td>
+            <td width="40" align="center"><strong>Yes</strong></td>
+            <td width="40" align="center"><strong>No</strong></td>
+            <td width="600"></td>
             </tr>
             <tr>
               <td align="center"><input name="breastfeed" type="radio"  value="Yes"></td>
