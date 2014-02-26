@@ -70,7 +70,9 @@ patientsidebar($doctorID);
     <p>&nbsp;</p>
     <p> Patient unique identifier = <?php echo $_SESSION['autoID']; ?></p>
     <p>Please store this in your patient's file for your records.</p><br>
-    <p><a href="index.php">Click here</a> to return to the home screen.</p>
+    <p><a href="index.php">Click here</a> to return to the Home Screen.</p>
+    <p><a href="http://remote.villocq.com:8081/tallis-enactment-1.7.2/EnactFile.page?protocol=BPManager&pfdi_patientID=<?php echo $_SESSION['patientID']; ?>">Click here</a> to launch Tallis Web Enactment.</p>
+
     
   </article>
   <div class="push"></div>
