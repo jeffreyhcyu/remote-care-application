@@ -40,7 +40,7 @@ function patientsidebar($doctorID){
     $alerted = $db->prepare("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID=?");
     $alerted->bind_param('s',$doctorID);
     $alerted->execute();
-    $results = $alerted->fetch_all();
+    $results = $alerted->fetch();
         
     foreach($results as $row)
     {
