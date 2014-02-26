@@ -314,8 +314,8 @@ ID Number
 Medication
 </div>
 
-<table>
-<tr>
+
+
 <div class="med_table1">
 Med 1
 <table id="med_table">
@@ -342,9 +342,7 @@ Med 1
 </tr>
 </table>
 </div>
-</tr>
 
-<tr>
 <div class="med_table2">
 Med 2
 <table id="med_table">
@@ -371,9 +369,7 @@ Med 2
 </tr>
 </table>
 </div>
-</tr>
 
-<tr>
 <div class="med_table3">
 Med 3
 <table id="med_table">
@@ -400,9 +396,7 @@ Med 3
 </tr>
 </table>
 </div>
-</tr>
 
-<tr>
 <div class="med_table4">
 Med 4
 <table id="med_table">
@@ -430,8 +424,7 @@ Med 4
 </table>
 </div>
 </div>
-</tr>
-</table>
+
 
 </div>
 </html>
