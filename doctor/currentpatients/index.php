@@ -219,7 +219,7 @@ Current User <?php echo $docInfo['prefix'] . ". " . $docInfo['firstName'] . " " 
 	left: 200px;
 	top:100px;
 	height:500px;
-	height:50vh;
+	height:48vh;
   width:1100px;
 	opacity:0.9;
 	filter:alpha(opacity=90); /* For IE8 and earlier */
