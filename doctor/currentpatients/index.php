@@ -271,7 +271,7 @@ ID Number
     $(function() {
         $( "#progressbar" ).progressbar(
         {
-        value: <?php echo $flagno ?>
+        value: <?php echo $flagno ?>*10
         });
         });
         /* 
