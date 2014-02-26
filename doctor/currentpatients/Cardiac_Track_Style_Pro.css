@@ -151,7 +151,6 @@
 .med_table2{
 	border-left: solid white 3px; 
 	position: relative;
-	top:-130px;
 	left:225px;
 	left:10vw;
 	margin-top: 30px;
@@ -167,9 +166,8 @@
 .med_table3{
 	border-left: solid white 3px; 
 	position: relative;
-	top:-260px;
 	left:470px;
-	left:24vw;
+	left:22vw;
 	margin-top: 30px;
 	margin-left: 30px;
 	font-family: helvetica;
@@ -183,9 +181,8 @@
 .med_table4{
 	border-left: solid white 3px; 
 	position: relative;
-	top:-390px;
 	left:695px;
-	left:36vw;
+	left:34vw;
 	margin-top: 30px;
 	margin-left: 30px;
 	font-family: helvetica;
