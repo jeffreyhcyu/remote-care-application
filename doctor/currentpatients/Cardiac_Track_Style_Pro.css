@@ -1,11 +1,11 @@
-.full_screen{
+/*.full_screen{
 	height: 100%;
 	width:100%;
 	background-color: red;
 	position: absolute;
 	z-index: 0;
 	font-family: helvetica;
-}
+}*/
 
 .patient_selector{
 	z-index: 1;
