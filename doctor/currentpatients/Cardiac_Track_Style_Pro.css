@@ -44,12 +44,12 @@
 .Apatient{
 	font-family: helvetica;
 	font-size: 20px;
-	font-size: 0.2vh;
+	font-size: 2vh;
 	border-bottom: solid white 1px;
 	color: white;
 	background-color: red;
 	height: 40px;
-	height: 0.2vh;
+	height: 4vh;
 }
 
 #normaled{
@@ -71,12 +71,12 @@
 .Npatient{
 	font-family: helvetica;
 	font-size: 20px;
-	font-size: 0.2vh;
+	font-size: 2vh;
 	border-bottom: solid white 1px;
 	color: white;
 	background-color: #9ECFF7;	
 	height: 40px;
-	height: 0.2vh;
+	height: 4vh;
 }
 
 #graph_container{
