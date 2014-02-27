@@ -146,6 +146,8 @@
 
 #med_table{
 	color: white;
+	font-size: 30px;			/*this is so that something appears on older browsers*/
+	font-size: 0.9vw;			/*this gives dynamic resizing*/
 }
 
 .med_table1{
