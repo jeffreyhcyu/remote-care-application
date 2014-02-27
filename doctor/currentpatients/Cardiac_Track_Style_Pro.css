@@ -45,7 +45,7 @@
 	font-family: helvetica;
 	font-size: 40px;
 	font-size: 4vh;
-	border-bottom: solid white 3px;
+
 	color: white;
 	background-color: red;	
 }
@@ -65,6 +65,7 @@
 	font-family: helvetica;
 	font-size: 40px;
 	font-size: 4vh;
+	border-top: solid white 3px;
 	border-bottom: solid white 3px;
 	color: white;
 	background-color: #9ECFF7;
