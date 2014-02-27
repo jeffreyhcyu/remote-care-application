@@ -59,6 +59,7 @@
 	background-color: red;
 	height: 40px;
 	height: 4vh;
+	cursor: pointer;
 }
 
 #normaled{
@@ -95,6 +96,7 @@
 	background-color: #9ECFF7;	
 	height: 40px;
 	height: 4vh;
+	cursor: pointer;
 }
 
 .menu{
