@@ -210,9 +210,11 @@ var idNum = this.getAttribute("data-idNo");
 window.location.href = "index.php?w1=" + idNum;
 });
 </script>
+<a href="https://3yp.villocq.com/doctor/newPatient.php" target="_blank">
 <div class="menu">
-New Patient
+Add New Patient
 </div>
+</a>
 <div class="menu">
 Log Out
 </div>
