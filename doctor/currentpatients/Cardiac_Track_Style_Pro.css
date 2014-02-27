@@ -35,6 +35,12 @@
 	background-color: red;
 }
 
+#alert_height{
+	 height:30vh;
+   	overflow:auto;
+    background:red;
+}
+
 #alert{
 	font-family: helvetica;
 	font-size: 40px;
