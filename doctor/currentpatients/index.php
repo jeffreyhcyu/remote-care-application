@@ -55,6 +55,7 @@ header('Location: https://3yp.villocq.com/doctor');
 <div id="patients">
 Patients
 </div>
+
 <div id="alert">
 <div id="alerted">
 High BP
@@ -119,6 +120,7 @@ require("linreg.php");
 $flagno = linear_regression($patientUsername);
 
 ?>
+</div>
 
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
