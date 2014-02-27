@@ -55,7 +55,7 @@ header('Location: https://3yp.villocq.com/doctor');
 <div id="patients">
 Patients
 </div>
-
+<div>
 <div id="alert">
 <div id="alerted">
 High BP
