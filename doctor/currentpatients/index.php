@@ -215,9 +215,11 @@ window.location.href = "index.php?w1=" + idNum;
 Add New Patient
 </div>
 </a>
+<a href="https://3yp.villocq.com/doctor/logout.php">
 <div class="menu">
 Log Out
 </div>
+</a>
 <div class="menu">
 Tutorial  
 </div>
