@@ -189,6 +189,7 @@ $flagno = linear_regression($patientUsername);
 <div id="normaled">
 Normal
 </div>
+<div id="normal_height">
 <?php
 while($row5 = mysql_fetch_array($result5))
   {
@@ -200,7 +201,7 @@ while($row5 = mysql_fetch_array($result5))
   }
 ?>
 </div>
-
+</div>
 <script>
 $( ".Identification" ).click(function() {
 // 'Getting' data-attributes using dataset 

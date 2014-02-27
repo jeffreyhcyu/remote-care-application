@@ -71,6 +71,12 @@
 	background-color: #9ECFF7;
 }
 
+#normal_height{
+	 height:30vh;
+   	overflow:auto;
+    background: #9ECFF7;
+}
+
 #normal{
 	font-family: helvetica;
 	font-size: 40px;
