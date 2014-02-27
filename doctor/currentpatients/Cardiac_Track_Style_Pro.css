@@ -88,15 +88,15 @@
 	text-indent:0px;
 	text-indent:0.04vw;
 	float: right;
-	height:70%;
-	height:70vh;
+	height:60%;
+	height:60vh;
 	width: 80%;
 	width: 85vw;
 	/*background-color: #9ECFF7;*/
 	background-image:url('CardioPic5.jpg');
 	background-repeat:no-repeat;
 	background-size:1530px 900px;
-	background-size:85vw 70vh;
+	background-size:85vw 60vh;
 	border-bottom: solid white 3px;
 	position: relative;
 }
