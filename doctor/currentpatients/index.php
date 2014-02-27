@@ -219,6 +219,12 @@ Log Out
 <div class="menu">
 Tutorial  
 </div>
+<div class="menu">
+About Us  
+</div>
+<div class="menu">
+Site Terms  
+</div>
 </div>
 <!--End of left hand of page-->
 
