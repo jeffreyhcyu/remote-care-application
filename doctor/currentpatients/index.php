@@ -211,7 +211,7 @@ window.location.href = "index.php?w1=" + idNum;
 });
 </script>
 <div class="menu">
-Create New Patient
+New Patient
 </div>
 <div class="menu">
 Log Out
