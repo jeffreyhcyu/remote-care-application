@@ -97,6 +97,15 @@
 	height: 4vh;
 }
 
+.menu{
+	font-family: helvetica;
+	font-size: 40px;
+	font-size: 4vh;
+	border-bottom: solid white 3px;
+	color: white;
+	background-color: #081933;
+}
+
 #graph_container{
 	text-indent:0px;
 	text-indent:0.04vw;

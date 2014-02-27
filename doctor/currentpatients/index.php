@@ -210,7 +210,15 @@ var idNum = this.getAttribute("data-idNo");
 window.location.href = "index.php?w1=" + idNum;
 });
 </script>
-
+<div class="menu">
+Create New Patient
+</div>
+<div class="menu">
+Log Out
+</div>
+<div class="menu">
+Tutorial  
+</div>
 </div>
 <!--End of left hand of page-->
 
