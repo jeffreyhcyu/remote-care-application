@@ -167,8 +167,8 @@
 	font-size: 0.9vw;			/*this gives dynamic resizing*/
 	color: white;
 	width:70%;
-	height:30%;
-	height: 40vh;
+	height:40%;
+	height: 30vh;
 }
 
 #med_table{
