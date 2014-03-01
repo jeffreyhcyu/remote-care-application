@@ -51,13 +51,6 @@ header('Location: https://3yp.villocq.com/doctor');
 
 $(document).ready(function(){
 
-      $(function() {
-        $( "#progressbar" ).progressbar(
-        {
-        value: <?php echo $flagno ?>*10
-        });
-        });
-  
   $(".menu_About_Us").click(function(){
   $(".about_us").show();
   $(".cross").show();
