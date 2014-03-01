@@ -55,7 +55,7 @@ header('Location: https://3yp.villocq.com/doctor');
 X
 </div>
 About Us
-<p>This is our application which tracks blood pressure over time</p>
+<p>This is our application which tracks blood pressure over time. This can be used to aid the treatment of primary hypertension in your patients. </p>
 </div>
 <!--Start of left hand of page-->
 
