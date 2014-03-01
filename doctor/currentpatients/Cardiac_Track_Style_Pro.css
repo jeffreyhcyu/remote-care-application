@@ -432,4 +432,5 @@
   	width:85vw;
   	z-index: 90;
   	position:absolute;
+  	float: right;
 }
