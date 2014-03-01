@@ -383,13 +383,13 @@
 	font-size: 40px;
 	font-size: 4vh;
 	color: white;
-  	/*display:none;*/
+  	display:none;
   }
 
 .Tutorial_1>p{
 	font-size: 20px;
 	font-size: 2vh;
-	/*display:none;*/
+	display:none;
 }
 
 .close{
@@ -401,7 +401,7 @@
 	font-size: 20px; 
 	font-size: 2vh;
 	cursor: pointer;
-	/*display:none;*/
+	display:none;
 }
 
 .next{
@@ -414,5 +414,5 @@
 	font-size: 2vh;
 	cursor: pointer;
 	text-decoration: underline;
-	/*display:none;*/	
+	display:none;	
 }
