@@ -299,4 +299,7 @@
 	z-index: 93;
 	top:10px;
 	right:10px;
+	float: right;
+	font-size: 20px; 
+	font-size: 2vh;
 }
