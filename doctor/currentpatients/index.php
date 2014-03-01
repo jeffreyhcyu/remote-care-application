@@ -48,15 +48,16 @@ header('Location: https://3yp.villocq.com/doctor');
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
-    $(function() {
+
+$(document).ready(function(){
+
+      $(function() {
         $( "#progressbar" ).progressbar(
         {
         value: <?php echo $flagno ?>*10
         });
         });
-    
-$(document).ready(function(){
-
+  
   $(".menu_About_Us").click(function(){
   $(".about_us").show();
   $(".cross").show();
