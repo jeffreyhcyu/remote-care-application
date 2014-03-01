@@ -45,8 +45,7 @@ header('Location: https://3yp.villocq.com/doctor');
     });
     </script>
      <!--this is the end of the j query for the spurious bar-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
 
 $(document).ready(function(){
@@ -102,6 +101,17 @@ X
 </div>
 Site Terms 
 <p>This needs to be filled with a legal disclaimer. Which highlights the fact we dont hold any liability when it comes to persrciptions.</p>
+</div>
+
+<div class="Tutorial_1">
+<div class="close">
+Close
+</div>
+<div class="next">
+Next
+</div>
+Tutorial 
+<p>This is a short tutorial to describe the main functions of Cardiac Track Pro to help you understand and best utlise the features it has to offer. Click next to proceed or click close to stop the tutorial at any time.</p>
 </div>
 <!--Start of left hand of page-->
 
