@@ -108,7 +108,7 @@ Site Terms
 Close
 </div>
 <div class="next">
-Next
+Next >
 </div>
 Tutorial 
 <p>This is a short tutorial to describe the main functions of Cardiac Track Pro to help you understand and best utlise the features it has to offer. Click next to proceed or click close to stop the tutorial at any time.</p>

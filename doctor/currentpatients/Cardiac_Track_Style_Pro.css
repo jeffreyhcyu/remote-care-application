@@ -407,11 +407,12 @@
 .next{
 	position:relative;
 	z-index: 93;
-	top:18vh;
+	top:16vh;
 	right:10px;
 	float: right;
 	font-size: 20px; 
 	font-size: 2vh;
 	cursor: pointer;
+	text-decoration: underline;
 	/*display:none;*/	
 }
