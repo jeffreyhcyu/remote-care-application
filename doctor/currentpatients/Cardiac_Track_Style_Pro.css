@@ -423,7 +423,7 @@
   	z-index: 90;
   	position:relative;
   	float: right;
-  	display:none; 
+  	/*display:none;*/ 
   	background-size:1530px 900px;
 	background-size:85vw 60vh;
 }
