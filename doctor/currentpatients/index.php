@@ -136,7 +136,7 @@ Site Terms
 <div class="close">
 Close
 </div>
-<div class="next">
+<div class="next1">
 Next >
 </div>
 Tutorial 
@@ -147,7 +147,7 @@ Tutorial
 <div class="close">
 Close
 </div>
-<div class="next">
+<div class="next2">
 Next >
 </div>
 Patient Selector 
