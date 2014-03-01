@@ -45,11 +45,30 @@ header('Location: https://3yp.villocq.com/doctor');
     });
     </script>
      <!--this is the end of the j query for the spurious bar-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+
+  $(".menu_About_Us").click(function(){
+  $(".about_us").show();
+  $(".cross").show();
+  });
+
+  $(".cross").click(function(){
+  $(".about_us").hide();
+  $(".cross").hide();
+});
+
+});
+</script>
+
 </head>
 <div class="full_screen">
 
 <div class="about_us_back">
 </div>
+
 <div class="about_us">
 <div class="cross">
 X
@@ -57,6 +76,15 @@ X
 About Us
 <p>This is our application which tracks blood pressure over time. This can be used to aid the treatment of primary hypertension in your patients. </p>
 </div>
+
+<!--<div class="site_terms">
+<div class="cross">
+X
+</div>
+Site Terms 
+<p>This is our application which tracks blood pressure over time. This can be used to aid the treatment of primary hypertension in your patients. </p>
+</div>
+-->
 <!--Start of left hand of page-->
 
 <div class="patient_selector">
@@ -229,13 +257,13 @@ Add New Patient
 Log Out
 </div>
 </a>
-<div class="menu">
+<div class="menu_Tutorial">
 Tutorial  
 </div>
-<div class="menu">
+<div class="menu_About_Us">
 About Us  
 </div>
-<div class="menu">
+<div class="menu_Site_Terms">
 Site Terms  
 </div>
 </div>
