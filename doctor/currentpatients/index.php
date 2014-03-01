@@ -86,6 +86,13 @@ $(document).ready(function(){
   $(".Tutorial_1>p").show();
   });
 
+  $(".close").click(function(){
+  $(".Tutorial_1").hide();
+  $(".close").hide();
+  $(".about_us_back").hide();
+  $(".next").hide();
+  $(".Tutorial_1>p").hide();
+  }); 
 });
 </script>
 
