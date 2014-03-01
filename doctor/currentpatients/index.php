@@ -48,6 +48,13 @@ header('Location: https://3yp.villocq.com/doctor');
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
+    $(function() {
+        $( "#progressbar" ).progressbar(
+        {
+        value: <?php echo $flagno ?>*10
+        });
+        });
+    
 $(document).ready(function(){
 
   $(".menu_About_Us").click(function(){
@@ -63,7 +70,7 @@ $(document).ready(function(){
   $(".about_us_back").hide();
   $(".about_us>p").hide();
   });
-  
+
   $(".menu_Site_Terms").click(function(){
   $(".site_terms").show();
   $(".cross").show();
