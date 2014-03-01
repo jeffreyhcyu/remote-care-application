@@ -49,9 +49,9 @@ header('Location: https://3yp.villocq.com/doctor');
 <div class="full_screen">
 
 <div class="about_us_back">
+</div>
 <div class="about_us">
 This is our application which tracks blood pressure over time.
-</div>
 </div>
 <!--Start of left hand of page-->
 
