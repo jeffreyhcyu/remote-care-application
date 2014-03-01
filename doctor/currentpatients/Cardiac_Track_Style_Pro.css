@@ -292,3 +292,10 @@
 	font-size: 4vh;
 	color: white;
   }
+
+.cross{
+	border: solid white 6px; 
+	position:relative;
+	top:10px;
+	right:10px;
+}
