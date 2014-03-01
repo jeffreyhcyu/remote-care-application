@@ -88,11 +88,22 @@ $(document).ready(function(){
 
   $(".close").click(function(){
   $(".Tutorial_1").hide();
+  $(".Tutorial_2").hide(); //this may have to be redone below for all as Close may remain hidden
+  $(".Tutorial_2_back").hide();
   $(".close").hide();
   $(".about_us_back").hide();
   $(".next").hide();
   $(".Tutorial_1>p").hide();
   }); 
+
+  $(".next").click(function(){
+  $(".Tutorial_2").show();
+  $(".close").show();
+  $(".Tutorial_2_back").show();
+  $(".next").show();
+  $(".Tutorial_2>p").show();
+  });
+
 });
 </script>
 
@@ -130,6 +141,17 @@ Next >
 </div>
 Tutorial 
 <p>This is a short tutorial to describe the main functions of Cardiac Track Pro to help you understand and best utlise the features it has to offer. Click next to proceed or click close to stop the tutorial at any time.</p>
+</div>
+
+<div class="Tutorial_2">
+<div class="close">
+Close
+</div>
+<div class="next">
+Next >
+</div>
+Patient Selector 
+<p>This is where you can select the data for each of your patients. They have been separated into two categories, Alerted and Normal. Those in the Alerted section have reached their review time or breached their BP target for either Systolic or Diastolic. Any can be simply selected by scrolling and clicking the patient whoes data you wish to see.</p>
 </div>
 <!--Start of left hand of page-->
 
