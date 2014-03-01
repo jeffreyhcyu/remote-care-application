@@ -109,6 +109,36 @@
 	cursor: pointer; 
 }
 
+.menu_Tutorial{
+	font-family: helvetica;
+	font-size: 40px;
+	font-size: 3.2vh;
+	border-bottom: solid white 3px;
+	color: white;
+	background-color: #081933;
+	cursor: pointer; 
+}
+
+.menu_About_Us{
+	font-family: helvetica;
+	font-size: 40px;
+	font-size: 3.2vh;
+	border-bottom: solid white 3px;
+	color: white;
+	background-color: #081933;
+	cursor: pointer; 
+}
+
+.menu_Site_Terms{
+	font-family: helvetica;
+	font-size: 40px;
+	font-size: 3.2vh;
+	border-bottom: solid white 3px;
+	color: white;
+	background-color: #081933;
+	cursor: pointer; 
+}
+
 #graph_container{
 	text-indent:0px;
 	text-indent:0.04vw;
