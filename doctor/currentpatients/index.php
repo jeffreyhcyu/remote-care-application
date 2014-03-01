@@ -82,7 +82,7 @@ $(document).ready(function(){
   $(".Tutorial_1").show();
   $(".close").show();
   $(".about_us_back").show();
-  $(".next").show();
+  $(".next1").show();
   $(".Tutorial_1>p").show();
   });
 
@@ -92,7 +92,8 @@ $(document).ready(function(){
   $(".Tutorial_2_back").hide();
   $(".close").hide();
   $(".about_us_back").hide();
-  $(".next").hide();
+  $(".next1").hide();
+  $(".next2").hide();
   $(".Tutorial_1>p").hide();
   }); 
 
@@ -100,7 +101,7 @@ $(document).ready(function(){
   $(".Tutorial_2").show();
   $(".close").show();
   $(".Tutorial_2_back").show();
-  $(".next").show();
+  $(".next2").show();
   $(".Tutorial_2>p").show();
   });
 
@@ -136,7 +137,7 @@ Site Terms
 <div class="close">
 Close
 </div>
-<div class="next1">
+<div class="next1"> <!--dont know where this has diasppered to-->
 Next >
 </div>
 Tutorial 
