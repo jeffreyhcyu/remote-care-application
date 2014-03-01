@@ -62,8 +62,21 @@ $(document).ready(function(){
   $(".cross").hide();
   $(".about_us_back").hide();
   $(".about_us>p").hide();
-});
+  });
+  
+  $(".menu_Site_Terms").click(function(){
+  $(".site_terms").show();
+  $(".cross").show();
+  $(".about_us_back").show();
+  $(".site_terms>p").show();
+  });
 
+  $(".cross").click(function(){
+  $(".site_terms").hide();
+  $(".cross").hide();
+  $(".about_us_back").hide();
+  $(".site_terms>p").hide();
+  });  
 });
 </script>
 
@@ -81,14 +94,13 @@ About Us
 <p>This is our application which tracks blood pressure over time. This can be used to aid the treatment of primary hypertension in your patients. </p>
 </div>
 
-<!--<div class="site_terms">
+<div class="site_terms">
 <div class="cross">
 X
 </div>
 Site Terms 
-<p>This is our application which tracks blood pressure over time. This can be used to aid the treatment of primary hypertension in your patients. </p>
+<p>This needs to be filled with a legal disclaimer. Which highlights the fact we dont hold any liability when it comes to persrciptions.</p>
 </div>
--->
 <!--Start of left hand of page-->
 
 <div class="patient_selector">
