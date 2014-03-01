@@ -53,6 +53,7 @@ header('Location: https://3yp.villocq.com/doctor');
 This is our application which tracks blood pressure over time
 </div>
 </div>
+
 <!--Start of left hand of page-->
 
 <div class="patient_selector">
