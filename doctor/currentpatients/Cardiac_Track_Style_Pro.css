@@ -294,7 +294,7 @@
   }
 
 .cross{
-	border: solid white 6px; 
+	border: solid white 3px; 
 	position:relative;
 	z-index: 93;
 	top:10px;
