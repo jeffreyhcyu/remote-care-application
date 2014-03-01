@@ -291,13 +291,11 @@
 	font-size: 40px;
 	font-size: 4vh;
 	color: white;
-  	text-decoration: underline;
   }
 
 .about_us>p{
 	font-size: 20px;
 	font-size: 2vh;
-	text-decoration: none !important;
 }
 
 .cross{
