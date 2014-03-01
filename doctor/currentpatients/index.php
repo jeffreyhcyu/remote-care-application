@@ -78,6 +78,13 @@ $(document).ready(function(){
   $(".about_us_back").hide();
   $(".site_terms>p").hide();
   });  
+
+      
+        $( "#progressbar" ).progressbar(
+        {
+        value: <?php echo $flagno ?>*10
+        });
+        });
 });
 </script>
 
