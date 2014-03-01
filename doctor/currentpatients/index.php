@@ -102,6 +102,9 @@ $(document).ready(function(){
 <div class="about_us_back">
 </div>
 
+<div class="Tutorial_2_back">
+</div>
+
 <div class="about_us">
 <div class="cross">
 X
