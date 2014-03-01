@@ -266,3 +266,12 @@
     text-shadow: 1px 1px 0 #fff;
   	color:red;
   }
+
+  .about_us_back{
+  	color:black;
+  	opacity: 30%;
+  	height:100vh;
+  	width:100vw;
+  	position:absolute;
+  	z-index: 10;
+  }
