@@ -304,6 +304,7 @@
   	width:100vw;
   	z-index: 90;
   	position:absolute;
+  	display:none;  
   }
 
 .about_us{
