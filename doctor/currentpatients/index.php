@@ -46,12 +46,11 @@ header('Location: https://3yp.villocq.com/doctor');
     </script>
      <!--this is the end of the j query for the spurious bar-->
 </head>
-<div id="about_us">
-This is our application it tracks blood pressure.
-</div>
-
 <div class="full_screen">
 
+<div class="about_us_back">
+
+</div>
 <!--Start of left hand of page-->
 
 <div class="patient_selector">
