@@ -419,9 +419,9 @@
 
 .Tutorial_2_back{
 	background-color:black;
+  	position:relative;
   	opacity: 0.55;
   	z-index: 94;
-  	position:relative;
   	float: right;
   	/*display:none;*/ 
   	background-size:1530px 900px;
