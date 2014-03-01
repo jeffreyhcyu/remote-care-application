@@ -407,7 +407,7 @@
 .next{
 	position:relative;
 	z-index: 93;
-	bottom:10px;
+	top:1.8vh;
 	right:10px;
 	float: right;
 	font-size: 20px; 
