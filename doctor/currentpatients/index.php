@@ -53,11 +53,13 @@ $(document).ready(function(){
   $(".menu_About_Us").click(function(){
   $(".about_us").show();
   $(".cross").show();
+  $(".about_us_back").show();
   });
 
   $(".cross").click(function(){
   $(".about_us").hide();
   $(".cross").hide();
+  $(".about_us_back").hide();
 });
 
 });
