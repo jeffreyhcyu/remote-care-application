@@ -416,3 +416,14 @@
 	text-decoration: underline;
 	display:none;	
 }
+
+.Tutorial_2_back{
+	background-color:black;
+  	opacity: 0.55;
+  	z-index: 90;
+  	position:relative;
+  	float: right;
+  	display:none; 
+  	background-size:1530px 900px;
+	background-size:85vw 60vh;
+}
