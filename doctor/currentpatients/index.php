@@ -54,12 +54,14 @@ $(document).ready(function(){
   $(".about_us").show();
   $(".cross").show();
   $(".about_us_back").show();
+  $(".about_us>p").show();
   });
 
   $(".cross").click(function(){
   $(".about_us").hide();
   $(".cross").hide();
   $(".about_us_back").hide();
+  $(".about_us>p").hide();
 });
 
 });
