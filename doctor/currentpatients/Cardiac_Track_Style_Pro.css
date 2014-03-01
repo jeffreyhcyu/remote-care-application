@@ -286,5 +286,5 @@
   	top:40vh;
   	left:35vw;
   	z-index: 91;
-  	opacity: 1;
+  	opacity: 1 !important;
   }
