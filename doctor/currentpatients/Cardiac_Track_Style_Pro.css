@@ -268,10 +268,10 @@
   }
 
   .about_us_back{
-  	color:black;
+  	background-color:black;
   	opacity: 30%;
   	height:100vh;
   	width:100vw;
-  	z-index: 120;
+  	z-index: 90;
   	position:absolute;
   }
