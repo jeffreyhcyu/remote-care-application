@@ -275,3 +275,15 @@
   	z-index: 90;
   	position:absolute;
   }
+
+.about_us{
+  	background-color: #081933;
+	border: solid white 6px; 
+  	border-radius: 5px;
+  	height: 20vh;
+  	width:30vw;
+  	position:absolute;
+  	top:40vh;
+  	left:35vw;
+  	z-index: 91;
+  }
