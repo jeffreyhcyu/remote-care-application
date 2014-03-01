@@ -424,8 +424,6 @@
   	z-index: 94;
   	float: right;
   	/*display:none;*/ 
-  	background-size:1530px 900px;
-	background-size:85vw 60vh;
 	height:60vh;
 	width:85vw;
 }
