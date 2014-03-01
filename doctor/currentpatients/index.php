@@ -99,10 +99,10 @@ $(document).ready(function(){
 </head>
 <div class="full_screen">
 
-<div class="about_us_back">
+<div class="Tutorial_2_back">
 </div>
 
-<div class="Tutorial_2_back">
+<div class="about_us_back">
 </div>
 
 <div class="about_us">
