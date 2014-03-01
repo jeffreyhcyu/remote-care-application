@@ -404,10 +404,23 @@
 	display:none;
 }
 
-.next{
+.next1{
 	position:relative;
 	z-index: 93;
 	top:16vh;
+	right:10px;
+	float: right;
+	font-size: 20px; 
+	font-size: 2vh;
+	cursor: pointer;
+	text-decoration: underline;
+	display:none;	
+}
+
+.next2{
+	position:relative;
+	z-index: 93;
+	top:20vh;
 	right:10px;
 	float: right;
 	font-size: 20px; 

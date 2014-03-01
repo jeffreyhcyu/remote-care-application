@@ -96,7 +96,7 @@ $(document).ready(function(){
   $(".Tutorial_1>p").hide();
   }); 
 
-  $(".next").click(function(){
+  $(".next1").click(function(){
   $(".Tutorial_2").show();
   $(".close").show();
   $(".Tutorial_2_back").show();
