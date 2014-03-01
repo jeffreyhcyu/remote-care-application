@@ -343,3 +343,27 @@
 	cursor: pointer;
 	display:none;
 }
+
+.site_terms{
+  	background-color: #081933;
+	border: solid white 6px; 
+  	border-radius: 5px;
+  	height: 20vh;
+  	width:30vw;
+  	position:absolute;
+  	top:40vh;
+  	left:35vw;
+  	z-index: 92;
+  	opacity: 1 !important;
+  	font-family: helvetica;
+	font-size: 40px;
+	font-size: 4vh;
+	color: white;
+  	display:none;
+  }
+
+.site_terms>p{
+	font-size: 20px;
+	font-size: 2vh;
+	display:none;
+}
