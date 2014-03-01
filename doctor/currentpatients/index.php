@@ -78,6 +78,14 @@ $(document).ready(function(){
   $(".site_terms>p").hide();
   });  
 
+  $(".menu_Tutorial").click(function(){
+  $(".Tutorial_1").show();
+  $(".close").show();
+  $(".about_us_back").show();
+  $(".next").show();
+  $(".Tutorial_1>p").show();
+  });
+
 });
 </script>
 
