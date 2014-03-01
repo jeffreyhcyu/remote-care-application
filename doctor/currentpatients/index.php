@@ -374,7 +374,7 @@ ID Number
 </script>
 <td>Data Uncertainty</td>
 <td>
-<div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div>
+<div id="progressbar"><?php echo $flagno ?><div class="progress-label"><?php echo $flagno ?></div></div>
 </td>
 </tr>
 <tr>
