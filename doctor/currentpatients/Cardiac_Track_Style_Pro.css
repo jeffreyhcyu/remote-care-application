@@ -453,6 +453,17 @@
  	display:none;
 }
 
+.Tutorial_2_back_b{
+	background-color:black;
+  	opacity: 0.55;
+  	height:40vh;
+  	width:15vw;
+  	z-index: 90;
+  	position:absolute;
+  	top:60vh;
+ 	display:none;
+}
+
 .Tutorial_2{
   	background-color: #081933;
 	border: solid white 6px; 
