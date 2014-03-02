@@ -132,13 +132,13 @@ $(document).ready(function(){
   $(".close2").hide();
   });
 
-  $(".close2").click(function(){
-  $(".Tutorial_2").hide();
-  $(".close2").hide();
-  $(".Tutorial_2_back").hide();
-  $(".Tutorial_2_back_b").hide();
-  $(".next2").hide();
-  $(".Tutorial_2>p").hide();
+  $(".close3").click(function(){
+  $(".Tutorial_3").hide();
+  $(".close3").hide();
+  $(".Tutorial_3_back").hide();
+  $(".Tutorial_3_back_b").hide();
+  $(".next3").hide();
+  $(".Tutorial_3>p").hide();
   });
 });
 </script>
