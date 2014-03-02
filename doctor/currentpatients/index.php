@@ -120,7 +120,7 @@ $(document).ready(function(){
   $(".next2").click(function(){
   $(".Tutorial_3").show();
   $(".Tutorial_2").hide();
-  $(".close2").show();
+  $(".close3").show();
   $(".Tutorial_3_back").show();
   $(".Tutorial_3_back_b").show();
   $(".next3").show();
