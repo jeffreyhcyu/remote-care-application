@@ -71,17 +71,13 @@ patientsidebar($doctorID);
       <h4>Manage patients:</h4>
       <p>Search for an existing patient using their patient ID</p>
       <p>
-        <label for="search">Patient ID:</label>
-        <input type="search" name="search" id="search">
-        <input type="button" name="button" id="button" value="Search" onClick="location.href='existingPatients.php'">
+    <form name="input" action="currentpatients/index.php" method="get">
+    UserId: <input type="text" name="w1">
+    <input type="submit" value="Submit">
+    </form>
       </p><br>
       <p>Or click here to create a <a href="newPatient.php">new patient profile</a></p>
     </section>
-    
-    <form name="input" action="currentpatients/index.php" method="get">
-    Username: <input type="text" name="w1">
-    <input type="submit" value="Submit">
-    </form>
     
   </article>
   <div class="push"></div>
