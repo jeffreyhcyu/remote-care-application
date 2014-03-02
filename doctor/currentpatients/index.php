@@ -414,7 +414,7 @@ Patients
 
 <div id="search">
     <form name="input" action="index.php" method="get">
-    <input  id="searchbox" placeholder="Search ID" type="text" name="w1">
+    <input  id="searchbox" placeholder="Search ID number" type="text" name="w1">
     <input id="mag" type="image" src="https://3yp.villocq.com/doctor/images/Search_Button_2-512.png" alt="search">
     <!--<input type="submit" value="Submit">-->
     </form>
