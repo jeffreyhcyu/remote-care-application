@@ -306,9 +306,6 @@ Graph
 </div>
 
 <div class="Tutorial_5">
-<div class="close5">
-Close
-</div>
 <div class="next5">
 Next >
 </div>
