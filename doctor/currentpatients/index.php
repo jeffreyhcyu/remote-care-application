@@ -171,6 +171,7 @@ $(document).ready(function(){
   $(".close5").show();
   $(".Tutorial_5_back").show();
   $(".Tutorial_5_back_b").show();
+  $(".Tutorial_5_back_c").show();
   $(".next5").show();
   $(".Tutorial_5>p").show();
   $(".Tutorial_4_back").hide();
@@ -203,6 +204,8 @@ $(document).ready(function(){
 <div class="Tutorial_5_back">
 </div>
 <div class="Tutorial_5_back_b">
+</div>
+<div class="Tutorial_5_back_c">
 </div>
 
 <div class="about_us_back">
@@ -276,7 +279,7 @@ Close
 Next >
 </div>
 Medication 
-<p>This shows what medication the patient is currently taking, what dose they are currently on wether this is the maximum does or not and the time they have been using this drug. The medication option will update when a Tallis review has been undertaken for the patient (see the next tutorial step for details).</p>
+<p>This shows what medication the patient is currently taking, what dose they are currently on wether this is the maximum does or not and the time they have been using this drug. The medication option will update when a Tallis review has been undertaken for the patient (see the next tutorial step for details)</p>
 </div>
 <!--Start of left hand of page-->
 

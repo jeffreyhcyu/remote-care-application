@@ -679,6 +679,18 @@
  	display:none;
 }
 
+.Tutorial_5_back_c{
+	background-color:black;
+  	opacity: 0.55;
+  	height:100vh;
+  	width:30vw;
+  	z-index: 90;
+  	position:absolute;
+  	left:69.2vw;
+ 	display:none;
+ 	top:1vh;
+}
+
 .Tutorial_5{
   	background-color: #081933;
 	border: solid white 6px; 
