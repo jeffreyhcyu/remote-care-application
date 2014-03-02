@@ -167,7 +167,7 @@ $(document).ready(function(){
 
   $(".next4").click(function(){
   $(".Tutorial_5").show();
-  $(".Tutorial_5").hide();
+  $(".Tutorial_4").hide();
   $(".close5").show();
   $(".Tutorial_5_back").show();
   $(".Tutorial_5_back_b").show();
@@ -276,7 +276,7 @@ Close
 Next >
 </div>
 Medication 
-<p>This shows what medication the patient is currently taking, what dose they are currently on wether this is the maximum does or not and the time they have been using this drug. The medication option will update when a Tallis review has been undertaken for the patient (see </p>
+<p>This shows what medication the patient is currently taking, what dose they are currently on wether this is the maximum does or not and the time they have been using this drug. The medication option will update when a Tallis review has been undertaken for the patient (see the next tutorial step for details).</p>
 </div>
 <!--Start of left hand of page-->
 
