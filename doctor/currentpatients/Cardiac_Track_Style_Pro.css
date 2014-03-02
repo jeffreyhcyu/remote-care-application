@@ -323,6 +323,7 @@
 	font-size: 4vh;
 	color: white;
   	display:none;
+   	overflow: auto;
   }
 
 .about_us>p{
@@ -729,6 +730,7 @@
 	font-size: 4vh;
 	color: white;
   	display:none;
+ 	overflow: auto;
   }
 
 .Tutorial_5>p{
@@ -788,6 +790,7 @@
 	font-size: 4vh;
 	color: white;
   	display:none;
+  	overflow: auto;
   }
 
 .Tutorial_6>p{
