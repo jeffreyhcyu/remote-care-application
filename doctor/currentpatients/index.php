@@ -576,7 +576,7 @@ window.location.href = "index.php?w1=" + idNum;
 </script>
 <a href="https://3yp.villocq.com/doctor/newPatient.php" target="_blank">
 <div class="menu">
-Add New Patient
+New Patient
 </div>
 </a>
 <a href="https://3yp.villocq.com/doctor/logout.php">
