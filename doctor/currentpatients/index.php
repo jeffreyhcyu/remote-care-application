@@ -412,6 +412,13 @@ medication suggestion, you are then required to set the new medication course fo
 Patients
 </div>
 
+<div id="search">
+    <form name="input" action="currentpatients/index.php" placeholder="Search ID" method="get">
+    <input type="text" name="w1">
+    <input type="submit" value="Submit">
+    </form>
+</div>
+
 <div id="alert">
 <div id="alerted">
 High BP
