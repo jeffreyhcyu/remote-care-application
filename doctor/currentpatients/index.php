@@ -140,6 +140,21 @@ $(document).ready(function(){
   $(".next3").hide();
   $(".Tutorial_3>p").hide();
   });
+
+  $(".next3").click(function(){
+  $(".Tutorial_4").show();
+  $(".Tutorial_3").hide();
+  $(".close4").show();
+  $(".Tutorial_4_back").show();
+  $(".Tutorial_4_back_b").show();
+  $(".next4").show();
+  $(".Tutorial_4>p").show();
+  $(".Tutorial_3_back").hide();
+  $(".Tutorial_3_back_b").hide();
+  $(".next3").hide();
+  $(".Tutorial_3>p").hide();
+  $(".close3").hide();
+  });
 });
 </script>
 
@@ -154,6 +169,11 @@ $(document).ready(function(){
 <div class="Tutorial_3_back">
 </div>
 <div class="Tutorial_3_back_b">
+</div>
+
+<div class="Tutorial_4_back">
+</div>
+<div class="Tutorial_4_back_b">
 </div>
 
 <div class="about_us_back">
@@ -206,6 +226,17 @@ Next >
 </div>
 Menu
 <p>This is where you can add new patients that you wish to use the application, log out from the application (we suggest you do this every time you leave the application).This is also where you can find out some more information about Cardiac Track Pro. If you ever need a recap of this tutorial it is also here.</p>
+</div>
+
+<div class="Tutorial_4">
+<div class="close4">
+Close
+</div>
+<div class="next4">
+Next >
+</div>
+Graph 
+<p>This shows the graphical representation of how the selected patients, Systolic and Diastolic blood pressure varies over time. This can be used as an persrciption aid, however please individually assess each patients data uncertainty to help this see the data uncertainity metric.</p>
 </div>
 <!--Start of left hand of page-->
 

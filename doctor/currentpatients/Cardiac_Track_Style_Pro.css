@@ -516,18 +516,19 @@
 .Tutorial_3_back{
 	background-color:black;
   	opacity: 0.55;
-  	height:100vh;
+  	height:40vh;
   	width:85vw;
   	z-index: 90;
   	position:absolute;
   	left:15vw;
  	display:none;
+ 	top:60vh;
 }
 
 .Tutorial_3_back_b{
 	background-color:black;
   	opacity: 0.55;
-  	height:75.5vh;
+  	height:100vh;
   	width:14.6vw;
   	z-index: 90;
   	position:absolute;
@@ -542,7 +543,7 @@
   	height: 25vh;
   	width:30vw;
   	position:absolute;
-  	top:40vh;
+  	top:65vh;
   	left:35vw;
   	z-index: 92;
   	opacity: 1 !important;
