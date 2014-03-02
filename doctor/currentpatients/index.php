@@ -261,7 +261,15 @@ $(document).ready(function(){
 X
 </div>
 About Us
-<p>This is our application which tracks blood pressure over time. This can be used to aid the treatment of primary hypertension in your patients. </p>
+      <p>This is a prototype application intented for use by doctors, alongside the patient <a href="https://3yp.villocq.com/patient/"><em>Cardiac Track app</em></a><em>, </em>to aid the treatment pathway for patients with clinically diagnosed hypertension.</p>
+      <p>&nbsp;</p>
+      <p>The software has been developed by students as part of the third year Engineering Science course at the University of Oxford.</p>
+      <p>&nbsp;</p>
+      <p>The team:</p>
+      <p>Michael Fedosiuk, Keble College</p>
+      <p>Henry Fletcher, Lady Margaret Hall</p>
+      <p>Emma Saragossi, Magdalen College</p>
+      <p>Jeffrey Yu, St Anne's College</p>
 <p>Browsers Supported, Google Chrome v33 and above, Mozilla Firefox v27 and above. Safari v6 and above semi supported.</p>
 </div>
 
