@@ -527,11 +527,11 @@
 .Tutorial_3_back_b{
 	background-color:black;
   	opacity: 0.55;
-  	height:76.5vh;
+  	height:76vh;
   	width:14.6vw;
   	z-index: 90;
   	position:absolute;
-  	top:0vh;
+  	top:05vh;
  	display:none;
 }
 

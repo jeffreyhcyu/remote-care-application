@@ -205,7 +205,7 @@ Close
 Next >
 </div>
 Menu
-<p>This is where you can add new patients that you wish to use the application, log out from the application (we suggest you do this every tim eyou leave the application and find out some more information about Cardiac Track Pro. If you ever need a recap of this tutorial this can also be found here.</p>
+<p>This is where you can add new patients that you wish to use the application, log out from the application (we suggest you do this every time you leave the application).This is also where you can find out some more information about Cardiac Track Pro. If you ever need a recap of this tutorial it is also here.</p>
 </div>
 <!--Start of left hand of page-->
 
