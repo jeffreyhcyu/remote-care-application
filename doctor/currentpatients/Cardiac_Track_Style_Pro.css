@@ -799,6 +799,9 @@
 #mag{
 	height:4vh;
 	width:4vh;
+	position: relative;
+	z-index: 2;
+	float: right;
 }
 
 #search{
@@ -810,5 +813,11 @@
 	background-color: red;
 	height: 40px;
 	height: 4vh;
-	cursor: pointer;
+	position: relative;
+	top:0vh;
+	left:0vw;
+}
+
+#searchbox{
+
 }
