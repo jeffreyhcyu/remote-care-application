@@ -269,20 +269,16 @@ About Us
 X
 </div>
 <!--start add of site terms-->
-<h3>Site terms</h3><br>
+<h3>Site terms</h3>
 
 <p>This site provides pharmacological therapy advice in line with the following references:</p>
-<p>&nbsp;</p>
 
 <ul>
   <li><a href="http://publications.nice.org.uk/hypertension-cg127">National Institute for Health and Clinical  Excellence (NICE). Hypertension: clinical management of primary hypertension in adults. Clinical Guideline 127. London: NICE; 2011</a></li>
     <li><a href="http://healthguides.mapofmedicine.com/choices/pdf/hypertension2.pdf">Map of Medicine Health Guides. Hypertension - pharmacological therapy. 2012</a></li>
 </ul>
 
-<br>
-
 <p>Out of scope of application:</p>
-<p>&nbsp;</p>
 
 <ul>
   <li>hypertension in children</li>
