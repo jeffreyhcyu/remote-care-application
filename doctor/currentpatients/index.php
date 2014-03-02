@@ -69,6 +69,7 @@ $(document).ready(function(){
   $(".cross").show();
   $(".about_us_back").show();
   $(".site_terms>p").show();
+  $(".site_terms>ul").show();
   });
 
   $(".cross").click(function(){
@@ -76,6 +77,7 @@ $(document).ready(function(){
   $(".cross").hide();
   $(".about_us_back").hide();
   $(".site_terms>p").hide();
+  $(".site_terms>ul").hide();
   });  
 
   $(".menu_Tutorial").click(function(){
