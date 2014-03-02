@@ -456,11 +456,11 @@
 .Tutorial_2_back_b{
 	background-color:black;
   	opacity: 0.55;
-  	height:40vh;
-  	width:15vw;
+  	height:25vh;
+  	width:13vw;
   	z-index: 90;
   	position:absolute;
-  	top:60vh;
+  	top:75vh;
  	/*display:none;*/
 }
 
