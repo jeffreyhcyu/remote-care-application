@@ -800,3 +800,11 @@
 	height:4vh;
 	width:4vh;
 }
+
+#search{
+	font-family: helvetica;
+	font-size: 40px;
+	font-size: 4vh;
+	border-bottom: solid white 3px;
+	color: white;
+}
