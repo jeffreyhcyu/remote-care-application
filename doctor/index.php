@@ -79,7 +79,7 @@ patientsidebar($doctorID);
     </section>
     
     <form name="input" action="currentpatients/index.php" method="get">
-    Username: <input type="text" name="user">
+    Username: <input type="text" name="w1">
     <input type="submit" value="Submit">
     </form>
     
