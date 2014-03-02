@@ -392,7 +392,19 @@
 	display:none;
 }
 
-.close{
+.close1{
+	position:relative;
+	z-index: 93;
+	top:10px;
+	right:10px;
+	float: right;
+	font-size: 20px; 
+	font-size: 2vh;
+	cursor: pointer;
+	display:none;
+}
+
+.close2{
 	position:relative;
 	z-index: 93;
 	top:10px;

@@ -86,25 +86,29 @@ $(document).ready(function(){
   $(".Tutorial_1>p").show();
   });
 
-  $(".close").click(function(){
+  $(".close1").click(function(){
   $(".Tutorial_1").hide();
-  $(".Tutorial_2").hide(); //this may have to be redone below for all as Close may remain hidden
-  $(".Tutorial_2_back").hide();
-  $(".close").hide();
+  $(".close1").hide();
   $(".about_us_back").hide();
   $(".next1").hide();
-  $(".next2").hide();
   $(".Tutorial_1>p").hide();
   }); 
 
   $(".next1").click(function(){
   $(".Tutorial_2").show();
-  $(".close").show();
+  $(".close2").show();
   $(".Tutorial_2_back").show();
   $(".next2").show();
   $(".Tutorial_2>p").show();
   });
 
+  $(".close2").click(function(){
+  $(".Tutorial_2").hide();
+  $(".close2").hide();
+  $(".about_us_back").hide();
+  $(".next2").hide();
+  $(".Tutorial_1>p").hide();
+  }); 
 });
 </script>
 
@@ -134,7 +138,7 @@ Site Terms
 </div>
 
 <div class="Tutorial_1">
-<div class="close">
+<div class="close1">
 Close
 </div>
 <div class="next1"> <!--dont know where this has diasppered to-->
@@ -145,7 +149,7 @@ Tutorial
 </div>
 
 <div class="Tutorial_2">
-<div class="close">
+<div class="close2">
 Close
 </div>
 <div class="next2">
