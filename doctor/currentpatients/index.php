@@ -266,27 +266,29 @@ About Us
 <div class="cross">
 X
 </div>
-Site Terms 
+<!--start add of site terms-->
 <h3>Site terms</h3><br>
 
 <p>This site provides pharmacological therapy advice in line with the following references:</p>
 <p>&nbsp;</p>
 
-  <br><a style="text-decoration: none;" href="http://publications.nice.org.uk/hypertension-cg127">National Institute for Health and Clinical  Excellence (NICE). Hypertension: clinical management of primary hypertension in adults. Clinical Guideline 127. London: NICE; 2011</a>
-  <br><a style="text-decoration: none;" href="http://healthguides.mapofmedicine.com/choices/pdf/hypertension2.pdf">Map of Medicine Health Guides. Hypertension - pharmacological therapy. 2012</a>
+<ul>
+  <li><a href="http://publications.nice.org.uk/hypertension-cg127">National Institute for Health and Clinical  Excellence (NICE). Hypertension: clinical management of primary hypertension in adults. Clinical Guideline 127. London: NICE; 2011</a></li>
+    <li><a href="http://healthguides.mapofmedicine.com/choices/pdf/hypertension2.pdf">Map of Medicine Health Guides. Hypertension - pharmacological therapy. 2012</a></li>
+</ul>
 
 <br>
 
 <p>Out of scope of application:</p>
 <p>&nbsp;</p>
 
-
-  <br>hypertension in children
-  <br>hypertension in pregnancy
-  <br>hypertension in patients with diabetes
-  <br>specialist management of secondary hypertension
-  <br>specialist management of hypertensive crises
-
+<ul>
+  <li>hypertension in children</li>
+  <li>hypertension in pregnancy</li>
+  <li>hypertension in patients with diabetes</li>
+  <li>specialist management of secondary hypertension</li>
+  <li>specialist management of hypertensive crises</li>
+  </ul>
 <h3>Terms &amp; Conditions for using this website</h3>
 <p><br>
   BY ACCESSING, USING OR DOWNLOADING  MATERIALS FROM THIS WEB SITE YOU AGREE TO THE FOLLOWING TERMS &amp; CONDITIONS,  DISCLAIMER AND PRIVACY POLICY</p>

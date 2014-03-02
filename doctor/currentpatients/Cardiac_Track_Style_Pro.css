@@ -369,6 +369,12 @@
 	display:none;
 }
 
+.site_terms>ul{
+	font-size: 20px;
+	font-size: 2vh;
+	display:none;
+}
+
 .Tutorial_1{
   	background-color: #081933;
 	border: solid white 6px; 
