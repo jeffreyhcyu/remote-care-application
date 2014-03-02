@@ -211,7 +211,7 @@ function linear_regression($patientUsername)
 mysql_query("UPDATE patientInfo SET fraudFlag='$patient_flag' WHERE patientID='$patientUsername'");
 
 //Need to set the data point 'used' flag to '1' so we don't do the same calculation again
-mysql_query("UPDATE patientCurrentBP SET uncertaintyFlag='1' WHERE patientID='test2' ORDER BY date DESC LIMIT 7");
+mysql_query("UPDATE patientCurrentBP SET uncertaintyFlag='1' WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7");
 
 mysql_close();
 
