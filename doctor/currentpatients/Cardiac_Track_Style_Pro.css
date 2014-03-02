@@ -820,4 +820,6 @@
 #searchbox{
 	height: 4vh;
 	width:100%;
+	position: relative;
+	z-index: 1;
 }
