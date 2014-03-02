@@ -660,7 +660,7 @@
 	background-color:black;
   	opacity: 0.55;
   	height:60vh;
-  	width:85vw;
+  	width:50vw;
   	z-index: 90;
   	position:absolute;
   	left:14.8vw;
@@ -686,7 +686,7 @@
   	height: 25vh;
   	width:30vw;
   	position:absolute;
-  	top:20vh;
+  	top:25vh;
   	left:35vw;
   	z-index: 92;
   	opacity: 1 !important;
