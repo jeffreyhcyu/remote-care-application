@@ -306,6 +306,9 @@ Graph
 </div>
 
 <div class="Tutorial_5">
+<div class="close5">
+Close
+</div>
 <div class="next5">
 Next >
 </div>
@@ -314,9 +317,6 @@ Medication
 </div>
 
 <div class="Tutorial_6">
-<div class="close6">
-Close
-</div>
 <div class="next6">
 Finish >
 </div>
