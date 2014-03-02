@@ -110,7 +110,7 @@ $(document).ready(function(){
   $(".close2").click(function(){
   $(".Tutorial_2").hide();
   $(".close2").hide();
-  $(".Tutorial_2_back").show();
+  $(".Tutorial_2_back").hide();
   $(".next2").hide();
   $(".Tutorial_2>p").hide();
   }); 
