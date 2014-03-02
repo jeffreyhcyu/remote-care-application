@@ -202,7 +202,7 @@ $(document).ready(function(){
   $(".Tutorial_6>p").show();
   $(".Tutorial_5_back").hide();
   $(".Tutorial_5_back_b").hide();
-  $(".Tutorial_5_back_b").hide();
+  $(".Tutorial_5_back_c").hide();
   $(".next5").hide();
   $(".Tutorial_5>p").hide();
   $(".close5").hide();
