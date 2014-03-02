@@ -819,6 +819,7 @@
 }
 
 #searchbox{
+	height: 40px;
 	height: 4vh;
 	width:77%;
 	position: relative;
