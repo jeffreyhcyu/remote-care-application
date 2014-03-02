@@ -413,7 +413,7 @@ Patients
 </div>
 
 <div id="search">
-    <form name="input" action="currentpatients/index.php" placeholder="Search ID" method="get">
+    <form name="input" action="index.php" placeholder="Search ID" method="get">
     <input type="text" name="w1">
     <input type="submit" value="Submit">
     </form>
