@@ -116,6 +116,30 @@ $(document).ready(function(){
   $(".next2").hide();
   $(".Tutorial_2>p").hide();
   }); 
+
+  $(".next2").click(function(){
+  $(".Tutorial_3").show();
+  $(".Tutorial_2").hide();
+  $(".close2").show();
+  $(".Tutorial_3_back").show();
+  $(".Tutorial_3_back_b").show();
+  $(".next3").show();
+  $(".Tutorial_3>p").show();
+  $(".Tutorial_2_back").hide();
+  $(".Tutorial_2_back_b").hide();
+  $(".next2").hide();
+  $(".Tutorial_2>p").hide();
+  $(".close2").hide();
+  });
+
+  $(".close2").click(function(){
+  $(".Tutorial_2").hide();
+  $(".close2").hide();
+  $(".Tutorial_2_back").hide();
+  $(".Tutorial_2_back_b").hide();
+  $(".next2").hide();
+  $(".Tutorial_2>p").hide();
+  });
 });
 </script>
 
@@ -125,6 +149,11 @@ $(document).ready(function(){
 <div class="Tutorial_2_back">
 </div>
 <div class="Tutorial_2_back_b">
+</div>
+
+<div class="Tutorial_3_back">
+</div>
+<div class="Tutorial_3_back_b">
 </div>
 
 <div class="about_us_back">
@@ -166,6 +195,17 @@ Next >
 </div>
 Patient Selector 
 <p>This is where you can select the data for each of your patients. They have been separated into two categories, Alerted and Normal. Those in the Alerted section have reached their review time or breached their BP target for either Systolic or Diastolic. Any can be simply selected by scrolling and clicking the patient whoes data you wish to see.</p>
+</div>
+
+<div class="Tutorial_3">
+<div class="close3">
+Close
+</div>
+<div class="next3">
+Next >
+</div>
+Menu
+<p>This is where you can add new patients that you wish to use the application, log out from the application (we suggest you do this every tim eyou leave the application and find out some more information about Cardiac Track Pro. If you ever need a recap of this tutorial this can also be found here.</p>
 </div>
 <!--Start of left hand of page-->
 
