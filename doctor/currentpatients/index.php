@@ -288,19 +288,19 @@ X
   <li>specialist management of hypertensive crises</li>
   </ul>
 <h3>Terms &amp; Conditions for using this website</h3>
-<p><br>
+<p>
   BY ACCESSING, USING OR DOWNLOADING  MATERIALS FROM THIS WEB SITE YOU AGREE TO THE FOLLOWING TERMS &amp; CONDITIONS,  DISCLAIMER AND PRIVACY POLICY</p>
-<p><br>
+<p>
   If you do not agree with any of the following, do  not use this site or download any materials from it. If you have any further  questions about this Legal Notice or its implementation, please email via the  contact page. If we decide to change this Legal Notice, we will post those  changes on this page so that you are always aware of the terms under which you  may use this site, what information we collect, how we use it and in what  circumstances we disclose it.</p>
-<h4><br>
+<h4>
   A. TERMS &amp; CONDITIONS</h4>
-<p><br>
+<p>
   <strong>1. Copyright Information</strong>&nbsp;Copyright and all other intellectual property  rights, in the material available on this site, is owned by CARDIAC TRACK and  third parties and may only be used in the ways described in this Legal Notice.  Except as otherwise indicated on this Web Site you may view, or download and  print a single copy of documents and graphics from this Web Site provided that:<br>
   (a) the material is used solely for research, personal or non-commercial  purposes;<br>
   (b) the material is not modified or altered in anyway; and<br>
   (c) you do not remove any part of this legal notice.<br>
   All other rights, title and interest not expressly granted herein are expressly  reserved. Accordingly, You are not permitted to copy, broadcast, download,  store (in any medium), transmit, show or play in public, adapt or change in any  way the content of this Web Site for any other purpose whatsoever without the  prior written permission of CARDIAC TRACK.</p>
-<p><br>
+<p>
   <strong>2. TradeMark Information</strong>&nbsp;All company, product or service names  referenced in this Web Site are used for identification purposes only and may  be trademarks of their respective owners. CARDIAC TRACK's trade marks may be  used only with permission from CARDIAC TRACK. Trademarks referenced in this Web  Site include but are not limited to:</p>
 <ul>
   <li>Third Party trademarks - All other  brands and names are property of their respective owners.</li>
@@ -312,14 +312,14 @@ X
   <strong>5. Cookies</strong>&nbsp;Cookies are small pieces of information that are stored  by your browser on your computer's hard drive, and enable CARDIAC TRACK to  provide features such as remembering your settings. Cookies can be deleted from  your hard drive if you wish. Most web browsers automatically accept cookies,  but you can change your browser settings to prevent that. This web site only  uses cookies when they are required for its proper working.</p>
 <p><br>
   <strong>6.Governing Law &amp; Jurisdiction</strong>&nbsp;This Web Site (excluding linked  sites) is controlled by CARDIAC TRACK from its offices within the United  Kingdom. The interpretation, construction and effect of this Legal Notice and  Disclaimer shall be governed and construed in all respects in accordance with  the Laws of England. You and CARDIAC TRACK also agree to submit to the  exclusive jurisdiction of the English Courts.</p>
-<h4><br>
+<h4>
   B. DISCLAIMER</h4>
-<p><br>
+<p>
   Except as expressly provided otherwise in an  agreement between you and CARDIAC TRACK, all information, software, products  and related graphics contained on this web site are provided &quot;as is&quot;  without warranty of any kind, either expressed or implied, including but not  limited to the implied warranties of satisfactory quality, fitness for a  particular purpose, title and non-infringement of third party intellectual  property rights.<br>
   In no event shall CARDIAC TRACK be liable for any  direct, indirect, incidental, special or consequential damages for loss of  profits, revenue, data or use incurred by you or any third party, whether in  action in contract, tort, or otherwise, arising from your access to, or use of,  this web site. CARDIAC TRACK make no representations about the suitability,  reliability, or timeliness, and accuracy of the information, software, products  and related graphics contained on this web site. CARDIAC TRACK reserves the  right to make improvements, changes or updates to this web site at any time  without notice.</p>
-<h4><br>
+<h4>
   C. PRIVACY POLICY</h4>
-<p><br>
+<p>
   Personal information received by CARDIAC TRACK will  be kept in a secure manner and processed in accordance with the laws relating  to data protection.<br>
   Except as expressly provided, any non-personal  information or material sent to CARDIAC TRACK will be deemed not to be  confidential and will be dealt in accordance with paragraph A4 above.<br>
   We shall keep information that personally  identifies you or allows us to contact you (&quot;Personal Information&quot;)  confidential. We may, however, from time to time use your Personal Information  to contact you about new products and services which may be of interest to you  and for other related marketing purposes.<br>
