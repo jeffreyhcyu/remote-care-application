@@ -207,6 +207,15 @@ $(document).ready(function(){
   $(".Tutorial_5>p").hide();
   $(".close5").hide();
   });
+
+  $(".next6").click(function(){
+  $(".Tutorial_6").hide();
+  $(".Tutorial_6_back").hide();
+  $(".Tutorial_6_back_b").hide();
+  $(".Tutorial_6_back_c").hide();
+  $(".next6").hide();
+  $(".Tutorial_6>p").hide();
+  });
 });
 </script>
 
