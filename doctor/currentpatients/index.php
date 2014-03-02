@@ -100,6 +100,7 @@ $(document).ready(function(){
   $(".Tutorial_2_back").show();
   $(".next2").show();
   $(".Tutorial_2>p").show();
+  $(".about_us_back").hide();
   });
 
   $(".close2").click(function(){
