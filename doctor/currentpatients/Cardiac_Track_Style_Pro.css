@@ -461,7 +461,7 @@
   	z-index: 90;
   	position:absolute;
   	top:60vh;
- 	display:none;
+ 	/*display:none;*/
 }
 
 .Tutorial_2{
