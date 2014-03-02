@@ -659,7 +659,7 @@
 .Tutorial_5_back{
 	background-color:black;
   	opacity: 0.55;
-  	height:61vh;
+  	height:60vh;
   	width:85vw;
   	z-index: 90;
   	position:absolute;
@@ -686,7 +686,7 @@
   	height: 25vh;
   	width:30vw;
   	position:absolute;
-  	top:45vh;
+  	top:20vh;
   	left:35vw;
   	z-index: 92;
   	opacity: 1 !important;
