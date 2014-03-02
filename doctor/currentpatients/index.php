@@ -180,6 +180,32 @@ $(document).ready(function(){
   $(".Tutorial_4>p").hide();
   $(".close4").hide();
   });
+
+  $(".close5").click(function(){
+  $(".Tutorial_5").hide();
+  $(".close5").hide();
+  $(".Tutorial_5_back").hide();
+  $(".Tutorial_5_back_b").hide();
+  $(".Tutorial_5_back_c").hide();
+  $(".next5").hide();
+  $(".Tutorial_5>p").hide();
+  });
+
+  $(".next5").click(function(){
+  $(".Tutorial_6").show();
+  $(".Tutorial_5").hide();
+  $(".close6").show();
+  $(".Tutorial_6_back").show();
+  $(".Tutorial_6_back_b").show();
+  $(".Tutorial_6_back_c").show();
+  $(".next6").show();
+  $(".Tutorial_6>p").show();
+  $(".Tutorial_5_back").hide();
+  $(".Tutorial_5_back_b").hide();
+  $(".next5").hide();
+  $(".Tutorial_5>p").hide();
+  $(".close5").hide();
+  });
 });
 </script>
 
@@ -206,6 +232,13 @@ $(document).ready(function(){
 <div class="Tutorial_5_back_b">
 </div>
 <div class="Tutorial_5_back_c">
+</div>
+
+<div class="Tutorial_6_back">
+</div>
+<div class="Tutorial_6_back_b">
+</div>
+<div class="Tutorial_6_back_c">
 </div>
 
 <div class="about_us_back">
@@ -280,6 +313,25 @@ Next >
 </div>
 Medication 
 <p>This shows what medication the patient is currently taking, what dose they are currently on wether this is the maximum does or not and the time they have been using this drug. The medication option will update when a Tallis review has been undertaken for the patient (see the next tutorial step for details)</p>
+</div>
+
+<div class="Tutorial_6">
+<div class="close6">
+Close
+</div>
+<div class="next6">
+Finish >
+</div>
+Patient Info  
+<p>This is where the basic data about the current patient can be found, their age when they have last been check in a surgery and the Target BP whihc has been set for them.
+There is also a data uncertainity metric. This has been devised to see if the measurements that have been recorded by the patient themselves are infact feasible. Hence allowing 
+you to make an informed decision about whether taking their home recoreded data into account when perscribing new drugs is correct. <!--The metric is based two statistical functions firstly 
+on a linear regression. This is performed on the last 7 data points. An acceptable percentage error bound is set around this and any data points outside the bound increase the metric.
+Secondly the correlation coefficient is calculated if this lies outside the set accepted range then the metric is further increased.-->
+</p>
+<p> The final button is to launch the tallis web enactment. This faccilitates the perscription suggestion part of the application. It collates the patient data to provide a new
+medication suggestion, you are then required to set the new medication course for the patient and this will update the information shown to you on each patient.  
+</p>
 </div>
 <!--Start of left hand of page-->
 
