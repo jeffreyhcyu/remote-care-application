@@ -374,7 +374,7 @@
 	font-size: 2vh;
 	display:none;
 	color: white;
-	text-decoration: none;
+	text-decoration: none !important;
 }
 
 .Tutorial_1{
