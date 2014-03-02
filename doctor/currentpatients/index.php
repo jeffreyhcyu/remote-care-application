@@ -99,6 +99,7 @@ $(document).ready(function(){
   $(".Tutorial_1").hide();
   $(".close2").show();
   $(".Tutorial_2_back").show();
+  $(".Tutorial_2_back_b").show();
   $(".next2").show();
   $(".Tutorial_2>p").show();
   $(".about_us_back").hide();
@@ -111,6 +112,7 @@ $(document).ready(function(){
   $(".Tutorial_2").hide();
   $(".close2").hide();
   $(".Tutorial_2_back").hide();
+  $(".Tutorial_2_back_b").hide();
   $(".next2").hide();
   $(".Tutorial_2>p").hide();
   }); 
