@@ -262,6 +262,7 @@ X
 </div>
 About Us
 <p>This is our application which tracks blood pressure over time. This can be used to aid the treatment of primary hypertension in your patients. </p>
+<p>Browsers Supported, Google Chrome v33 and above, Mozilla Firefox v27 and above. Safari v6 and above semi supported.</p>
 </div>
 
 <div class="site_terms">
