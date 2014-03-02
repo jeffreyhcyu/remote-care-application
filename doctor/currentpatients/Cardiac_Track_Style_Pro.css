@@ -348,11 +348,11 @@
   	background-color: #081933;
 	border: solid white 6px; 
   	border-radius: 5px;
-  	height: 20vh;
-  	width:30vw;
+  	height: 60vh;
+  	width:60vw;
   	position:absolute;
-  	top:40vh;
-  	left:35vw;
+  	top:20vh;
+  	left:20vw;
   	z-index: 92;
   	opacity: 1 !important;
   	font-family: helvetica;
@@ -360,6 +360,7 @@
 	font-size: 4vh;
 	color: white;
   	display:none;
+  	overflow: auto;
   }
 
 .site_terms>p{
