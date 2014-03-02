@@ -795,3 +795,8 @@
 	font-size: 2vh;
 	display:none;
 }
+
+#mag{
+	height:4vh;
+	width:4vh;
+}
