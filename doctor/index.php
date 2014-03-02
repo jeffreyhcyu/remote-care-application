@@ -78,7 +78,7 @@ patientsidebar($doctorID);
       <p>Or click here to create a <a href="newPatient.php">new patient profile</a></p>
     </section>
     
-    <form name="input" action="html_form_action.asp" method="get">
+    <form name="input" action="currentpatients/index.php" method="get">
     Username: <input type="text" name="user">
     <input type="submit" value="Submit">
     </form>
