@@ -644,7 +644,7 @@ ID Number
 </tr>
 <tr>
 <script>
-    $(function() {
+    $(function() {            /* THIS HAS BROKEN ON SAFARI BUT NOT FIREFOX THIS IS VERY VERY ODD*/
         $( "#progressbar" ).progressbar(
         {
         value: <?php echo $flagno ?>*10
@@ -666,7 +666,7 @@ ID Number
 </script>
 <td>Data Uncertainty</td>
 <td>
-<div id="progressbar"><?php echo $flagno ?><div class="progress-label"><?php echo $flagno ?></div></div>
+<div id="progressbar"><div class="progress-label"><?php echo $flagno ?></div></div>
 </td>
 </tr>
 <tr>
