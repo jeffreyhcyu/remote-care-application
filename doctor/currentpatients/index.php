@@ -96,19 +96,23 @@ $(document).ready(function(){
 
   $(".next1").click(function(){
   $(".Tutorial_2").show();
+  $(".Tutorial_1").hide();
   $(".close2").show();
   $(".Tutorial_2_back").show();
   $(".next2").show();
   $(".Tutorial_2>p").show();
   $(".about_us_back").hide();
+  $(".next1").hide();
+  $(".Tutorial_1>p").hide();
+  $(".close1").hide();
   });
 
   $(".close2").click(function(){
   $(".Tutorial_2").hide();
   $(".close2").hide();
-  $(".about_us_back").hide();
+  $(".Tutorial_2_back").show();
   $(".next2").hide();
-  $(".Tutorial_1>p").hide();
+  $(".Tutorial_2>p").hide();
   }); 
 });
 </script>
