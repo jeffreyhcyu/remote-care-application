@@ -31,7 +31,7 @@ function linear_regression($patientUsername)
         //Each data point has an associated flag (already used = 1, not yet used = 0)
         //To prevent using same data over and over again, check the last 7 data point flag
         $dataFlagQuery = mysql_query("SELECT SUM(uncertaintyFlag) FROM (SELECT date,patientCurrentBPSystolic,uncertaintyFlag FROM
-                                     patientCurrentBP WHERE patientID='test2' ORDER BY date DESC LIMIT 7) AS value");
+                                     patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value");
         $dataFlagArray = mysql_fetch_array($dataFlagQuery);
         $dataFlagSum = $dataFlagArray[0];
         
@@ -211,7 +211,7 @@ function linear_regression($patientUsername)
 mysql_query("UPDATE patientInfo SET fraudFlag='$patient_flag' WHERE patientID='$patientUsername'");
 
 //Need to set the data point 'used' flag to '1' so we don't do the same calculation again
-mysql_query("UPDATE patientCurrentBP SET uncertaintyFlag='1' WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 1");
+mysql_query("UPDATE patientCurrentBP SET uncertaintyFlag='1' WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7");
 
 mysql_close();
 
