@@ -268,7 +268,7 @@ About Us
       <p>Henry Fletcher, Lady Margaret Hall</p>
       <p>Emma Saragossi, Magdalen College</p>
       <p>Jeffrey Yu, St Anne's College</p>
-<p>Browsers Supported, Google Chrome v33 and above, Mozilla Firefox v27 and above. Safari v6 and above semi supported.</p>
+<p>Browsers Supported, Google Chrome v33 and above, Mozilla Firefox v27 and above. Partially supported: Safari v6 and above.</p>
 </div>
 
 <div class="site_terms">
@@ -342,7 +342,7 @@ Close
 Next >
 </div>
 Tutorial 
-<p>This is a short tutorial to describe the main functions of Cardiac Track Pro to help you understand and best utlise the features it has to offer. Click next to proceed or click close to stop the tutorial at any time.</p>
+<p>This is a short tutorial to describe the main functions of Cardiac Track Pro and to help you understand and best utilise the features it has to offer. Click next to proceed or click close to stop the tutorial at any time.</p>
 </div>
 
 <div class="Tutorial_2">
@@ -353,7 +353,7 @@ Close
 Next >
 </div>
 Patient Selector 
-<p>This is where you can select the data for each of your patients. They have been separated into two categories, Alerted and Normal. Those in the Alerted section have reached their review time or breached their BP target for either Systolic or Diastolic. Any can be simply selected by scrolling and clicking the patient whoes data you wish to see.</p>
+<p>This is where you can select the data for each of your patients. They have been separated into two categories, Alerted and Normal. Those in the Alerted section have reached their review time or breached their BP target for either Systolic or Diastolic. Any can be selected by scrolling and clicking the patient whose data you wish to see.</p>
 </div>
 
 <div class="Tutorial_3">
@@ -364,7 +364,7 @@ Close
 Next >
 </div>
 Menu
-<p>This is where you can add new patients that you wish to use the application, log out from the application (we suggest you do this every time you leave the application).This is also where you can find out some more information about Cardiac Track Pro. If you ever need a recap of this tutorial it is also here.</p>
+<p>This is where you can add new patients that you wish to use the application, log out from the application (we suggest you do this every time you leave the application). This is also where you can find out some more information about Cardiac Track Pro. If you ever need a recap of this tutorial it is also here.</p>
 </div>
 
 <div class="Tutorial_4">
@@ -375,7 +375,7 @@ Close
 Next >
 </div>
 Graph 
-<p>This shows the graphical representation of how the selected patients, Systolic and Diastolic blood pressure varies over time. This can be used as an persrciption aid, however please individually assess each patients data uncertainty to help this see the data uncertainity metric.</p>
+<p>This shows the graphical representation of how the selected patients' Systolic and Diastolic blood pressure varies over time. This can be used as a prescription aid, however please individually assess each patients data. To help with this see the "data uncertainity metric".</p>
 </div>
 
 <div class="Tutorial_5">
@@ -386,7 +386,7 @@ Close
 Next >
 </div>
 Medication 
-<p>This shows what medication the patient is currently taking, what dose they are currently on wether this is the maximum does or not and the time they have been using this drug. The medication option will update when a Tallis review has been undertaken for the patient (see the next tutorial step for details)</p>
+<p>This shows what medication the patient is currently taking, what dose they are currently on, whether this is the maximum dose or not, and the time they have been using this drug. The medication option will update when a Tallis review has been undertaken for the patient (see the next tutorial step for details)</p>
 </div>
 
 <div class="Tutorial_6">
@@ -394,13 +394,13 @@ Medication
 Finish >
 </div>
 Patient Info  
-<p>This is where the basic data about the current patient can be found, their age when they have last been check in a surgery and the Target BP whihc has been set for them.
+<p>This is where the basic data about the current patient can be found: their age, when they have last been reviewed in a surgery and the Target BP which has been set for them.
 There is also a data uncertainity metric. This has been devised to see if the measurements that have been recorded by the patient themselves are infact feasible. Hence allowing 
-you to make an informed decision about whether taking their home recoreded data into account when perscribing new drugs is correct. <!--The metric is based two statistical functions firstly 
+you to make an informed decision as to whether or not to use their home recorded data when prescribing new drugs. <!--The metric is based two statistical functions firstly 
 on a linear regression. This is performed on the last 7 data points. An acceptable percentage error bound is set around this and any data points outside the bound increase the metric.
 Secondly the correlation coefficient is calculated if this lies outside the set accepted range then the metric is further increased.-->
 </p>
-<p> The final button is to launch the tallis web enactment. This faccilitates the perscription suggestion part of the application. It collates the patient data to provide a new
+<p> The final button is to launch the Tallis Web Enactment. This facilitates the prescription suggestion part of the application. It collates the patient data to provide a new
 medication suggestion, you are then required to set the new medication course for the patient and this will update the information shown to you on each patient.  
 </p>
 </div>
