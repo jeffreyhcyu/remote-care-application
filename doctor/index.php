@@ -26,8 +26,9 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <div class="container">
   	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
   	  <label for="search2">Patient ID:</label>
-      <input type="search" name="search2" id="search2">
-      <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
+      <form name="input" action="currentpatients/index.php" method="get">
+      <input type="text" name="w1"><input type="submit" value="Submit">
+    </form>
     <section id="searchbar"></section>
   	</header>
     
@@ -70,8 +71,8 @@ patientsidebar($doctorID);
     <section>
       <h4>Manage patients:</h4>
       <p>Search for an existing patient using their patient ID</p>
-      <form name="input" action="currentpatients/index.php" method="get">
-      <p>UserId: <input type="text" name="w1"><input type="submit" value="Submit"></p>
+    <form name="input" action="currentpatients/index.php" method="get">
+      <p>Patient ID: <input type="text" name="w1"><input type="submit" value="Submit"></p>
     </form>
     <br>
       <p>Or click here to create a <a href="newPatient.php">new patient profile</a></p>
