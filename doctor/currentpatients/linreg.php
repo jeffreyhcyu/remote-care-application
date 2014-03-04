@@ -20,10 +20,8 @@ function linear_regression($patientUsername)
     $daysElapsed = $daysElapsedArray[0];
     
     
-    //If last review was less than 7 days, data is not reliable enough so set DISPLAYED error = 0
-    //Note: The previous uncertainty value(s) are still maintained in the database!!!!
+    //If last review was less than 7 days, data is not reliable enough so don't do anything.
     if ($daysElapsed <= 7) {
-        $patient_flag = '0';
         return $patient_flag;
     }
     
