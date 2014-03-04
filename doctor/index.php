@@ -24,11 +24,11 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <body>
 
 <div class="container">
-  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
+  	<header><a href="index.php"><img src="images/logo.png" width="550" height="31" alt=""/></a>
 <form name="input" action="currentpatients/index.php" method="get">  
 <label for="search2">Patient ID:</label>
       <input type="text" name="w1">
-      <input type="button" value="Search">
+      <input type="submit" value="Submit">
 </form>
 <nav></nav>
       <section id="searchbar"></section>
