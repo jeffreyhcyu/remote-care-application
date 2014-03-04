@@ -26,11 +26,15 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <div class="container">
   	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
  <form name="input" action="currentpatients/index.php" method="get">
-      <p>User ID: <input type="text" name="w1"><input type="submit" value="Submit"></p>
+      <label for="w1">Patient ID:</label>
+      <input type="text" name="w1"><input type="submit" value="Submit"></p>
+<nav></nav>
     </form>
     <section id="searchbar"></section>
   	</header>
     
+
+
     <div class="sidebar1">
 		<nav>
             <ul>
