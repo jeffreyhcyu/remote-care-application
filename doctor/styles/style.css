@@ -6,7 +6,7 @@ html, body {
 	height: 100%;
 }
 body {
-	font: Verdana;
+	font: Helvetica;
 	background-color: #F1F1EF;
 	margin: 0;
 	padding: 0;
@@ -37,7 +37,7 @@ nav a:visited {
 	width: 960px;
 	background-color: #FFFFFF;
 	margin: 0 auto -4em;
-	font-family: Verdana;
+	font-family: Helvetica;
 	color: #081933;
 	font-weight: normal;
 	text-align: left;
@@ -97,7 +97,7 @@ nav a:hover, nav a:active, nav a:focus {
 	position: relative;
 	background-color: #081933;
 	color: #FFFFFF;
-	font-family: Verdana;
+	font-family: Helvetica;
 	font-weight: normal;
 	display: block;
 }
