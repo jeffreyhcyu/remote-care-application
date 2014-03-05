@@ -24,34 +24,36 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <body>
 
 <div class="container">
-  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
-<form name="search" action="currentpatients/index.php" method="get">
-  <input type="text" name="w1" placeholder="Search by User ID" size="15"><input type="submit" value="Submit">
-    </form>
-<nav></nav>
-      <section id="searchbar"></section>
-  	</header>
+  	<header>
 
-    <div class="sidebar1">
+	<a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
+        <section id="searchbar">
+		<form name="search" action="currentpatients/index.php" method="get">
+  			<input type="text" name="w1" placeholder="Search by User ID" size="15">
+			<input type="submit" value="Submit">
+    		</form>
+	</section>
+  	
+	</header>
+
+    	<div class="sidebar1">
 		<nav>
-            <ul>
-              <li><a href="index.php">Home</a></li>
-              <li><a href="currentpatients/index.php">Existing patients</a></li>
-              <li><a href="newPatient.php">Add a new patient</a></li>
-              <li><a href="logout.php">Log out</a></li>
-            </ul>
-      </nav>
+            		<ul>
+             		<li><a href="index.php">Home</a></li>
+              		<li><a href="currentpatients/index.php">Existing patients</a></li>
+              		<li><a href="newPatient.php">Add a new patient</a></li>
+              		<li><a href="logout.php">Log out</a></li>
+            		</ul>
+      		</nav>
       <aside>
       <div class="patient_selector">
 
-<div id="alert">
-<div id="alerted">
-  <strong>Alerted patients:</strong> </div>
+	<div id="alert">
+	<div id="alerted">
+ 		 <strong>Alerted patients:</strong>
+	</div>
 
-<?php
-require("functions.php");
-patientsidebar($doctorID);
-?>
+			<?php require("functions.php"); patientsidebar($doctorID);?>
 
 </div>
 <br>
