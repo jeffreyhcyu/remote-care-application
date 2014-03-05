@@ -26,7 +26,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <div class="container">
   	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
 <form name="search" action="currentpatients/index.php" method="get">
-  <input type="text" name="w1" placeholder="Search by User ID"><input type="submit" value="Submit">
+  <input type="text" name="w1" placeholder="Search by User ID" size="15"><input type="submit" value="Submit">
     </form>
 <nav></nav>
       <section id="searchbar"></section>
