@@ -25,8 +25,16 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 
 <div class="container">
   	<header>
+
 	<a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
-        </header>
+        <section id="searchbar">
+		<form name="search" action="currentpatients/index.php" method="get">
+  			<input type="text" name="w1" placeholder="Search by User ID" size="15">
+			<input type="image" src="images/search.png" value="Submit">
+    		</form>
+	</section>
+  	
+	</header>
 
     	<div class="sidebar1">
 		<nav>
@@ -37,12 +45,6 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
               		<li><a href="logout.php">Log out</a></li>
             		</ul>
       		</nav>
-		<section id="searchbar">
-		<form name="search" action="currentpatients/index.php" method="get">
-  			<input type="text" name="w1" placeholder="Search by User ID" size="13">
-			<input type="image" src="images/search.png" value="Submit">
-    		</form>
-	</section>
       <aside>
       <div class="patient_selector">
 
