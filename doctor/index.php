@@ -30,7 +30,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
         <section id="searchbar">
 		<form name="search" action="currentpatients/index.php" method="get">
   			<input type="text" name="w1" placeholder="Search by User ID" size="15">
-			<input type="submit" value="Submit">
+			<input type="image" src="images/search.png" value="Submit">
     		</form>
 	</section>
   	
