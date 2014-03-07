@@ -45,9 +45,10 @@ function patientsidebar($doctorID){
         
     while($alerted->fetch())
     {
-      echo "User ID: ";
+      <a href="currentpatients/index.php?w1='.$id.'">echo "User ID: ";
       echo $id;
       echo "<br>";
+      </a>
     }
 
     $alerted->close();
