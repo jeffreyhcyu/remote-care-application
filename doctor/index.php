@@ -25,16 +25,11 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 
 <div class="container">
   	<header>
-
-	<a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
-        <section id="searchbar">
-		<form name="search" action="currentpatients/index.php" method="get">
+	<a href="index.php"><img src="images/logo.png" width="313" height="31" alt=""/></a>    	<form name="search" action="currentpatients/index.php" method="get">
   			<input type="text" name="w1" placeholder="Search by User ID" size="15">
-			<input type="image" src="images/search.png" value="Submit">
-    		</form>
-	</section>
-  	
-	</header>
+			<input type="submit" value="Search">
+    	</form>
+    </header>
 
     	<div class="sidebar1">
 		<nav>
@@ -44,7 +39,10 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
               		<li><a href="newPatient.php">Add a new patient</a></li>
               		<li><a href="logout.php">Log out</a></li>
             		</ul>
-      		</nav>
+ 
+	
+            </nav>
+		
       <aside>
       <div class="patient_selector">
 
@@ -67,16 +65,16 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
     <h3>Welcome, <?php $doctorName = doctorname($doctorID); echo $doctorName;?></h3>
     
     <section>
-      <br>
-      <p>This is the <i>Cardiac Track Pro</i> portal. Here, you can monitor your patients' progress and update their treatment.</p></section>
-    <br>
+      <p>This is the <i>Cardiac Track Pro</i> portal. Here, you can monitor your patients' progress and update their treatment.     </p>
+    </section>
+<br>
+    <section> </section>
     <section>
       <h4>Manage patients:</h4>
       <p>Search for an existing patient using their patient ID</p>
       <form name="input" action="currentpatients/index.php" method="get">
-      <p>User ID: <input type="text" name="w1"><input type="submit" value="Submit"></p>
-    </form>
-    <br>
+        <p>User ID: <input type="text" name="w1"><input type="submit" value="Submit"></p>
+  </form>
       <p>Or click here to create a <a href="newPatient.php">new patient profile</a></p>
     </section>
     

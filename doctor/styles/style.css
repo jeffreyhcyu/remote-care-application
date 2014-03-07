@@ -1,6 +1,6 @@
 @charset "utf-8";
 *{
-	margin:0;
+
 }
 html, body {
 	height: 100%;
@@ -133,13 +133,10 @@ section, aside, article, figure {
 }
 .content a:hover, a:active, a:focus {
 	text-decoration: underline;
-	color: #081933;
+	color: #197AD4;
 }
 .footer a:hover, a:active, a:focus {
 	text-decoration: underline;
-}
-.container header #searchbar {
- 	color: #FFFFFF;
 }
 article {
 	color: #000000;
@@ -156,4 +153,7 @@ article {
 }
 .container .sidebar1 aside .patient_selector #alert {
 	color: #FF0000;
+}
+.container header form {
+	width: 160px;
 }
