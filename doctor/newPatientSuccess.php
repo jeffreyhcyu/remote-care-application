@@ -64,9 +64,7 @@ patientsidebar($doctorID);
   <article class="content">
 
 	<h3>Add a new patient:</h3>
-	<p>&nbsp;</p>
-    <p>Thank you, your patient profile has been created successfully.</p>
-    <p>&nbsp;</p>
+	<p>Thank you, your patient profile has been created successfully.</p>
     <p> Patient unique identifier = <?php echo $_SESSION['autoID']; ?></p>
     <p>Please store this in your patient's file for your records.</p><br>
     <p><a href="index.php">Click here</a> to return to the Home Screen.</p>

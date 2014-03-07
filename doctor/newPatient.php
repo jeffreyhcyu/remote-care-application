@@ -66,9 +66,7 @@ patientsidebar($doctorID);
     
     <section>
       <p>Before a new patient profile can be created, you must confirm that the patient meets the scope of this app. Please see <a href="siteTerms.html">site terms</a> for more information.</p>
-      <p>&nbsp;</p>
-      <p>Please tick all that apply: </p>
-      <p>&nbsp;</p>
+      <p>Please tick all that apply:    </p>
     </section>
     
     <section>

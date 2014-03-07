@@ -64,10 +64,8 @@ patientsidebar($doctorID);
   <article class="content">
 
 <?php include 'target.php' ?><h3>Add a new patient:</h3>
-<p>&nbsp;</p>
 <p>We have calculated an appropriate target blood pressure for your patient, based on the patient information provided.</p>
-<p><br>
-  Target systolic blood pressure: <strong><?php echo $_SESSION['targetSystolic'] ?>mmHg </strong><br>
+<p>  Target systolic blood pressure: <strong><?php echo $_SESSION['targetSystolic'] ?>mmHg </strong><br>
   Target diastolic blood pressure:<strong> <?php echo $_SESSION['targetDiastolic'] ?>mmHg </strong></p>
 <p><br>
   

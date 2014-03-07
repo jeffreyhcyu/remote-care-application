@@ -70,7 +70,6 @@ patientsidebar($doctorID);
     <section>
       <form action="details.php" method="post">
         <section id="submit">
-          <p>&nbsp;          </p>
           <p>
             <label for="ageGroup">Age group:</label>
             <select name="ageGroup">
@@ -79,27 +78,20 @@ patientsidebar($doctorID);
               <option value="80+">80+</option>
             </select>
           </p>
-          <p>&nbsp;</p>
-
-<p>
-<label for='gender'>Sex:</label>
+          <p>
+            <label for='gender'>Sex:</label>
 <input name="gender" type="radio" value="Male" checked="checked">
 <span>Male</span>
 <input type="radio" name="gender" value="Female">
-<span>Female</span>
-</p>
+<span>Female</span>          </p>
 
-<p>&nbsp;</p>
 <p>
   <label for='ethnicity'>Is the patient of Black African or Black Caribbean descent?</label>
   <input name="ethnicity" type="radio" value="Yes">
   <span>Yes</span>
   <input type="radio" name="ethnicity" value="No" checked>
-  <span>No</span>
-</p>
-
- <br>
- <input type="submit" name="formSubmit" value="Submit">
+  <span>No</span></p>
+<input type="submit" name="formSubmit" value="Submit">
           </p>
 
 

@@ -64,21 +64,20 @@ patientsidebar($doctorID);
   <article class="content">
 
 <h3>Add a new patient:</h3>
-<p>Please ask the patient to enter a memorable username and password, which will grant them access to the patient Cardiac Track app.</p>
-<br>
- <form action="submitAll.php" method="post">
-	<table width="300" border="0" cellspacing="5" cellpadding="5">
-      <tr>
-        <td>Username:</td>
-        <td><input type="text" name="patientID" id="username"></td>
+<p>Please ask the patient to enter a memorable username and password, which will grant them access to the patient Cardiac Track app. </p>
+<form action="submitAll.php" method="post">
+  <table width="300" border="0" cellspacing="5" cellpadding="5">
+    <tr>
+      <td>Username:</td>
+      <td><input type="text" name="patientID" id="username"></td>
       </tr>
-      <tr>
-        <td>Password:</td>
-        <td><input type="password" name="input_password"></td>
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" name="input_password"></td>
       </tr>
     </table>
-    <br>
-    <input type="submit" name="formSubmit" value="Submit"></form>
+  <br>
+  <input type="submit" name="formSubmit" value="Submit"></form>
     
   </article>
   <div class="push"></div>
