@@ -45,7 +45,8 @@ nav a:visited {
 }
 header {
 	background-color: #FFFFFF;
-	display: inline;
+	display: block;
+	width: 960px;
 }
 .sidebar1 {
 	float: left;
@@ -155,5 +156,8 @@ article {
 	color: #FF0000;
 }
 .container header form {
-	width: 160px;
+	width: 200px;
+	display: inline;
+	float: right;
+	padding-top: 15px;
 }

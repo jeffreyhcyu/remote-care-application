@@ -68,8 +68,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
       <p>This is the <i>Cardiac Track Pro</i> portal. Here, you can monitor your patients' progress and update their treatment.     </p>
     </section>
 <br>
-    <section> </section>
-    <section>
+<section>
       <h4>Manage patients:</h4>
       <p>Search for an existing patient using their patient ID</p>
       <form name="input" action="currentpatients/index.php" method="get">
