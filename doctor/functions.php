@@ -38,14 +38,14 @@ function patientsidebar($doctorID){
     // New MySQLi Instance
     $db = new mysqli($server,$username,$DBpassword,$database);
     
-    $alerted = $db->prepare("SELECT patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID=?");
+    $alerted = $db->prepare("SELECT id FROM patientInfo WHERE BPcontrolled='No' AND doctorID=?");
     $alerted->bind_param('s',$doctorID);
     $alerted->execute();
-    $alerted->bind_result($patientID);
+    $alerted->bind_result($id);
         
     while($alerted->fetch())
     {
-      echo $patientID;
+      echo $id;
       echo "<br>";
     }
 
