@@ -25,7 +25,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <body>
 
 <div class="container">
-  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
+  	<header><a href="index.php"><img src="images/logo.png" width="313" height="31" alt=""/></a>
   	  <label for="search2">Patient ID:</label>
       <input type="search" name="search2" id="search2">
       <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
