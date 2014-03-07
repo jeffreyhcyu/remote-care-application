@@ -70,7 +70,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <br>
 <section>
       <h4>Manage patients:</h4>
-      <p>Search for an existing patient using their patient ID</p>
+      <p>Search for an existing patient using their User ID</p>
       <form name="input" action="currentpatients/index.php" method="get">
         <p>User ID: <input type="text" name="w1"><input type="submit" value="Submit"></p>
   </form>
