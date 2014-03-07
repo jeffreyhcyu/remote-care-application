@@ -45,7 +45,7 @@ function patientsidebar($doctorID){
         
     while($alerted->fetch())
     {
-      echo $id;
+      echo "id:"$id;
       echo "<br>";
     }
 
