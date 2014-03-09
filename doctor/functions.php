@@ -47,7 +47,7 @@ function patientsidebar($doctorID){
     {
         echo "User ID: ";
         //echo $id;
-        echo '<br>';
+        echo "<br>";
         echo "<a href='https://3yp.villocq.com/doctor/currentpatients/index.php?w1=$id'>$id</a>";
     }
 
