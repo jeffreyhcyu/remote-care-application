@@ -146,21 +146,13 @@ article {
 	padding-left: 15px;
 	padding-top: 5px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-.container .sidebar1 aside a:hover, a:active, a:focus {
-=======
 .container .sidebar1 aside .patient_selector .normal {
 	color: #006C02;
 }
 .container .sidebar1 aside .patient_selector a:hover, a:active, a:focus {
->>>>>>> parent of 6b292fa... tidy up css
 	color: #FF0000;
 	text-decoration: underline;
-=======
-=======
->>>>>>> parent of e1b1793... hyperlink colour into css
+}
 .container .sidebar1 aside .patient_selector .normal {
 	color: #006C02;
 }
@@ -169,7 +161,6 @@ article {
 }
 .container .sidebar1 aside .patient_selector #alert {
 	color: #FF0000;
->>>>>>> parent of e1b1793... hyperlink colour into css
 }
 .container .sidebar1 aside .patient_selector #normal {
 	color: #0A6300;
