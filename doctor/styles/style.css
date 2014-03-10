@@ -142,7 +142,7 @@ section, aside, article, figure {
 article {
 	color: #000000;
 }
-.container .sidebar1 aside .patient_selector {
+.container .sidebar1 aside .patient_selector a:link {
 	padding-left: 15px;
 	padding-top: 5px;
 	color: #FF0000
