@@ -142,15 +142,18 @@ section, aside, article, figure {
 article {
 	color: #000000;
 }
-.container .sidebar1 aside .patient_selector a:link {
+.container .sidebar1 aside .patient_selector {
 	padding-left: 15px;
 	padding-top: 5px;
+}
+.container .siddebar1 aside .patient_selector a:link {
+	color: #FF0000;
 }
 .container .sidebar1 aside .patient_selector .normal {
 	color: #006C02;
 }
 .container .sidebar1 aside .patient_selector a:hover, a:active, a:focus {
-	color: #FF0000;
+	color: #56099A;
 	text-decoration: underline;
 }
 .container .sidebar1 aside .patient_selector .normal {
