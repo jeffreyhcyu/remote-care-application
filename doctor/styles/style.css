@@ -147,10 +147,13 @@ article {
 	padding-top: 5px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .container .sidebar1 aside a:hover, a:active, a:focus {
 	color: #FF0000;
 	text-decoration: underline;
 =======
+=======
+>>>>>>> parent of e1b1793... hyperlink colour into css
 .container .sidebar1 aside .patient_selector .normal {
 	color: #006C02;
 }
