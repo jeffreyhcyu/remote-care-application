@@ -147,18 +147,9 @@ article {
 	padding-top: 5px;
 	color: #FF0000
 }
-.container .sidebar1 aside .patient_selector .normal {
-	color: #006C02;
-}
-.container .sidebar1 aside .patient_selector a:hover, a:active, a:focus {
+.container .sidebar1 aside a:hover, a:active, a:focus {
 	color: #FF0000;
 	text-decoration: underline;
-}
-.container .sidebar1 aside .patient_selector #normal {
-	color: #0A6300;
-}
-.container .sidebar1 aside .patient_selector #alert {
-	color: #FF0000;
 }
 .container header form {
 	width: 200px;
