@@ -96,7 +96,7 @@ function linear_regression($patientUsername)
              SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM 
                   (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP 
                   WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) 
-             AS value ORDER BY date
+            AS value ORDER BY date
                     
           
           ) as source_data
@@ -124,8 +124,7 @@ function linear_regression($patientUsername)
     //Construct the 10% boundaries using the regression data.
     //Loop over i = 0 to 6. $dayout is the constructed line.
     //Top bound and upper bound are the 10% error boundaries.
-    $i = 0; 
-    do {
+    for ($i=0 ; $i<7 ; $i++){
         
         $dayout[$i] = $array['a']+($array['b']*($i + 1));
         $topbound[$i] = 1.1*$dayout[$i];
@@ -138,7 +137,7 @@ function linear_regression($patientUsername)
         if($dayin[$i]<$bottombond[$i]){
             $patient_flag++;
         };
-    } while ($i < 7)
+    }
 
 
     //Additional conditions
