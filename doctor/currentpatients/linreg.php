@@ -154,7 +154,7 @@ function linear_regression($patientUsername)
         };
         
         $i++;
-    } while ($i < 7)
+    } while ($i < 7);
 
 
     //Additional conditions
