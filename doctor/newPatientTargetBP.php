@@ -25,13 +25,12 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <body>
 
 <div class="container">
-  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
-  	  <label for="search2">Patient ID:</label>
-      <input type="search" name="search2" id="search2">
-      <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
-<nav></nav>
-      <section id="searchbar"></section>
-  	</header>
+  	<header>
+	<a href="index.php"><img src="images/logo.png" width="313" height="31" alt=""/></a>    	<form name="search" action="currentpatients/index.php" method="get">
+  			<input type="text" name="w1" placeholder="Search by User ID" size="15">
+			<input type="submit" value="Search">
+    	</form>
+    </header>
     
     <div class="sidebar1">
 		<nav>
@@ -65,10 +64,8 @@ patientsidebar($doctorID);
   <article class="content">
 
 <?php include 'target.php' ?><h3>Add a new patient:</h3>
-<p>&nbsp;</p>
 <p>We have calculated an appropriate target blood pressure for your patient, based on the patient information provided.</p>
-<p><br>
-  Target systolic blood pressure: <strong><?php echo $_SESSION['targetSystolic'] ?>mmHg </strong><br>
+<p>  Target systolic blood pressure: <strong><?php echo $_SESSION['targetSystolic'] ?>mmHg </strong><br>
   Target diastolic blood pressure:<strong> <?php echo $_SESSION['targetDiastolic'] ?>mmHg </strong></p>
 <p><br>
   

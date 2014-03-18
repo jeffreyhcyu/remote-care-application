@@ -24,13 +24,12 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <body>
 
 <div class="container">
-  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
-  	  <label for="search2">Patient ID:</label>
-      <input type="search" name="search2" id="search2">
-      <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
-<nav></nav>
-      <section id="searchbar"></section>
-  	</header>
+  	<header>
+	<a href="index.php"><img src="images/logo.png" width="313" height="31" alt=""/></a>    	<form name="search" action="currentpatients/index.php" method="get">
+  			<input type="text" name="w1" placeholder="Search by User ID" size="15">
+			<input type="submit" value="Search">
+    	</form>
+    </header>
     
     <div class="sidebar1">
 		<nav>
@@ -71,7 +70,6 @@ patientsidebar($doctorID);
     <section>
       <form action="details.php" method="post">
         <section id="submit">
-          <p>&nbsp;          </p>
           <p>
             <label for="ageGroup">Age group:</label>
             <select name="ageGroup">
@@ -80,27 +78,20 @@ patientsidebar($doctorID);
               <option value="80+">80+</option>
             </select>
           </p>
-          <p>&nbsp;</p>
-
-<p>
-<label for='gender'>Sex:</label>
+          <p>
+            <label for='gender'>Sex:</label>
 <input name="gender" type="radio" value="Male" checked="checked">
 <span>Male</span>
 <input type="radio" name="gender" value="Female">
-<span>Female</span>
-</p>
+<span>Female</span>          </p>
 
-<p>&nbsp;</p>
 <p>
   <label for='ethnicity'>Is the patient of Black African or Black Caribbean descent?</label>
   <input name="ethnicity" type="radio" value="Yes">
   <span>Yes</span>
   <input type="radio" name="ethnicity" value="No" checked>
-  <span>No</span>
-</p>
-
- <br>
- <input type="submit" name="formSubmit" value="Submit">
+  <span>No</span></p>
+<input type="submit" name="formSubmit" value="Submit">
           </p>
 
 

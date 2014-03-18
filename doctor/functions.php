@@ -38,15 +38,15 @@ function patientsidebar($doctorID){
     // New MySQLi Instance
     $db = new mysqli($server,$username,$DBpassword,$database);
     
-    $alerted = $db->prepare("SELECT patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID=?");
+    $alerted = $db->prepare("SELECT id FROM patientInfo WHERE BPcontrolled='No' AND doctorID=?");
     $alerted->bind_param('s',$doctorID);
     $alerted->execute();
-    $alerted->bind_result($patientID);
+    $alerted->bind_result($id);
         
     while($alerted->fetch())
     {
-      echo $patientID;
-      echo "<br>";
+        echo "<a href='https://3yp.villocq.com/doctor/currentpatients/index.php?w1=$id' style='color:#FF0000'>User ID: $id</a>";
+        echo "<br>";
     }
 
     $alerted->close();

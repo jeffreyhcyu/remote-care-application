@@ -25,13 +25,12 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <body>
 
 <div class="container">
-  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
-  	  <label for="search2">Patient ID:</label>
-      <input type="search" name="search2" id="search2">
-      <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
-<nav></nav>
-      <section id="searchbar"></section>
-  	</header>
+  	<header>
+	<a href="index.php"><img src="images/logo.png" width="313" height="31" alt=""/></a>    	<form name="search" action="currentpatients/index.php" method="get">
+  			<input type="text" name="w1" placeholder="Search by User ID" size="15">
+			<input type="submit" value="Search">
+    	</form>
+    </header>
     
     <div class="sidebar1">
 		<nav>
@@ -65,21 +64,20 @@ patientsidebar($doctorID);
   <article class="content">
 
 <h3>Add a new patient:</h3>
-<p>Please ask the patient to enter a memorable username and password, which will grant them access to the patient Cardiac Track app.</p>
-<br>
- <form action="submitAll.php" method="post">
-	<table width="300" border="0" cellspacing="5" cellpadding="5">
-      <tr>
-        <td>Username:</td>
-        <td><input type="text" name="patientID" id="username"></td>
+<p>Please ask the patient to enter a memorable username and password, which will grant them access to the patient Cardiac Track app. </p>
+<form action="submitAll.php" method="post">
+  <table width="300" border="0" cellspacing="5" cellpadding="5">
+    <tr>
+      <td>Username:</td>
+      <td><input type="text" name="patientID" id="username"></td>
       </tr>
-      <tr>
-        <td>Password:</td>
-        <td><input type="password" name="input_password"></td>
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" name="input_password"></td>
       </tr>
     </table>
-    <br>
-    <input type="submit" name="formSubmit" value="Submit"></form>
+  <br>
+  <input type="submit" name="formSubmit" value="Submit"></form>
     
   </article>
   <div class="push"></div>

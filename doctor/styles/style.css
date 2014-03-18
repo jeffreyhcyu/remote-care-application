@@ -1,12 +1,12 @@
 @charset "utf-8";
 *{
-	margin:0;
+
 }
 html, body {
 	height: 100%;
 }
 body {
-	font: Verdana;
+	font: Helvetica;
 	background-color: #F1F1EF;
 	margin: 0;
 	padding: 0;
@@ -37,7 +37,7 @@ nav a:visited {
 	width: 960px;
 	background-color: #FFFFFF;
 	margin: 0 auto -4em;
-	font-family: Verdana;
+	font-family: Helvetica;
 	color: #081933;
 	font-weight: normal;
 	text-align: left;
@@ -45,7 +45,8 @@ nav a:visited {
 }
 header {
 	background-color: #FFFFFF;
-	display: inline;
+	display: block;
+	width: 960px;
 }
 .sidebar1 {
 	float: left;
@@ -97,7 +98,7 @@ nav a:hover, nav a:active, nav a:focus {
 	position: relative;
 	background-color: #081933;
 	color: #FFFFFF;
-	font-family: Verdana;
+	font-family: Helvetica;
 	font-weight: normal;
 	display: block;
 }
@@ -133,13 +134,10 @@ section, aside, article, figure {
 }
 .content a:hover, a:active, a:focus {
 	text-decoration: underline;
-	color: #081933;
+	color: #197AD4;
 }
 .footer a:hover, a:active, a:focus {
 	text-decoration: underline;
-}
-.container header #searchbar {
- 	color: #FFFFFF;
 }
 article {
 	color: #000000;
@@ -147,6 +145,16 @@ article {
 .container .sidebar1 aside .patient_selector {
 	padding-left: 15px;
 	padding-top: 5px;
+}
+.container .siddebar1 aside .patient_selector a:link {
+	color: #FF0000;
+}
+.container .sidebar1 aside .patient_selector .normal {
+	color: #006C02;
+}
+.container .sidebar1 aside .patient_selector a:hover, a:active, a:focus {
+	color: #56099A;
+	text-decoration: underline;
 }
 .container .sidebar1 aside .patient_selector .normal {
 	color: #006C02;
@@ -156,4 +164,16 @@ article {
 }
 .container .sidebar1 aside .patient_selector #alert {
 	color: #FF0000;
+}
+.container .sidebar1 aside .patient_selector #normal {
+	color: #0A6300;
+}
+.container .sidebar1 aside .patient_selector #alert {
+	color: #FF0000;
+}
+.container header form {
+	width: 200px;
+	display: inline;
+	float: right;
+	padding-top: 15px;
 }

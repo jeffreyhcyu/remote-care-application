@@ -25,13 +25,12 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 <body>
 
 <div class="container">
-  	<header><a href="index.php"><img src="images/logo.png" width="600" height="31" alt=""/></a>
-  	  <label for="search2">Patient ID:</label>
-      <input type="search" name="search2" id="search2">
-      <input type="button" name="button2" id="button2" value="Search" onClick="location.href='existingPatients.php'">
-<nav></nav>
-      <section id="searchbar"></section>
-  	</header>
+  	<header>
+	<a href="index.php"><img src="images/logo.png" width="313" height="31" alt=""/></a>    	<form name="search" action="currentpatients/index.php" method="get">
+  			<input type="text" name="w1" placeholder="Search by User ID" size="15">
+			<input type="submit" value="Search">
+    	</form>
+    </header>
     
     <div class="sidebar1">
 		<nav>
@@ -65,13 +64,11 @@ patientsidebar($doctorID);
   <article class="content">
 
 	<h3>Add a new patient:</h3>
-	<p>&nbsp;</p>
-    <p>Thank you, your patient profile has been created successfully.</p>
-    <p>&nbsp;</p>
+	<p>Thank you, your patient profile has been created successfully.</p>
     <p> Patient unique identifier = <?php echo $_SESSION['autoID']; ?></p>
     <p>Please store this in your patient's file for your records.</p><br>
     <p><a href="index.php">Click here</a> to return to the Home Screen.</p>
-    <p><a href="http://remote.villocq.com:8081/tallis-enactment-1.7.2/EnactFile.page?protocol=BPManager&pfdi_patientID=<?php echo $_SESSION['patientID']; ?>">Click here</a> to launch Tallis Web Enactment.</p>
+    <p><a href="http://remote.villocq.com:8081/tallis-enactment-1.7.2/EnactFile.page?protocol=BPManager&template=cardiacpro&pfdi_patientID=<?php echo $_SESSION['patientID']; ?>" target="_blank">Click here</a> to launch Tallis Web Enactment.</p>
 
     
   </article>
