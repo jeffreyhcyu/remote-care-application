@@ -138,8 +138,7 @@ function linear_regression($patientUsername)
             $patient_flag++;
         };
     }*/
-
-    $i = 0; 
+ 
     do {
         
         $dayout[$i] = $array['a']+($array['b']*($i + 1));
