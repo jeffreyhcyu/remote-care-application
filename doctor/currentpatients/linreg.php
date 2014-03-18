@@ -93,10 +93,7 @@ function linear_regression($patientUsername)
              -- Alias the y-variable column as 'y'
                     
 
-             SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM 
-                  (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP 
-                  WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) 
-             AS value ORDER BY date
+             SELECT patientCurrentBPSystolic AS y, @i:=@i+1 AS x FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date
                     
           
           ) as source_data
@@ -111,8 +108,7 @@ function linear_regression($patientUsername)
     //The below query gets the past 7 days data again, puts into an array $dayin
     mysql_query("SELECT @i:=0;"); //pre-query
     
-    $dayquery = mysql_query("SELECT patientCurrentBPSystolic AS SBP, @i:=@i+1 AS DAY FROM 
-      (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date");
+    $dayquery = mysql_query("SELECT patientCurrentBPSystolic AS SBP, @i:=@i+1 AS DAY FROM (SELECT date,patientCurrentBPSystolic FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date");
     $counter = 0;
     while($row = mysql_fetch_array($dayquery)){
         $dayin[$counter] = $row[0];
@@ -124,7 +120,7 @@ function linear_regression($patientUsername)
     //Construct the 10% boundaries using the regression data.
     //Loop over i = 0 to 6. $dayout is the constructed line.
     //Top bound and upper bound are the 10% error boundaries.
-    do {
+    for ($i=0 ; $i<7 ; $i++){
         
         $dayout[$i] = $array['a']+($array['b']*($i + 1));
         $topbound[$i] = 1.1*$dayout[$i];
@@ -137,7 +133,7 @@ function linear_regression($patientUsername)
         if($dayin[$i]<$bottombond[$i]){
             $patient_flag++;
         };
-    } while ($i < 7)
+    }
 
 
     //Additional conditions
