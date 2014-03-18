@@ -130,76 +130,6 @@ function linear_regression($patientUsername)
             $patient_flag++;
         };
 
-<<<<<<< HEAD
-                        //The below query gets the past 7 days data again, puts into an array $dayin
-			mysql_query("SELECT @i:=0;"); //pre-query
-                        
-			$dayquery = mysql_query("SELECT patientCurrentBPSystolic AS SBP, @i:=@i+1 AS DAY FROM (SELECT date,patientCurrentBPSystolic 
-				FROM patientCurrentBP WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7) AS value ORDER BY date");
-                        $counter = 0;
-                        while($row = mysql_fetch_array($dayquery))
-                              {
-                                $dayin[$counter] = $row[0];
-                                $counter++;
-                              }
-                              // $dayin[index] is the 7 previous days of actual data. Remember 1st day = [0]!
-
-            if ($array['r_r']>1){
-            			$patient_flag = $patient_flag+1;
-            }
-            if ($array['r_r']<(-1)){
-            			$patient_flag = $patient_flag+1;
-            }
-			if($dayonetop<$dayin[0]){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayin[0]<$dayonebottom){
-						$patient_flag = $patient_flag+1;
-			};
-			if($daytwotop<$dayin[1]){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayin[1]<$daytwobottom){
-						$patient_flag = $patient_flag+1;
-			};
-			if($daythreetop<$dayin[2]){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayin[2]<$daythreebottom){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayfourtop<$dayin[3]){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayin[3]<$dayfourbottom){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayfivetop<$dayin[4]){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayin[4]<$dayfivebottom){
-						$patient_flag = $patient_flag+1;
-			};
-			if($daysixtop<$dayin[5]){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayin[5]<$daysixbottom){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayseventop<$dayin[6]){
-						$patient_flag = $patient_flag+1;
-			};
-			if($dayin[6]<$daysevenbottom){
-						$patient_flag = $patient_flag+1;
-			};
-//update queries
-//Set the new flag value
-mysql_query("UPDATE patientInfo SET fraudFlag='$patient_flag' WHERE patientID='$patientUsername'");
-//Need to set the data point 'used' flag to '1' so we don't do the same calculation again
-mysql_query("UPDATE patientCurrentBP SET uncertaintyFlag='1' WHERE patientID='$patientUsername' ORDER BY date DESC LIMIT 7")
-mysql_close()
-return($patient_flag);       
-=======
         if($dayin[$i]<$bottombond[$i]){
             $patient_flag++;
         };
@@ -207,11 +137,11 @@ return($patient_flag);
 
 
     //Additional conditions
-    if ($array['r_r']>1){
+    if ($array['r_r']>0.98){
         $patient_flag++;
     }
 
-    if ($array['r_r']<(-1)){
+    if ($array['r_r']<(-0.98)){
         $patient_flag++;
     }
         
@@ -227,7 +157,6 @@ return($patient_flag);
     
     return($patient_flag);
 
->>>>>>> FETCH_HEAD
 }
-?>
 
+?>
