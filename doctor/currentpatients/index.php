@@ -493,12 +493,13 @@ $flagno = linear_regression($patientUsername);
       function drawChart() {
         var data = google.visualization.arrayToDataTable(
 		<?php
-
+    include 'graph-data-doctor.php';
 		// This PHP getes the chart data
 		
 
 		// Configure the MySQL connection
-		$username="3yp";
+		/*
+    $username="3yp";
 		$DBpassword="project";
 		$database="tallis";
 
@@ -529,7 +530,7 @@ $flagno = linear_regression($patientUsername);
 
 
 		mysql_close();
-
+    */
 		?>
     );
 
