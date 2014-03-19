@@ -719,10 +719,10 @@ Med 1
 <td>Daily Dosage</td>
 <td><?php echo $med['drug1prescription'] ?></td>
 </tr>	
-<tr>
+<!--<tr>
 <td>On Max Dosage</td>
 <td><?php echo $med['isOnMaxDose'] ?></td>
-</tr>
+</tr>-->
 <tr>
 <td>Time using drug</td>
 <td></td> <!--NEED DB STUFF TO IMPLEMENT-->
