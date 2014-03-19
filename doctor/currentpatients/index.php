@@ -746,10 +746,10 @@ Med 2
 <td>Daily Dosage</td>
 <td><?php echo $med['drug2prescription'] ?></td>
 </tr>	
-<tr>
-<td>On Max Dosage</td> <!--needs on for each-->
+<!--<tr>
+<td>On Max Dosage</td>
 <td><?php echo $med['isOnMaxDose'] ?></td>
-</tr>
+</tr>-->
 <tr>
 <td>Time using drug</td>
 <td></td> <!--NEED DB STUFF TO IMPLEMENT-->
@@ -773,10 +773,10 @@ Med 3
 <td>Daily Dosage</td>
 <td><?php echo $med['drug3prescription'] ?></td>
 </tr>	
-<tr>
-<td>On Max Dosage</td> <!--needs on for each-->
+<!--<tr>
+<td>On Max Dosage</td>
 <td><?php echo $med['isOnMaxDose'] ?></td>
-</tr>
+</tr>-->
 <tr>
 <td>Time using drug</td>
 <td></td> <!--NEED DB STUFF TO IMPLEMENT-->
@@ -800,10 +800,10 @@ Med 4
 <td>Daily Dosage</td>
 <td><?php echo $med['drug4prescription'] ?></td>
 </tr>	
-<tr>
-<td>On Max Dosage</td> <!--needs on for each-->
+<!--<tr>
+<td>On Max Dosage</td>
 <td><?php echo $med['isOnMaxDose'] ?></td>
-</tr>
+</tr>-->
 <tr>
 <td>Time using drug</td>
 <td></td> <!--NEED DB STUFF TO IMPLEMENT-->
