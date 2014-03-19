@@ -414,8 +414,9 @@ Patients
 
 <div id="search">
     <form name="input" action="index.php" method="get">
-    <input id="searchbox" placeholder="Search ID number" type="text" name="w1">
+    <input  id="searchbox" placeholder="Search ID number" type="text" name="w1">
     <input id="mag" type="image" src="https://3yp.villocq.com/doctor/images/Search_Button_2-512.png" alt="search">
+    <!--<input type="submit" value="Submit">-->
     </form>
 </div>
 
@@ -434,21 +435,19 @@ $database="tallis";
 mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
 @mysql_select_db($database);
 
-$result = mysql_query("SELECT id, patientID FROM patientInfo 
-                       WHERE BPcontrolled='No' AND doctorID='$doctorID'");
+$result = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='No' AND doctorID='$doctorID'");
 $num = mysql_num_rows($result);
 
 while($row = mysql_fetch_array($result))
   {
-  echo '<div class="Apatient" data-idNo=' . $row['id']. '>';                          //inserted the data tag data-id
+  echo '<div class="Apatient" data-idNo=' . $row['id']. '>'; //inserted the data tag data-id
   echo '<div class="Identification" data-idNo=' . $row['id']. '>';
-  echo $row['patientID'] . " id:" . $row['id']; 
+  echo $row['patientID'] . " id:" . $row['id'];
   echo '</div>';
   echo '</div>';
   }
 
-$result5 = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes' 
-                        AND doctorID='$doctorID'");
+$result5 = mysql_query("SELECT id, patientID FROM patientInfo WHERE BPcontrolled='Yes' AND doctorID='$doctorID'");
 $num5 = mysql_num_rows($result5);
 
 $current=$_GET["w1"]; //This is the current patient ID number selected on the left side
@@ -494,11 +493,57 @@ $flagno = linear_regression($patientUsername);
       function drawChart() {
         var data = google.visualization.arrayToDataTable(
 		<?php
-    include 'graph-data-doctor.php';
+
+		// This PHP getes the chart data
+		
+
+		// Configure the MySQL connection
+		$username="3yp";
+		$DBpassword="project";
+		$database="tallis";
+
+		mysql_connect('remote.villocq.com:3306',$username,$DBpassword);
+		@mysql_select_db($database);
+
+		$current=$_GET["w1"];
+
+		//Perform the SQL Query
+		$SQLQuery = "SELECT b.date, b.patientCurrentBPSystolic, b.patientCurrentBPDiastolic
+	    FROM patientCurrentBP AS b JOIN patientInfo AS i ON b.patientID=i.patientID WHERE i.id='$current'";
+
+		$result4 = mysql_query($SQLQuery);
+		$num = mysql_num_rows($result4);
+
+
+		//This builds an array that contains the BP values. This array is then used by the javascript to make the chart.
+		//Source code below provided by: http://www.kometschuh.de/GoogleChartToolswithJSON.html
+		$data[0] = array('day','SystolicBP','DiastolicBP');		
+		for ($i=1; $i<($num+1); $i++)
+		{
+		    $data[$i] = array(substr(mysql_result($result4, $i-1, "date"), 0, 10),
+		    		(int) mysql_result($result4, $i-1, "patientCurrentBPSystolic"),
+				(int) mysql_result($result4, $i-1, "patientCurrentBPDiastolic") );
+		}
+
+		echo json_encode($data);
+
+
+		mysql_close();
+
 		?>
     );
+
+        var options = {
+          //title: 'Blood Pressure',
+          //titleTextStyle: {color: 'red', fontSize: '40', fontName: 'arial' },
+          //chartArea.top: '30',
+          //backgroundColor.stroke: {#80807D},
+          //vAxis.baselineColor: 'red',
+        };
+
         var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-        chart.draw(data, options);         
+        chart.draw(data, options);
+         
       }
     </script>
 
@@ -525,7 +570,7 @@ while($row5 = mysql_fetch_array($result5))
 $( ".Identification" ).click(function() {
 // 'Getting' data-attributes using dataset 
 var idNum = this.getAttribute("data-idNo");
-// appends new varaible to URL
+//var idNumber = idNum.dataset.idNo; // leaves = 47;
 window.location.href = "index.php?w1=" + idNum;
 });
 </script>
