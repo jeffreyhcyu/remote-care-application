@@ -1,5 +1,5 @@
 <?php
-function graph_data_doctor($patientUsername){
+function graph_data_doctor($patientUsername)
 // enable sessions
 session_start();
 
@@ -35,7 +35,7 @@ for ($i=1; $i<($num+1); $i++)
 echo json_encode($data);
 
 mysql_close();
-}   
+   
 ?>
 
 
