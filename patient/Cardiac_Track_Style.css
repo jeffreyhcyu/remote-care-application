@@ -211,3 +211,84 @@
 .address_3{}
 
 .address_4{}
+
+#result_positive{
+	position:relative;
+	top:190px;
+	color: white;
+	font-family: arial;
+	font-size: 40px;
+	left:30px;
+	width:580px;
+}
+
+#result_pending{
+	position:relative;
+	top:190px;
+	color: white;
+	font-family: arial;
+	font-size: 40px;
+	left:30px;
+}
+
+#contact1{
+	position:relative;
+	top:190px;
+	color: white;
+	font-family: arial;
+	font-size: 40px;
+	left:30px;
+	width:6100px;
+}
+
+#contact_title1{
+	font-size: 60px;
+	border-bottom: solid white 5px;
+}
+
+#contact2{
+	position:relative;
+	top:190px;
+	color: white;
+	font-family: arial;
+	font-size: 40px;
+	left:0px;
+	color: #80807D;
+	background-color: #C2C4C3;
+	width: 610px;
+	padding-left: 30px;
+}
+
+#contact_title2{
+	font-size: 60px;
+	border-bottom: solid white 5px;
+}
+
+.alert_contact{
+	font-family: helvetica;
+	font-size: 44px;
+	left:00px;
+	text-indent: 40px;
+	width: 656px;
+	border-bottom: solid white 4px;
+	color: white;
+	position:relative;
+	top:300px;
+	padding-bottom: 30px;
+	padding-top: 38px;
+}
+
+#chart_div{
+	position:relative;
+	top:125px;
+}
+
+#chart_title{
+	position: relative;
+	top:210px;
+	left:-133px;
+	z-index: 100;
+	font-size: 50px;
+	color: red;
+	font-family: arial;
+}
