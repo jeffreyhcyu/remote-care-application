@@ -28,7 +28,7 @@ document.forms["jsform"].submit();
 <body >
 <div class="main_page">
 
-<div id="title_menu">
+<div id="title_menu_update">
 Cardiac Track
 </div>
 
