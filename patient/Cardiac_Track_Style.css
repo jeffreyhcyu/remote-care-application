@@ -214,12 +214,12 @@
 
 #result_positive{
 	position:relative;
-	top:190px;
+	top:95px;
 	color: white;
 	font-family: arial;
-	font-size: 40px;
-	left:30px;
-	width:580px;
+	font-size: 20px;
+	left:15px;
+	width:290px;
 }
 
 #result_pending{
