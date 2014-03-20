@@ -266,16 +266,16 @@
 
 .alert_contact{
 	font-family: helvetica;
-	font-size: 44px;
+	font-size: 22px;
 	left:00px;
-	text-indent: 40px;
-	width: 656px;
+	text-indent: 20px;
+	width: 328px;
 	border-bottom: solid white 4px;
 	color: white;
 	position:relative;
-	top:300px;
-	padding-bottom: 30px;
-	padding-top: 38px;
+	top:150px;
+	padding-bottom: 15px;
+	padding-top: 19px;
 }
 
 #chart_div{

@@ -28,7 +28,7 @@ Cardiac Track
 
 <div class="page_header" style="positon:relative; top:87px;">
 <a href="menu.php">
-<img src="menu_button.png" style="float:left" height="40px" >
+<img src="menu_button.png" style="float:left" height="36px" >
 </a>
 Update
 </div>
