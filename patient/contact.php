@@ -60,9 +60,9 @@ $db->close();
 Cardiac Track
 </div>
 
-<div class="page_header" style="position:relative; top:174px;">
+<div class="page_header" style="position:relative; top:87px;">
 <a href="menu.php">
-<img src="menu_button.png" style="float:left" height="80px" >
+<img src="menu_button.png" style="float:left" height="40px" >
 </a>
 Contact 
 </div>
