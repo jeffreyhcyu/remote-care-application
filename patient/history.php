@@ -54,7 +54,7 @@ header('Location: https://3yp.villocq.com/patient');
 Cardiac Track
 </div>
 
-<div class="page_header" style="position:relative; top:174px; font-size:52px">
+<div class="page_header" style="position:relative; top:87px; font-size:26px">
 <a href="menu.php">
 <img src="menu_button.png" style="float:left" height="36px" >
 </a>
