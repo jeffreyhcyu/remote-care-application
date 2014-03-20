@@ -56,14 +56,14 @@ Cardiac Track
 
 <div class="page_header" style="position:relative; top:174px; font-size:52px">
 <a href="menu.php">
-<img src="menu_button.png" style="float:left" height="72px" >
+<img src="menu_button.png" style="float:left" height="36px" >
 </a>
 Historical Track 
 </div>
 
 <div id="chart_title">Blood Pressure</div>
 
-<div id="chart_div" style="width: 640px; height: 520px;"></div>
+<div id="chart_div" style="width: 320px; height: 260px;"></div>
 
 </div>
 </html>
