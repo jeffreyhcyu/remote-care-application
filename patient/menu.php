@@ -30,7 +30,7 @@ Cardiac Track
 
 <div class="menu_option">
 <a href="update.php" style="text-decoration:none; color:white">Update
-<div class="arrow" style="position: relative; top:-30px;">
+<div class="arrow" style="position: relative; top:-15px;">
 <img src="arrow.png" width="40" height="50">
 </a>
 </div>
@@ -39,7 +39,7 @@ Cardiac Track
 <div class="menu_option2">
 <a href="history.php" style="text-decoration:none; color:white">
 Patient History
-<div class="arrow" style="position: relative; top:-30px;">
+<div class="arrow" style="position: relative; top:-15px;">
 <img src="arrow.png" width="40" height="50">
 </a>
 </div>
@@ -47,7 +47,7 @@ Patient History
 
 <div class="menu_option2">
 <a href="contact.php" style="text-decoration:none; color:white; ">Doctors Contact Details 
-<div class="arrow" style="position: relative; top:-30px;">
+<div class="arrow" style="position: relative; top:-15px;">
 <img src="arrow.png" width="40" height="50">
 </div>
 </div>
