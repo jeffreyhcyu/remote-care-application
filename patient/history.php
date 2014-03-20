@@ -54,16 +54,16 @@ header('Location: https://3yp.villocq.com/patient');
 Cardiac Track
 </div>
 
-<div class="page_header" style="position:relative; top:87px; font-size:26px">
+<div class="page_header" style="position:relative; top:174px; font-size:52px">
 <a href="menu.php">
-<img src="menu_button.png" style="float:left" height="36px" >
+<img src="menu_button.png" style="float:left" height="72px" >
 </a>
 Historical Track 
 </div>
 
 <div id="chart_title">Blood Pressure</div>
 
-<div id="chart_div" style="width: 320px; height: 260px;"></div>
+<div id="chart_div" style="width: 640px; height: 520px;"></div>
 
 </div>
 </html>
