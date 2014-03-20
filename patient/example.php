@@ -12,21 +12,20 @@ else
 header('Location: https://3yp.villocq.com/patient'); 
 }
 ?>
+
 <html>
+
 <head> 
 <title>Cardiac Track App</title>
 <link rel="stylesheet" type="text/css" href="Cardiac_Track_Style.css">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=0.95; user-scalable=0;">
+
 </head>
 
-<body >
+<body>
 <div class="main_page">
-
 <div id="title_menu">
 Cardiac Track
 </div>
-
-
 
 <div class="page_header" style="positon:relative; top:87px;">
 <a href="menu.php">
@@ -34,7 +33,6 @@ Cardiac Track
 </a>
 Page Title
 </div>
-
-<body>
+</body>
 
 </html>
