@@ -280,15 +280,15 @@
 
 #chart_div{
 	position:relative;
-	top:125px;
+	top:65px;
 }
 
 #chart_title{
 	position: relative;
-	top:210px;
+	top:105px;
 	left:-133px;
 	z-index: 100;
-	font-size: 50px;
+	font-size: 25px;
 	color: red;
 	font-family: arial;
 }
