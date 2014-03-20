@@ -63,7 +63,7 @@ Historical Track
 
 <div id="chart_title">Blood Pressure</div>
 
-<div id="chart_div" style="width: 640px; height: 520px;"></div>
+<div id="chart_div" style="width: 100vw; height: 520px;"></div>
 
 </div>
 </html>
