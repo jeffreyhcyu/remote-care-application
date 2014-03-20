@@ -17,8 +17,8 @@ header('Location: https://3yp.villocq.com/patient');
 <html>
 <head> 
 <title>Cardiac Track App</title>
-<link rel="stylesheet" type="text/css" href="Cardiac_Track_Style2.css">
-<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=0.486; user-scalable=0;">
+<link rel="stylesheet" type="text/css" href="Cardiac_Track_Style.css">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=0.95; user-scalable=0;">
 </head>
 
 <body >
@@ -28,9 +28,9 @@ header('Location: https://3yp.villocq.com/patient');
 Cardiac Track
 </div>
 
-<div class="page_header" style="positon:relative; top:174px;">
+<div class="page_header" style="positon:relative; top:87px;">
 <a href="menu.php">
-<img src="menu_button.png" style="float:left" height="80px" >
+<img src="menu_button.png" style="float:left" height="36px" >
 </a>
 Update
 </div>
