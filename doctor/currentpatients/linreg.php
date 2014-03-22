@@ -149,11 +149,12 @@ function linear_regression($patientUsername)
             $patient_flag++;
         };
 
-        if($dayin[$i]<$bottombond[$i]){
+        if($dayin[$i]<$bottombound[$i]){
             $patient_flag++;
         };
         
         $i++;
+        
     } while ($i < 7);
 
 
