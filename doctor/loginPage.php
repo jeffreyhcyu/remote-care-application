@@ -17,7 +17,7 @@ document.forms["jsform"].submit();
 
 <div class="container">
 
-  	<header><img src="images/logo_login.ai" width="960" height="340" alt=""/>
+  	<header><img src="images/logo_login.png" width="960" height="340" alt=""/>
   	</header>
     
     <section id="login">
