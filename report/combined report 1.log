@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.3.11)  23 APR 2014 17:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.3.11)  23 APR 2014 17:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1414,7 +1414,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 1455.
 
 
-Package caption Warning: \label without proper \caption on input line 1553.
+Package caption Warning: \label without proper \caption on input line 1554.
 See the caption package documentation for explanation.
 
 
@@ -1556,7 +1556,7 @@ st/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
 1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/h
 elvetic/uhvro8a.pfb>
-Output written on "combined report 1.pdf" (84 pages, 7376446 bytes).
+Output written on "combined report 1.pdf" (84 pages, 7357092 bytes).
 PDF statistics:
  519 PDF objects out of 1000 (max. 8388607)
  297 compressed objects within 3 object streams
