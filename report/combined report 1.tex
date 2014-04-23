@@ -12,22 +12,20 @@
 \usepackage{color}
 \usepackage{framed}
 
-%\usepackage{courier}
-%\usepackage{float}
-%\floatstyle{boxed}
-%\newfloat{code}{ht}{lop}
-%\floatname{code}{Extract}
+\usepackage{courier}
+\usepackage{float}
+\floatstyle{boxed}
+\newfloat{code}{ht}{lop}
+\floatname{code}{Extract}
 
 %\usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
-\usepackage{url}
 
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
-\iffalse
 \usepackage[hyphens]{url}
 \usepackage{listings,xcolor}
 \definecolor{dkgreen}{rgb}{0,.6,0}
@@ -101,7 +99,7 @@
   lineskip={-2pt}
   }
   }{}
-\fi
+
 
 \author{Michael Fedosiuk, Henry Fletcher, Emma Saragossi & Jeffery Yu}
 
@@ -364,7 +362,7 @@ The doctor application is to be viewed in a web browser. Web pages are built usi
 
 \subsubsection{General page structure - HTML}
 
-\iffalse
+
 \begin{code}[ht]
 \begin{html}
 <link href="styles/style.css" rel="stylesheet" type="text/css">
@@ -392,7 +390,7 @@ The doctor application is to be viewed in a web browser. Web pages are built usi
 \caption{General page format (HTML)}
 \label{code:htmlGeneral}
 \end{code}
-\fi
+
 
 The general format for the structure of each page is shown in Extract~\ref{code:htmlGeneral}. At the top of all HTML files is a link to the style sheet, the source of all page formatting. All page content, such as text, hyperlinks or images, must fall within HTML body tags. HTML div tags are then used to separate the page content. Div tags define sections in an HTML document, and group block elements so that they can be formatted with CSS.
 
@@ -408,7 +406,7 @@ A standard tablet display is 768 x 1024px, while typical desktop displays are mu
 
 The width of the browser should therefore be greater than the width of the page content. The CSS, shown in Extract~\ref{code:cssGeneral}, formats the page such that all content is centred in the browser, no matter what the browser width, leaving a margin either side of the page content. In the HTML, the bulk of the page content is held in the container div. In the CSS, the margins of the container are set to auto. This automatically centers the container div, and anything within it. Figure~\ref{fig:pageLayout} shows the layout set by the CSS, and where the div elements sit in relation to the browser and each other.
 
-\iffalse
+
 \begin{code}[ht]
 \begin{css}
 @charset "utf-8";
@@ -458,7 +456,7 @@ header {
 \caption{CSS for page layout}
 \label{code:cssGeneral}
 \end{code}
-\fi
+
 
 \begin{figure}[ht]
 \begin{center}
@@ -509,7 +507,7 @@ The login page displays the Cardiac Track Pro logo and houses two text input box
 \end{figure}
 
 An HTML form was created to send the login data to the server (see Extract~\ref{code:loginHtml}).
-\iffalse
+
 \begin{code}[ht]
 \begin{html}
 <form action="login.php" method="post">
@@ -521,7 +519,7 @@ An HTML form was created to send the login data to the server (see Extract~\ref{
 \caption{HTML form for login credentials}
 \label{code:loginHtml}
 \end{code}
-\fi
+
 
 The METHOD attribute of the FORM element specifies the HTTP method used to send the form to the processing agent. There are two commonly used methods for a request-response between a client and server: GET and POST. The GET method encodes the form data into the URL, while the POST method hides the data in the message body meaning it cannot be seen by the user. POST requests cannot be cached or bookmarked and do not remain in the browser history. Due to the sensitive nature of the form data, POST was chosen.
 
@@ -535,7 +533,7 @@ A user must only be granted access to the internal pages of the site if they hav
 
 The user ID was stored as a session variable in \textbf{login.php}. Session variables store information about a single user and make it available to all pages of the site. These are temporary and are deleted after the user logs out or closes their browser. The isset() function checks whether the session variable \mbox{\$\_SESSION['userID']} has already been set. This will only be true if the user has logged in successfully previously. If the variable has not been set, the user has not been granted access, and is redirected to the login page.
 
-\iffalse
+
 \begin{code}[ht]
 \begin{php}
 <?php
@@ -558,7 +556,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 \caption{Internal pages - security}
 \label{code:intPages}
 \end{code}
-\fi
+
 
 \subsection{Creating a patient profile}
 
@@ -634,7 +632,7 @@ The network of specific tasks, shown in Figure~\ref{fig:tallis_task_top}.
 \end{center}
 \end{figure}
 
-\iffalse
+
 \begin{comment}
 Patient suitability enquiry
 Aim – terminates process early if patient is unsuitable  doctor avoids entering all patient info before finding out patient is unsuitable
@@ -672,7 +670,7 @@ If female, further line of questioning regarding pregnancy and breastfeeding
 	Precondition set that Gender = “Female”
 Otherwise, process continues to comorbidities - the presence of one or more additional disorders (or diseases) co-occurring with a primary disease or disorder; or the effect of such additional disorders or diseases. This will heavily influence the appropriate choice of treatment (contraindications)
 \end{comment}
-\fi
+
 
 Figure~\ref{fig:Tallis_UI_unsuitable} shows the Tallis User Interface (UI) for an \textit{enquiry} task. Radio buttons are used to enter patient data. They are presented in two columns, meaning the information is not easy to digest. We decided to update the UI to make data entry as efficient and easy for the user as possible. It was at this point that the decision to split the application was made: the treatment selection would still take place in Tallis, but the patient data would be entered into a separate web form and then submitted to the database. This is because creating an HTML form is quite straightforward. Moreover, we would have more control over the UI if we built our own site.
 
@@ -704,7 +702,7 @@ The first form is similar to the \textit{Disclaimer} enquiry from the initial Ta
 \end{center}
 \end{figure}
 
-\iffalse
+
 \begin{code}[ht]
 \begin{html}
 <form id="suitability" action="suitable.php" name="suitability" method="post">
@@ -724,11 +722,11 @@ The first form is similar to the \textit{Disclaimer} enquiry from the initial Ta
 \caption{HTML - checkbox form}
 \label{code:checkBox}
 \end{code}
-\fi
+
 
 The checkbox inputs and their labels were entered into an HTML table to keep them aligned and make the form as efficient and easy to use as possible. The ACTION of the form calls the PHP script \textbf{suitable.php}, shown in Extract~\ref{code:phpTerminate}. This determines whether the patient meets the scope of the clinical guideline. If any of the checkboxes are selected, the patient is not suitable, and the doctor is redirected to a page indicating as such. This is done using the PHP function empty(), which determines whether a variable is considered to be empty i.e. it does not exist or if its value equals FALSE. If a checkbox is not selected, its value reads as FALSE. If none of the checkboxes are selected, the patient must be suitable, and is redirected to the next page in the patient creation process. 
 
-\iffalse
+
 \begin{code}[ht]
 \begin{php}
 <?php
@@ -753,7 +751,7 @@ header('Location: https://3yp.villocq.com/doctor/newPatientDetails.php');
 \caption{PHP for terminating process}
 \label{code:phpTerminate}
 \end{code}
-\fi
+
 
 \item \textbf{Entering patient data}
 
@@ -769,7 +767,7 @@ As an example, the form requiring the doctor to enter the patient's comorbiditie
 
 The HTML for creating a radio box form is shown in Extract~\ref{code:radioBox}. The ACTION for this form calls the PHP script \textbf{comorbidity.php} (Extract ~\ref{code:phpSession}). This assigns all the form variables to SESSION variables, as described earlier. It then redirects the user to the next page.
 
-\iffalse
+
 \begin{code}[ht]
 \begin{html}
 
@@ -817,13 +815,13 @@ header("Location: newPatientTargetBP.php");
 \caption{PHP - storing form data as session variables}
 \label{code:phpSession}
 \end{code}
-\fi
+
 
 \item \textbf{Determining target blood pressure}
 
 In the initial Tallis design, a \textit{decision} task implemented the decision logic for determining the patient's target blood pressure. This is now implemented in the PHP script \textbf{target.php} instead, (see Extract~\ref{code:phpTargetBP}). There are two separate blood pressure values which need to be determined: the systolic and diastolc blood pressures. These are assigned empty PHP variables at the start of the script for efficiency. These are then determined as before; for example, if a patient is over 80 years of age AND has 'white coat' hypertension, their target blood pressure is 145/85mmHg. The target values are then stored as SESSION variables for later submission to the database. 
 
-\iffalse
+
 \begin{code}[ht]
 \begin{php}
 <?php
@@ -866,11 +864,11 @@ $_SESSION['targetDiastolic'] = $targetDiastolic;
 \caption{PHP for determining target blood pressure}
 \label{code:phpTargetBP}
 \end{code}
-\fi
+
 
 The target blood pressure needs to be displayed to the doctor for their own records. This is achieved by including the PHP echo() function within the page HTML (see Extract ~\ref{code:dispBP}). The PHP script \textbf{target.php} which determined the target value is included within PHP tags, and the SESSION variables assigned to the two target blood pressure values are echoed within the page content.
 
-\iffalse
+
 \begin{code}[ht]
 \begin{html}
 <?php include 'target.php' ?>
@@ -886,13 +884,13 @@ Target diastolic blood pressure:<strong><?php echo $_SESSION['targetDiastolic'] 
 \caption{Displaying target blood pressure to user}
 \label{code:dispBP}
 \end{code}
-\fi
+
   
 \item \textbf{Saving form data to database}
 
 Once all forms have been completed and all form variables assigned to SESSION variables, the data can all be uploaded to the database. When the SUBMIT button of the final form is pressed, it calls the PHP script \textbf{submitAll.php}. An excerpt from this script is shown in Extract~\ref{code:submitAll}. First, all SESSION variables are assigned to PHP variables. The MySQL connection parameters are then configured and a new MySQL instance is created. The values are then bound and executed to the appropriate table within the database. 
 
-\iffalse
+
 \begin{code}[ht]
 \begin{php}
 <?php
@@ -935,7 +933,7 @@ $newPatient->close();
 \caption{Submitting all data to database}
 \label{code:submitAll}
 \end{code}
-\fi
+
 
 \end{enumerate}
 
@@ -946,7 +944,7 @@ The PHP function \textbf{patientsidebar} which generates the news feed is shown 
 
 The patient ID is then displayed to the user using the PHP echo() function. The HTML tag <a> indicates that the text is a hyperlink, while the href attribute specifies the link's destination. The URL to access the patient summary page is formulated such that the patient ID is embedded within the URL.
 
-\iffalse
+
 \begin{code}[ht]
 \begin{php}
 function patientsidebar($doctorID){
@@ -978,7 +976,7 @@ function patientsidebar($doctorID){
 \caption{patientsidebar PHP}
 \label{code:PHPsidebar}
 \end{code}
-\fi
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Patient search bar}
@@ -987,7 +985,7 @@ Embedded in the header on all pages is the patient search bar, which allows the 
 
 %An HTML form was created (Extract~\ref{code:searchBar}) which contains a standard TEXT input element and SUBMIT button. The form uses the GET method, which encodes the form data as a variable into the URL. When the SUBMIT button is pressed, the text entered into the TEXT element is appended to the link specified in the form's ACTION attribute and the page is redirected.
 
-\iffalse
+
 \begin{code}[ht]
 \begin{html}
 <form name="search" action="currentpatients/index.php" method="get">
@@ -999,7 +997,7 @@ Embedded in the header on all pages is the patient search bar, which allows the 
 \caption{HTML form for patient ID search bar}
 \label{code:searchBar}
 \end{code}
-\fi
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Extension ideas for the Doctor Application}
@@ -1490,7 +1488,7 @@ Breastfeeding & Breastfeed & Yes & (--) \\
 \label{table:ramipril}
 \end{table}
 
-\iffalse
+
 \begin{code}[ht]
 \begin{html}
 candidate :: 'ACE__ramipril' ;
@@ -1554,7 +1552,7 @@ candidate :: 'ACE__ramipril' ;
 \label{code:ramipril}
 \caption{PRO\textit{forma} defining arguments for ACE Inhibitor \textit{Ramipril}}
 \end{code}
-\fi
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Server Environment - \textit{Henry Fletcher}}
@@ -1595,9 +1593,9 @@ The test server that was used for the purpose of the project was a Virtual Priva
 
 
 \subsection{Integrating Tallis \& the MySQL database}
-One of the important features of our application is the ability for the medical decision making software to access patient data from the database, in order to make tailored decisions for their treatment. The Tallis software can interact with a MySQL database by providing the software with a path to an XML (Extensible Markup Language) file. This XML defines the relationship between a Tallis data variable, via a SQL statement, to an object in the database. One such relationship is called an 'enquiryReader', which reads data from the database and inserts it into Tallis when an enquiry task is called (Code box \ref{xml-enquiryreader}). An enquiry task is a block in Tallis that requires user input, however with database access this data can now be read in from the database automatically. 
+One of the important features of our application is the ability for the medical decision making software to access patient data from the database, in order to make tailored decisions for their treatment. The Tallis software can interact with a MySQL database by providing the software with a path to an XML (Extensible Markup Language) file. This XML defines the relationship between a Tallis data variable, via a SQL statement, to an object in the database. One such relationship is called an 'enquiryReader', which reads data from the database and inserts it into Tallis when an enquiry task is called (Code box \ref{xmlenquiryreader}). An enquiry task is a block in Tallis that requires user input, however with database access this data can now be read in from the database automatically. 
 
-\iffalse
+
 %%XML Listing settings!
 \lstdefinelanguage{XML}
 {
@@ -1617,14 +1615,14 @@ One of the important features of our application is the ability for the medical 
 %%
 
 \renewcommand{\lstlistingname}{Code box}
-\begin{lstlisting}[float=ht,numbers=left,frame=lines,caption="Example enquiryReader element",label=xml-enquiryreader,showstringspaces=false]
+\begin{lstlisting}[float=ht,numbers=left,frame=lines,caption="Example enquiryReader element",label=xmlenquiryreader,showstringspaces=false]
 <enquiryReader taskName="Current_treatment_READ" dataItem="Number_of_drugs">
 <preparedSQLStatement dbName="tallis" params="patientID">
 SELECT numberDrugs FROM patientDrugs WHERE patientID=(?)
 </preparedSQLStatement>
 </enquiryReader>
 \end{lstlisting}
-\fi
+
 
 The 'taskName' attribute defines the name of the Tallis enquiry task that this SQL statement is associated with. The 'dataItem' attribute is the name of the Tallis data variable that will be updated using the output value of the SQL statement. Finally, the 'params' attribute is used to pass any inputs into the SQL statement, in this case the patient's ID number. We use over 500 lines of XML in order to map all of the required data between Tallis and the database.
 
@@ -1669,7 +1667,7 @@ MySQL database \textbf{replication} \cite{mysql:chapter16} is a relatively simpl
 MySQL \textbf{clustering} \cite{mysql:chapter17} is a more advanced method that involves many interconnected server nodes that operate synchronously with each other. Such systems have no single point of failure, since each node can run on a physically separate machine. Accessing the database can be done by connecting to any one of the nodes, and any changes are propagated to the other nodes instantly. 
 
 
-\section{Security} \label{security}
+\section{Security - \textit{Henry Fletcher}} \label{security}
 
 Since one of the main features of the project is the ability to save and share patient data between patients and clinicians, the project inherently requires the data to be stored somewhere. Since the data is being held on an electronic database, and that data may also contain confidential patient information, the aspect of application security is an important one.
 \\ \indent
@@ -1698,7 +1696,7 @@ The NHS HSCIC Guidelines \cite{NHS:hsic:acs} recommend using either SSLv3 or TLS
 \\ \indent
 The first step of getting SSL to work was to enable the SSL module on the Apache webserver. Then using software called 'OpenSSL', the key and certificate files can be created. Finally, Apache has to be configured to use the key files that are saved on the server. All of these settings are stored in a file, httpd.conf. A snippet of the relevant settings is shown in code box \ref{apachehttpd}.
 
-\iffalse
+
 \begin{lstlisting}[float=ht,numbers=left,frame=lines,caption="Apache httpd.conf",label=apachehttpd,basicstyle=\ttfamily\small,showstringspaces=false]
 <VirtualHost *:443>
 ...
@@ -1714,7 +1712,7 @@ SSLCertificateKeyFile /etc/apache2/ssl/server2.key
 ...
 </VirtualHost>
 \end{lstlisting}
-\fi
+
 
 Lines 2 and 4 tell Apache that all requests to port 443 are to be handled using SSL. Port 443 is the port used for HTTP over SSL (HTTPS) \cite{port443}. Lines 6,7 and 8 define the exact type of SSL that is allowed to be used. Initially we use the "-all" flag to disable all of the available protocols, and then we use "+TLSv1 +SSLv3" to enable only these particular protocols. This ensures that SSLv2 remains disabled as required by the NHS guidelines. Note that TLSv1 is the successor to SSLv3 and is marginally more secure. Finally, on lines 10 and 11, we tell Apache where the certificate and key file are stored on the server. These files are required for the encryption process, since they hold the encryption keys.
 
@@ -1729,7 +1727,7 @@ The NHS guidelines as described in section \ref{security:nhsguidelines} mandate 
 
 During the initial stages of the project, the patients iPhone application was built to use AES encryption using the MySQL "AES\_ENCRYPT" command. We chose to use the patient's login password as the encryption key since the plain text password was not stored on the database server, and so if the database was compromised, recovering the encrypted data would be essentially impossible. Code box \ref{mysqlencrypt} shows part of the submission code and SQL statement (shown in red) that was used to encrypt the submitted data before it was saved onto the database.
 
-\iffalse
+
 %%PHP Listing settings!
 \lstset{
   language        = php,
@@ -1756,7 +1754,7 @@ mysql_query($enterBPquery);
 ?>
 
 \end{lstlisting}
-\fi
+
 
 The SQL statement performs a number of actions. Firstly, it is inserting a new row into the "patientCurrentBP" table, which contains all of the submitted patient data. The VALUES command tells the database what data to insert into each column of the new row. In this case, there are 4 columns that exist: The current date and time, the patients ID, their systolic blood pressure, and their diastolic blood pressure. The "now()" command simply inserts the current timestamp into the first column. For the remaining columns, we use MySQL's encryption function to encrypt the patient ID and their blood pressure readings. The function has the format: "AES\_ENCRYPT(\$data, \$key)", and so it is clear that we used the patients password as the encryption key in this case. One thing to note with this example is that both the data and the key is sent un-encrypted to the database server. The encrypt command is only executed by the database and not before, and so the data could potentially travel over the Internet unsecured. However we have mitigated against this sort of loss by using an SSL connection between the client and the server (see section \ref{SSLencryption} for details).
  
@@ -1777,7 +1775,7 @@ There is therefore a need to secure the storage of password data when held on a 
 
 A whole multitude of hashing functions exist for use. Many of the older functions have known vulnerabilities however, which means that choosing the correct function is important when dealing with passwords. An example using the antiquated MD5 algorithm:
 
-\iffalse
+
 \begin{lstlisting}
 MD5(Hello World) = b10a8db164e0754105b7a99be72e3fe5
 \end{lstlisting}
@@ -1789,7 +1787,7 @@ rightly produces an entirely different output. Other functions, such as SHA-256,
 \begin{lstlisting}
 SHA256(Hello World) = a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b...
 \end{lstlisting}
-\fi
+
 
 \subsubsection{Using hash functions in a login system}
 When a doctor first creates a new patient account, the patient has to provide a password. This password is hashed before being saved onto the database. In order to login at a later date, and since the password is stored on the database as an irreversible hash, when the user supplies their password in the login form, that password has to be hashed also in order to be compared with the saved value (see figure \ref{login-flow-diagram}).
@@ -1820,12 +1818,12 @@ Therefore, a potential hacker would only need to hash around 10,000 common passw
 The main way to combat lookup table attacks is to use something known as 'salting'. Essentially, a salt is a long random string that is appended onto the end of the users password before it is hashed. Assuming the salt is sufficiently random and long, and that each user has their own salt independent from any other user, it would not be possible to create a lookup table of common passwords for all users. 
 \\ \indent 
 In order for a system like this to work, the salt actually needs to be saved in plaintext on the database, since in order to check a patient logging in, we need to perform a similar process as previously in figure \ref{login-flow-diagram}. A function call such as:
-\iffalse
+
 \begin{lstlisting}
 $salt = getUserSaltFromDatabase();
 SHA256($inputPassword . $salt) = b10a8db164e0754105b7a99be72e3fe5...
 \end{lstlisting}
-\fi
+
 will create a hash based on the entered input password using the salt for that given user. If that output value then matches the stored value, the password was correct. Note that salting only mitigates against using a pre-generated lookup table. To get around salting, each hash on its own would have to be brute-forced (see section \ref{salting}). With a large database of users, this approach of working on each hash independently would significantly slow hacker attempts to recover the passwords.
 
 \subsubsection{The second problem: Brute-force attacks}
@@ -1835,7 +1833,6 @@ Using the MD5 hash algorithm as an example, a modern 2013 graphics card is capab
 \\ \indent
 Clearly there is a need to mitigate against brute force password attacks, since as compute power continues to increase even longer passwords will be susceptible to being discovered. The primary way of doing this is to use significantly slower hashing algorithms in the first place, as well as employ use of \textit{key stretching}.
 
-\iffalse
 %%PHP Listing settings!
 \lstset{
   language        = php,
@@ -1865,7 +1862,7 @@ for($i=0;$i<10000;$i++){
 ?>
 
 \end{lstlisting}
-\fi
+
 
 A simple PHP example of key stretching is show  in code box \ref{stretching}. Essentially the result of each hash output is fed back into itself, this is repeated 10,000 times. This means it could take \(10^4\) times longer to brute-force this password hash using the same methods as before, causing a password to be revealed in months or years rather than minutes. The added iterations will slow down the user logging in just slightly, since a hash needs to be computed on every login, but the number of iterations is chosen correctly so that there is minimal user impact (a few tenths of a second is probably acceptable). 
 
@@ -1877,7 +1874,7 @@ Because of the importance of safely storing passwords used by the Cardiac Track 
 In section \ref{mysql}, one of the reasons given for using a PHP \& MySQL setup was the ease at which they could be integrated together. PHP can include the MySQL extension functions, which allow database access within PHP. However the way that this extension works is complicated by security issues, with the most dangerous being an SQL injection attack. SQL injection "is a technique where an attacker creates or alters existing SQL commands to expose hidden data, or to override valuable ones, or even to execute dangerous system level commands on the database host" \cite{sqlinjection:phpmanual}. The attack exploits the fact that many database interactions involve a user entering details into a website form before hitting submit. Usually PHP code handles website submission forms by taking the textual input from the forms, turning it into PHP variables, and then  including these variables in a SQL statement, before finally sending and executing the whole SQL statement on the database server. 
 
 \subsubsection{SQL injection example}
-\iffalse
+
 %%PHP Listing settings!
 \lstset{	 
   language        = php,
@@ -1901,26 +1898,26 @@ $query = "SELECT password FROM users WHERE username='$username'";
 $result = mysql_query($query);
 ?>
 \end{lstlisting}
-\fi
+
 Code box \ref{sql-injection-1} shows a very simple system where a user submits their username, and their password is then retrieved from the database. However, this code is very susceptible to an SQL injection attack. Suppose the user entered into the website form the following:
-\iffalse
+
 \begin{lstlisting}[showstringspaces=false]
 abc'; DROP TABLES users;
 \end{lstlisting}
-\fi
+
 The user has just deleted the 'users' table! If this code is inserted into the full SQL command, it becomes apparent why it works:
-\iffalse
+
 \begin{lstlisting}[showstringspaces=false]
 $query = "SELECT password FROM users WHERE username='abc'; DROP TABLES users;'";
 \end{lstlisting}
-\fi
+
 By including the single quote mark after the 'abc', the user has escaped outside of the text input area and is now free to issue any SQL command that they choose. The reason this works is that PHP inserts the full value of the variable \$username into the SQL query before it is sent to the database. The MySQL server cannot distinguish between user-entered data and the original SQL statement.
 
 \subsubsection{Mitigating against SQL injection attacks}
 Clearly it is important to mitigate against such an attack, especially since our database will hold sensitive patient data. One of the main ways that we protect against unauthorised data access is through user level control written in PHP. However if SQL injection were used, a hacker could easily obtain the data without having a valid login. 
 \\ \indent
 There are many ways to avoid SQL injection, most of which involve sanitising the data inputs before they are included in the SQL statement. However an easier way is to use the principal of separating data and queries. This is done in PHP using the more advanced MySQLi (MySQL improved) extension, which allows us to separate the data being sent to the database from the SQL query itself. Code box \ref{mysqli-example} demonstrates how this works.
-\iffalse
+
 %%PHP Listing settings!
 \lstset{
   language        = php,
@@ -1947,7 +1944,7 @@ $query->execute();
 ...
 ?>
 \end{lstlisting}
-\fi
+
 Lines 1-3 are the same as the previous example, however line 5 introduces the concept of a prepared statement. Notice how the question mark (?) on line 5 is used to denote where user input will be required, but is not explicitly included at this point. Line 5 is essentially the 'query' part of our split model system. Not until line 7, where we use the 'bind\_param' function, is the user data added (the 's' means that the username is of type 'String'). This is the 'data' part of the system. Since the PHP variable \$username is not inside the SQL statement, and it is passed to the database server separately and explicitly as data rather than as a query, we have helped to mitigate against SQL injection.
 \\ \indent
 In this project, not all MySQL/PHP interactions are done using the improved MySQLi connector. However the critical database access involving a user entering data into a form is mostly, if not all, handled using MySQLi, and as such is resistant to an injection attack. For compatibility reasons, some parts of the doctor's portal, which only receive data from the database continue to use the older connector. If this project were transitioned to a real system, it might be preferable to update all of the MySQL access to use the newer connector for security and performance reasons.
@@ -1983,7 +1980,7 @@ Github was used to store all of the project code. It allows version control, the
 
 
 \subsection{Doctor's Login Form} \label{drloginform}
-\iffalse
+
 %%PHP Listing settings!
 \lstset{
   language        = php,
@@ -2060,7 +2057,7 @@ $db->close();
 ?>
 
 \end{lstlisting}
-\fi
+
 Above is the doctor application "login.php" code. The purpose of the login system is to check that both the user exists and that the entered password is correct. Both the patient and doctor application use a very similar login system. The HTML form, which the user enters their username and password into, is then sent to this PHP code.
 \\
 \textbf{Line 4} enables PHP session variables, as explained in section \ref{phpsessions}.
@@ -2082,7 +2079,7 @@ Above is the doctor application "login.php" code. The purpose of the login syste
 \textbf{Lines 52 to 56} only happen in the event of the password check being unsuccessful. The 'loginMessag'e variable is set to give a generic error message that is displayed to the user, and the header function redirects the user back to the original login page to try again. 
 
 \subsection{Patient's Submission Form}
-\iffalse
+
 %%PHP Listing settings!
 \lstset{
   language        = php,
@@ -2229,7 +2226,7 @@ else
 $db->close();
 ?>
 \end{lstlisting}
-\fi
+
 The above code is one of the major parts of the project, which allows the patient to submit their daily blood pressure readings through the application. As well as submitting the BP reading, the application also performs some target-based checks to see if the patient is responding to their treatment. If the target BP is reached successfully, the patient can be told that their treatment is on course and that there is no need to see their doctor.
 \\
 \textbf{Lines 5 to 24} incorporate all of the code required to submit the patient's blood pressure readings onto the database, in a similar manner to the SQL used for the doctor's login form (section \ref{drloginform}). 
