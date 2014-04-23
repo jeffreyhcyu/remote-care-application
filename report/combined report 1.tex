@@ -11,6 +11,7 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{color}
 \usepackage{framed}
+\usepackage{comment}
 
 \usepackage{courier}
 \usepackage{float}
@@ -605,13 +606,13 @@ The keystone becomes an \textit{enquiry}. A series of questions are posed to the
 \hline
 \textbf{Candidate name} & \textbf{Target BP (mmHg)} & \textbf{Argument 1} & \textbf{Argument 2} & \textbf{Description} \\
 \hline
-Systolic140 & 140/90 & Whitecoat=”Yes” (--) & Age\_group=”80+” (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
+Systolic140 & 140/90 & Whitecoat="Yes" (--) & Age\_group="80+" (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
 \hline
-Systolic150 & 150/90 & Whitecoat=”Yes” (--) & Age\_group!=”80+” (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
+Systolic150 & 150/90 & Whitecoat="Yes" (--) & Age\_group!="80+" (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
 \hline
-Systolic135 & 135/85 & Whitecoat=”No” (--) & Age\_group=”80+” (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
+Systolic135 & 135/85 & Whitecoat="No" (--) & Age\_group="80+" (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
 \hline
-Systolic145 & 145/85 & Whitecoat=”No” (--) & Age\_group!=”80+” (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
+Systolic145 & 145/85 & Whitecoat="No" (--) & Age\_group!="80+" (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
 \hline
 \end{tabular}
 \caption{Decision logic for determining target blood pressure in Tallis}
@@ -659,15 +660,16 @@ Second & booleanType & Mandatory & Has the patient been diagnosed with secondary
 
 Mandatory status – question must be answered for process to continue
 No need to follow this with a decision task to determine whether patient is suitable
-Patient unsuitable precondition – if answer to any of the above is “Yes”
+Patient unsuitable precondition – if answer to any of the above is "Yes"
 	Displays text alerting doctor that patient is unsuitable
 	Process is then terminated
-Patient data precondition – if answer to all of above is “No”
+Patient data precondition – if answer to all of above is "No"
 
 Patient data plan enacted only if patient is eligible
 Series of enquiries – patient details (age, gender, ethnicity etc)
 If female, further line of questioning regarding pregnancy and breastfeeding
-	Precondition set that Gender = “Female”
+	Precondition set that Gender = 
+	"Female"
 Otherwise, process continues to comorbidities - the presence of one or more additional disorders (or diseases) co-occurring with a primary disease or disorder; or the effect of such additional disorders or diseases. This will heavily influence the appropriate choice of treatment (contraindications)
 \end{comment}
 
