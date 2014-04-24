@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.23)  24 APR 2014 11:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.23)  24 APR 2014 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1527,7 +1527,7 @@ b></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local
 /texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texliv
 e/2013/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on "combined report 1.pdf" (86 pages, 7357148 bytes).
+Output written on "combined report 1.pdf" (86 pages, 7357082 bytes).
 PDF statistics:
  527 PDF objects out of 1000 (max. 8388607)
  302 compressed objects within 4 object streams
