@@ -260,7 +260,7 @@ The application is most likely to be used by patients in home or at work when th
 \end{itemize}
 
 \subsubsection{HTML5}
-This stands for Hyperlink Text Mark-up Language and the 5 references the version. This language is used to format all web pages. It allows different sections to be created the most common are called div's. In the code these are surrounded by the following tags $<$div id="one"$>$This is inside a div $<$/div$>$. Note the id="one" (also could be class="one") is what name's the div so it can be referenced within the CSS style sheet. In HTML it is also possible to format tables (see medication section in doctors app) and create forms for data submission (see search box in doctor app). However only simple text manipulation such as paragraphs (using $<$p$>$in a paragrap$<$/p$>$) is possible. Any further formatting must be done within the CSS. It should also be noted that html script can be written within .php file this is done when websites require the extra functionality offered within Php such as the currentpatients/index.php page. In this case the entire html is surrounded by $<$html$>$ ... $<$/html$>$ tags. 
+This stands for Hyperlink Text Mark-up Language and the 5 references the version. This language is used to format all web pages. It allows different sections to be created the most common are called div's. In the code these are surrounded by the following tags $<$div id="one"$>$This is inside a div $<$/div$>$. Note the id="one" (also could be class="one") is what name's the div so it can be referenced within the CSS style sheet. In HTML it is also possible to format tables (see medication section in doctors app) and create forms for data submission (see search box in doctor app). However only simple text manipulation such as paragraphs (using $<$p$>$in a paragrap$<$/p$>$) is possible. Any further formatting must be done within the CSS. It should also be noted that html script can be written within .php file this is done when websites require the extra functionality offered within PHP such as the currentpatients/index.php page. In this case the entire html is surrounded by $<$html$>$ ... $<$/html$>$ tags. 
 \subsubsection{CSS3}
 This stands for Cascading Style Sheet and the 3 references the version. This language works in tandem with HTML to improve the aesthetics of websites. It is written in a separate .css file and is called within the $<$head$>$ tags of the HTML script, fig.\ref{csslink}. 
 \begin{figure}[h!] 
@@ -276,7 +276,7 @@ This stands for Cascading Style Sheet and the 3 references the version. This lan
 The general format of a .css file is shown in fig.\ref{CSSex}, in this example the "exampleclass" denotes which class in the html is being formatted, "." is used to prefix a class and "\#" an id. Within the "\{\}" brackets are the commands, here the font is made red and in the Helvetica style. The style sheet is called cascading because any div's that are contained within other div's inherit the style of the parent div they are contained within. The CSS is also used for the positioning, and size of all divs. 
 
 \subsubsection{JavaScript and JQuery}
-JavaScript facilitates dynamic functions to be performed within the browser. "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers." \cite{Jquery}. Javascript is specifically used in this website to form the tutorial, graph, the uncertainty bar and the patient selector. It should be noted that because the functions are performed within the user's browser it is not trivial to pass variables between JavaScript and Php which is conversely run on the server side of the website. 
+JavaScript facilitates dynamic functions to be performed within the browser. "jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers." \cite{Jquery}. Javascript is specifically used in this website to form the tutorial, graph, the uncertainty bar and the patient selector. It should be noted that because the functions are performed within the user's browser it is not trivial to pass variables between JavaScript and PHP which is conversely run on the server side of the website. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -289,15 +289,15 @@ The key goal for the patient application was usability. Due to hypertension main
 \includegraphics[width=1\linewidth]{patientUI.png}
 \caption{Patient UI journey walkthrough (page names shown in black at the bottom and refer to the following sections) \label{patientUI}}
 \end{wrapfigure} 
-Finally consistency between pages making learning to use the application easier and faster. The app's itself is written in php for all but one page, however most of the content of these files consist of html. The app has been optimised for use on iPhone 5 however will also function on an iPad and android phones with minimal scaling problems. All pages bar one are styled using the same CSS file "Cardiac\_Track\_Style.css" that is 297 lines long. 
+Finally consistency between pages making learning to use the application easier and faster. The app's itself is written in PHP for all but one page, however most of the content of these files consist of html. The app has been optimised for use on iPhone 5 however will also function on an iPad and android phones with minimal scaling problems. All pages bar one are styled using the same CSS file "Cardiac\_Track\_Style.css" that is 297 lines long. 
 
 \subsection{General format}
-For consistency and efficiency of programming, most pages have the same standard format. Fig.\ref{appstandard} shows the Php, HTML and CSS that together form the standard page, also shown.
+For consistency and efficiency of programming, most pages have the same standard format. Fig.\ref{appstandard} shows the PHP, HTML and CSS that together form the standard page, also shown.
 \begin{figure}[h!] 
 \includegraphics[width=\linewidth]{appstandard.png}
 \caption{Left:php and html Middle: CSS Right: Standard app page \label{appstandard}}
 \end{figure} 
-The Php script starts with a php function which checks if a user is logged in, if they are not it redirects them to the login page "https://3yp.villocq.com/patient". 
+The PHP script starts with a PHP function which checks if a user is logged in, if they are not it redirects them to the login page "https://3yp.villocq.com/patient". 
 \\ \indent
 The rest of the script is written in html between the $<$html$>$ tags. Firstly in the page header the title is set; this is displayed in the top of a web browser. The link to the CSS page is then made and finally within the head meta-properties for the viewport are set. The viewport properties affect how the site is shown on the device. The first term "width=device-width" means that the content of the page fills the device's screen, hence maximises the size of the content displayed. The "Initial-scale=1.0; maximum-scale=0.95; user-scalable=0;" means that when the page loads the page is scaled to the device width, and that the user is unable to zoom in or out of the page. Disabling the zoom function aids the application's usability as the page remains consistent when the user may accidentally tap the screen. 
 \\ \indent
@@ -346,7 +346,7 @@ This section can be accessed from the menu and allows the user to see how their 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Doctor's Application}
+\section{Doctor's Application - \textit{Emma Saragossi}}
 
 \subsection{Function}
 
@@ -524,15 +524,14 @@ An HTML form was created to send the login data to the server (see Extract~\ref{
 
 The METHOD attribute of the FORM element specifies the HTTP method used to send the form to the processing agent. There are two commonly used methods for a request-response between a client and server: GET and POST. The GET method encodes the form data into the URL, while the POST method hides the data in the message body meaning it cannot be seen by the user. POST requests cannot be cached or bookmarked and do not remain in the browser history. Due to the sensitive nature of the form data, POST was chosen.
 
-The TEXT and PASSWORD fields are standard HTML input elements for forms. The characters in a password field are automatically masked (shown as asterisks) for security. The PLACEHOLDER attribute specifies the expected value of an input element (see Figure~\ref{fig:login_design}). The SUBMIT button sends the form data to the server. The data is sent to the page specified in the form's ACTION attribute – here it calls the PHP script \textbf{login.php}.
+The TEXT and PASSWORD fields are standard HTML input elements for forms. The characters in a password field are automatically masked (shown as asterisks) for security. The PLACEHOLDER attribute specifies the expected value of an input element (see Figure~\ref{fig:login_design}). The SUBMIT button sends the form data to the server. The data is sent to the page specified in the form's ACTION attribute - here it calls the PHP script \textbf{login.php} (See section \ref{drloginform})
 
-\textcolor{red}{Insert Henry's section on Doctor login!!!}
 
 \subsubsection{Internal pages}
 
 A user must only be granted access to the internal pages of the site if they have already logged in i.e. a user cannot gain access to the internal pages of the site by simply entering the page URL. A PHP script is included at the top of all internal pages which checks whether the user has logged in successfully and is authorised to view the page content. Otherwise, the user is redirected to the login page. The code is shown in Extract~\ref{code:intPages}
 
-The user ID was stored as a session variable in \textbf{login.php}. Session variables store information about a single user and make it available to all pages of the site. These are temporary and are deleted after the user logs out or closes their browser. The isset() function checks whether the session variable \mbox{\$\_SESSION['userID']} has already been set. This will only be true if the user has logged in successfully previously. If the variable has not been set, the user has not been granted access, and is redirected to the login page.
+The user ID was stored as a session variable in \textbf{login.php}. Session variables (see section \ref{phpsessions}) store information about a single user and make it available to all pages of the site. These are temporary and are deleted after the user logs out or closes their browser. The isset() function checks whether the session variable \mbox{\$\_SESSION['userID']} has already been set. This will only be true if the user has logged in successfully previously. If the variable has not been set, the user has not been granted access, and is redirected to the login page.
 
 
 \begin{code}[ht]
@@ -541,7 +540,7 @@ The user ID was stored as a session variable in \textbf{login.php}. Session vari
 
 // Check the person is logged in!
 session_start();    
-if (isset($_SESSION['userID']))
+if (isset($_SESSION['userID'])) $
 {
     //Continue to the page
     // This sets the current user ID as php variable!
@@ -1013,7 +1012,7 @@ At present, the prototype application only makes it possible for the doctor to c
 \caption{The currentpatients/index.php page \label{indexover}}
 \end{figure} 
 \noindent 
-Overview of index.php: It is a Php file containing html, JavaScript, jQuery and SQL, it is 791 lines long. It is styled by the CSS file "Cardiac\_Track\_Style\_Pro.css", which is 835 lines long. 
+Overview of index.php: It is a PHP file containing html, JavaScript, jQuery and SQL, it is 791 lines long. It is styled by the CSS file "Cardiac\_Track\_Style\_Pro.css", which is 835 lines long. 
 \subsubsection{Page Segments and Scaling}
 The page is created in 3 main div's, on the left, the patient selector, the top right the graph and the bottom is the patient information that is split between medication and personal information. The div's were created in the html and given different class names so they could be manipulated in CSS. 
 \\ \indent
@@ -1029,7 +1028,7 @@ Originally the page scaling in the CSS was set using the \% unit, which sets the
 This led to problems due to the page being programmed on a large high resolution screen when it was opened on a smaller device or in a smaller window the size of the div's change dramatically in terms of pixel width however the text remained constant. This caused the page to become a jumbled with text overflowing off the page. This problem was solved with the use of a new tag introduced in the 3rd version of CSS. The new units are denoted vh (for height) and vw (for width), 1 unit corresponds to $1/100$th of the viewport's height or width respectively. What makes this so useful is that it can also be used for scaling text. Therefore when the page is loaded both the font and dimensions are set in proportion to the viewport. The graph container CSS in fig.\ref{CSSscaling} to shows this, note that the original percentage settings are still kept. This is so that if someone is using an old browser that is not updated for CSS3 the divs will still be created in the old style. Using this new scaling technique means that the site is also compatible with tablet's, fig.\ref{ipad}. Also note in fig.\ref{CSSscaling}, the "background-image:url('cardioPic5.jpg')" command means that the jpg image which is saved within the currentpatients folder on the website is shown. Its repetition is set to "no-repeat" as without this the image is shown in its original pixel size but is repeated in a grid format. 
 
 \subsubsection{Patient Selector} 
-This is what the doctor uses to select the patient who he whishes' to review. Firstly the list of "High BP" and "Normal" patients seen on the left of fig.\ref{indexover} had to be dynamically created using details called from the database. This was done using Php within the index.php page. The SQL statement in the first line of fig.\ref{selectorphp}, "SELECTS" all the patient id's "FROM" the patientInfo table whose BP is stated as being uncontrolled and who are patients of the doctor currently logged into the application. The "mysql\_num\_rows" sets the varaible\$num with the number of patients that have been selected in the SQL query and hence the number of iterations the following "while" loop needs to perform. 
+This is what the doctor uses to select the patient who he whishes' to review. Firstly the list of "High BP" and "Normal" patients seen on the left of fig.\ref{indexover} had to be dynamically created using details called from the database. This was done using PHP within the index.php page. The SQL statement in the first line of fig.\ref{selectorphp}, "SELECTS" all the patient id's "FROM" the patientInfo table whose BP is stated as being uncontrolled and who are patients of the doctor currently logged into the application. The "mysql\_num\_rows" sets the varaible\$num with the number of patients that have been selected in the SQL query and hence the number of iterations the following "while" loop needs to perform. 
 \begin{figure}[h!] 
 \minipage{0.59\textwidth}
 \includegraphics[width=\linewidth]{selectorphp.png}
@@ -1040,14 +1039,14 @@ This is what the doctor uses to select the patient who he whishes' to review. Fi
 \caption{Patient selector CSS}
 \endminipage
 \end{figure} 
-The "while" loop is used to write the html code which forms the div's for each individual patient. The "echo" function in Php allows items to be written in the html script of a page, this extends to div's as well as plain text. Therefore the first line of the while function opens the div "Apatient",fig.\ref{selectorphp}. It's CSS styling sets the size, font-colour, background and border for the div. It also contains the "cursor: pointer" command this enhances usability by changing the cursor style when it is hovering over the div showing the user it is clickable. The next line of the while function creates the Identification div, this has no styling related to it but instead a data tag label idNo, "data-idNo='.\$row['id'].'$>$". This means that each div has a unique data tag which corresponds to the id number of the patient, which is called from the SQL \$row result array in Php. This is required for selecting the patient using JavaScript. The central echo row simply writes the patient data from the same array into the div so it is displayed on the page. Note this code only forms the alerted section the normal section's code is very similar. 
+The "while" loop is used to write the html code which forms the div's for each individual patient. The "echo" function in PHP allows items to be written in the html script of a page, this extends to div's as well as plain text. Therefore the first line of the while function opens the div "Apatient",fig.\ref{selectorphp}. It's CSS styling sets the size, font-colour, background and border for the div. It also contains the "cursor: pointer" command this enhances usability by changing the cursor style when it is hovering over the div showing the user it is clickable. The next line of the while function creates the Identification div, this has no styling related to it but instead a data tag label idNo, "data-idNo='.\$row['id'].'$>$". This means that each div has a unique data tag which corresponds to the id number of the patient, which is called from the SQL \$row result array in PHP. This is required for selecting the patient using JavaScript. The central echo row simply writes the patient data from the same array into the div so it is displayed on the page. Note this code only forms the alerted section the normal section's code is very similar. 
 
 \begin{wrapfigure}{l}{.34\textwidth}
 \centering
 \includegraphics[scale=0.5]{selectfunc.png}
 \caption{JavaScript selection function \label{selectfunc}} 
 \end{wrapfigure}
-The second step of implementation was the ability to bring up a patients data by clicking on their name in the list. This was done by using the JavaScript function, fig.\ref{selectfunc}. The first line within the $<$script$<$ tags (which switches the language in between them to be in JavaScript) sets the condition for initialising the function, which is on clicking an ".Identification" div. Once a function has been enacted it creates a variable "idNum" and sets this equal to the data-idNo attribute linked to that div. Finally the "window.location.href = "index.php?w1=" + idNum" function appends the newly created variable to the URL of the page creating a global variable "w1". The page reloads with this global variable in the URL, which can be accessed in Php scripts within the page using the command "\$ \_GET["w1"]". This is the only way (bar a very similar jQuery AJAX method) in which a variable can be passed from JavaScript to Php due to the fact the Php runs on the server side it has no link to what happens within the JavaScript which is performed on the client side in the browser. 
+The second step of implementation was the ability to bring up a patients data by clicking on their name in the list. This was done by using the JavaScript function, fig.\ref{selectfunc}. The first line within the $<$script$<$ tags (which switches the language in between them to be in JavaScript) sets the condition for initialising the function, which is on clicking an ".Identification" div. Once a function has been enacted it creates a variable "idNum" and sets this equal to the data-idNo attribute linked to that div. Finally the "window.location.href = "index.php?w1=" + idNum" function appends the newly created variable to the URL of the page creating a global variable "w1". The page reloads with this global variable in the URL, which can be accessed in PHP scripts within the page using the command "\$ \_GET["w1"]". This is the only way (bar a very similar jQuery AJAX method) in which a variable can be passed from JavaScript to PHP due to the fact the PHP runs on the server side it has no link to what happens within the JavaScript which is performed on the client side in the browser. 
 \\ \indent
 Patient selection was also implemented in a search bar, to enhance the usability for the doctor when dealing with large numbers of patients and the common scenario of needing to quickly find a particular patient when they come to be checked in the clinic. The search bar is found above the patient selector container on the top left of the page shown in fig.\ref{indexover}. The search bar is a html form, fig.\ref{searchbarhtml}. 
 
@@ -1056,13 +1055,13 @@ Patient selection was also implemented in a search bar, to enhance the usability
 \includegraphics[scale=0.4]{searchbarhtml.png}
 \caption{Html for the search bar \label{searchbarhtml}} 
 \end{wrapfigure}
-The form is initialised in the first line, action specifies the URL to which the forms data is directed, which in this case will be the same page. The "method="get"" command is what tells the form to append the data inputted to the URL, for this application it is the specific patient id variable. The next line sets the attributes of the search bar. The placeholder value is set so the doctor knows what they must enter and "name="w1"" is what is used to name the variable inputted. Note w1 again is used so the appended variable in the URL can be called by the php script in the same way. Finally the second input line screens the image of the magnifying glass which is used instead of the standard text search button to improve aesthetics. Once a patient id is entered into the bar and the magnifying glass is clicked the page is reloaded with the inputted id number appended to the URL as the global w1 variable, thus producing the patients data within the page. 
+The form is initialised in the first line, action specifies the URL to which the forms data is directed, which in this case will be the same page. The "method="get"" command is what tells the form to append the data inputted to the URL, for this application it is the specific patient id variable. The next line sets the attributes of the search bar. The placeholder value is set so the doctor knows what they must enter and "name="w1"" is what is used to name the variable inputted. Note w1 again is used so the appended variable in the URL can be called by the PHP script in the same way. Finally the second input line screens the image of the magnifying glass which is used instead of the standard text search button to improve aesthetics. Once a patient id is entered into the bar and the magnifying glass is clicked the page is reloaded with the inputted id number appended to the URL as the global w1 variable, thus producing the patients data within the page. 
 
 \subsubsection{Graph}
 As an aid to diagnosis the variation of the patients BP over time is presented graphically to the doctor. This is done using the same Google JavaScript package as was used within the patient app, for further details on its implementation refer to the patient application UI section. The one difference from the patient app was that it was not possible to call the graph-data.php script to import the relevant data array. This is due to the fact that global page variable "w1" which denotes the user selected is required in the SQL data query. As the graph-data.php is a small script the simple solution of copying its contents into the body of JavaScript was acceptable. The SQL query was also updated to include the w1 variable so that it was updated upon a new patient being selected. 
 
 \subsubsection{Patient information}
-This section is found at the bottom of fig.\ref{indexover}. Firstly the data had to be called from the database and be formed into a series of arrays. The SQL queries for the data are shown in fig.\ref{infoSQL}, note that the "*" refers to all data being called for the relevant patient. The relevant data was then displayed in a html table by creating a short Php section within the relevant cells which selects data from the array and displays it using echo command. Fig.\ref{medtable} shows the table for the first piece of medication, the $<$tr$>$ tags surround rows and the $<$td$>$ create cells within these rows. 
+This section is found at the bottom of fig.\ref{indexover}. Firstly the data had to be called from the database and be formed into a series of arrays. The SQL queries for the data are shown in fig.\ref{infoSQL}, note that the "*" refers to all data being called for the relevant patient. The relevant data was then displayed in a html table by creating a short PHP section within the relevant cells which selects data from the array and displays it using echo command. Fig.\ref{medtable} shows the table for the first piece of medication, the $<$tr$>$ tags surround rows and the $<$td$>$ create cells within these rows. 
 
 \begin{wrapfigure}{l}{0.35\textwidth}
 \centering
@@ -1083,7 +1082,7 @@ The patient info section is similar in creation however it does include the unce
 \caption{Creating the uncertainity bar \label{progressbar}}
 \endminipage
 \end{figure} 
-The first button seen below is the uncertainty metric reset button, this calls a Php script which enacts a single SQL query, "UPDATE patientInfo SET fraudFlag='0' WHERE patientID = '\$patientUsername'" this resets the patients uncertainty metric to 0. The second button opens the Tallis enactment script within a new window allowing the patient to be reviewed.
+The first button seen below is the uncertainty metric reset button, this calls a PHP script which enacts a single SQL query, "UPDATE patientInfo SET fraudFlag='0' WHERE patientID = '\$patientUsername'" this resets the patients uncertainty metric to 0. The second button opens the Tallis enactment script within a new window allowing the patient to be reviewed.
 
 \subsubsection{Tutorial, About Us and Site Terms}
 All of these are initiated within the bottom left hand of the index.php file. They each display their data in a similar format, with the tutorial being slightly more complex. The tutorial was included to aid usability for the doctor. Due to the time pressures GP's are under they will not have time to figure out how an application works and so may not use it unless they are succinctly taught how to operate it. The tutorial as shown from fig.\ref{tut}, highlights segments of the page individually and displays text on how to use them. The "About Us" and "Site Terms" are in the exact same format as the first tutorial section and just display the relevant data. 
@@ -1357,7 +1356,7 @@ The reason that a large range of limits was chosen is based on two of the limita
 To implement the metric within the doctor"s web based application it was necessary to transfer the calculations from Excel file to a script that could be hosted on the application's server. 
 \\ \indent There were several ways to do this, initially it was thought that a statistics package such as IBM SPSS 7.0 \cite{SPSS} could be used. The major benefit of such a method is the ease of use; all can be done through the programs graphical user interface (GUI) including linking to the database. The first limitation was that it is not possible to host the program on the server. Data would have to be sent to an external computer and then the results updated into the database. The second limitation is that the cost of purchasing such a package for commercial use is extremely expensive running into tens of thousands of pounds. Hence it is not economically viable for an application such as Cardiac Track that would only use a tiny portion of the program.
 \\ \indent 
-The solution that was implemented took the form of hard coding the calculations within a php script. The main calculation was carried out using a many times nested SQL query and the boundarys checked using "if" statements. 
+The solution that was implemented took the form of hard coding the calculations within a PHP script. The main calculation was carried out using a many times nested SQL query and the boundarys checked using "if" statements. 
 
 \subsubsection{Data Input and calculation}
 Firstly before any calculations could be performed the patient's last seven data entries, which had not previously been analysed for uncertainty, had to be called from the database. The specific last 7 days were required rather than all data as this was the period of time for which the analysis had been calibrated using the trial patients data.
@@ -1402,7 +1401,7 @@ The $\overline{x}$ and $\overline{y}$ are simply found using the "avg()" functio
 \\ \indent
 A further step up the page into the next nest segment is where the calculation of both linear regression coefficients, $m_0$ and $m_1$, takes place. This is the implementation of eq.10 and 15, pg.4!!!. The values of the variances$\Sigma x^2 -N\overline{y}\overline{y}, \Sigma y^2 - N\overline{y}\overline{y}, \Sigma xy - N\overline{x}\overline{y}$ are also calculated within and named with the prefixes ss\_xx, ss\_yy and ss\_xy. These are then called in the final nest segment to find the correlation coefficient and so complete the implementation of equation 18, pg 7!!!.
 \\ \indent
-Finally as shown in the last two lines the query is run in the database using the "mysql\_query" php function. The result is formed into an array using the "mysql\_fetch\_array" function. 
+Finally as shown in the last two lines the query is run in the database using the "mysql\_query" PHP function. The result is formed into an array using the "mysql\_fetch\_array" function. 
 
 \subsubsection{Call the current uncertainty metric value from the data base}
 
@@ -1415,7 +1414,7 @@ To set the new uncertainty metric the current value of uncertainty attributed to
 \includegraphics[scale=0.6]{corrcheck}
 \caption{Correlation coefficient inequalities \label{corrcheck}} 
 \end{wrapfigure} 
-The simplest limit to test is the correlation coefficient, which is done using two "if" statements, as shown in fig.\ref{corrcheck}. The correlation coefficient variable is called from within the array, it is then placed in an inequality with the boundary value of either +/- 0.98. If the inequality is correct the \$patient\_flag variable is increased by 1 using the php ++ incrementation function.
+The simplest limit to test is the correlation coefficient, which is done using two "if" statements, as shown in fig.\ref{corrcheck}. The correlation coefficient variable is called from within the array, it is then placed in an inequality with the boundary value of either +/- 0.98. If the inequality is correct the \$patient\_flag variable is increased by 1 using the PHP ++ incrementation function.
 \\ \indent
 For the linear regression percentage error limit's test the values of the regression for each day must be calculated. This was initially performed for each of the values individually; top line of fig.\ref{inbound}. Both regression coefficients are called from the array and the $m_1$ value is multiplied by 1 so that the first days value can be found. Once the value has been found in this case labelled \$dayone the +/- 10\% boundaries for this day are calculated using multiplication. 
 \begin{wrapfigure}{r}{.42\textwidth}
@@ -2408,8 +2407,6 @@ NHS Information Governance. 2008. Guidelines on use of encryption to protect per
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                  %END %EMMA %BIBLOGRAPHY
 \bibitem{netcraft:PHP}
 News.netcraft.com, (2014). PHP just grows \& grows | Netcraft. [online] Available at: \url{http://news.netcraft.com/archives/2013/01/31/php-just-grows-grows.html} [Accessed 22 Apr. 2014].
-\bibitem{tallisDescription}
-Cossac.org, (2014). Tallis | COSSAC. [online] Available at: \url{http://www.cossac.org/tallis} [Accessed 23 Apr. 2014].
 \bibitem{microsoft:dbnorm}
 Support.microsoft.com, (2014). Description of database normalization basics. [online] Available at: \url{http://support.microsoft.com/kb/283878} [Accessed 23 Apr. 2014].
 \bibitem{netcraft:apache}
