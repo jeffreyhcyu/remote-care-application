@@ -33,65 +33,65 @@
 \contentsline {subsection}{\numberline {5.5}News feed}{29}
 \contentsline {subsection}{\numberline {5.6}Patient search bar}{30}
 \contentsline {subsection}{\numberline {5.7}Extension ideas for the Doctor Application}{31}
-\contentsline {section}{\numberline {6} - \textit {Michael Fedosiuk}}{31}
-\contentsline {subsection}{\numberline {6.1}currentpatients/index.php}{31}
-\contentsline {subsubsection}{\numberline {6.1.1}Page Segments and Scaling}{32}
+\contentsline {section}{\numberline {6}Doctor's Application - \textit {Michael Fedosiuk}}{33}
+\contentsline {subsection}{\numberline {6.1}currentpatients/index.php}{33}
+\contentsline {subsubsection}{\numberline {6.1.1}Page Segments and Scaling}{33}
 \contentsline {subsubsection}{\numberline {6.1.2}Patient Selector}{34}
 \contentsline {subsubsection}{\numberline {6.1.3}Graph}{36}
 \contentsline {subsubsection}{\numberline {6.1.4}Patient information}{36}
 \contentsline {subsubsection}{\numberline {6.1.5}Tutorial, About Us and Site Terms}{37}
-\contentsline {section}{\numberline {7}Uncertainty Metric - \textit {Michael Fedosiuk}}{38}
-\contentsline {subsection}{\numberline {7.1}Data Sourcing}{39}
+\contentsline {section}{\numberline {7}Uncertainty Metric - \textit {Michael Fedosiuk}}{39}
+\contentsline {subsection}{\numberline {7.1}Data Sourcing}{40}
 \contentsline {subsection}{\numberline {7.2}Metric Overview}{40}
-\contentsline {subsection}{\numberline {7.3}Metric make up}{40}
+\contentsline {subsection}{\numberline {7.3}Metric make up}{41}
 \contentsline {subsubsection}{\numberline {7.3.1}Linear Regression}{41}
 \contentsline {subsubsection}{\numberline {7.3.2}Pearson product-moment correlation coefficient}{45}
 \contentsline {subsection}{\numberline {7.4}Metric Implementation}{47}
-\contentsline {subsubsection}{\numberline {7.4.1}Data Input and calculation}{47}
-\contentsline {subsubsection}{\numberline {7.4.2}Call the current uncertainty metric value from the data base}{49}
-\contentsline {subsubsection}{\numberline {7.4.3}Calculating limits and test points for patient inputted data}{49}
-\contentsline {subsubsection}{\numberline {7.4.4}Interaction with currentpatients.php page}{50}
+\contentsline {subsubsection}{\numberline {7.4.1}Data Input and calculation}{48}
+\contentsline {subsubsection}{\numberline {7.4.2}Call the current uncertainty metric value from the data base}{50}
+\contentsline {subsubsection}{\numberline {7.4.3}Calculating limits and test points for patient inputted data}{50}
+\contentsline {subsubsection}{\numberline {7.4.4}Interaction with currentpatients.php page}{51}
 \contentsline {subsection}{\numberline {7.5}Extensions}{51}
-\contentsline {section}{\numberline {8}Tallis application}{51}
-\contentsline {subsection}{\numberline {8.1}Initial treatment selection - \textit {Emma Saragossi}}{51}
-\contentsline {section}{\numberline {9}Server Environment - \textit {Henry Fletcher}}{52}
-\contentsline {subsection}{\numberline {9.1}Key Project Software}{52}
-\contentsline {subsubsection}{\numberline {9.1.1}PHP: a server-side scripting language}{52}
-\contentsline {subsubsection}{\numberline {9.1.2}MySQL: a relational database management system}{53}
-\contentsline {subsubsection}{\numberline {9.1.3}Apache Web Server}{53}
-\contentsline {subsubsection}{\numberline {9.1.4}Tallis: clinical decision making software}{53}
-\contentsline {subsection}{\numberline {9.2}Server Environment Overview}{54}
-\contentsline {subsection}{\numberline {9.3}Integrating Tallis \& the MySQL database}{54}
-\contentsline {subsection}{\numberline {9.4}Data storage \& redundancy}{55}
-\contentsline {subsubsection}{\numberline {9.4.1}Database normalisation}{55}
-\contentsline {subsubsection}{\numberline {9.4.2}Database scalability}{56}
-\contentsline {section}{\numberline {10}Security - \textit {Henry Fletcher}}{57}
-\contentsline {subsection}{\numberline {10.1}NHS Guidelines for data transmission and storage}{58}
-\contentsline {subsection}{\numberline {10.2}SSL Encryption}{58}
-\contentsline {subsubsection}{\numberline {10.2.1}Overview}{58}
-\contentsline {subsubsection}{\numberline {10.2.2}Server configuration}{59}
-\contentsline {subsection}{\numberline {10.3}AES encryption}{60}
-\contentsline {subsubsection}{\numberline {10.3.1}Overview}{60}
-\contentsline {subsubsection}{\numberline {10.3.2}Implementing AES using MySQL}{60}
-\contentsline {subsubsection}{\numberline {10.3.3}Implementation difficulties and subsequent removal from test system}{61}
-\contentsline {subsection}{\numberline {10.4}Password Hashing}{62}
-\contentsline {subsubsection}{\numberline {10.4.1}Example hash functions}{62}
-\contentsline {subsubsection}{\numberline {10.4.2}Using hash functions in a login system}{63}
-\contentsline {subsubsection}{\numberline {10.4.3}The first problem: Lookup tables}{63}
-\contentsline {subsubsection}{\numberline {10.4.4}The second problem: Brute-force attacks}{65}
-\contentsline {subsubsection}{\numberline {10.4.5}Hashing implementation in the 'Cardiac Track' application}{66}
-\contentsline {subsection}{\numberline {10.5}MySQLi Connector}{66}
-\contentsline {subsubsection}{\numberline {10.5.1}SQL injection example}{66}
-\contentsline {subsubsection}{\numberline {10.5.2}Mitigating against SQL injection attacks}{67}
-\contentsline {subsection}{\numberline {10.6}Other security considerations}{68}
-\contentsline {subsubsection}{\numberline {10.6.1}Application access control}{68}
-\contentsline {subsubsection}{\numberline {10.6.2}Access logging}{69}
-\contentsline {subsubsection}{\numberline {10.6.3}Physical hardware security}{69}
-\contentsline {section}{\numberline {11}Application codebase - \textit {Henry Fletcher}}{70}
-\contentsline {subsection}{\numberline {11.1}Doctor's Login Form}{70}
-\contentsline {subsection}{\numberline {11.2}Patient's Submission Form}{72}
-\contentsline {section}{\numberline {12}Economic Viability - \textit {Michael Fedosiuk}}{76}
-\contentsline {subsection}{\numberline {12.1}Cost benefits to the customer: Focused on NHS}{76}
-\contentsline {subsubsection}{\numberline {12.1.1}Reduction in Strokes and Ischaemic heart disease}{76}
-\contentsline {subsection}{\numberline {12.2}Implementation Costs}{78}
-\contentsline {subsubsection}{\numberline {12.2.1}Comparables}{79}
+\contentsline {section}{\numberline {8}Tallis application}{52}
+\contentsline {subsection}{\numberline {8.1}Initial treatment selection - \textit {Emma Saragossi}}{52}
+\contentsline {section}{\numberline {9}Server Environment - \textit {Henry Fletcher}}{55}
+\contentsline {subsection}{\numberline {9.1}Key Project Software}{55}
+\contentsline {subsubsection}{\numberline {9.1.1}PHP: a server-side scripting language}{55}
+\contentsline {subsubsection}{\numberline {9.1.2}MySQL: a relational database management system}{55}
+\contentsline {subsubsection}{\numberline {9.1.3}Apache Web Server}{56}
+\contentsline {subsubsection}{\numberline {9.1.4}Tallis: clinical decision making software}{56}
+\contentsline {subsection}{\numberline {9.2}Server Environment Overview}{56}
+\contentsline {subsection}{\numberline {9.3}Integrating Tallis \& the MySQL database}{56}
+\contentsline {subsection}{\numberline {9.4}Data storage \& redundancy}{58}
+\contentsline {subsubsection}{\numberline {9.4.1}Database normalisation}{58}
+\contentsline {subsubsection}{\numberline {9.4.2}Database scalability}{59}
+\contentsline {section}{\numberline {10}Security - \textit {Henry Fletcher}}{59}
+\contentsline {subsection}{\numberline {10.1}NHS Guidelines for data transmission and storage}{60}
+\contentsline {subsection}{\numberline {10.2}SSL Encryption}{61}
+\contentsline {subsubsection}{\numberline {10.2.1}Overview}{61}
+\contentsline {subsubsection}{\numberline {10.2.2}Server configuration}{61}
+\contentsline {subsection}{\numberline {10.3}AES encryption}{62}
+\contentsline {subsubsection}{\numberline {10.3.1}Overview}{62}
+\contentsline {subsubsection}{\numberline {10.3.2}Implementing AES using MySQL}{62}
+\contentsline {subsubsection}{\numberline {10.3.3}Implementation difficulties and subsequent removal from test system}{63}
+\contentsline {subsection}{\numberline {10.4}Password Hashing}{64}
+\contentsline {subsubsection}{\numberline {10.4.1}Example hash functions}{65}
+\contentsline {subsubsection}{\numberline {10.4.2}Using hash functions in a login system}{65}
+\contentsline {subsubsection}{\numberline {10.4.3}The first problem: Lookup tables}{66}
+\contentsline {subsubsection}{\numberline {10.4.4}The second problem: Brute-force attacks}{67}
+\contentsline {subsubsection}{\numberline {10.4.5}Hashing implementation in the 'Cardiac Track' application}{68}
+\contentsline {subsection}{\numberline {10.5}MySQLi Connector}{68}
+\contentsline {subsubsection}{\numberline {10.5.1}SQL injection example}{69}
+\contentsline {subsubsection}{\numberline {10.5.2}Mitigating against SQL injection attacks}{69}
+\contentsline {subsection}{\numberline {10.6}Other security considerations}{71}
+\contentsline {subsubsection}{\numberline {10.6.1}Application access control}{71}
+\contentsline {subsubsection}{\numberline {10.6.2}Access logging}{71}
+\contentsline {subsubsection}{\numberline {10.6.3}Physical hardware security}{72}
+\contentsline {section}{\numberline {11}Application PHP examples - \textit {Henry Fletcher}}{72}
+\contentsline {subsection}{\numberline {11.1}Doctor's Login Form}{72}
+\contentsline {subsection}{\numberline {11.2}Patient's Submission Form}{75}
+\contentsline {section}{\numberline {12}Economic Viability - \textit {Michael Fedosiuk}}{78}
+\contentsline {subsection}{\numberline {12.1}Cost benefits to the customer: Focused on NHS}{78}
+\contentsline {subsubsection}{\numberline {12.1.1}Reduction in Strokes and Ischaemic heart disease}{79}
+\contentsline {subsection}{\numberline {12.2}Implementation Costs}{80}
+\contentsline {subsubsection}{\numberline {12.2.1}Comparables}{81}

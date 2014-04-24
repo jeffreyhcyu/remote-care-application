@@ -901,7 +901,6 @@ session_start();
 if($_POST['formSubmit'] == "Submit")
 
 //Assign the creation form SESSION output to PHP variables
-
 //Patient Details
 $patientID = $_SESSION['patientID'];
 
@@ -917,18 +916,14 @@ $database="tallis";
 $db = new mysqli($server,$username,$DBpassword,$database);
 
 //Prepared statement:
-
-$newPatient = $db->prepare("INSERT INTO patientInfo VALUES('');
+$newPatient = $db->prepare("INSERT INTO patientInfo VALUES('')";
 
 //Bind & Execute to submit to database. 
-$newPatient->bind_param('s',
-                    $patientID);
+$newPatient->bind_param('s',$patientID);
 $newPatient->execute();
 $newPatient->close();
 //Data has now been submitted to the database
-
 //All records have now been created
-
 ?>
 \end{php}
 \caption{Submitting all data to database}
@@ -982,7 +977,7 @@ function patientsidebar($doctorID){
 %%%%%%%%%%%%%%%%%%%%%%%%%%%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Patient search bar}
 
-Embedded in the header on all pages is the patient search bar, which allows the doctor to search by patient ID for immediate access to a patient's blood pressure and treatment history. As programed within the currentpatients/index.php section, see for more detail on implementation. 
+Embedded in the header on all pages is the patient search bar, which allows the doctor to search by patient ID for immediate access to a patient's blood pressure and treatment history. As programmed within the currentpatients/index.php section, see for more detail on implementation. 
 
 %An HTML form was created (Extract~\ref{code:searchBar}) which contains a standard TEXT input element and SUBMIT button. The form uses the GET method, which encodes the form data as a variable into the URL. When the SUBMIT button is pressed, the text entered into the TEXT element is appended to the link specified in the form's ACTION attribute and the page is redirected.
 
@@ -993,7 +988,7 @@ Embedded in the header on all pages is the patient search bar, which allows the 
 <input type="text" name="w1" placeholder="Search by User ID" size="15">
 <input type="submit" value="Search">
 </form>
-<!-- page will redirect to currentpatients/index.php?w1=$id-->
+<!-- page will redirect to currentpatients/index.php?w1=id -->
 \end{html}
 \caption{HTML form for patient ID search bar}
 \label{code:searchBar}
@@ -1004,8 +999,10 @@ Embedded in the header on all pages is the patient search bar, which allows the 
 \subsection{Extension ideas for the Doctor Application}
 At present, the prototype application only makes it possible for the doctor to create a new patient profile. It is perhaps desirable that the doctor should be able to edit this information if necessary. For example, a patient may develop new conditions which will need to be included as a patient comorbidity. Further work needs to be done, therefore, to allow the doctor to update and edit patient data.
 
+\clearpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{ - \textit{Michael Fedosiuk}}
+\section{Doctor's Application - \textit{Michael Fedosiuk}}
 \subsection{currentpatients/index.php}
 \begin{figure}[h!] 
 \includegraphics[width=\linewidth]{indexover.png}
@@ -1550,10 +1547,11 @@ candidate :: 'ACE__ramipril' ;
           end attributes
           ;
 \end{html}
-\label{code:ramipril}
 \caption{PRO\textit{forma} defining arguments for ACE Inhibitor \textit{Ramipril}}
+\label{code:ramipril}
 \end{code}
 
+\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Server Environment - \textit{Henry Fletcher}}
@@ -1972,13 +1970,12 @@ If the application were to be run as a real system, additional measures would li
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Application codebase - \textit{Henry Fletcher}}
+\section{Application PHP examples - \textit{Henry Fletcher}}
 This section of the project report includes two portions of the actual PHP code used to build parts of the application, namely the login system and the blood pressure submission system. In addition, the entire project codebase can be viewed on github:
 \begin{framed}
 \url{https://www.github.com/henryfletch/remote-care-application}
 \end{framed}
 Github was used to store all of the project code. It allows version control, the ability to merge files if edited by multiple people simultaneously, as well as clearly showing line-by-line changes. Since the application was mostly web based, file changes to the github repository immediately updated on the test server. This was achieved using a 'webhook', which essentially notifies the web server of a change, and it then downloads the latest copy of the files \cite{github:webhooks} \cite{github:webhook-2}. 
-
 
 \subsection{Doctor's Login Form} \label{drloginform}
 
@@ -2003,7 +2000,6 @@ Github was used to store all of the project code. It allows version control, the
 session_start();
 
 // Configure the MySQL connection parameters
-// Stored server-side: not viewable to a user!
 $server='remote.villocq.com';
 $username='3yp';
 $DBpassword='project';
@@ -2017,7 +2013,6 @@ $id=$_POST['username'];
 $input_password=$_POST['password'];
 
 // Get and compare the hashed passwords:
-// Prepared statement
 $getHash = $db->prepare("SELECT password FROM doctorInfo WHERE id=?");
 
 // Bind & Execute
@@ -2047,37 +2042,34 @@ if ($checkPassword)
     $doctorLog->close();
     
 header('Location: https://3yp.villocq.com/doctor/index.php'); 
-}
-else
-{
+} else {
     $_SESSION['loginMessage'] = 'Incorrect login details. Please try again.';
     header('Location: https://3yp.villocq.com/doctor/loginPage.php'); 
 }
 
 $db->close();
 ?>
-
 \end{lstlisting}
 
 Above is the doctor application "login.php" code. The purpose of the login system is to check that both the user exists and that the entered password is correct. Both the patient and doctor application use a very similar login system. The HTML form, which the user enters their username and password into, is then sent to this PHP code.
 \\
 \textbf{Line 4} enables PHP session variables, as explained in section \ref{phpsessions}.
 \\
-\textbf{Lines 8 to 11} contain the details of the MySQL server. The login details are never sent to the client, it remains strictly on the server. Only file access to the server itself can reveal the details. 
+\textbf{Lines 7 to 10} contain the details of the MySQL server. The login details are never sent to the client, it remains strictly on the server. Only file access to the server itself can reveal the details. 
 \\
-\textbf{Line 14} initialises a new MySQLi object. The object handles all of the SQL calls used later in the code.
+\textbf{Line 13} initialises a new MySQLi object. The object handles all of the SQL calls used later in the code.
 \\
-\textbf{Lines 17 and 18} copy the HTML form variables 'username' and 'password' to internal PHP variables \$id and \$input\_password respectively.
+\textbf{Lines 16 and 17} copy the HTML form variables 'username' and 'password' to internal PHP variables \$id and \$input\_password respectively.
 \\
-\textbf{Line 22} is the first SQL call to retrieve the user's password hash from the database. It is using the MySQLi prepared statement as described in section \ref{mysqli}. The SQL call returns a password hash only for the exact username match, if there is not an exact match the statement returns 0 records and authentication will fail.
+\textbf{Line 20} is the first SQL call to retrieve the user's password hash from the database. It is using the MySQLi prepared statement as described in section \ref{mysqli}. The SQL call returns a password hash only for the exact username match, if there is not an exact match the statement returns 0 records and authentication will fail.
 \\
-\textbf{Lines 25 to 29} continue with the SQL call. The 'bind\_param' function sends the user ID to the database server, where it is then inserted in place of the question mark (?) in the SQL statement. The 'bind\_result' function allows data to be returned from the SQL call, in this case the \$actual\_password\_hash of that user from the database. 
+\textbf{Lines 23 to 27} continue with the SQL call. The 'bind\_param' function sends the user ID to the database server, where it is then inserted in place of the question mark (?) in the SQL statement. The 'bind\_result' function allows data to be returned from the SQL call, in this case the \$actual\_password\_hash of that user from the database. 
 \\
-\textbf{Lines 33 \& 34} make us of the \textit{phpass} (section \ref{phpass-section}) hashing framework. The code creates a new instance of the hashing object, and then passes to it both the password hash that was stored in the database and the entered input password from the login form. The 'CheckPassword' function then encapsulates all that is needed to compare the hash to the provided password. If the stored hash is the same as the hash of the entered password, then the function returns 'true'.
+\textbf{Lines 31 \& 32} make us of the \textit{phpass} (section \ref{phpass-section}) hashing framework. The code creates a new instance of the hashing object, and then passes to it both the password hash that was stored in the database and the entered input password from the login form. The 'CheckPassword' function then encapsulates all that is needed to compare the hash to the provided password. If the stored hash is the same as the hash of the entered password, then the function returns 'true'.
 \\
-\textbf{Lines 37 to 51} contain all of the actions that occur once a user is successfully authenticated. First some session variables are set which are used later to ensure a user went through the login process (see section \ref{phpsessions}). The 'loginMessage' variable can be used to return error messages in the event of an unsuccessful login. Also included at this stage is some logging: the successful login is recorded into an access log on the database. Finally, the 'header' function redirects the user to the next page of the application, which in this case is the Doctor's portal page.
+\textbf{Lines 35 to 52} contain all of the actions that occur once a user is successfully authenticated. First some session variables are set which are used later to ensure a user went through the login process (see section \ref{phpsessions}). The 'loginMessage' variable can be used to return error messages in the event of an unsuccessful login. Also included at this stage is some logging: the successful login is recorded into an access log on the database. Finally, the 'header' function redirects the user to the next page of the application, which in this case is the Doctor's portal page.
 \\
-\textbf{Lines 52 to 56} only happen in the event of the password check being unsuccessful. The 'loginMessag'e variable is set to give a generic error message that is displayed to the user, and the header function redirects the user back to the original login page to try again. 
+\textbf{Lines 50 to 52} only happen in the event of the password check being unsuccessful. The 'loginMessage' variable is set to give a generic error message that is displayed to the user, and the header function redirects the user back to the original login page to try again. 
 
 \subsection{Patient's Submission Form}
 
