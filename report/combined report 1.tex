@@ -508,7 +508,7 @@ The image was saved as a Portable Network Graphic (PNG), a raster graphics file 
 \subsubsection{Login page}
 A login page for the doctor portal is required to grant the user access to the internal pages of the site, and to prevent others from viewing or altering sensitive data. It also ensures that only relevant data is displayed to the user. Access is controlled by identifying and authenticating the user. A PHP script is called to check the user's credentials (username and password) and grant or deny access to the internal pages of the site.
 
-The login page displays the Cardiac Track Pro logo and houses two text input boxes – one for the username and one for the password – and a submit button which will call the PHP script to check the login credentials when clicked.
+The login page displays the Cardiac Track Pro logo and houses two text input boxes - one for the username and one for the password - and a submit button which will call the PHP script to check the login credentials when clicked.
 
 \begin{figure}[ht]
 \begin{center}
@@ -616,13 +616,13 @@ The keystone becomes an \textit{enquiry}. A series of questions are posed to the
 \hline
 \textbf{Candidate name} & \textbf{Target BP (mmHg)} & \textbf{Argument 1} & \textbf{Argument 2} & \textbf{Description} \\
 \hline
-Systolic140 & 140/90 & Whitecoat="Yes" (--) & Age\_group="80+" (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
+Systolic140 & 140/90 & Whitecoat="Yes" (- -) & Age\_group="80+" (- -) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
 \hline
-Systolic150 & 150/90 & Whitecoat="Yes" (--) & Age\_group!="80+" (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
+Systolic150 & 150/90 & Whitecoat="Yes" (- -) & Age\_group!="80+" (- -) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
 \hline
-Systolic135 & 135/85 & Whitecoat="No" (--) & Age\_group="80+" (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
+Systolic135 & 135/85 & Whitecoat="No" (- -) & Age\_group="80+" (- -) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
 \hline
-Systolic145 & 145/85 & Whitecoat="No" (--) & Age\_group!="80+" (--) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
+Systolic145 & 145/85 & Whitecoat="No" (- -) & Age\_group!="80+" (- -) & Patient must not have white coat hypertension AND be younger than 80 years of age \\
 \hline
 \end{tabular}
 \caption{Decision logic for determining target blood pressure in Tallis}
@@ -1463,7 +1463,7 @@ There are a couple of ways the current system may be improved upon if more data 
 
 The first course of pharmacological therapy for each patient is determined in the Tallis application. There are 24 possible drug candidates. There are upto 28 arguments for and against each drug. For example the patient's age or ethnicity can determine whether drug can be selected or not.
 
-A \textit{decision} task is populated with the arguments for and against each drug type. There are four types of argument: For (+), Against (-), Confirm (++) and Exclude (--). To demonstrate how they are used, the arguments for and against choosing the ACE Inhibitor \textit{Ramipril} are shown in Table~\ref{table:ramipril}. If a patient has a history of angioedema, hereditary or idiopathic angioedema, renovascular disease, stenosis or is breastfeeding, the drug is excluded from the list of possible candidates. If the patient is of black African or Black Caribbean descent or is over the age of 55, the drug is not excluded from the list but is not recommended. The drug is recommended for patients with heart failure of Myocardial Infarction. If a patient were to have both stenosis and heart failure, for example, while the drug is recommended for those with heart failure, it is contraindicated in patients with stenosis and the drug would not be recommended. The PRO\textit{forma} script for the arguments for and against selecting \textit{Ramipril} is shown in Extract~\ref{code:ramipril}.
+A \textit{decision} task is populated with the arguments for and against each drug type. There are four types of argument: For (+), Against (-), Confirm (++) and Exclude (- -). To demonstrate how they are used, the arguments for and against choosing the ACE Inhibitor \textit{Ramipril} are shown in Table~\ref{table:ramipril}. If a patient has a history of angioedema, hereditary or idiopathic angioedema, renovascular disease, stenosis or is breastfeeding, the drug is excluded from the list of possible candidates. If the patient is of black African or Black Caribbean descent or is over the age of 55, the drug is not excluded from the list but is not recommended. The drug is recommended for patients with heart failure of Myocardial Infarction. If a patient were to have both stenosis and heart failure, for example, while the drug is recommended for those with heart failure, it is contraindicated in patients with stenosis and the drug would not be recommended. The PRO\textit{forma} script for the arguments for and against selecting \textit{Ramipril} is shown in Extract~\ref{code:ramipril}.
 
 \begin{table}[ht]
 \begin{center}
@@ -1471,23 +1471,23 @@ A \textit{decision} task is populated with the arguments for and against each dr
 \hline
 \textbf{Comorbidity} & \textbf{Source name} & \textbf{Response} & \textbf{Argument} \\
 \hline
-History of angioedema & Angio\_expose & Yes & (--) \\
+History of angioedema & Angio\_expose & Yes & (- -) \\
 \hline
-Renovascular disease & Renovascular & Yes & (--) \\
+Renovascular disease & Renovascular & Yes & (- -) \\
 \hline
 Heart failure & Heart\_failure & Yes & (+) \\
 \hline
 Myocardial Infarction & MI & Yes & (+) \\
 \hline
-Hereditary or idiopathic angioedema	& Angio\_hered & Yes & (--) \\
+Hereditary or idiopathic angioedema	& Angio\_hered & Yes & (- -) \\
 \hline
-Stenosis & Stenosis & Yes & (--) \\
+Stenosis & Stenosis & Yes & (- -) \\
 \hline
 Black African or Caribbean & Ethnicity & No & (-) \\
 \hline
 Over 55 years of age & Age\_group & 55-79 & (-) \\
 \hline
-Breastfeeding & Breastfeed & Yes & (--) \\
+Breastfeeding & Breastfeed & Yes & (- -) \\
 \hline
 
 \end{tabular}
@@ -2346,9 +2346,9 @@ The Mathematical Derivation of Least Squares. 2014. [e-book] Harvard, Psychology
 \bibitem{linregex}
 Upa.pdx.edu. 2014. [online] Available at: \url{http://www.upa.pdx.edu/IOA/newsom/pa551/scatter2.gif} [Accessed: 9 Apr 2014].
 \bibitem{Jquery}
-Bibliography: Jquery.Org, J. 2014. jQuery. [online] Available at: \url{http://www.jquery.com} [Accessed: 9 Apr 2014].
+Jquery.Org, J. 2014. jQuery. [online] Available at: \url{http://www.jquery.com} [Accessed: 9 Apr 2014].
 \bibitem{SPSS}
-Bibliography: Www-01.ibm.com. 2014. IBM - SPSS software - United Kingdom. [online] Available at: \url{http://www-01.ibm.com/software/uk/analytics/spss/} [Accessed: 9 Apr 2014].
+www-01.ibm.com. 2014. IBM - SPSS software - United Kingdom. [online] Available at: \url{http://www-01.ibm.com/software/uk/analytics/spss/} [Accessed: 9 Apr 2014].
 \bibitem{Mike}
 Burr, M. 2013. Mike's Technology and Finance Blog: SQL Linear Regression. [online] Available at: \url{http://mikemstech.blogspot.co.uk/2013/07/sql-linear-regression.html} [Accessed: 9 Apr 2014].
 \bibitem{paint}
@@ -2356,7 +2356,7 @@ Paint v2.0 ( Copyright ©2012 CrazzyWorks)
 \bibitem{chart}
 Google-developers.appspot.com. 2014. Visualization: Line Chart - Google Charts - Google Developers. [online] Available at: \url{https://google-developers.appspot.com/chart/interactive/docs/gallery/linechart} [Accessed: 9 Apr 2014].
 \bibitem{costhome}
-National Institute for Health and Clinical Excellence. 2011. Hypertension Costing report Implementing NICE guidance. National Costing report. [report] NICE. Available at:\url{http://www.nice.org.uk/nicemedia/live/13561/56016/56016.pdf} [Accessed: 9 Apr 2014].
+National Institute for Health and Clinical Excellence. 2011. Hypertension Costing report Implementing NICE guidance. National Costing report. [report] NICE. Available at: \url{http://www.nice.org.uk/nicemedia/live/13561/56016/56016.pdf} [Accessed: 9 Apr 2014].
 \bibitem{costdrug}
 National Institute for Health and Clinical Excellence. 2006. ￼ Management of hypertension in adults in primary care: partial update. Costing report. [report] NICE. Available at:\url{http://www.nice.org.uk/nicemedia/live/13561/56768/56768.pdf} [Accessed: 9 Apr 2014].
 \bibitem{isch}
