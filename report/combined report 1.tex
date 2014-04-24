@@ -141,7 +141,7 @@
 \begin{minipage}{0.8\textwidth}
 \begin{flushleft} \large
 \emph{Authors:}\\
-Michael \textsc{Fedosiuk}, Henry \textsc{Fletcher}, Emma \textsc{Saragossi} \& Jeffery \textsc{Yu}
+Michael \textsc{Fedosiuk}, Henry \textsc{Fletcher}, Emma \textsc{Saragossi} \& Jeffrey \textsc{Yu}
 \\
 %\emph{Executive Summary:}\\
 %This is cardiac track the app we made for our 3yp project
@@ -203,10 +203,10 @@ Our aim is to research, design and build an intelligent software application tha
 
 \subsection{Tallis Application}
 \begin{itemize}
-\item The application must run in a desktop or tablet web brower.
+\item The application must run in a desktop or tablet web browser.
 \item The application must be hosted on a suitable server.
 \item The application must be able to read-from and write-to the database
-\item The application must reccommend the best initial course of treatment for the patient based on the patient data submitted during the patient profile creation process.
+\item The application must recommend the best initial course of treatment for the patient based on the patient data submitted during the patient profile creation process.
 \item The application must recommend an appropriate drug dosage.
 \item The application must schedule an appropriate review date, by which time the target blood pressure should be met.
 \item The application must allow the doctor to review the patient
@@ -226,7 +226,7 @@ Our aim is to research, design and build an intelligent software application tha
 	\begin{itemize}
 	\item A doctor access log
     \item Doctor login information
-    \item Patient information (including their doctor, medical history, target blood pressure, login details, drug type etc)
+    \item Patient information (including their doctor, medical history, target blood pressure, login details, drug type etc.)
     \item Patient blood pressure data and the time and date of upload
 	\end{itemize}
 \item The database must meet the encryption standard expected of medical software set by the NHS \cite{encryption}
@@ -271,7 +271,7 @@ The application is most likely to be used by patients in home or at work when th
 \end{itemize}
 
 \subsubsection{HTML5}
-This stands for Hyperlink Text Mark-up Language and the 5 references the version. This language is used to format all web pages. It allows different sections to be created the most common are called div's. In the code these are surrounded by the following tags $<$div id="one"$>$This is inside a div $<$/div$>$. Note the id="one" (also could be class="one") is what name's the div so it can be referenced within the CSS style sheet. In HTML it is also possible to format tables (see medication section in doctors app) and create forms for data submission (see search box in doctor app). However only simple text manipulation such as paragraphs (using $<$p$>$in a paragrap$<$/p$>$) is possible. Any further formatting must be done within the CSS. It should also be noted that html script can be written within .php file this is done when websites require the extra functionality offered within PHP such as the currentpatients/index.php page. In this case the entire html is surrounded by $<$html$>$ ... $<$/html$>$ tags. 
+This stands for HyperText Mark-up Language and the 5 references the version. This language is used to format all web pages. It allows different sections to be created the most common are called div's. In the code these are surrounded by the following tags $<$div id="one"$>$This is inside a div $<$/div$>$. Note the id="one" (also could be class="one") is what name's the div so it can be referenced within the CSS style sheet. In HTML it is also possible to format tables (see medication section in doctors app) and create forms for data submission (see search box in doctor app). However only simple text manipulation such as paragraphs (using $<$p$>$in a paragraph$<$/p$>$) is possible. Any further formatting must be done within the CSS. It should also be noted that html script can be written within .php file this is done when websites require the extra functionality offered within PHP such as the currentpatients/index.php page. In this case the entire html is surrounded by $<$html$>$ ... $<$/html$>$ tags. 
 \subsubsection{CSS3}
 This stands for Cascading Style Sheet and the 3 references the version. This language works in tandem with HTML to improve the aesthetics of websites. It is written in a separate .css file and is called within the $<$head$>$ tags of the HTML script, fig.\ref{csslink}. 
 \begin{figure}[h!] 
@@ -300,7 +300,7 @@ The key goal for the patient application was usability. Due to hypertension main
 \includegraphics[width=1\linewidth]{patientUI.png}
 \caption{Patient UI journey walkthrough (page names shown in black at the bottom and refer to the following sections) \label{patientUI}}
 \end{wrapfigure} 
-Finally consistency between pages making learning to use the application easier and faster. The app's itself is written in PHP for all but one page, however most of the content of these files consist of html. The app has been optimised for use on iPhone 5 however will also function on an iPad and android phones with minimal scaling problems. All pages bar one are styled using the same CSS file "Cardiac\_Track\_Style.css" that is 297 lines long. 
+Finally consistency between pages making learning to use the application easier and faster. The app itself is written in PHP for all but one page, however most of the content of these files consist of html. The app has been optimised for use on iPhone 5 however will also function on an iPad and android phones with minimal scaling problems. All pages bar one are styled using the same CSS file "Cardiac\_Track\_Style.css" that is 297 lines long. 
 
 \subsection{General format}
 For consistency and efficiency of programming, most pages have the same standard format. Fig.\ref{appstandard} shows the PHP, HTML and CSS that together form the standard page, also shown.
@@ -308,11 +308,11 @@ For consistency and efficiency of programming, most pages have the same standard
 \includegraphics[width=\linewidth]{appstandard.png}
 \caption{Left:php and html Middle: CSS Right: Standard app page \label{appstandard}}
 \end{figure} 
-The PHP script starts with a PHP function which checks if a user is logged in, if they are not it redirects them to the login page "https://3yp.villocq.com/patient". 
+The PHP script starts with a PHP function which checks if a user is logged in, if they are not it redirects them to the login page "\url{https://3yp.villocq.com/patient}". 
 \\ \indent
 The rest of the script is written in html between the $<$html$>$ tags. Firstly in the page header the title is set; this is displayed in the top of a web browser. The link to the CSS page is then made and finally within the head meta-properties for the viewport are set. The viewport properties affect how the site is shown on the device. The first term "width=device-width" means that the content of the page fills the device's screen, hence maximises the size of the content displayed. The "Initial-scale=1.0; maximum-scale=0.95; user-scalable=0;" means that when the page loads the page is scaled to the device width, and that the user is unable to zoom in or out of the page. Disabling the zoom function aids the application's usability as the page remains consistent when the user may accidentally tap the screen. 
 \\ \indent
-The first main div within the body of the page is given the class="main\_page", as seen in the CSS this sets the background of the app using the vh/vw units. Initially the app was programmed with the px unit (these has been left in for old browser compatibility), however they were updated to the new CSS 3 unit once they had been discovered for use in the currentpatients/index.php page. The benefit of their use in the patient app is that they provide greater device compatibility, as the app is now able to fill any screen. Before using the px unit meant the app specifically only fitted the screen of an iphone5. For further information on the scaling unit refer to the currentpatients/index.php, Page segments and scaling section. Finally the margin term is to remove the white edges which are automatically shown when a webpage is displayed and the "overflow-x:hidden" stops the page from moving when scroll selection in the update page is used. The "title\_menu" is what formats the white "Cardiac Track" title. The final div "page\_header" is what creates the white band at the top of the page. The "position:relative" which is seen throughout all CSS means that any positioning is done relative to the surrounding div's, the other option is to set "position:absolute" this means positioning is done relative to the edge of the page. Within the div the image "menu\_button.png", the grey button, which was drawn in Paint \cite{paint} is screened. This is linked to the "menu.php" page. The CSS for the menu button has been written with the html using style="float:left" this makes the button position itself to the far left of the div it is within. The pages based on this format are the same except the title and the additional content which is added between the final $<$/div$>$ and $<$/body$>$ tags. 
+The first main div within the body of the page is given the class="main\_page", as seen in the CSS this sets the background of the app using the vh/vw units. Initially the app was programmed with the px unit (these has been left in for old browser compatibility), however they were updated to the new CSS 3 unit once they had been discovered for use in the currentpatients/index.php page. The benefit of their use in the patient app is that they provide greater device compatibility, as the app is now able to fill any screen. Before using the px unit meant the app specifically only fitted the screen of an iPhone 5. For further information on the scaling unit refer to the currentpatients/index.php, Page segments and scaling section. Finally the margin term is to remove the white edges which are automatically shown when a web page is displayed and the "overflow-x:hidden" stops the page from moving when scroll selection in the update page is used. The "title\_menu" is what formats the white "Cardiac Track" title. The final div "page\_header" is what creates the white band at the top of the page. The "position:relative" which is seen throughout all CSS means that any positioning is done relative to the surrounding div's, the other option is to set "position:absolute" this means positioning is done relative to the edge of the page. Within the div the image "menu\_button.png", the grey button, which was drawn in Paint \cite{paint} is screened. This is linked to the "menu.php" page. The CSS for the menu button has been written with the html using style="float:left" this makes the button position itself to the far left of the div it is within. The pages based on this format are the same except the title and the additional content which is added between the final $<$/div$>$ and $<$/body$>$ tags. 
 
 \subsection{patient/index.php}
 The index.php page is the page to which all users are initially directed so they can login. It based around a JavaScript form (left fig.\ref{logincode}), of which the JavaScript function (top right fig.\ref{logincode}) is held in the page's head and the form itself is a table within the html. There is a specific JavaScript function "submitform" which extracts the data from the form specified, in this case with the id="jsform". The form seen in the html has the action="login.php" and method="post", this means that the data entered is sent to the script login.php. The $<$input$>$ tags set what the input type is (password turns the covers text after the next letter is entered), it also names the variable and states whether or not it is required for the form to be submitted. Finally to run the JavaScript and submit the form a link href="javascript: submitform()" is set for the submit button. 
@@ -370,7 +370,7 @@ The \textit{Cardiac Track Pro} doctor portal has three primary functions:
 
 \subsection{User interface}
 
-The doctor application is to be viewed in a web browser. Web pages are built using two key technologies: HTML (the Hypertext Markup Language) and CSS (Cascading Style Sheets). The HTML provides the structure of the page while CSS provides the layout and formatting. It is important to keep the page structure and design quite separate. This is because it allows all pages to share the same style sheet. The site is then easier to maintain, as only one file need be updated to change the appearance of the site.  In addition, CSS is much more flexible for specifying the design.
+The doctor application is to be viewed in a web browser. Web pages are built using two key technologies: HTML (the HyperText Markup Language) and CSS (Cascading Style Sheets). The HTML provides the structure of the page while CSS provides the layout and formatting. It is important to keep the page structure and design quite separate. This is because it allows all pages to share the same style sheet. The site is then easier to maintain, as only one file need be updated to change the appearance of the site.  In addition, CSS is much more flexible for specifying the design.
 
 \subsubsection{General page structure - HTML}
 
@@ -416,7 +416,7 @@ It is unlikely that the doctor will view the site on a mobile device. The decisi
 
 A standard tablet display is 768 x 1024px, while typical desktop displays are much wider. If the site is viewed with the tablet in landscape, the page content must be limited to 1024px in width, while the height of the page can be unlimited. This ensures that the user will only have to scroll down the page, and not across, to view content, making the site more user-friendly on tablet devices. The decision was made to limit the width of all page content to 960px to fit comfortably within the 1024px limit, so that the site may be compatible with as many browser dimensions as possible.
 
-The width of the browser should therefore be greater than the width of the page content. The CSS, shown in Extract~\ref{code:cssGeneral}, formats the page such that all content is centred in the browser, no matter what the browser width, leaving a margin either side of the page content. In the HTML, the bulk of the page content is held in the container div. In the CSS, the margins of the container are set to auto. This automatically centers the container div, and anything within it. Figure~\ref{fig:pageLayout} shows the layout set by the CSS, and where the div elements sit in relation to the browser and each other.
+The width of the browser should therefore be greater than the width of the page content. The CSS, shown in Extract~\ref{code:cssGeneral}, formats the page such that all content is centred in the browser, no matter what the browser width, leaving a margin either side of the page content. In the HTML, the bulk of the page content is held in the container div. In the CSS, the margins of the container are set to auto. This automatically centres the container div, and anything within it. Figure~\ref{fig:pageLayout} shows the layout set by the CSS, and where the div elements sit in relation to the browser and each other.
 
 
 \begin{code}[ht]
@@ -506,7 +506,7 @@ The image was saved as a Portable Network Graphic (PNG), a raster graphics file 
 \subsection{User access}
 
 \subsubsection{Login page}
-A login page for the doctor portal is required to grant the user access to the internal pages of the site, and to prevent others from viewing or altering sensitive data. It also ensures that only relevant data is displayed to the user. Access is controlled by identifying and authenticating the user. A PHP script is called to check the user’s credentials (username and password) and grant or deny access to the internal pages of the site.
+A login page for the doctor portal is required to grant the user access to the internal pages of the site, and to prevent others from viewing or altering sensitive data. It also ensures that only relevant data is displayed to the user. Access is controlled by identifying and authenticating the user. A PHP script is called to check the user's credentials (username and password) and grant or deny access to the internal pages of the site.
 
 The login page displays the Cardiac Track Pro logo and houses two text input boxes – one for the username and one for the password – and a submit button which will call the PHP script to check the login credentials when clicked.
 
@@ -573,7 +573,7 @@ header('Location: https://3yp.villocq.com/doctor/loginPage.php');
 
 Relevant information about the patient needs to be uploaded and saved to the database. This information is required to determine the patient's target blood pressure, and is used by the Tallis treatment tool to determine the best course of drug treatment for the patient.
 
-Initially, the data was entered, and the target blood pressure calclulated, within the Tallis application. However for design reasons this was later removed and implemented separately.
+Initially, the data was entered, and the target blood pressure calculated, within the Tallis application. However for design reasons this was later removed and implemented separately.
 
 \subsubsection{Initial design}
 
@@ -700,11 +700,11 @@ As the target blood pressure decision task had relatively few candidates and arg
 
 An online tool was created to allow the doctor to add a new patient to the database. A series of HTML forms allows the doctor to enter relevant information about their patient. Each form requires the doctor to enter a different class of information (for example one form for medical history, a second form for comorbidities etc.). Each form appears on a different web page. The first form must be completed to be able to continue to the next.
 
-The data is not saved to the database with each separate page. This would be more difficult than executing just one SQL command to submit ALL the data to the database in one go. For example, if the doctor clicks submit on the first page, but then doesn’t continue, half of the data will exist in the database but some of it will be missing. Rather than each page submitting to the database, each form variable is stored as a SESSION variable. Session variables are saved locally between pages but are not yet stored in the database. Once the doctor has completed all the forms, the final form submit button will call a PHP script which will assign all the session variables as PHP variables and save them to the database.
+The data is not saved to the database with each separate page. This would be more difficult than executing just one SQL command to submit ALL the data to the database in one go. For example, if the doctor clicks submit on the first page, but then doesn't continue, half of the data will exist in the database but some of it will be missing. Rather than each page submitting to the database, each form variable is stored as a SESSION variable. Session variables are saved locally between pages but are not yet stored in the database. Once the doctor has completed all the forms, the final form submit button will call a PHP script which will assign all the session variables as PHP variables and save them to the database.
 \begin{enumerate}
 \item \textbf{Disclaimer}
 
-The first form is similar to the \textit{Disclaimer} enquiry from the initial Tallis application. It terminates the patient creation process if the patient does not meet the scope of the clinical guideline. The form can be seen in Figure~\ref{fig:formCheckBox}, and constists of a series of checkboxes. The HTML for creating a checkbox element in a form is shown in Extract~\ref{code:checkBox}.
+The first form is similar to the \textit{Disclaimer} enquiry from the initial Tallis application. It terminates the patient creation process if the patient does not meet the scope of the clinical guideline. The form can be seen in Figure~\ref{fig:formCheckBox}, and consists of a series of checkboxes. The HTML for creating a checkbox element in a form is shown in Extract~\ref{code:checkBox}.
 
 \begin{figure}[ht]
 \begin{center}
@@ -758,7 +758,7 @@ else
 header('Location: https://3yp.villocq.com/doctor/newPatientDetails.php'); 
 }
 
-?>
+?>$
 \end{php}
 \caption{PHP for terminating process}
 \label{code:phpTerminate}
@@ -822,7 +822,7 @@ if($_POST['formSubmit'] == "Submit")
 
 header("Location: newPatientTargetBP.php");
 
-?>
+?>$
 \end{php}
 \caption{PHP - storing form data as session variables}
 \label{code:phpSession}
@@ -985,10 +985,9 @@ function patientsidebar($doctorID){
 \end{code}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Patient search bar}
 
-Embedded in the header on all pages is the patient search bar, which allows the doctor to search by patient ID for immediate access to a patient's blood pressure and treatment history. As programmed within the currentpatients/index.php section, see for more detail on implementation. 
+Embedded in the header on all pages is the patient search bar, which allows the doctor to search by patient ID for immediate access to a patient's blood pressure and treatment history. See section \ref{drapp:MF} for further details. 
 
 %An HTML form was created (Extract~\ref{code:searchBar}) which contains a standard TEXT input element and SUBMIT button. The form uses the GET method, which encodes the form data as a variable into the URL. When the SUBMIT button is pressed, the text entered into the TEXT element is appended to the link specified in the form's ACTION attribute and the page is redirected.
 
@@ -1005,15 +1004,15 @@ Embedded in the header on all pages is the patient search bar, which allows the 
 \label{code:searchBar}
 \end{code}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Extension ideas for the Doctor Application}
 At present, the prototype application only makes it possible for the doctor to create a new patient profile. It is perhaps desirable that the doctor should be able to edit this information if necessary. For example, a patient may develop new conditions which will need to be included as a patient comorbidity. Further work needs to be done, therefore, to allow the doctor to update and edit patient data.
 
 \clearpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Doctor's Application - \textit{Michael Fedosiuk}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Doctor's Application - \textit{Michael Fedosiuk}} \label{drapp:MF}
 \subsection{currentpatients/index.php}
 \begin{figure}[h!] 
 \includegraphics[width=\linewidth]{indexover.png}
@@ -1036,7 +1035,7 @@ Originally the page scaling in the CSS was set using the \% unit, which sets the
 This led to problems due to the page being programmed on a large high resolution screen when it was opened on a smaller device or in a smaller window the size of the div's change dramatically in terms of pixel width however the text remained constant. This caused the page to become a jumbled with text overflowing off the page. This problem was solved with the use of a new tag introduced in the 3rd version of CSS. The new units are denoted vh (for height) and vw (for width), 1 unit corresponds to $1/100$th of the viewport's height or width respectively. What makes this so useful is that it can also be used for scaling text. Therefore when the page is loaded both the font and dimensions are set in proportion to the viewport. The graph container CSS in fig.\ref{CSSscaling} to shows this, note that the original percentage settings are still kept. This is so that if someone is using an old browser that is not updated for CSS3 the divs will still be created in the old style. Using this new scaling technique means that the site is also compatible with tablet's, fig.\ref{ipad}. Also note in fig.\ref{CSSscaling}, the "background-image:url('cardioPic5.jpg')" command means that the jpg image which is saved within the currentpatients folder on the website is shown. Its repetition is set to "no-repeat" as without this the image is shown in its original pixel size but is repeated in a grid format. 
 
 \subsubsection{Patient Selector} 
-This is what the doctor uses to select the patient who he whishes' to review. Firstly the list of "High BP" and "Normal" patients seen on the left of fig.\ref{indexover} had to be dynamically created using details called from the database. This was done using PHP within the index.php page. The SQL statement in the first line of fig.\ref{selectorphp}, "SELECTS" all the patient id's "FROM" the patientInfo table whose BP is stated as being uncontrolled and who are patients of the doctor currently logged into the application. The "mysql\_num\_rows" sets the varaible\$num with the number of patients that have been selected in the SQL query and hence the number of iterations the following "while" loop needs to perform. 
+This is what the doctor uses to select the patient whom he wishes to review. Firstly the list of "High BP" and "Normal" patients seen on the left of fig.\ref{indexover} had to be dynamically created using details called from the database. This was done using PHP within the index.php page. The SQL statement in the first line of fig.\ref{selectorphp}, "SELECTS" all the patient id's "FROM" the patientInfo table whose BP is stated as being uncontrolled and who are patients of the doctor currently logged into the application. The "mysql\_num\_rows" sets the variable \$num with the number of patients that have been selected in the SQL query and hence the number of iterations the following "while" loop needs to perform. 
 \begin{figure}[h!] 
 \minipage{0.59\textwidth}
 \includegraphics[width=\linewidth]{selectorphp.png}
