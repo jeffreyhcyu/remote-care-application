@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.23)  24 APR 2014 15:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.23)  24 APR 2014 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1591,36 +1591,40 @@ Overfull \hbox (22.23651pt too wide) in paragraph at lines 2325--2326
  []
 
 [82 <./costing.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2367--2368
+Underfull \hbox (badness 10000) in paragraph at lines 2365--2366
 []\T1/phv/m/n/9 Krzysztof Za-ucha, W. L. 2014. Web De-vel-oper Salaries. [on-li
 ne] Avail-able at: urlhttp://salary-
  []
 
 [83]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 2404.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 2402.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2404--2405
+Underfull \hbox (badness 10000) in paragraph at lines 2402--2403
 []\T1/phv/m/n/9 COSSAC. 2014. Knowl-edge Mod-elling - PRO\T1/phv/m/sl/9 forma \
 T1/phv/m/n/9 tasks. [on-line] Avail-able at:
  []
 
 
-Underfull \hbox (badness 5175) in paragraph at lines 2431--2432
+Underfull \hbox (badness 5175) in paragraph at lines 2429--2430
 []\T1/phv/m/n/9 Media.ofcom.org.uk, (2014). Of-com | UK adults tak-ing on-line 
 pass-word se-cu-rity risks. [on-line] Avail-able
  []
 
 [84] [85]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2453.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2453.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2451.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2451.
  (./combined report 1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2453.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2453.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2451.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2451.
 
 Package rerunfilecheck Info: File `"combined report 1".out' has not changed.
 (rerunfilecheck)             Checksum: 80C02E183B9CC7F6B067A827F3AF1F4C;7729.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2453.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2451.
  ) 
 Here is how much of TeX's memory you used:
  25561 strings out of 493312
@@ -1630,25 +1634,28 @@ Here is how much of TeX's memory you used:
  75901 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  62i,14n,78p,1857b,3143s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local
-/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/
-texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
-e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-di
-st/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
-1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/h
-elvetic/uhvro8a.pfb>
-Output written on "combined report 1.pdf" (86 pages, 7432258 bytes).
+pdfTeX warning (dest): name{cite.linregdia} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist
+/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
+urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/hel
+vetic/uhvro8a.pfb>
+Output written on "combined report 1.pdf" (86 pages, 7402123 bytes).
 PDF statistics:
- 2286 PDF objects out of 2487 (max. 8388607)
- 2041 compressed objects within 21 object streams
+ 2285 PDF objects out of 2487 (max. 8388607)
+ 2040 compressed objects within 21 object streams
  943 named destinations out of 1000 (max. 500000)
  1109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
