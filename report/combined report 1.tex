@@ -370,6 +370,65 @@ Other highly rated apps\cite{UIiBP}\cite{UIbppp}\cite{UIbpmh}\cite{UIbpd} have p
 Smartphone compatible blood pressure monitors are also available \cite{app2} \cite{app3}.  They have the benefit of being able to send blood pressure (and heart rate) data directly to a smartphone.  But along with the high price tag, another problem is that the app and measuring device usually rely heavily on each other.  There is no manual input and there is no display on the device. Nevertheless, it seems more convenient to the patient, and could possibly improve compliance of monitoring.  
 
 A drawback to these apps is that they are not integrated to a healthcare provider.  The export/imports give some flexibility to where data is sent, but at the cost of having to put in more effort.  With this feature, the app is intended more for a motivated patients using it as a supplement to usual treatment. Patients are mostly self-managing the hypertension, without extra input from the doctor.  They would be happy to send data every month before visiting the doctor, but not daily.  On the physicians side, receiving a csv file perhaps is good for a small number of patients. On a larger scale, receiving emails would not be practical. The various formats of differnt apps could be confusing. And it would be inefficient to extract the data from the email to a centralised database.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Medical Background: Hypertension Care Pathway -  \textit{Jeffrey Yu}}
+
+Originally, Tallis was presented as the backbone software for developing the app. Tallis is  user-friendly, high level and less technical. It excels at linking and representing the sequential workflow that a lot of medicine is. At the same time, it preserves some flexibility in the components, which is needed in such a highly complex medical knowledgebase.
+
+%\cite{NICE}
+An initial layout of the whole process is useful for dividing tasks into modular components.  Figure \ref{fig:TreatPath} is a readapted version of the primary care pathway for hypertension, based on NICE guidelines.  Primary care means that it is the main point of contact for patients with their healthcare provider. It is where the patient sees a general practioner of nurse first, before having any specialist treatment for complicated situations.  The pathway is shown to give a very broad overview of the whole process of dealing with hypertension.  In fact, such a workflow can be generalized to many other diseases. There are finer details to be discussed.
+\begin{figure}[!p]
+\begin{center}
+\includegraphics[scale=0.35]{TreatPath}
+\caption{Overview of treatment pathway}
+\label{fig:TreatPath}
+\end{center}
+\end{figure}
+\subsection{Diagnosis}
+A new patient would come for their health checkup. If the blood pressure is too high, other assessments are performed.  This threshold is based on some of the patiets background.   Also, the guideline is only applicable to certain conditions of hypertension.  For example, a patient who has hypertension as a result of other illnesses, should follow a treatment plan for that illness instead. Or if the patient has a condition that may interact with the treatment of hypertension, a specialist may be needed in secondary care.  At the end of the diagnosis, the patient would go back to a long term review if blood pressure is controlled, or receive further medical care 
+
+\subsection{Treatment}
+The treatment here is summarised in a single block tenatively named "change treatment". It is much more complicated. There are many factors which may affect how a physician decides to progress with the treatment.  For example, different conditions may indicate or contraindicate certain drugs. Or a patient may be allergic to some.  Financial and practical costs may also be taken into acccount.
+
+Also, according to NICE guidelines, there could be 4 stages of drug treatments, before a patient is deemed to have hypertension (need to refer to specialist).  Each of these 4 stages of drugs depend on the previous stage with some logical algorithm.  
+
+\subsection{Monitor}
+The monitoring stage is part of the "management of hypertension" section of the guidelines.  Once the patient starts having medication changes (i.e. an input), it is important to assess some of the health parameters (i.e. the output).  Then the output is fedback into the treatment stage; and the medication is readjusted with the target BP in mind. 
+
+The key parameter is reduction in systolic and diastolic blood pressure. Adverse effects are also constanltly assessed to make sure the patient is reacting well.   If there is any noteworthy event, then the doctor is alerted. In usual care, these events is just a patient having an review appointment, or a patient contacting the doctor if symptoms of side effects are worsening.  In the case of telemonitoring, further alerts may be needed such as for patients not using the equipment according to protocol.
+%But there is a delay before the effect of the input of medication is seen in the output.  This is due to the fact that it takes time for medication to assimilate into the body, and for the drug to accumulate to a required amount.  NICE suggests 4 weeks is a good rule to follow.  In the usual clinical setting, once the target BP is reached, or close,  on the day of appointment, then the patient is considered to be treated.  The patient, however, still needs to constantly take the medicine and review on a slightly more frequent schedule.  
+
+  %As opposed to the 4 week onset of the beneficial effects of drugs, there is a different time frame for the various side effects.  To err on the safe side, awareness of these events should start at an earlier date.  
+
+\subsection{Dividing tasks: limitations of Tallis}
+Ideally, it would be convenient to have all the required components in one package.  This would reduce the interface with external components, thus minimising any potential errors and simplifying the software for further update.The problem however, stems from the fact that the project aims to encompass the whole care pathway for hypertension.  
+
+Many tasks performed in a clinical setting are treated in a one-off basis. In that case, Tallis would perform well by assisting the physician in deciding on the execution of a series of tasks within a short timeframe.  The Tallis session could be loaded once and, for example, could help decide what to do with the patients during their short visit.  But hypertension is a chronic disease where the patients' history has to be followed for a long time. As outlined in the care pathway, there would be certain waiting periods, such as for the annual review, or for the reassessment of drug effects. One method would be to have a session of Tallis open for a single patient.  The web enactment has the ability to save a session.  
+
+A further problem encountered would be the high number of patients that need to be treated. Hypertension, like many other chronic diseases, is highly prevalent. Given that a patient is going to seek medical attention at intervals of the order of weeks, or months, a physician would have to face patients overlapping at different stages of treatment.  Saving and reloading a single session of Tallis would not be possible.  To overcome that, it is necessary to have a method of storing and retrieving data.  
+
+Tallis handles data to a certain extent by the "enquiry" task, which creates and writes a data item as a variable.  However, the variables are predefined by the programmer when using the Tallis composer. For example, a programmer would create n variables for n patients by manually creating "sources", as shown in  figure \ref{fig:tallisEnq}. This is fine when creating for a small number of patients.  For a larger number of patients, this process of clicking through the Tallis Composer software to create sources becomes tedious.  But it could be automated by editing the proForma script (which could come in a format of a text file) underlying the Tallis process description.  For example, code can be written to create n data sources of the same type, with an output as shown in figure \ref{fig:tallisEnq2}.  So if there is a large number of patients, and that number is known beforehand, then it is possible to handle a lot in a single session of Tallis. This could possibly be used for a clinical trial where numbers are known. But the process breaks down if one wants to add an extra patient to the existing session.  The whole proForma script needs to be recreated and uploaded.
+
+An alternative is to map the data items to a database.  This method is a much more efficient use of resources because Tallis is not dedicated to handling large arrays of data.  The intuitive flow-chart like presentation of Tallis indicates that it is better to have a single variable representitive of multiple patients. But this comes at the small cost of creating an interface potentially prone to mistakes; for example, the possibility of names mismatching when one edits the Tallis guidelines or the database fields.
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{tallisEnq}
+\caption{Data storage in Tallis composer in the form of enquiry sources }
+\label{fig:tallisEnq}
+\end{center}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[scale=0.5]{tallisEnq2}
+\caption{A version of data storage in Tallis, scripted in proForma}
+\label{fig:tallisEnq2}
+\end{center}
+\end{figure}
+
+Now with the individual patient data sets decoupled from Tallis, there is still the problem of waiting time.  As mentioned before, these blocks of time are for waiting for the drug to take effect, or just waiting for the next scheduled appointment.  An initial idea would  be to let the Tallis run its session, and constantly let it read from the database.  Whenever one of these events happen (an alert), the database updates, then Tallis reads it immediately and allowing the next step to begin.  This would not work, however, because it would not be practical for the GP to keep Tallis open and running in the background constantly, whether on a computer or a mobile device.  Also, it is not necessary to be constantly updated because these alert events are not emergencies. The GP has leeway to be updated at a longer time interval. For example, updating daily on patient status is more than enough.  In the case of actual emergencies, existing means of contact such as telephone is also enough, since this is outside the scope of the app.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
